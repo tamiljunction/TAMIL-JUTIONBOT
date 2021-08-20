@@ -122,7 +122,7 @@ def load_module(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import userbot.utils
+        import superos.utils
         import sys
         import importlib
         from pathlib import Path
@@ -133,7 +133,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         LOGS.info("𝕷єgєи∂𝕭οτ 2.o " + shortname)
     else:
-        import userbot.utils
+        import superos.utils
         import sys
         import importlib
         from pathlib import Path
@@ -147,17 +147,17 @@ def load_module(shortname):
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["uniborg.util"] = userbot.utils
+        sys.modules["uniborg.util"] = superos.utils
         mod.Config = Config
         mod.borg = bot
         mod.LEGENDBOT = bot
         mod.edit_or_reply = edit_or_reply
         mod.delete_LEGEND = delete_LEGEND
         # support for LEGENDBOT originals
-        sys.modules["LEGENDBOT.utils"] = userbot.utils
+        sys.modules["LEGENDBOT.utils"] = superos.utils
         sys.modules["LEGENDBOT"] = userbot
         # support for paperplaneextended
-        sys.modules["userbot.events"] = userbot.utils
+        sys.modules["userbot.events"] = superos.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod

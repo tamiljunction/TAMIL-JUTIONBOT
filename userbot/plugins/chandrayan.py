@@ -6,7 +6,7 @@ CmdHelp("chandryan").add_command(
 ).add() 
 import asyncio
 
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern=r"isro"))

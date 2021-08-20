@@ -4,7 +4,7 @@ Syntax: .fwd as reply to any message"""
 from telethon import events
 from telethon import sync
 from telethon.tl import types, functions
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 
 
 

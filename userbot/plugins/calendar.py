@@ -5,7 +5,7 @@ import asyncio
 from datetime import datetime
 import requests
 import json
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 from userbot import CmdHelp
 from . import *
 

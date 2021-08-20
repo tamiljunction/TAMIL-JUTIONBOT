@@ -3,7 +3,7 @@ import io
 import time
 
 from userbot.cmdhelp import CmdHelp
-from userbot.utils import admin_cmd, sudo_cmd
+from superos.utils import admin_cmd, sudo_cmd
 from . import *
 
 @borg.on(admin_cmd(pattern="bash ?(.*)"))

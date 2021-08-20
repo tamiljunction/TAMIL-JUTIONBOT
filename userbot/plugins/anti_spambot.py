@@ -13,7 +13,7 @@ from userbot import (
     BOTLOG_CHATID,
     bot,
 )
-from userbot.utils import errors_handler
+from superos.utils import errors_handler
 
 @borg.on(ChatAction)
 @errors_handler

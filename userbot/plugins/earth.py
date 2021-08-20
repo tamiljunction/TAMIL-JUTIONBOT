@@ -4,7 +4,7 @@
 import asyncio
 from collections import deque
 
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 CmdHelp("earth").add_command(
    'earth', None, 'animation'

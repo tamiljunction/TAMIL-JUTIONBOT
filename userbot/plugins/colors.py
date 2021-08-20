@@ -2,7 +2,7 @@ import os
 
 import requests
 
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 
 from userbot.cmdhelp import CmdHelp
 CmdHelp("colors").add_command(

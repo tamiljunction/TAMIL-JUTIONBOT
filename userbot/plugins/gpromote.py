@@ -11,8 +11,8 @@ from telethon.tl.types import (ChannelParticipantsAdmins,
                                    ChatBannedRights,
                                      MessageEntityMentionName,
                                        MessageMediaPhoto)
-from userbot.utils import register, errors_handler
-from userbot.utils import admin_cmd
+from superos.utils import register, errors_handler
+from superos.utils import admin_cmd
 from userbot import CMD_HELP
 from userbot.cmdhelp import CmdHelp
 from userbot import bot as borg

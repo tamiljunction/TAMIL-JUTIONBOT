@@ -1,7 +1,7 @@
 
 import random, re
 from userbot.cmdhelp import CmdHelp
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from superos.utils import admin_cmd, edit_or_reply, sudo_cmd
 import asyncio
 from telethon import events
 

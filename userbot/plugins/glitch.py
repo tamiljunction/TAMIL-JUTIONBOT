@@ -3,7 +3,7 @@ import os
 from glitch_this import ImageGlitcher
 from telethon.tl.types import MessageMediaPhoto
 
-from userbot.utils import admin_cmd, sudo_cmd
+from superos.utils import admin_cmd, sudo_cmd
 
 glitcher = ImageGlitcher()
 DURATION = 200  # Set this to however many centiseconds each frame should be visible for

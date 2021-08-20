@@ -7,7 +7,7 @@ CmdHelp("check").add_command(
 ).add() 
 from telethon.tl.types import Channel, Chat, User
 
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="cr (.*)"))

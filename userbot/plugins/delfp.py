@@ -1,7 +1,7 @@
 from telethon.tl.functions.photos import DeletePhotosRequest, GetUserPhotosRequest
 from telethon.tl.types import InputPhoto
 
-from userbot.utils import admin_cmd, edit_or_reply, sudo_cmd
+from superos.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 CmdHelp("delfp").add_command(
    'delpfp', None, 'delete ur currnt profile picture'

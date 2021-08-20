@@ -1,7 +1,7 @@
 # imported from userbot credit goes to spechide
 from telethon.tl.types import InputMediaDice
 
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 
 from userbot.cmdhelp import CmdHelp
 CmdHelp("earth").add_command(

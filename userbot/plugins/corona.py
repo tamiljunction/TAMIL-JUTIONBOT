@@ -1,6 +1,6 @@
 from covid import Covid
 
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="coronas (.*)"))

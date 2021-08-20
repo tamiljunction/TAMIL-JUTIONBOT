@@ -1,7 +1,7 @@
 
 from telethon import events
 import random, re
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 from . import *
 
 @bot.on(admin_cmd(pattern="coin ?(.*)"))

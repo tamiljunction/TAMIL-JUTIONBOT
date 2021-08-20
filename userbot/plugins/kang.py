@@ -14,7 +14,7 @@ from telethon.tl.types import (
 )
 
 from userbot.cmdhelp import CmdHelp
-from userbot.utils import *
+from superos.utils import *
 from . import *
 KANGING_STR = [
     "Using Witchery to kang this sticker...",

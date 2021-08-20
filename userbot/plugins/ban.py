@@ -28,7 +28,7 @@ from telethon.tl.types import (ChannelParticipantsAdmins, ChatAdminRights,
                                MessageMediaPhoto)
 
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot 
-from userbot.utils import register, errors_handler, admin_cmd, sudo_cmd
+from superos.utils import register, errors_handler, admin_cmd, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 # =================== CONSTANT ===================

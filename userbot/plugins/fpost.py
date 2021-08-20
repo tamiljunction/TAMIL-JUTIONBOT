@@ -9,7 +9,7 @@ CmdHelp("fpost").add_command(
 ).add()
 import string
 
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 
 msg_cache = {}
 

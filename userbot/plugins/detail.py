@@ -1,5 +1,5 @@
 from userbot import CmdHelp, bot
-from userbot.utils import admin_cmd, sudo_cmd
+from superos.utils import admin_cmd, sudo_cmd
 import asyncio
 from . import *
 from userbot.cmdhelp import CmdHelp

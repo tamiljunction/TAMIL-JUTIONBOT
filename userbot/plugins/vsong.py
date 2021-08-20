@@ -9,14 +9,14 @@ import math
 import asyncio, json
 from youtube_dl import YoutubeDL
 from pySmartDL import SmartDL
-from userbot.utils import progress
+from superos.utils import progress
 from youtube_dl.utils import (DownloadError, ContentTooShortError,
                               ExtractorError, GeoRestrictedError,
                               MaxDownloadsReached, PostProcessingError,
                               UnavailableVideoError, XAttrMetadataError)
 from asyncio import sleep
 from telethon.tl.types import DocumentAttributeAudio
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 
 
 try:

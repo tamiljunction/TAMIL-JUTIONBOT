@@ -10,7 +10,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CmdHelp, bot
 from . import *
-# from userbot.utils import admin_cmd
+# from superos.utils import admin_cmd
 from userbot.events import register
 
 try:

@@ -277,7 +277,7 @@ from datetime import datetime
 from telethon.tl.functions.channels import EditAdminRequest
 from telethon.tl.types import ChatAdminRights
 
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern="prank ?(.*)"))

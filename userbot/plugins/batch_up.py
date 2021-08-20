@@ -7,7 +7,7 @@ By:-@Zero_cool7870
 """
 import os
 from . import *
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 
 
 @borg.on(admin_cmd(pattern=r"upb"))

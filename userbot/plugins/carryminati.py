@@ -4,7 +4,7 @@ import asyncio
 import os
 import sys
 import random
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 @borg.on(admin_cmd(pattern=r"carry$", outgoing=True))
 async def _(event):

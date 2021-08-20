@@ -2,7 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 
 
 from userbot.cmdhelp import CmdHelp

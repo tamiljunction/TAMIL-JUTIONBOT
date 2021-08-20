@@ -1,7 +1,7 @@
 
 import asyncio
 
-from userbot.utils import admin_cmd
+from superos.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 CmdHelp("єg∂миg").add_command(
    'egm', None, 'Use in Gm Time'

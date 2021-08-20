@@ -10,7 +10,7 @@ from userbot.cmdhelp import CmdHelp
 
 from userbot import events
 
-from userbot.utils import admin_cmd, sudo_cmd
+from superos.utils import admin_cmd, sudo_cmd
 
 from . import *
 
