@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "userbot.util"
+          find: "userbot.tweet"
 
-          replace: "superos.utils"
+          replace: "superos.extra.tweet"
 
       - name: Create Pull Request
 
