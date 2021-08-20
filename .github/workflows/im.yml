@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "NO_OF_COLUMS_DISPLAYED_IN_H_ME_CMD"
+          find: "userbot.utils"
 
-          replace: "NO_OF_COLUMNS"
+          replace: "superos.utils"
 
       - name: Create Pull Request
 
