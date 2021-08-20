@@ -19,7 +19,7 @@ jobs:
 
         with:
 
-          find: "userbot.utils"
+          find: "userbot.util"
 
           replace: "superos.utils"
 
