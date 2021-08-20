@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "1289422521"
+          find: "PMPERMIT_PIC"
 
-          replace: "1856561912"
+          replace: "PM_PIC"
 
       - name: Create Pull Request
 
