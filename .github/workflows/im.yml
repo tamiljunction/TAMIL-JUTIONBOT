@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "TG_BOT_USER_NAME_BF_HER"
+          find: "NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD"
 
-          replace: "BOT_USERNAME"
+          replace: "NO_OF_BUTTONS"
 
       - name: Create Pull Request
 
