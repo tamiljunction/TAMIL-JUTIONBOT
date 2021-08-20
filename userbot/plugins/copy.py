@@ -1,4 +1,4 @@
-from userbot.util import admin_cmd
+from superos.utils import admin_cmd
 from userbot import CmdHelp
 
 
