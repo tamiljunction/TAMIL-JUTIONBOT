@@ -83,7 +83,7 @@ if ENV:
             PM_LOGGR_BOT_API_ID = int(PM_LOGGR_BOT_API_ID)
        # in pm permit pic
         PM_PIC = os.environ.get("PM_PIC", None)
-        CUSTOM_PMPERMIT_TEXT = os.environ.get("CUSTOM_PMPERMIT_TEXT", None)
+        PM_MSG_TEXT = os.environ.get("PM_MSG_TEXT", None)
 
         # For Databases
         # can be None in which case plugins requiring

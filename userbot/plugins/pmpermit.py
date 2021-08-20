@@ -9,7 +9,7 @@ from telethon.sync import custom
 from telethon import events, functions, Button, custom
 from telethon.tl.functions.users import GetFullUserRequest
 from userbot.plugins.sql_helper import pmpermit_sql as pmpermit_sql
-from userbot import ALIVE_NAME, CUSTOM_PMPERMIT, LEGEND_ID
+from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
 from userbot.Config import Config
 from LEGENDBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
@@ -26,8 +26,8 @@ PREV_REPLY_MESSAGE = {}
 myid = bot.uid
 
 LEGEND = (
-    str(CUSTOM_PMPERMIT)
-    if CUSTOM_PMPERMIT
+    str(PM_MSG)
+    if PM_MSG
     else "**YOU HAVE TRESPASSED TO MY MASTERS INBOX** \n THIS IS ILLEGAL AND REGARDED AS CRIME"
 )
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ℓєgєи∂"

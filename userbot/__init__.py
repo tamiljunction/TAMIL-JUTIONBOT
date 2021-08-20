@@ -150,7 +150,7 @@ except:
     CUSTOM_ANIMATED_PACK_NAME = os.environ.get("CUSTOM_ANIMATED_PACK_NAME", None)
 
     # Custom Module
-    CUSTOM_PMPERMIT = os.environ.get("CUSTOM_PMPERMIT", None)
+    PM_MSG = os.environ.get("PM_MSG", None)
     CUSTOM_AFK = os.environ.get("CUSTOM_AFK", None)
 
     # Upstream Repo
