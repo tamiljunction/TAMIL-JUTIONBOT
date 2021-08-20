@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "CUSTOM_PMPERMIT"
+          find: "MAX_FLOOD_IN_P_M_s"
 
-          replace: "PM_MSG"
+          replace: "MAX_FLOOD_IN_PM"
 
       - name: Create Pull Request
 
