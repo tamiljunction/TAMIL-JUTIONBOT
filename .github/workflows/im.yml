@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "MAX_FLOOD_IN_P_M_s"
+          find: "STRING_SESSION"
 
-          replace: "MAX_FLOOD_IN_PM"
+          replace: "LEGEND_STRING"
 
       - name: Create Pull Request
 
