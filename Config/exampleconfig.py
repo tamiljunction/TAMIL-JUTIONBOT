@@ -9,7 +9,7 @@ class Development(Config):
 
   # the name to display in your alive message.
   # If not filled anything then default value is LEGEND User.
-  ALIVE_NAME = "LEGEND User"
+  ALIVE_NAME = "LEGENDOP"
 
   # create any PostgreSQL database.
   # I recommend to use elephantsql and paste that link here
@@ -19,11 +19,11 @@ class Development(Config):
   # Do python string_session.py and fill the on screen prompts.
   # String session will be saved in your saved message of telegram.
   # Put that string here.
-  STRING_SESSION = "Your value"
+  LEGEND_SESSION = "Your value"
 
   # Create a bot in @botfather and fill the following values with bot token and username.
-  TG_BOT_TOKEN_BF_HER = "Your value" #token
-  TG_BOT_USER_NAME_BF_HER = "Your value" #username
+  BOT_TOKEN = "Your value" #token
+  BOT_USERNAME = "Your value" #username
 
   # Create a private group and add rose bot to it.
   # and type /id and paste that id here.
