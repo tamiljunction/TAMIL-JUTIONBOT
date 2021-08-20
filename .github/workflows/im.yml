@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "STRING_SESSION"
+          find: "TG_BOT_TOKEN_BF_HER"
 
-          replace: "LEGEND_STRING"
+          replace: "BOT_TOKEN"
 
       - name: Create Pull Request
 
