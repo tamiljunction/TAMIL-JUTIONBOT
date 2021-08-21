@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "userbot.broadcast_db"
+          find: "hellbot"
 
-          replace: "superos.plugins.sql_helper"
+          replace: "Legendbot"
 
       - name: Create Pull Request
 
