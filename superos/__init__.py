@@ -13,12 +13,6 @@ LEGENDversion = "⚡2.O⚡"
 botversion = "1.ο"
 
 os.system("pip install --upgrade pip")
-if Var.LEGEND_STRING:
-    session_name = str(Config.LEGEND_STRING)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
-else:
-    session_name = "startup"
-    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
 DEVS = [1856561912]
 CMD_LIST = {}
