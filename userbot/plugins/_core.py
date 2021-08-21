@@ -146,7 +146,7 @@ async def install(event):
     o = stdout.decode()
     _o = o.split("\n")
     o = "\n".join(_o)
-    OUTPUT = f"♥️List Of Plugins In 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳 :- \n\n{o}\n\n<><><><><><><><><><><><><><><><><><><><><><><><>\nHELP:- If you want to know the commands for a plugin, do :- \n.plinfo <plugin name> without the < > brackets. \nJoin https://t.me/LEGENDSupport for help."
+    OUTPUT = f"♥️List Of Plugins In 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳 :- \n\n{o}\n\n<><><><><><><><><><><><><><><><><><><><><><><><>\nHELP:- If you want to know the commands for a plugin, do :- \n.plinfo <plugin name> without the < > brackets. \nJoin https://t.me/LEGEND_Userbot for help."
     if len(OUTPUT) > 69:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "cmnds_list.text"
@@ -158,7 +158,7 @@ async def install(event):
                 thumb=thumb,
                 reply_to=reply_to_id,
             )
-            await edit_or_reply(LEGEND_file, f"Output Too Large. This is the file for the list of plugins in LEGENDBOT.\n\n**BY :-** {DEFAULTUSER}")
+            await edit_or_reply(LEGEND_file, f"**Output Too Large. This is the file for the list of plugins in ✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ .\n\n**BY :- {DEFAULTUSER}**")
             await event.delete()
 
 
