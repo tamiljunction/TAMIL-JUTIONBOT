@@ -9,8 +9,7 @@ from LEGENDBOT.utils import *
 from userbot import *
 from . import *
 DELETE_TIMEOUT = 5
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
-LEGEND_logo = "./userbot/resoureces/pics/LEGENDBOT_logo.jpg"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎"
 legend = bot.uid
 LEGEND = f"[{DEFAULTUSER}](tg://user?id={legend})"
 
