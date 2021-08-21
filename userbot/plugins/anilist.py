@@ -58,15 +58,15 @@ async def formatJSON(outData):
         title = jsonData["title"]["romaji"]
         link = f"https://anilist.co/anime/{jsonData['id']}"
         msg += f"[{title}]({link})"
-        msg += f"\n\n**τγρє** : {jsonData['format']}"
-        msg += f"\n**gєияєѕ** : "
+        msg += f"\n\n**𝚃𝚢𝚙𝚎** : {jsonData['format']}"
+        msg += f"\n**𝙶𝚎𝚗𝚛𝚎𝚜** : "
         for g in jsonData["genres"]:
             msg += g + " "
-        msg += f"\n**ѕτατυѕ** : {jsonData['status']}"
-        msg += f"\n**єριѕο∂є** : {jsonData['episodes']}"
-        msg += f"\n**γєαя** : {jsonData['startDate']['year']}"
-        msg += f"\n**ѕϲοяє** : {jsonData['averageScore']}"
-        msg += f"\n**∂υяατιοи** : {jsonData['duration']} min\n\n"
+        msg += f"\n**𝚂𝚝𝚊𝚝𝚞𝚜** : {jsonData['status']}"
+        msg += f"\n**𝙴𝚙𝚒𝚜𝚘𝚍𝚎** : {jsonData['episodes']}"
+        msg += f"\n**𝚈𝚎𝚊𝚛** : {jsonData['startDate']['year']}"
+        msg += f"\n**𝚂𝚌𝚘𝚛𝚎** : {jsonData['averageScore']}"
+        msg += f"\n**𝙳𝚞𝚛𝚊𝚝𝚒𝚘𝚗** : {jsonData['duration']} min\n\n"
         # https://t.me/Legend_Userbot/19496
         cat = f"{jsonData['description']}"
         msg += " __" + re.sub("<br>", "\n", cat) + "__"
@@ -85,6 +85,6 @@ async def anilist(event):
     await event.edit(msg, link_preview=True)
 
 
-CmdHelp("αиιℓιѕτ").add_command(
+CmdHelp("𝚊𝚗𝚒𝚕𝚒𝚜𝚝").add_command(
   'anilist', '<anime name>', 'Shows you the details of the anime'
 ).add()
