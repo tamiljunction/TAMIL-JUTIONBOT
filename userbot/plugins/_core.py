@@ -10,7 +10,7 @@ from userbot import *
 from . import *
 DELETE_TIMEOUT = 5
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
-LEGEND_logo = "./LEGEND_logo.jpg"
+LEGEND_logo = "./userbot/resoureces/pics/LEGENDBOT_logo.jpg"
 legend = bot.uid
 LEGEND = f"[{DEFAULTUSER}](tg://user?id={legend})"
 
@@ -22,7 +22,7 @@ async def send(event):
     message_id = event.message.id
     thumb = LEGEND_logo
     input_str = event.pattern_match.group(1)
-    omk = f"**⍟ Plugin name ≈** `{input_str}`\n**⍟ Uploaded by ≈** {LEGEND}\n\n⚡ **[Legendary LEGENDBOT](t.me/LEGEND_Userbot)** ⚡"
+    omk = f"**⍟ Plugin name ≈** `{input_str}`\n**⍟ Uploaded by ≈** {LEGEND}\n\n⚡ **[✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳](t.me/LEGEND_Userbot)** ⚡"
     the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         lauda = await event.client.send_file(
@@ -70,7 +70,7 @@ async def install(event):
                             a = "__Installing...__"
                             b = 1
                         await event.edit(a)
-                    return await event.edit(f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {LEGEND}\n\n{string}\n\n        ⚡ **[Legendary LEGENDBOT](t.me/LEGEND_Userbot)** ⚡", link_preview=False)
+                    return await event.edit(f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {LEGEND}\n\n{string}\n\n        ⚡ **[✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳](t.me/LEGEND_Userbot)** ⚡", link_preview=False)
                 return await event.edit(f"Installed module `{os.path.basename(downloaded_file_name)}`")
             else:
                 os.remove(downloaded_file_name)
@@ -147,10 +147,10 @@ async def install(event):
     o = stdout.decode()
     _o = o.split("\n")
     o = "\n".join(_o)
-    OUTPUT = f"List of Plugins in LEGENDBOT :- \n\n{o}\n\n<><><><><><><><><><><><><><><><><><><><><><><><>\nHELP:- If you want to know the commands for a plugin, do :- \n.plinfo <plugin name> without the < > brackets. \nJoin https://t.me/LEGENDSupport for help."
+    OUTPUT = f"♥️List Of Plugins In 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳 :- \n\n{o}\n\n<><><><><><><><><><><><><><><><><><><><><><><><>\nHELP:- If you want to know the commands for a plugin, do :- \n.plinfo <plugin name> without the < > brackets. \nJoin https://t.me/LEGENDSupport for help."
     if len(OUTPUT) > 69:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
-            out_file.name = "cmd_list.text"
+            out_file.name = "cmnds_list.text"
             LEGEND_file = await bot.send_file(
                 event.chat_id,
                 out_file,
