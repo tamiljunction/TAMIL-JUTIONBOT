@@ -5,7 +5,7 @@ from telethon.sessions import StringSession
 from telethon import TelegramClient
 from superos.helpers import functions as simpdef
 from superos.Config.Config import Config
-from superos.Config.var import Var
+from . import *
 
 
 StartTime = time.time()
