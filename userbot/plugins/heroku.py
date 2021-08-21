@@ -4,7 +4,7 @@ import os
 import heroku3
 import requests
 from superos.supercmds.cmdhelp import CmdHelp
-from userbot.Config import Config
+from superos.Config.Config import Config
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from superos.supercmds.cmdhelp import CmdHelp
 import urllib3

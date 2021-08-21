@@ -10,7 +10,7 @@ from telethon import events, functions, Button, custom
 from telethon.tl.functions.users import GetFullUserRequest
 from userbot.plugins.sql_helper import pmpermit_sql as pmpermit_sql
 from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
-from userbot.Config import Config
+from superos.Config.Config import Config
 from LEGENDBOT.utils import admin_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 PM_TRUE_FALSE = Config.PM_DATA

@@ -16,7 +16,7 @@ from hachoir.parser import createParser
 from telethon.tl.types import DocumentAttributeVideo
 from telethon import events
 from userbot import CMD_HELP
-from userbot.Config import Config
+from superos.Config.Config import Config
 from LEGENDBOT.utils import admin_cmd, progress
 from superos.supercmds.cmdhelp import CmdHelp
 

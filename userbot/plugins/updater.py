@@ -4,7 +4,7 @@ import sys
 
 import git
 
-from userbot.Config import Config
+from superos.Config.Config import Config
 from LEGENDBOT.utils import admin_cmd
 
 # -- Constants -- #

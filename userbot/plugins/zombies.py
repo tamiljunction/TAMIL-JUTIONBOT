@@ -34,7 +34,7 @@ from userbot import BOTLOG, BOTLOG_CHATID
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from superos.supercmds.cmdhelp import CmdHelp
-from userbot.Config import Config
+from superos.Config.Config import Config
 
 # =================== CONSTANT ===================
 
