@@ -11,7 +11,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
 from superos import CMD_HELP
-from superos.helperss.functions import (
+from superos.helpers.functions import (
     awooify,
     baguette,
     convert_toimage,

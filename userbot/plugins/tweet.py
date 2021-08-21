@@ -1,7 +1,7 @@
 
 
 from superos import CMD_HELP
-from superos.helperss.functions import (
+from superos.helpers.functions import (
     changemymind,
     deEmojify,
     kannagen,

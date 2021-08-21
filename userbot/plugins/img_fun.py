@@ -8,7 +8,7 @@ import PIL.ImageOps
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd
 from superos import CmdHelp, CMD_HELP, LOGS, bot as LEGENDBOT
-from superos.helperss.functions import (
+from superos.helpers.functions import (
     convert_toimage,
     convert_tosticker,
     flip_image,

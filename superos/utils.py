@@ -19,7 +19,7 @@ from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 from var import Var
 
 from superos import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
-from superos.helperss.exceptions import CancelProcess
+from superos.helpers.exceptions import CancelProcess
 from superos.Config.Config import Config
 from superos import bot
 from telethon import events

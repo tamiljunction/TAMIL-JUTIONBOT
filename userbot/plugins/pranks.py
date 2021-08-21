@@ -21,7 +21,7 @@ from telegraph import exceptions, upload_file
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
 from superos import CMD_HELP
-from superos.helperss.functions import (
+from superos.helpers.functions import (
     convert_toimage,
     deEmojify,
     phcomment,
