@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "Config.sample_config"
+          find: "from var import var"
 
-          replace: "superos.Config.sample_config"
+          replace: "from . import *"
 
       - name: Create Pull Request
 
