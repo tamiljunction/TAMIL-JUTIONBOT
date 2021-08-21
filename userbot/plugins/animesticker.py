@@ -3,7 +3,7 @@ import random
 import re
 
 from userbot.cmdhelp import CmdHelp
-from userbot.events import register
+from superos.op.events import register
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 EMOJI_PATTERN = re.compile(

@@ -157,7 +157,7 @@ def load_module(shortname):
         sys.modules["LEGENDBOT.utils"] = superos.utils
         sys.modules["LEGENDBOT"] = userbot
         # support for paperplaneextended
-        sys.modules["userbot.events"] = superos.utils
+        sys.modules["superos.op.events"] = superos.utils
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
