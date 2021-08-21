@@ -11,11 +11,11 @@ from telethon import version
 LEGEND_USER = bot.me.first_name
 LEGEND = bot.uid
 mention = f"[{LEGEND_USER}](tg://user?id={LEGEND})"
-LEGEND_logo = "./userbot/resources/pics/LEGENDBOT_LOGO.jpg"
-cjb = "./userbot/resources/pics/cjb.jpg"
-restlo = "./userbot/resources/pics/rest.jpeg"
-shuru = "./hellbot/resources/pics/shuru.jpg"
-shhh = "./hellbot/resources/pics/chup_madarchod.jpeg"
+LEGEND_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
+cjb = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+restlo = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+shuru = "./hellbot/resources/pics/-4965507108355287505_121.jpg"
+shhh = "./hellbot/resources/pics/-4965507108355287505_121.jpg"
 hl = Config.COMMAND_HAND_LER
 shl = Config.SUDO_HANDLER
 tel_ver = version.__LEGENDversion__
