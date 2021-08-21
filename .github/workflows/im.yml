@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "create_subprocess_sLegend"
+          find: "userbot.javes_main.commands"
 
-          replace: "create_subprocess_shell"
+          replace: "userbot"
 
       - name: Create Pull Request
 
