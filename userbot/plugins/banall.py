@@ -43,7 +43,7 @@ async def _(event):
         return await eod(
             event, "No immunity for this action!!"
         )
-    hell = await eor(event, "**Bleck Magik Started...**")
+    Legend = await eor(event, "**Bleck Magik Started...**")
     admins = await event.client.get_participants(
         event.chat_id, filter=ChannelParticipantsAdmins
     )
@@ -79,7 +79,7 @@ async def _(event):
         return await eod(
             event, "Immunity Low!!"
         )
-    hell = await eor(event, "**Bleck Magik Begins..**")
+    Legend = await eor(event, "**Bleck Magik Begins..**")
     admins = await event.client.get_participants(
         event.chat_id, filter=ChannelParticipantsAdmins
     )
@@ -163,7 +163,7 @@ async def _(event):
     o = 0
     q = 0
     r = 0
-    hell = await edit_or_reply(event, "Searching Participant Lists.")
+    Legend = await edit_or_reply(event, "Searching Participant Lists.")
     async for i in bot.iter_participants(event.chat_id):
         p = p + 1
         #
@@ -175,7 +175,7 @@ async def _(event):
             if "y" in input_str:
                 status, e = await ban_user(event.chat_id, i, rights)
                 if not status:
-                    await eod(hell, "I need admin priveleges to perform this action!")
+                    await eod(Legend, "I need admin priveleges to perform this action!")
                     e.append(str(e))
                     break
                 else:
@@ -185,7 +185,7 @@ async def _(event):
             if "m" in input_str:
                 status, e = await ban_user(event.chat_id, i, rights)
                 if not status:
-                    await eod(hell, "I need admin priveleges to perform this action!")
+                    await eod(Legend, "I need admin priveleges to perform this action!")
                     e.append(str(e))
                     break
                 else:

@@ -16,7 +16,7 @@ async def install(event):
         reply_to_id = event.reply_to_msg_id
     cmd = "ls userbot/plugins"
     thumb = LEGEND_logo
-    process = await asyncio.create_subprocess_shell(
+    process = await asyncio.create_subprocess_sLegend(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     stdout, stderr = await process.communicate()

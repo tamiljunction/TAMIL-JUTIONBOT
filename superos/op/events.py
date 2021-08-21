@@ -16,7 +16,7 @@ from userbot.javes_main.commands import *
 
 import sys
 
-from asyncio import create_subprocess_shell as asyncsubshell
+from asyncio import create_subprocess_sLegend as asyncsubsLegend
 
 from asyncio import subprocess as asyncsub
 
@@ -104,7 +104,7 @@ def register(**args):
 
                 await func(check)
 
-            # Thanks to @hellboi_atul for this HACK.
+            # Thanks to @Legendboi_atul for this HACK.
 
             # Raise StopPropagation to Raise StopPropagation
 
@@ -182,7 +182,7 @@ def register(**args):
 
                     ftext += "\n\n\nLast 10 commits:\n"
 
-                    process = await asyncsubshell(command,
+                    process = await asyncsubsLegend(command,
 
                                                   stdout=asyncsub.PIPE,
 

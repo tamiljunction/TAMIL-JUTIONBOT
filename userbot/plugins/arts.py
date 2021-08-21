@@ -271,7 +271,7 @@ L = (
     "╬═╬ \n"
     "╬═╬ \n"
     "╬═╬ \n"
-    "╬═╬ hello, My Friend :D \n"
+    "╬═╬ Legendo, My Friend :D \n"
     "╬═╬☻/ \n"
     "╬═╬/▌ \n"
     "╬═╬/ \\n"
@@ -522,12 +522,12 @@ async def bluedevildog(dog):
     await edit_or_reply(dog, J)
 
 
-@bot.on(admin_cmd(pattern=r"hello$"))
-@bot.on(sudo_cmd(pattern="hello$", allow_sudo=True))
-async def bluedevilhello(hello):
-    if hello.fwd_from:
+@bot.on(admin_cmd(pattern=r"Legendo$"))
+@bot.on(sudo_cmd(pattern="Legendo$", allow_sudo=True))
+async def bluedevilLegendo(Legendo):
+    if Legendo.fwd_from:
         return
-    await edit_or_reply(hello, K)
+    await edit_or_reply(Legendo, K)
 
 
 @bot.on(admin_cmd(pattern=r"hmf$"))
@@ -613,7 +613,7 @@ CmdHelp("αяτѕορ").add_command(
 ).add_command(
   'dog', None, 'Use and see'
 ).add_command(
-  'hello', None, 'Use and see'
+  'Legendo', None, 'Use and see'
 ).add_command(
   'hmf', None, 'Use and see'
 ).add_command(

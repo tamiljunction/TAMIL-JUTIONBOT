@@ -82,8 +82,8 @@ async def anilist(event):
 @bot.on(admin_cmd(pattern="anime(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="anime(?: |$)(.*)", allow_sudo=True))
 async def nope(hel_):
-    hell = hel_.pattern_match.group(1)
-    if not hell:
+    Legend = hel_.pattern_match.group(1)
+    if not Legend:
         if hel_.is_reply:
             (await hel_.get_reply_message()).message
         else:
@@ -91,7 +91,7 @@ async def nope(hel_):
             )
             return
 
-    troll = await bot.inline_query("AniFluidbot", f".anime {(deEmojify(hell))}")
+    troll = await bot.inline_query("AniFluidbot", f".anime {(deEmojify(Legend))}")
 
     await troll[0].click(
         hel_.chat_id,
@@ -105,8 +105,8 @@ async def nope(hel_):
 @bot.on(admin_cmd(pattern="manga(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="manga(?: |$)(.*)", allow_sudo=True))
 async def nope(hel_):
-    hell = hel_.pattern_match.group(1)
-    if not hell:
+    Legend = hel_.pattern_match.group(1)
+    if not Legend:
         if hel_.is_reply:
             (await hel_.get_reply_message()).message
         else:
@@ -114,7 +114,7 @@ async def nope(hel_):
             )
             return
 
-    troll = await bot.inline_query("AniFluidbot", f".manga {(deEmojify(hell))}")
+    troll = await bot.inline_query("AniFluidbot", f".manga {(deEmojify(Legend))}")
 
     await troll[0].click(
         hel_.chat_id,
@@ -128,8 +128,8 @@ async def nope(hel_):
 @bot.on(admin_cmd(pattern="character(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="character(?: |$)(.*)", allow_sudo=True))
 async def nope(hel_):
-    hell = hel_.pattern_match.group(1)
-    if not hell:
+    Legend = hel_.pattern_match.group(1)
+    if not Legend:
         if hel_.is_reply:
             (await hel_.get_reply_message()).message
         else:
@@ -137,7 +137,7 @@ async def nope(hel_):
             )
             return
 
-    troll = await bot.inline_query("AniFluidbot", f".character {(deEmojify(hell))}")
+    troll = await bot.inline_query("AniFluidbot", f".character {(deEmojify(Legend))}")
 
     await troll[0].click(
         hel_.chat_id,

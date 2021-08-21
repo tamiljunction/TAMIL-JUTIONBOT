@@ -110,10 +110,10 @@ async def cri(e):
 
 @bot.on(admin_cmd(pattern="hey$", outgoing=True))
 @bot.on(sudo_cmd(pattern="hey$", allow_sudo=True))
-async def hoi(hello):
+async def hoi(Legendo):
     """ Greet everyone! """
-    if not hello.text[0].isalpha() and hello.text[0] not in ("/", "#", "@", "!"):
-        await edit_or_reply(hello, random.choice(HELLOSTR))
+    if not Legendo.text[0].isalpha() and Legendo.text[0] not in ("/", "#", "@", "!"):
+        await edit_or_reply(Legendo, random.choice(HELLOSTR))
 
 
 @bot.on(admin_cmd(pattern="shrug$", outgoing=True))

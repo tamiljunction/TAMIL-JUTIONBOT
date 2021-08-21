@@ -1,4 +1,4 @@
-# Plugin made by @hellboi_atul for DARK COBRA..
+# Plugin made by @Legendboi_atul for DARK COBRA..
 # You can use this..but don't edit/remove these comment lines..
 # This module fetches the link from YouTube for the given query..
 # merged .uta

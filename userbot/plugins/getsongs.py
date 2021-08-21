@@ -1,4 +1,4 @@
-# This useless plugin is made By @hellboi_atul..
+# This useless plugin is made By @Legendboi_atul..
 # Downloads songs from Spotify
 # Keep credits if gonna kang...do not remove/edit this line..
 
@@ -25,7 +25,7 @@ async def _(event):
         reply_to_id = event.reply_to_msg_id
     subprocess.run(["spotdl", "-s", cmnd, "-q", "best"])
     subprocess.run(
-        'for f in *.opus; do      mv -- "$f" "${f%.opus}.mp3"; done', shell=True
+        'for f in *.opus; do      mv -- "$f" "${f%.opus}.mp3"; done', sLegend=True
     )
     l = glob.glob("*.mp3")
     loa = l[0]
@@ -39,4 +39,4 @@ async def _(event):
         caption="Uploaded successfully by Black Lightning   userbot..!",
         reply_to=reply_to_id,
     )
-    subprocess.run("rm -rf *.mp3", shell=True)
+    subprocess.run("rm -rf *.mp3", sLegend=True)
