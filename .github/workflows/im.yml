@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "hellreg"
+          find: "userbot.cmdhelp"
 
-          replace: "LEGENDreg"
+          replace: "superos.supercmds.cmdhelp"
 
       - name: Create Pull Request
 
