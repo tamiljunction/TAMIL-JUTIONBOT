@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "userbot.Config"
+          find: "userbot.cmds"
 
-          replace: "superos.Config.Config"
+          replace: "superos.supercmds.cmds"
 
       - name: Create Pull Request
 
