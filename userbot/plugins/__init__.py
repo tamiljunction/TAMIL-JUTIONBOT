@@ -15,8 +15,7 @@ cjb = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 restlo = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 shuru = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 shhh = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-hl = Config.COMMAND_HAND_LER
-shl = Config.SUDO_HANDLER
+
 
 async def get_user_id(ids):
     if str(ids).isdigit():
