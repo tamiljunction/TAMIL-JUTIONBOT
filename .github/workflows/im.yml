@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "userbot.javes_main.commands"
+          find: "Legendbot.config"
 
-          replace: "userbot"
+          replace: "superos.Config"
 
       - name: Create Pull Request
 
