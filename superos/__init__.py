@@ -5,10 +5,10 @@ from telethon.sessions import StringSession
 from telethon import TelegramClient
 from superos.helpers import functions as simpdef
 from superos.Config.Config import Config
-from var import Var
+from . import Var
 
 StartTime = time.time()
-LEGENDversion = "2.ο"
+LEGENDversion = "⚡2.O⚡"
 botversion = "1.ο"
 
 os.system("pip install --upgrade pip")
