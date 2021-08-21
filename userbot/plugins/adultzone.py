@@ -22,7 +22,7 @@ async def boobs(event):
     pic_loc = os.path.join(Var.TEMP_DOWNLOAD_DIRECTORY, "bobs.jpg")
     a = await event.reply("Finding some big boobs for u 🧐")
     await asyncio.sleep(0.5)
-    await a.edit("Sending some big boobs🤪")
+    await a.edit("Sending Some Bigs Boobs")
     nsfw = requests.get("http://api.oboobs.ru/noise/1").json()[0]["preview"]
     urllib.request.urlretrieve("http://media.oboobs.ru/{}".format(nsfw), pic_loc)
     await event.client.send_file(event.chat_id, pic_loc, force_document=False)
