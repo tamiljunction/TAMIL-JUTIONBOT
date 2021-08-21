@@ -165,7 +165,7 @@ async def mod(event):
     await tap[0].click(event.chat_id)
     await event.delete()
 
-CmdHelp("app").add_command(
+CmdHelp("𝚊𝚙𝚙").add_command(
   'app', '<app name>', 'Searches the app in the playstore and provides the link to the app in playstore and fetchs app details'
 ).add_command(
   'mods', '<app name>', 'Searches the modded/premium app'
