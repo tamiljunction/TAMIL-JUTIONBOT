@@ -26,7 +26,7 @@ async def _(event):
         event.chat_id, "CAADAQADRwADnjOcH98isYD5RJTwAg"
     )
     text2 = await event.reply(
-        f"**[{DEFAULTUSER}]({USERNAME}) :** I have to call discussion😯"
+        f"**[{DEFAULTUSER}]({USERNAME}) :** 𝙸 𝙷𝚊𝚟𝚎 𝚃𝚘 𝙲𝚊𝚕𝚕 𝙳𝚒𝚜𝚌𝚞𝚜𝚜𝚒𝚘𝚗😯"
     )
     await asyncio.sleep(3)
     await stcr1.delete()
@@ -43,12 +43,12 @@ async def _(event):
     stcr3 = await event.client.send_file(
         event.chat_id, "CAADAQADOwADnjOcH77v3Ap51R7gAg"
     )
-    text4 = await event.reply(f"**Others :** Where???🤨 ")
+    text4 = await event.reply(f"**Others :** 𝚆𝚑𝚎𝚛𝚎???🤨 ")
     await asyncio.sleep(2)
-    await text4.edit(f"**Others :** Who??🤔 ")
+    await text4.edit(f"**Others :** 𝚆𝚑𝚘??🤔 ")
     await asyncio.sleep(2)
     await text4.edit(
-        f"**[{DEFAULTUSER}]({USERNAME}) :** Its {name} , I saw {name}  using🤨 vent,"
+        f"**[{DEFAULTUSER}]({USERNAME}) :** 𝙸𝚝𝚜 {name} , 𝙸 𝚜𝚊𝚠 {name}  u𝚞𝚜𝚒𝚗𝚐🤨 𝚟𝚎𝚗𝚝,"
     )
     await asyncio.sleep(3)
     await text4.edit(f"**Others :**Okay.. 😲Vote {name} ")
@@ -136,7 +136,7 @@ async def _(event):
         )
 
 
-CmdHelp("αмοиgυѕ").add_command(
+CmdHelp("𝚊𝚖𝚘𝚗𝚐𝚞𝚜").add_command(
   'imp', 'Name/username', 'Finds the imposter with sticker. Imposter-True'
 ).add_command(
   'impn', 'Name/Username', 'Finds the imposter with sticker. Imposter-False'
