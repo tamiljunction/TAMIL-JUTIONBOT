@@ -17,7 +17,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from Legendbot import *
-from Legendbot.config import Config
+from superos.Config import Config
 from Legendbot.helpers import *
 from Legendbot.utils import *
 

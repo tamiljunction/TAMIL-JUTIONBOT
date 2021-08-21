@@ -4,7 +4,7 @@ import re
 from telethon import events
 
 from Legendbot import bot
-from Legendbot.config import Config
+from superos.Config import Config
 
 
 # forward check
