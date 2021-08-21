@@ -5,20 +5,20 @@ from telethon.sessions import StringSession
 from telethon import TelegramClient
 from superos.helpers import functions as simpdef
 from superos.Config.Config import Config
+from superos.Config.var import var
 
-from . import *
 
 StartTime = time.time()
 LEGENDversion = "⚡2.O⚡"
 botversion = "1.ο"
 
 os.system("pip install --upgrade pip")
-if Config.LEGEND_STRING:
+if Var.LEGEND_STRING:
     session_name = str(Config.LEGEND_STRING)
-    bot = TelegramClient(StringSession(session_name), Config.APP_ID, Config.API_HASH)
+    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
 else:
     session_name = "startup"
-    bot = TelegramClient(session_name, Config.APP_ID, Config.API_HASH)
+    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
 DEVS = [1856561912]
 CMD_LIST = {}
