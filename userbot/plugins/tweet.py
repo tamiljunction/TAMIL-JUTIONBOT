@@ -1,7 +1,7 @@
 
 
 from userbot import CMD_HELP
-from userbot.helpers.functions import (
+from superos.helperss.functions import (
     changemymind,
     deEmojify,
     kannagen,

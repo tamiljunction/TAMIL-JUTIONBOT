@@ -9,7 +9,7 @@ import re
 from userbot import bot
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-from userbot.helpers.functions import deEmojify
+from superos.helperss.functions import deEmojify
 
 
 @bot.on(admin_cmd(pattern="mev(?: |$)(.*)", outgoing=True))

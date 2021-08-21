@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterDocument
 
 from userbot import bot
-from userbot.helpers.functions import deEmojify
+from superos.helperss.functions import deEmojify
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 

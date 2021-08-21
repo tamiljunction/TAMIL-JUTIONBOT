@@ -3,7 +3,7 @@ import sys
 import time
 from telethon.sessions import StringSession
 from telethon import TelegramClient
-from userbot.helpers import functions as simpdef
+from superos.helperss import functions as simpdef
 from userbot.Config import Config
 from var import Var
 
@@ -211,6 +211,6 @@ AFKREASON = None
 SUDO_LIST = {}
 
 
-from userbot.helpers import *
-from userbot.helpers import functions as LEGENDdef
+from superos.helperss import *
+from superos.helperss import functions as LEGENDdef
 from userbot.cmdhelp import CmdHelp

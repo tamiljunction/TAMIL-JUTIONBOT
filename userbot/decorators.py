@@ -17,7 +17,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from userbot import *
-from userbot.helpers import *
+from superos.helperss import *
 from userbot.config import Config
 from userbot.sql import sudo_sql as s_ql
 
