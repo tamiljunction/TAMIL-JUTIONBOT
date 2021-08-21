@@ -144,7 +144,8 @@ if ENV:
         ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
         AWAKE_PIC = os.environ.get("ALIVE_PIC", None)
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None)
-        MY_GROUP = os.environ.get("MY_GROUP", None)
+        MY_GROUP = os.environ.get("MY_GROUP", "@Legend_Userbot")
+        MY_CHANNEL = os.environ.get("MY_CHANNEL", "@Its_Legend")
         BOT_PIC = os.environ.get("ALIVE_PIC", None)
         #auto bio
         BIO_MSG = os.environ.get("ALIVE_MSG", None)
@@ -156,6 +157,7 @@ if ENV:
         )
         STRING_SESSION = os.environ.get("STRING_SESSION", None)
         BOT_MODE = os.environ.get("BOT_MODE", "ON")
+        ABUSE = os.environ.get("ABUSE", None)
         BOT_TRIGGER = os.environ.get("BOT_TRIGGER", "^/")
         BOTMODE_LOG = int(os.environ.get("BOTMODE_LOG", False))
         BOT_TOKEN = os.environ.get("TG_BOT_TOKEN_BF_HER", None) 
