@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "NO_OF_COLUMS_DISPLAYED_IN_H_ME_CMD"
+          find: "CUSTOM_PMPERMIT"
 
-          replace: "NO_OF_COLUMNS"
+          replace: "PM_MSG"
 
       - name: Create Pull Request
 
