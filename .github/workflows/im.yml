@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "Legendbot.config"
+          find: "userbot.decorators"
 
-          replace: "superos.Config"
+          replace: "superos.op.decorators"
 
       - name: Create Pull Request
 
