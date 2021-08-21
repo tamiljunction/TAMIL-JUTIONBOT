@@ -12,10 +12,10 @@ PRO_USER = bot.me.first_name
 Legend = bot.uid
 mention = f"[{PRO_USER}](tg://user?id={Legend})"
 Legend_logo = "./superos/pics/Legendbot_logo.jpg"
-cjb = "./hellbot/resources/pics/cjb.jpg"
-restlo = "./hellbot/resources/pics/rest.jpeg"
-shuru = "./hellbot/resources/pics/shuru.jpg"
-shhh = "./hellbot/resources/pics/chup_madarchod.jpeg"
+cjb = "./Legendbot/resources/pics/cjb.jpg"
+restlo = "./Legendbot/resources/pics/rest.jpeg"
+shuru = "./Legendbot/resources/pics/shuru.jpg"
+shhh = "./Legendbot/resources/pics/chup_madarchod.jpeg"
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
 Legend_ver = __Legend__
