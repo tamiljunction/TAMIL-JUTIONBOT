@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "userbot.functions"
+          find: "userbot.helper"
 
-          replace: "superos.functions"
+          replace: "superos.helpers"
 
       - name: Create Pull Request
 
