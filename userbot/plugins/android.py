@@ -29,9 +29,9 @@ async def kakashi(magisk):
         return
     magisk_repo = "https://raw.githubusercontent.com/topjohnwu/magisk_files/"
     magisk_dict = {
-        "⦁ **Stable**": magisk_repo + "master/stable.json",
-        "⦁ **Beta**": magisk_repo + "master/beta.json",
-        "⦁ **Canary**": magisk_repo + "canary/canary.json",
+        "⦁ **𝚂𝚝𝚊𝚋𝚕𝚎**": magisk_repo + "master/stable.json",
+        "⦁ **𝙱𝚎𝚝𝚊**": magisk_repo + "master/beta.json",
+        "⦁ **𝙲𝚊𝚗𝚊𝚛𝚢**": magisk_repo + "canary/canary.json",
     }
     releases = "**Latest Magisk Releases**\n\n"
     for name, release_url in magisk_dict.items():
@@ -77,12 +77,12 @@ async def device_info(request):
         reply = f"**Search results for {codename}**:\n\n"
         for item in results:
             reply += (
-                f"**ϐяαи∂**: {item['brand']}\n"
-                f"**иαмє**: {item['name']}\n"
-                f"**мο∂єℓ**: {item['model']}\n\n"
+                f"**𝙱𝚛𝚊𝚗𝚍**: {item['brand']}\n"
+                f"**𝙽𝚊𝚖𝚎**: {item['name']}\n"
+                f"**𝙼𝚘𝚍𝚎𝚕**: {item['model']}\n\n"
             )
     else:
-        reply = f"`Couldn't find info about {codename}!`\n"
+        reply = f"`𝙲𝚘𝚞𝚕𝚍𝚗'𝚝 𝙵𝚒𝚗𝚍 𝙸𝚗𝚏𝚘 𝙰𝚋𝚘𝚞𝚝 {codename}!`\n"
     await edit_or_reply(request, reply)
 
 
@@ -124,9 +124,9 @@ async def codename_info(request):
             results = results[:8]
         for item in results:
             reply += (
-                f"**∂єνιϲє**: {item['device']}\n"
-                f"**иαмє**: {item['name']}\n"
-                f"**мο∂єℓ**: {item['model']}\n\n"
+                f"**𝙳𝚎𝚟𝚒𝚌𝚎**: {item['device']}\n"
+                f"**𝙽𝚊𝚖𝚎**: {item['name']}\n"
+                f"**𝙼𝚘𝚍𝚎𝚕**: {item['model']}\n\n"
             )
     else:
         reply = f"`Couldn't find {device} codename!`\n"
@@ -232,7 +232,7 @@ async def twrp(request):
     await edit_or_reply(request, reply)
 
 
-CmdHelp("αи∂яοι∂").add_command(
+CmdHelp("𝚊𝚗𝚍𝚛𝚘𝚒𝚍").add_command(
   'magisk', None, 'Get latest magisk release'
 ).add_command(
   'device', '<codename>', 'Get info about android device codename or model'
