@@ -164,7 +164,7 @@ async def install(event):
 
 
 
-CmdHelp("ϲοяє").add_command(
+CmdHelp("𝚌𝚘𝚛𝚎").add_command(
   "install", "<reply to a .py file>", "Installs the replied python file if suitable to userbot codes. (TEMPORARILY DISABLED AS HACKERS MAKE YOU INSTALL SOME PLUGINS AND GET YOUR DATA)"
 ).add_command(
   "uninstall", "<plugin name>", "Uninstalls the given plugin from userbot. To get that again do .restart", "uninstall alive"
