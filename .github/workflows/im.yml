@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "CUSTOM_PMPERMIT"
+          find: "PMPERMIT_PIC"
 
-          replace: "PM_MSG"
+          replace: "PM_PIC"
 
       - name: Create Pull Request
 
