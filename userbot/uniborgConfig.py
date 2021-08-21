@@ -82,7 +82,7 @@ if ENV:
         if PM_LOGGR_BOT_API_ID:
             PM_LOGGR_BOT_API_ID = int(PM_LOGGR_BOT_API_ID)
        # in pm permit pic
-        PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
+        PM_PIC = os.environ.get("PM_PIC", None)
         CUSTOM_PMPERMIT_TEXT = os.environ.get("CUSTOM_PMPERMIT_TEXT", None)
 
         # For Databases

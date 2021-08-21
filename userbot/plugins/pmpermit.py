@@ -15,10 +15,10 @@ from LEGENDBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 PM_TRUE_FALSE = Config.PM_DATA
 
-PMPERMIT_PIC = os.environ.get("PMPERMIT_PIC", None)
+PM_PIC = os.environ.get("PM_PIC", None)
 LEGENDPIC = (
-    PMPERMIT_PIC
-    if PMPERMIT_PIC
+    PM_PIC
+    if PM_PIC
     else "https://telegra.ph/file/7b2fefb2c78c90734444d.jpg"
 )
 PM_WARNS = {}
