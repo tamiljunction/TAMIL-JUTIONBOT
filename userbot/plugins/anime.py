@@ -148,7 +148,7 @@ async def nope(hel_):
     await hel_.delete()
 #ℓєgєи∂
 
-CmdHelp("αиιмє").add_command(
+CmdHelp("𝚊𝚗𝚒𝚖𝚎").add_command(
   "anime", "<anime name>", "Searches for the given anime and sends the details.", "anime violet evergarden"
 ).add_command(
   "manga", "<manga name>", "Searches for the given manga and sends the details.", "manga Jujutsu kaisen"
