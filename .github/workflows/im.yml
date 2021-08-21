@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "hell"
+          find: "create_subprocess_sLegend"
 
-          replace: "Legend"
+          replace: "create_subprocess_shell"
 
       - name: Create Pull Request
 
