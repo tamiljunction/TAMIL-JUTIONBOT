@@ -6,7 +6,7 @@ from telethon import TelegramClient
 from superos.helpers import functions as simpdef
 from superos.Config.Config import Config
 
-from superos.Config.sample_config import Var
+from superos.superos.Config.sample_config import Var
 
 StartTime = time.time()
 LEGENDversion = "⚡2.O⚡"
