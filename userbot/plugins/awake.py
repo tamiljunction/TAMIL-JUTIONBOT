@@ -4,7 +4,7 @@ from telethon import version
 from userbot import ALIVE_NAME, StartTime, LEGENDversion
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-
+from . import *
 async def reply_id(event):
     reply_to_id = None
     if event.sender_id in Config.SUDO_USERS:
@@ -67,11 +67,11 @@ async def amireallyalive(event):
         
         LEGEND_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
         LEGEND_caption += f"     💫 𝕷êgëñd𝕭øt ιѕ αωακє 💫\n"
-        LEGEND_caption += f"•⚡• 𝕷êgëñd𝕭øt    : ν2.ο\n"
-        LEGEND_caption += f"•⚡• 𝕿єℓєτнοи      : `{version.__version__}`\n"
-        LEGEND_caption += f"•⚡• 𝖀ptïmê          : `{uptime}`\n"
-        LEGEND_caption += f"•⚡• 𝕮нαииєℓ        : [𝕮нαииєℓ](t.me/Its_LegendBot)\n"
-        LEGEND_caption += f"•⚡• Mγ Gяουρ : {CUSTOM_YOUR_GROUP}\n"   
+        LEGEND_caption += f"•🔥•     : ν2.ο\n"
+        LEGEND_caption += f"•🔥• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽      : `{version.__version__}`\n"
+        LEGEND_caption += f"•🔥• 𝚄𝙿𝚃𝙸𝙼𝙴         : `{uptime}`\n"
+        LEGEND_caption += f"•🔥• 𝙲𝙷𝙰𝙽𝙽𝙴𝙻        : [𝕮нαииєℓ](t.me/Its_LegendBot)\n"
+        LEGEND_caption += f"•🔥• 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 : {CUSTOM_YOUR_GROUP}\n"   
 
         await event.client.send_file(
             event.chat_id, LEGEND_IMG, caption=LEGEND_caption, reply_to=reply_to_id
@@ -90,6 +90,6 @@ async def amireallyalive(event):
             f"🔱 σωɳεɾ         : [ℓєgєи∂](t.me/Legend_Mr_Hacker)\n"
         )
 
-CmdHelp("αωακє").add_command(
+CmdHelp("𝚊𝚠𝚊𝚔𝚎").add_command(
     'bot', None, 'υѕє αи∂ ѕєє'
 ).add()
