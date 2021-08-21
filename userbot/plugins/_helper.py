@@ -8,7 +8,7 @@ from userbot import ALIVE_NAME, CMD_LIST, SUDO_LIST
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
-@bot.on(admin_cmd(pattern="legend ?(.*)", outgoing=True))
+@bot.on(admin_cmd(pattern="op ?(.*)", outgoing=True))
 async def yardim(event):
     if event.fwd_from:
         return
@@ -33,14 +33,14 @@ async def yardim(event):
           await event.edit(input_str + " is not a valid plugin!")
 
 
-@bot.on(sudo_cmd(allow_sudo=True, pattern="legend ?(.*)"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern="op ?(.*)"))
 async def info(event):
     if event.fwd_from:
         return
     input_str = event.pattern_match.group(1)
     if input_str == "text":
         string = (
-            "Total {count} commands found in {plugincount} sudo plugins of LEGENDBOT\n\n"
+            "♦️Total {count} commands found in {plugincount} sudo plugins of  𝖑𝖊ɠêɳ̃dẞø✞︎\n\n"
         )
         LEGENDcount = 0
         plugincount = 0
@@ -89,7 +89,7 @@ async def info(event):
     else:
         string = "<b>Please specify which plugin do you want help for !!\
             \nNumber of plugins : </b><code>{count}</code>\
-            \n<b>Usage:</b> <code>.legend plugin name</code>\n\n"
+            \n<b>Usage:</b> <code>.op plugin name</code>\n\n"
         LEGENDcount = 0
         for i in sorted(SUDO_LIST):
             string += "≈ " + f"<code>{str(i)}</code>"
