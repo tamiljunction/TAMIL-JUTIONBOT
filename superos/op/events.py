@@ -16,7 +16,7 @@ from userbot.javes_main.commands import *
 
 import sys
 
-from asyncio import create_subprocess_sLegend as asyncsubsLegend
+from asyncio import create_subprocess_shell as asyncsubsLegend
 
 from asyncio import subprocess as asyncsub
 
