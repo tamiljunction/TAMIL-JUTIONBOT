@@ -4,7 +4,6 @@ from userbot.Config import Config
 from userbot.helpers.functions import *
 from userbot.cmdhelp import CmdHelp
 import datetime
-from userbot.version import LEGENDversion
 from telethon import version
 
 
@@ -14,11 +13,10 @@ mention = f"[{LEGEND_USER}](tg://user?id={LEGEND})"
 LEGEND_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
 cjb = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 restlo = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-shuru = "./hellbot/resources/pics/-4965507108355287505_121.jpg"
-shhh = "./hellbot/resources/pics/-4965507108355287505_121.jpg"
+shuru = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+shhh = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 hl = Config.COMMAND_HAND_LER
 shl = Config.SUDO_HANDLER
-tel_ver = version.__LEGENDversion__
 
 async def get_user_id(ids):
     if str(ids).isdigit():
