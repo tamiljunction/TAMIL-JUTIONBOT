@@ -1,4 +1,4 @@
-from superos.Config.sample_config import Config
+from superos.superos.Config.sample_config import Config
 
 
 class Development(Config):
