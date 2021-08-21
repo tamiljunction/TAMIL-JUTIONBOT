@@ -91,6 +91,6 @@ async def amireallyalive(alive):
             f"🔱 σωɳεɾ         : [ℓєgєи∂](t.me/Legend_Mr_Hacker)\n"
         )
 
-CmdHelp("ɓσƭรƭαƭµร").add_command(
+CmdHelp("𝚋𝚘𝚝𝚜𝚝𝚊𝚝𝚜").add_command(
     'bot', None, 'υѕє αи∂ ѕєє'
 ).add()
