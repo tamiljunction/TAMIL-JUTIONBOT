@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "helperss"
+          find: "Config.sample_config"
 
-          replace: "helpers"
+          replace: "superos.Config.sample_config"
 
       - name: Create Pull Request
 
