@@ -14,14 +14,14 @@ async def reply_id(event):
     return reply_to_id
 
 
-DEFAULTUSER = ALIVE_NAME or "ℓєgєи∂ϐοτ"
+DEFAULTUSER = ALIVE_NAME or "✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳"
 LEGEND_IMG = Config.ALIVE_PIC
-CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "ℓєgєи∂ Choice ℓєgєи∂ϐοτ"
+CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "ℓєgєи∂ Choice 𝖑𝖊ɠêɳ̃dẞø✞︎"
 CUSTOM_MY_GROUP =Config.MY_GROUP or "@Legend_Userbot"
 
-USERID = bot.uid
+Legend = bot.uid
 
-mention = f"[{DEFAULTUSER}](tg://user?id={USERID})"
+mention = f"[{DEFAULTUSER}](tg://user?id={Legend})"
 
 
 def get_readable_time(seconds: int) -> str:
@@ -66,13 +66,13 @@ async def amireallyalive(alive):
         LEGEND_caption = f"**{CUSTOM_ALIVE_TEXT}**\n"
         
         LEGEND_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
-        LEGEND_caption += f"     💫 𝕭𝖔𝖙 𝕾𝖙𝖆𝖙𝖚𝖘 💫\n"
-        LEGEND_caption += f"•⚜️• 𝕺ωɳεɾ       : {mention}\n\n"
-        LEGEND_caption += f"•⚡• 𝕷êgëñd𝕭øt  : {LEGENDversion}\n"
-        LEGEND_caption += f"•⚡• 𝕿єℓєτнοи   : `{version.__version__}`\n"
-        LEGEND_caption += f"•⚡• 𝖀ptïmê       : `{uptime}`\n"
-        LEGEND_caption += f"•⚡• Gяουρ        : [𝕲𝖗𝖔𝖚𝖕](t.me/Legend_Userbot)\n"
-        LEGEND_caption += f"•⚡• Mγ Gяουρ : {CUSTOM_MY_GROUP}\n"   
+        LEGEND_caption += f"     💫 ẞø✞︎ ẞ✞︎α✞︎µѕ 💫\n"
+        LEGEND_caption += f"•⚜️• Øաղ̃ҽ̈ɾ       : {mention}\n\n"
+        LEGEND_caption += f"•⚡• 𝖑𝖊ɠêɳ̃dẞø✞︎  : {LEGENDversion}\n"
+        LEGEND_caption += f"•⚡• ✞︎ҽ̀lҽ́ƭhøղ̃   : `{version.__version__}`\n"
+        LEGEND_caption += f"•⚡• 𝕌ρƭเɱε       : `{uptime}`\n"
+        LEGEND_caption += f"•⚡• 𝔾ɾσµρ        : [𝔾ɾσµρ](t.me/Legend_Userbot)\n"
+        LEGEND_caption += f"•⚡• 𝕄ყ 𝔾ɾσµρ : {CUSTOM_MY_GROUP}\n"   
 
         await alive.client.send_file(
             alive.chat_id, LEGEND_IMG, caption=LEGEND_caption, reply_to=reply_to_id
