@@ -17,7 +17,7 @@ async def reply_id(event):
 DEFAULTUSER = ALIVE_NAME or "ℓєgєи∂ϐοτ"
 LEGEND_IMG = Config.AWAKE_PIC
 CUSTOM_ALIVE_TEXT = Config.ALIVE_MSG or "ℓєgєи∂ Choice ℓєgєи∂ϐοτ"
-CUSTOM_MY_GROUP =Config.MY_GROUP or "@Legend_Userbot"
+CUSTOM_YOUR_GROUP =Config.YOUR_GROUP or "@Legend_Userbot"
 
 USERID = bot.uid
 
@@ -71,7 +71,7 @@ async def amireallyalive(event):
         LEGEND_caption += f"•⚡• 𝕿єℓєτнοи      : `{version.__version__}`\n"
         LEGEND_caption += f"•⚡• 𝖀ptïmê          : `{uptime}`\n"
         LEGEND_caption += f"•⚡• 𝕮нαииєℓ        : [𝕮нαииєℓ](t.me/Its_LegendBot)\n"
-        LEGEND_caption += f"•⚡• Mγ Gяουρ : {CUSTOM_MY_GROUP}\n"   
+        LEGEND_caption += f"•⚡• Mγ Gяουρ : {CUSTOM_YOUR_GROUP}\n"   
 
         await event.client.send_file(
             event.chat_id, LEGEND_IMG, caption=LEGEND_caption, reply_to=reply_to_id

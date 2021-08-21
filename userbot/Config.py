@@ -144,7 +144,7 @@ if ENV:
         ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
         AWAKE_PIC = os.environ.get("ALIVE_PIC", None)
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None)
-        MY_GROUP = os.environ.get("MY_GROUP", "@Legend_Userbot")
+        YOUR_GROUP = os.environ.get("YOUR_GROUP", "@Legend_Userbot")
         MY_CHANNEL = os.environ.get("MY_CHANNEL", "@Its_Legend")
         BOT_PIC = os.environ.get("ALIVE_PIC", None)
         #auto bio
