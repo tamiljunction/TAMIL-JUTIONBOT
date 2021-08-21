@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "userbot.events"
+          find: "hellreg"
 
-          replace: "superos.op.events"
+          replace: "LEGENDreg"
 
       - name: Create Pull Request
 
