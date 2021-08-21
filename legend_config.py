@@ -38,7 +38,7 @@ if ENV:
         MIRROR_ACE_API_KEY = os.environ.get("MIRROR_ACE_API_KEY", None)
         MIRROR_ACE_API_TOKEN = os.environ.get("MIRROR_ACE_API_KEY", None)
         # Telegram BOT Token from @BotFather
-        TG_BOT_TOKEN_BF_HER = os.environ.get("TG_BOT_TOKEN_BF_HER", None)
+        BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
         TG_BOT_USER_NAME_BF_HER = os.environ.get("TG_BOT_USER_NAME_BF_HER", None)
         #spootifie
         SPOTIFY_USERNAME = os.environ.get("SPOTIFY_USERNAME", None)
