@@ -1,1 +1,1 @@
-from .vars import Config
+from . import Config
