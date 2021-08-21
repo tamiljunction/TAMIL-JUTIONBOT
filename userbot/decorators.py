@@ -17,12 +17,12 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from userbot import *
-from superos.helperss import *
-from userbot.config import Config
-from userbot.sql import sudo_sql as s_ql
+from superos.helpers import *
+from superos.config import Config
+from superos.plugins.sqlhelper import sudo_sql as s_ql
 
 # admin cmd or normal user cmd
-def admin_cmd(pattern=None, command=None, **args):
+def Legend_cmd(pattern=None, command=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
@@ -46,7 +46,7 @@ def admin_cmd(pattern=None, command=None, **args):
                 hellreg = "^" + Config.HANDLER
                 reg = Config.HANDLER[1]
             elif len(Config.HANDLER) == 1:
-                hellreg = "^\\" + Config.HANDLER
+                legendreg = "^\\" + Config.HANDLER
                 reg = Config.HANDLER
             args["pattern"] = re.compile(hellreg + pattern)
             if command is not None:
@@ -74,7 +74,7 @@ def admin_cmd(pattern=None, command=None, **args):
         args["outgoing"] = True
 
     # blacklisted chats. 
-    # hellbot will not respond in these chats.
+    # legendbot will not respond in these chats.
     args["blacklist_chats"] = True
     black_list_chats = list(Config.BL_CHAT)
     if black_list_chats:
@@ -139,7 +139,7 @@ def sudo_cmd(pattern=None, command=None, **args):
     elif "incoming" in args and not args["incoming"]:
         args["outgoing"] = True
     # blacklisted chats
-    # hellbot won't respond here
+    # Legendbot won't respond here
     args["blacklist_chats"] = True
     black_list_chats = list(Config.BL_CHAT)
     if black_list_chats:
