@@ -1,4 +1,4 @@
-from userbot.javes_main.commands import *
+from userbot import *
 
 # Copyright (C) 2019 The Raphielscape Company LLC.
 
