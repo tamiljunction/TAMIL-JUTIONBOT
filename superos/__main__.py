@@ -5,7 +5,6 @@ from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
 import os
 from . import *
 from telethon import TelegramClient
-from var import Var
 from superos.Config.Config import Config
 from superos.utils import load_module, start_assistant
 from superos import LOAD_PLUG, LOGS, LEGENDversion
