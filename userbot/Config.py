@@ -142,7 +142,7 @@ if ENV:
         MONGO_URI = os.environ.get("MONGO_URI", None)
         #alive
         ALIVE_PIC = os.environ.get("ALIVE_PIC", None)
-        AWAKE_PIC = os.environ.get("ALIVE_PIC", None)
+        AWAKE_PIC = os.environ.get("AWAKE_PIC", None)
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None)
         YOUR_GROUP = os.environ.get("YOUR_GROUP", "@Legend_Userbot")
         MY_CHANNEL = os.environ.get("MY_CHANNEL", "@Its_Legend")
