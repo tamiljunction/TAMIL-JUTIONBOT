@@ -1,7 +1,7 @@
 # Made by @David99q for @LEGEND_Userbot
 
 from LEGENDBOT.utils import *
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 @bot.on(admin_cmd(pattern="wspr ?(.*)"))

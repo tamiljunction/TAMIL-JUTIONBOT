@@ -11,7 +11,7 @@ from telethon.tl import functions
 
 from userbot import CMD_HELP
 from LEGENDBOT.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
   
 @borg.on(admin_cmd(pattern="pbio"))   # pylint:disable=E0602

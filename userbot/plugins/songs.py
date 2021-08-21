@@ -11,7 +11,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import bot
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply, progress
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from superos.helperss.functions import deEmojify
 
 @bot.on(admin_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))

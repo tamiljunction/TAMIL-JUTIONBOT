@@ -15,7 +15,7 @@ from telethon.tl.types import Channel, Chat, InputPhoto, User
 
 from userbot import CMD_HELP, bot
 from LEGENDBOT.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 # ====================== CONSTANT ===============================
 INVALID_MEDIA = "```The extension of the media entity is invalid.```"

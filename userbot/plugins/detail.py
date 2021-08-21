@@ -2,7 +2,7 @@ from userbot import CmdHelp, bot
 from superos.utils import admin_cmd, sudo_cmd
 import asyncio
 from . import *
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("detail").add_command(
    'detailed', None, 'help to get detail of plugin'
 ).add()

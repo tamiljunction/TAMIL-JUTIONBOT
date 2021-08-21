@@ -5,7 +5,7 @@ from telethon.tl.types import InputMessagesFilterDocument
 
 from LEGENDBOT.utils import admin_cmd, load_module
 from var import Var
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 @borg.on(admin_cmd(pattern="extdl$", outgoing=True))
 async def install(event):

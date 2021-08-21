@@ -11,7 +11,7 @@ import barcode
 from barcode.writer import ImageWriter
 
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 @bot.on(admin_cmd(pattern="barcodes ?(.*)"))
 async def _(event):

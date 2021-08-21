@@ -2,7 +2,7 @@
 from telethon.tl.types import ChannelParticipantsAdmins
 
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 CmdHelp("design").add_command(

@@ -5,7 +5,7 @@ By :- Jaskaran ^_^
 Telegram :- @Zero_cool7870
 
 """
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("check").add_command(
    'check', None, 'Use And See'
 ).add_command(

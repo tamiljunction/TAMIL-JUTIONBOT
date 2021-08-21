@@ -6,7 +6,7 @@ import random
 import re
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 @borg.on(admin_cmd(pattern="scramble(\s+[\S\s]+|$)"))

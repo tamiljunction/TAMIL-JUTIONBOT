@@ -19,7 +19,7 @@ async def _(event):
         await event.edit("something is wrong. please try again later.")
 
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("google").add_command(
        'ggl', None, '.ggl search query'
 ).add()

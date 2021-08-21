@@ -6,7 +6,7 @@ import asyncio
 from telethon import functions
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 @bot.on(admin_cmd(pattern=r"dc"))  # pylint:disable=E0602

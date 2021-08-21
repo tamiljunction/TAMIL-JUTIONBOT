@@ -1,7 +1,7 @@
 
 import os
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 import numpy as np
 import requests, re
 from PIL import Image

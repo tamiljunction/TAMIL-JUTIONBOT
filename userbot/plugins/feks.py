@@ -5,7 +5,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 import random, re
 import asyncio
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 
@@ -251,7 +251,7 @@ async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("Globally unmuted successfully..!")
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("feks").add_command(
    'gbun', None, 'A kind of fake gban try it yourself'
 ).add_command(

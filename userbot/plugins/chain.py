@@ -5,7 +5,7 @@ from telethon.tl.functions.messages import SaveDraftRequest
 
 from userbot import CMD_HELP
 from LEGENDBOT.utils import admin_cmd, sudo_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 @bot.on(admin_cmd(pattern="chain$"))

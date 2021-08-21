@@ -6,7 +6,7 @@ import requests
 
 from userbot import *
 from LEGENDBOT.utils import *
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 async def callAPI(search_str):

@@ -1,5 +1,5 @@
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 CmdHelp("check").add_command(

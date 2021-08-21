@@ -1,5 +1,5 @@
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 import asyncio
 import random

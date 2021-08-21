@@ -2,7 +2,7 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("lctg").add_command(
    'lctg', None, 'Check Fake Limitiation'
 ).add()

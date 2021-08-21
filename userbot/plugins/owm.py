@@ -17,7 +17,7 @@ from userbot import CMD_HELP
 from userbot import OPEN_WEATHER_MAP_APPID as OWM_API
 from superos.op.events import errors_handler
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 # ===== CONSTANT =====

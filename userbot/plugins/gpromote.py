@@ -14,7 +14,7 @@ from telethon.tl.types import (ChannelParticipantsAdmins,
 from superos.utils import register, errors_handler
 from superos.utils import admin_cmd
 from userbot import CMD_HELP
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from userbot import bot as borg
 async def get_full_user(event):  
     args = event.pattern_match.group(1).split(':', 1)

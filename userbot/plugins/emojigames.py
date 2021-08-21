@@ -3,7 +3,7 @@ from telethon.tl.types import InputMediaDice
 
 from superos.utils import admin_cmd
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("earth").add_command(
    'dart', None, 'animation'
 ).add_command(

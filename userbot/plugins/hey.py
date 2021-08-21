@@ -1,4 +1,4 @@
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from . import *
 @bot.on(admin_cmd(pattern="hey ?(.*)"))
 async def hi(event):

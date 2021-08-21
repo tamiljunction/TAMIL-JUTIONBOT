@@ -10,7 +10,7 @@ import urllib
 import requests
 from telethon.tl import functions
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 AUTOPFP_PACK = os.environ.get("AUTOPFP_PACK", None)

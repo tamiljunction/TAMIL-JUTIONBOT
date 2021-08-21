@@ -109,7 +109,7 @@ async def DeezLoader(Deezlod):
         await Deezlod.delete()
 
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("gaana").add_command(
     "spd", None, "for searching songs from spotify"
 ).add_command(

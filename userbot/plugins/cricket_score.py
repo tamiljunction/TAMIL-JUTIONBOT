@@ -16,7 +16,7 @@ import urllib.request
 
 from bs4 import BeautifulSoup
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 

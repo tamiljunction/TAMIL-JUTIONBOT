@@ -574,4 +574,4 @@ async def _(event):
         )
 
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp

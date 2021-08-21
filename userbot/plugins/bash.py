@@ -2,7 +2,7 @@ import asyncio
 import io
 import time
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from superos.utils import admin_cmd, sudo_cmd
 from . import *
 

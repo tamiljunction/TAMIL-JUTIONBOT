@@ -36,7 +36,7 @@ def get_country_data(country, world):
     return {"Status": "No information yet about this country!"}
 
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 CmdHelp("coronas").add_command(
    'coronas', None, '.corona <country name>'

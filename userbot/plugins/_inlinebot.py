@@ -12,7 +12,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.channels import JoinChannelRequest
 
 from userbot import *
-from userbot.cmdhelp import *
+from superos.supercmds.cmdhelp import *
 from LEGENDBOT.utils import *
 from userbot.Config import Config
 from userbot import ALIVE_NAME

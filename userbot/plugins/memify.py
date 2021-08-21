@@ -8,7 +8,7 @@ import textwrap
 from PIL import Image, ImageDraw, ImageFont
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from var import Var
 
 # how a lazy guy ports.

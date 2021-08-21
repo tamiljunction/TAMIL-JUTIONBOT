@@ -19,7 +19,7 @@ import requests
 from telethon.tl import functions
 
 from LEGENDBOT.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 COLLECTION_STRING1 = [
     "awesome-batman-wallpapers",

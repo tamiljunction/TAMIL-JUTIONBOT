@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from superos.utils import admin_cmd
 
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("filext").add_command(
     "filext", None, "Get info about a File Extension"
 ).add()

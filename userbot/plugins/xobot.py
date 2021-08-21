@@ -7,7 +7,7 @@ import re
 
 from userbot import bot
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 IF_EMOJI = re.compile(
     "["

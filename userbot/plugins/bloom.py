@@ -7,7 +7,7 @@ Hmmmm U need to config DOWNLOAD_PFP_URL_CLOCK var in Heroku with any telegraph i
 USING THIS PLUGIN CAN RESULT IN ACCOUNT BAN. WE DONT CARE ABOUT BAN, SO WE ARR USING THIS.
 """
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 CmdHelp("bloom").add_command(
    'bloom', None, 'Use And See'

@@ -54,7 +54,7 @@ async def _(event):
 
 
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("iffuci").add_command(
        'iffuci', None, '.iffuci long text'
 ).add()

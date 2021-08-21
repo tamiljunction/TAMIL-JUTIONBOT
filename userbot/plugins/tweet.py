@@ -15,7 +15,7 @@ from superos.helperss.functions import (
     dani,
 )
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 @bot.on(admin_cmd(pattern=r"tweet(?: |$)(.*)"))

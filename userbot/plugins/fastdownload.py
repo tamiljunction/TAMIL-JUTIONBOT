@@ -5,7 +5,7 @@ import os
 import aria2p
 
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("fastdown").add_command(
    'fdownload', None, 'fast download'
 ).add()

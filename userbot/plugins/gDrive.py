@@ -6,7 +6,7 @@ By: @Zero_cool7870
 """
 import requests
 from telethon import events
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 async def download_file_from_google_drive(id):
     URL = "https://docs.google.com/uc?export=download"

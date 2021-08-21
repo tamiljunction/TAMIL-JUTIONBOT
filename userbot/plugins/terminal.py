@@ -6,7 +6,7 @@ from subprocess import PIPE
 from subprocess import run as runapp
 import pybase64
 from sys import executable
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID, bot
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd 
 LEGEND = str(ALIVE_NAME) if ALIVE_NAME else "Du"
@@ -52,7 +52,7 @@ async def dc(event):
 
 
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("τєямιиαℓ").add_command(
   'term', None, 'Reply to python file'
 ).add()

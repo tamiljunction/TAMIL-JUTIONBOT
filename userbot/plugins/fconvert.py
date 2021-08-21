@@ -13,7 +13,7 @@ from telethon.tl.functions.messages import SendMediaRequest
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, progress, sudo_cmd
 from userbot import CMD_HELP
 from superos.helperss.functions import unzip
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 if not os.path.isdir("./temp"):
     os.makedirs("./temp")

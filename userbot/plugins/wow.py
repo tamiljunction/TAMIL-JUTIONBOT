@@ -8,7 +8,7 @@
 from telethon import events
 import asyncio
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from userbot import CMD_HELP
 @borg.on(admin_cmd(pattern=r"wows"))
 async def hapy(event):

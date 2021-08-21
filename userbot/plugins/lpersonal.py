@@ -1,6 +1,6 @@
 import asyncio
 import random
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from . import *
 
 from superos.utils import admin_cmd, sudo_cmd, edit_or_reply

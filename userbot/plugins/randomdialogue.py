@@ -5,7 +5,7 @@ import os
 import sys
 import random
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 @borg.on(admin_cmd(pattern=r"rfilmy$", outgoing=True))

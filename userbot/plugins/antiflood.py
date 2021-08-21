@@ -5,7 +5,7 @@ from telethon.tl.types import ChatBannedRights
 
 from userbot.plugins.sql_helper import antiflood_sql as sql
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 CHAT_FLOOD = sql.__load_flood_settings()
 # warn mode for anti flood

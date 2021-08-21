@@ -2,7 +2,7 @@ import requests
 
 from userbot import CMD_HELP
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 @bot.on(admin_cmd(pattern="dns (.*)", outgoing=True))

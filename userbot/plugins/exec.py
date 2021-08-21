@@ -8,7 +8,7 @@ import io
 import time
 
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("exec").add_command(
    'exec', None, 'See plugin of owner'
 ).add()

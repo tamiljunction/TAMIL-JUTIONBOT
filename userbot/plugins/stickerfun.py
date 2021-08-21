@@ -9,7 +9,7 @@ from telethon.tl.types import InputMessagesFilterDocument
 from userbot import bot
 from superos.helperss.functions import deEmojify
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 # RegEx by https://t.me/c/1220993104/50065
 

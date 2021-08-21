@@ -1,7 +1,7 @@
 import os
 #MADE BY Legend DONT KANG
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 #MADE BY Legend DONT KANG
 #MADE BY Legend DONT KANG
 from telethon.tl.types import MessageMediaPhoto

@@ -10,7 +10,7 @@ import zipfile
 from datetime import datetime
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 extracted = Config.TMP_DOWNLOAD_DIRECTORY + "extracted/"

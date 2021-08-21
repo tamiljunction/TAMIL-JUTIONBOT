@@ -13,7 +13,7 @@ from userbot import CMD_HELP, ALIVE_NAME
 # credits to legend, john snow
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 # credits to legend, john snow
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 # credits to legend, john snow
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
 # credits to legend, john snow

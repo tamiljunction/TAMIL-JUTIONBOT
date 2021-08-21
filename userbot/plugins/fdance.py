@@ -7,7 +7,7 @@ from telethon import events
 from superos.utils import admin_cmd
 
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("fdance").add_command(
    'fdance', None, 'animation'
 ).add_command(

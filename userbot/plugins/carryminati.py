@@ -5,7 +5,7 @@ import os
 import sys
 import random
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 @borg.on(admin_cmd(pattern=r"carry$", outgoing=True))
 async def _(event):
     if event.fwd_from:

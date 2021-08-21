@@ -13,7 +13,7 @@ from telethon.tl.types import (
     MessageMediaPhoto,
 )
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from superos.utils import *
 from . import *
 KANGING_STR = [

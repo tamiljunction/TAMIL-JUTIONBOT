@@ -4,7 +4,7 @@ import requests
 import json
 from superos.utils import admin_cmd
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("ifsc").add_command(
        'ifsc', None, 'search ifsc code of bank'
 ).add()

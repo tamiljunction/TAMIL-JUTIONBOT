@@ -1,6 +1,6 @@
 """Syntax: .whatscrapp as reply to a message copied from @WhatsCRApp"""
 from LEGENDBOT.utils import *
-from userbot.cmdhelp import *
+from superos.supercmds.cmdhelp import *
 # when you are tight on schedule...
 # and also lazy af!!
 

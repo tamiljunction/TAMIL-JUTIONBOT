@@ -6,7 +6,7 @@ from PIL import Image, ImageEnhance, ImageOps
 from telethon.tl.types import DocumentAttributeFilename
 
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("deepfryer").add_command(
    'deepfry', None, 'Reply to image'
 ).add()

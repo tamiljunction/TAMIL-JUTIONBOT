@@ -6,7 +6,7 @@ Syntax: .wikipedia Query"""
 import wikipedia
 
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 @borg.on(admin_cmd(pattern="wikipedia (.*)"))
 async def _(event):

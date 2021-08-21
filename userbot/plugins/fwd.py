@@ -8,7 +8,7 @@ from superos.utils import admin_cmd
 
 
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("fwd").add_command(
     "fwd", None, "reply to any message"
 ).add()

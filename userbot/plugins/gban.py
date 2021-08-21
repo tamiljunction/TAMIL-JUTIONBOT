@@ -1,7 +1,7 @@
 from userbot import bot, CMD_HELP, ALIVE_NAME
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 import html
 from telethon import events
 from telethon.tl.functions.photos import GetUserPhotosRequest

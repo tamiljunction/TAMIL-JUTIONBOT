@@ -10,7 +10,7 @@ async def test(event):
     uwu = event.pattern_match.group(1)
     await event.edit("Added note to Evernote".format(uwu))
     await bot.send_message("@ifttt", "#note {}".format(uwu))
-from userbot.cmdhelp import CmdHelp 
+from superos.supercmds.cmdhelp import CmdHelp 
 CmdHelp("note").add_command(
   'note', None, 'Here u can save note'
 ).add()

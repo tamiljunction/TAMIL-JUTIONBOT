@@ -6,7 +6,7 @@ import glob
 import subprocess
 
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("getsongs").add_command(
     "getsong <songname>", None, "Geting ur music"
 ).add()

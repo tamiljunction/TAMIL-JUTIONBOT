@@ -6,7 +6,7 @@ from os import execl
 from time import sleep
 
 from LEGENDBOT.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from userbot import HEROKU_APP, bot
 
 @bot.on(admin_cmd(pattern="restart"))

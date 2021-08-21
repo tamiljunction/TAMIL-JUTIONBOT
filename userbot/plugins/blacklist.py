@@ -14,7 +14,7 @@ from telethon import events
 from userbot.plugins.sql_helper import blacklist_sql as sql
 from userbot import CMD_HELP
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 @bot.on(events.NewMessage(incoming=True))

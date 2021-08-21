@@ -2,7 +2,7 @@ import re
 
 from userbot import bot
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("deezer").add_command(
    'deezer', None, 'Give me query to search'
 ).add()

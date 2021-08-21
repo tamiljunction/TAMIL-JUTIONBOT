@@ -213,4 +213,4 @@ SUDO_LIST = {}
 
 from superos.helperss import *
 from superos.helperss import functions as LEGENDdef
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp

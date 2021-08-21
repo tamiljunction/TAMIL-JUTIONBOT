@@ -25,7 +25,7 @@ async def _(message):
                 await message.edit(something_else)
             except errors.MessageIdInvalidError:
                 return
-from userbot.cmdhelp import CmdHelp 
+from superos.supercmds.cmdhelp import CmdHelp 
 CmdHelp ("dumpster").add_command(
   'dump', None, 'Use and See'
 ).add()

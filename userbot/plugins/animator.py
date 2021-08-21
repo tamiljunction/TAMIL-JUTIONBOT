@@ -7,7 +7,7 @@ import asyncio
 
 from userbot import ALIVE_NAME, CMD_HELP
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 

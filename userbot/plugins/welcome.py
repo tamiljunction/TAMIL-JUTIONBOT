@@ -8,7 +8,7 @@ from userbot.plugins.sql_helper.welcome_sql import (
     update_previous_welcome,
 )
 from LEGENDBOT.utils import *
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 @bot.on(events.ChatAction())  # pylint:disable=E0602

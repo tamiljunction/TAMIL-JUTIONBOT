@@ -5,7 +5,7 @@ from urllib.parse import quote
 import requests
 
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 @borg.on(admin_cmd(pattern="xkcd ?(.*)"))
 async def _(event):

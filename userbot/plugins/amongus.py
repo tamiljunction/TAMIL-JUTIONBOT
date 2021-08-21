@@ -2,7 +2,7 @@
 
 
 import asyncio
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 from userbot import *
 from LEGENDBOT.utils import *

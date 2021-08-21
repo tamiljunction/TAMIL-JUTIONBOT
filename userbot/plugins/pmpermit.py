@@ -12,7 +12,7 @@ from userbot.plugins.sql_helper import pmpermit_sql as pmpermit_sql
 from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
 from userbot.Config import Config
 from LEGENDBOT.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 PM_TRUE_FALSE = Config.PM_DATA
 
 PM_PIC = os.environ.get("PM_PIC", None)

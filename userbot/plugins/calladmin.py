@@ -3,7 +3,7 @@ import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 @bot.on(admin_cmd(pattern="admins"))
 async def _(event):

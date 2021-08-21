@@ -12,7 +12,7 @@ from telethon import functions, types
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from LEGENDBOT.Config import Config
 
 SUDO_WALA = Config.SUDO_USERS

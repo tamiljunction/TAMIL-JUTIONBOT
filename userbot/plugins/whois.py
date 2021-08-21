@@ -13,7 +13,7 @@ from telethon.utils import get_input_location
 
 from .. import LOGS, TEMP_DOWNLOAD_DIRECTORY
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 # Copyright (C) 2019 The Raphielscape Company LLC.
 #

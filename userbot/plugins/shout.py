@@ -1,5 +1,5 @@
 from LEGENDBOT.utils import *
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 
 @bot.on(admin_cmd(pattern=r"shout", outgoing=True))

@@ -38,7 +38,7 @@ import traceback
 import os
 import superos.utils
 from . import *
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("extdl").add_command(
    'extdl', None, 'To instal  plugin'
 ).add()

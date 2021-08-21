@@ -388,7 +388,7 @@ async def _(event):
         await event.edit(f"STOPPING RAID BY {ALIVE_NAME}")
         
         
-from userbot.cmdhelp import CmdHelp     
+from superos.supercmds.cmdhelp import CmdHelp     
         
 CmdHelp("raid").add_command(
 'replyraid', None, 'Reply to him or her to start raid'

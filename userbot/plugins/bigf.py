@@ -1,5 +1,5 @@
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 CmdHelp("fuck").add_command(
    'kk', None, 'Fuck OFF'

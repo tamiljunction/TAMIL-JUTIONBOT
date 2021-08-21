@@ -18,7 +18,7 @@ from telethon import events
 from userbot import CMD_HELP
 from userbot.Config import Config
 from LEGENDBOT.utils import admin_cmd, progress
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
 extracted = Config.TMP_DOWNLOAD_DIRECTORY + "extracted/"

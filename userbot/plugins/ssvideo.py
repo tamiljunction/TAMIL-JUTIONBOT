@@ -6,7 +6,7 @@ import time
 
 from telethon.tl.types import DocumentAttributeFilename
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 from userbot import events
 

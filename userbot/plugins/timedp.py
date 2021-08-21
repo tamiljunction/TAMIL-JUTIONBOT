@@ -6,7 +6,7 @@ from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 from pySmartDL import SmartDL
 from telethon.tl import functions
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from LEGENDBOT.utils import admin_cmd
 
 FONT_FILE_TO_USE = "Fonts/digital.ttf"

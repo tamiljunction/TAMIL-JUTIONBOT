@@ -2,7 +2,7 @@
 import random
 import re
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from superos.op.events import register
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 

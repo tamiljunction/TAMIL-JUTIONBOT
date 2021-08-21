@@ -8,7 +8,7 @@ import traceback
 
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import *
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 @bot.on(admin_cmd(pattern="exec(?: |$|\n)(.*)", command="exec"))
 @bot.on(sudo_cmd(pattern="exec(?: |$|\n)(.*)", command="exec", allow_sudo=True))

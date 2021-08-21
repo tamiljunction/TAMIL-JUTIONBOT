@@ -9,7 +9,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError, UserAlreadyPartici
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot.cmdhelp import CmdHelp 
+from superos.supercmds.cmdhelp import CmdHelp 
 
 @bot.on(admin_cmd("tti ?(.*)"))
 async def _(event):

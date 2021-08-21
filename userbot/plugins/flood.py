@@ -4,7 +4,7 @@ from telethon import events
 import asyncio
 from collections import deque
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("floodwarn").add_command(
     "floodwarn", None, "Flood warn"
 ).add()

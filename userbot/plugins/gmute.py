@@ -1,7 +1,7 @@
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from telethon import events
 
 

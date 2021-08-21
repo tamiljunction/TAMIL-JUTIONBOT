@@ -4,7 +4,7 @@ from telethon import events
 import requests
 from superos.utils import admin_cmd
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("decide").add_command(
    'decide', None, 'Quickly makes a decision'
 ).add()

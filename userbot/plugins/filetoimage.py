@@ -8,7 +8,7 @@ from telethon.tl.functions.messages import SendMediaRequest
 
 from userbot import *
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("ftoimg").add_command(
     "ftoimg", None, "Here file must be in image file"
 ).add()

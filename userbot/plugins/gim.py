@@ -16,7 +16,7 @@ async def hapy(event):
 
 
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("gim").add_command(
     "gim", None, "Get info about a File Extension"
 ).add()

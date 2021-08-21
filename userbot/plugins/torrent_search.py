@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup as bs
 import cfscrape  # https://github.com/Anorov/cloudflare-scrape
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from LEGENDBOT.utils import humanbytes, admin_cmd
 
 

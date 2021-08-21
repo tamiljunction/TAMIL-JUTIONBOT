@@ -7,7 +7,7 @@ By:-@Zero_cool7870
 import os
 
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("upbs").add_command(
    'upbs', None, 'upload file to telegram'
 ).add()

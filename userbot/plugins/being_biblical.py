@@ -598,7 +598,7 @@ async def _(event):
         )
 
 
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 CmdHelp("bibical").add_command(
    'bbl', None, 'Say Something From Holy Bible'

@@ -2,7 +2,7 @@
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
 
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("get_bot").add_command(
     "get_bot", None, "Get info about a File Extension"
 ).add()

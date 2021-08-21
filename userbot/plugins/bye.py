@@ -1,6 +1,6 @@
 import asyncio
 from superos.utils import admin_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 from . import *
 @bot.on(admin_cmd(pattern="byeall"))
 async def _(event):

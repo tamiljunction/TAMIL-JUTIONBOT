@@ -3,7 +3,7 @@ from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 from superos.utils import admin_cmd
 from . import *
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 @bot.on(admin_cmd("chup"))
 async def _(event):
     if event.fwd_from:

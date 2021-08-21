@@ -18,7 +18,7 @@ from telethon.tl.functions.messages import GetFullChatRequest
 
 from userbot import CMD_HELP
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 
 async def get_chatinfo(event):
     chat = event.pattern_match.group(1)

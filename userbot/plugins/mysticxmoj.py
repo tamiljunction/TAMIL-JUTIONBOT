@@ -33,7 +33,7 @@ async def _(event):
     await asyncio.sleep(999)
     
     
-from userbot.cmdhelp import CmdHelp
+from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("ℓϰмοנ").add_command(
   'moj', None, 'Its like abuse'
 ).add_command(
