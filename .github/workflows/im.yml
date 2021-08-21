@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "PMPERMIT_PIC"
+          find: "NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD"
 
-          replace: "PM_PIC"
+          replace: "NO_OF_BUTTONS"
 
       - name: Create Pull Request
 
