@@ -29,8 +29,8 @@ from telethon.tl.types import (
     MessageMediaPhoto,
 )
 
-from userbot import *
-from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
+from superos import *
+from superos.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 from LEGENDBOT.utils import *
 from superos.supercmds.cmdhelp import CmdHelp
 

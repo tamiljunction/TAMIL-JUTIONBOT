@@ -1,5 +1,5 @@
 import os
-from userbot import CMD_HELP, CMD_HELP_BOT
+from superos import CMD_HELP, CMD_HELP_BOT
 
 HANDLER = os.environ.get("COMMAND_HAND_LER", r".")
       

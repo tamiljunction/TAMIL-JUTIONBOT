@@ -6,7 +6,7 @@
 import random
 from asyncio import sleep
 import asyncio
-from userbot import CMD_HELP, ALIVE_NAME
+from superos import CMD_HELP, ALIVE_NAME
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 

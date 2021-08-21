@@ -1,6 +1,6 @@
 import asyncio
 
-from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
+from superos.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 from superos.utils import admin_cmd
 
 

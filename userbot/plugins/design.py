@@ -1,4 +1,4 @@
-""".admin Plugin for @userbot"""
+""".admin Plugin for @superos"""
 from telethon.tl.types import ChannelParticipantsAdmins
 
 from superos.utils import admin_cmd

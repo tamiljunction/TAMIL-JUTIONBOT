@@ -8,7 +8,7 @@ from telethon import TelegramClient
 from var import Var
 from superos.Config.Config import Config
 from superos.utils import load_module, start_assistant
-from userbot import LOAD_PLUG, LOGS, LEGENDversion
+from superos import LOAD_PLUG, LOGS, LEGENDversion
 from pathlib import Path
 import asyncio
 import telethon.utils

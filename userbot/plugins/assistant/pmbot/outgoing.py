@@ -9,7 +9,7 @@ from . import *
 
 # outgoing
 
-from userbot import bot
+from superos import bot
 @bot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def on_out_mssg(event):
     x = await event.get_reply_message()

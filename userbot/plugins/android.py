@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 from requests import get
 from superos.supercmds.cmdhelp import CmdHelp
 
-from userbot import *
+from superos import *
 from LEGENDBOT.utils import *
 
 GITHUB = "https://github.com"

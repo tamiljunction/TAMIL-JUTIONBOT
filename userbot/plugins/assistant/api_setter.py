@@ -14,11 +14,11 @@ from telethon.sync import custom
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.channels import JoinChannelRequest
 
-from userbot import *
+from superos import *
 from superos.supercmds.cmdhelp import *
 from LEGENDBOT.utils import *
 from superos.Config.Config import Config
-from userbot import ALIVE_NAME
+from superos import ALIVE_NAME
 LEGEND_row = Config.BUTTONS_IN_HELP
 LEGEND_emoji = Config.EMOJI_IN_HELP
 

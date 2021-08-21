@@ -1,4 +1,4 @@
-from userbot import bot as LEGENDgalaxy
+from superos import bot as LEGENDgalaxy
 from superos.utils import admin_cmd as choot
 
 x = True

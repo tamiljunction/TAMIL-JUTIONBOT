@@ -8,7 +8,7 @@ from telethon.tl.types import DocumentAttributeFilename
 
 from superos.supercmds.cmdhelp import CmdHelp
 
-from userbot import events
+from superos import events
 
 from superos.utils import admin_cmd, sudo_cmd
 

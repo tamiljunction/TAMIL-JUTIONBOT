@@ -5,7 +5,7 @@
 
 import re
 
-from userbot import bot
+from superos import bot
 from superos.utils import admin_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 

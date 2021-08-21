@@ -1,4 +1,4 @@
-# imported from userbot credit goes to spechide
+# imported from superos credit goes to spechide
 from telethon.tl.types import InputMediaDice
 
 from superos.utils import admin_cmd

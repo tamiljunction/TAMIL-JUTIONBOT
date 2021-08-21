@@ -1,5 +1,5 @@
 """
-Files Batch Uploader Plugin for userbot.
+Files Batch Uploader Plugin for superos.
 usage:- .upb 
 Note:- set TEMP_DIR in Your ENV Vars First.
 By:-@Zero_cool7870	
@@ -28,7 +28,7 @@ async def batch_upload(event):
         return
     await event.edit("Successfull.")
 
-from userbot import CmdHelp
+from superos import CmdHelp
 
 
 CmdHelp("batch").add_command(

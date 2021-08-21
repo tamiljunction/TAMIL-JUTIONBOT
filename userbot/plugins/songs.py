@@ -1,6 +1,6 @@
 # Originally made by @rkpavi for @javes05
 # porting to Legendbot by @David99q...
-# first userbot to port javes song module...
+# first superos to port javes song module...
 # keep credit if u wanna kang...
 # else u are a gay...no doubt in that....
 
@@ -9,7 +9,7 @@ import asyncio
 import re
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot import bot
+from superos import bot
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply, progress
 from superos.supercmds.cmdhelp import CmdHelp
 from superos.helperss.functions import deEmojify

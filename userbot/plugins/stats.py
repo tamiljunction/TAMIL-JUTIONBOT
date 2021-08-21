@@ -5,7 +5,7 @@ from telethon.events import NewMessage
 from telethon.tl.custom import Dialog
 from telethon.tl.types import Channel, Chat, User
 
-from userbot import CMD_HELP
+from superos import CMD_HELP
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 

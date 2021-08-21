@@ -17,7 +17,7 @@ import asyncio
 
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins
-from userbot import CMD_HELP
+from superos import CMD_HELP
 from LEGENDBOT.utils import admin_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 

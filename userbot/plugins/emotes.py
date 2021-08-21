@@ -1,6 +1,6 @@
 from superos.utils import admin_cmd
-from userbot import CmdHelp
-from userbot import bot
+from superos import CmdHelp
+from superos import bot
 from superos.supercmds.cmdhelp import CmdHelp
 
 @borg.on(admin_cmd(pattern=r"hhi ?(.*)")) #initially made by @NOOB_GUY_OP

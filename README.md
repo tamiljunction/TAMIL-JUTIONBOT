@@ -69,7 +69,7 @@ This is Plugins Of LEGENDBOT
     - `DB_URI`:   Same as `DATABASE_URL`
     - `BOT_TOKEN`:   Make a Bot from [Botfather](https://t.me/botfather) and paste the bot token here.
     - `BOT_USERNAME`:   Paste the Username of bot that you made from [BotFather](https://t.me/botfather).
-- The userbot will not work without setting the mandatory vars.
+- The superos will not work without setting the mandatory vars.
 
 </details>
 

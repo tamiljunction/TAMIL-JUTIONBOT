@@ -6,7 +6,7 @@
 
 import re
 
-from userbot import bot
+from superos import bot
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from superos.supercmds.cmdhelp import CmdHelp
 from superos.helperss.functions import deEmojify

@@ -4,7 +4,7 @@
 import asyncio
 from superos.supercmds.cmdhelp import CmdHelp
 
-from userbot import *
+from superos import *
 from LEGENDBOT.utils import *
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"

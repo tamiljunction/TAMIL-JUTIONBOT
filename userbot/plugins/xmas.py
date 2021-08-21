@@ -2,7 +2,7 @@ from telethon import events
 from asyncio import sleep
 import os, sys, random, re
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot import bot
+from superos import bot
 from superos.supercmds.cmdhelp import CmdHelp
 img1=("https://t.me/Legend_Mr_Xmas/2")
 img2=("https://t.me/Legend_Mr_Xmas/3")

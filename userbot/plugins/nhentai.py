@@ -3,7 +3,7 @@
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot import bot
+from superos import bot
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from superos.supercmds.cmdhelp import CmdHelp
 

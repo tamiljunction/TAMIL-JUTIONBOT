@@ -11,8 +11,8 @@ import re
 
 from telethon import events
 
-from userbot.plugins.sql_helper import blacklist_sql as sql
-from userbot import CMD_HELP
+from superos.plugins.sql_helper import blacklist_sql as sql
+from superos import CMD_HELP
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 

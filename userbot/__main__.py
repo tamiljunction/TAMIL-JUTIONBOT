@@ -1,4 +1,4 @@
-from userbot import bot
+from superos import bot
 from sys import argv
 import sys
 from telethon.errors.rpcerrorlist import PhoneNumberInvalidError
@@ -8,7 +8,7 @@ from telethon import TelegramClient
 from var import Var
 from superos.Config.Config import Config
 from superos.utils import load_module, start_assistant
-from userbot import LOAD_PLUG, LOGS, LEGENDversion
+from superos import LOAD_PLUG, LOGS, LEGENDversion
 from pathlib import Path
 import asyncio
 import telethon.utils
@@ -50,7 +50,7 @@ else:
 
 
 import glob
-path = 'userbot/plugins/*.py'
+path = 'superos/plugins/*.py'
 files = glob.glob(path)
 for name in files:
     with open(name) as f:
@@ -59,7 +59,7 @@ for name in files:
         load_module(shortname.replace(".py", ""))
 
 if LOAD_ASSISTANT == True:
-    path = "userbot/plugins/assistant/*.py"
+    path = "superos/plugins/assistant/*.py"
     files = glob.glob(path)
     for name in files:
         with open(name) as f:

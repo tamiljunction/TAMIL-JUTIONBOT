@@ -217,7 +217,7 @@ async def _(event):
         )
 
 CmdHelp("rename").add_command(
-  "rename", "<reply to media> <new name>", "Renames the replied media and downloads it to userbot local storage"
+  "rename", "<reply to media> <new name>", "Renames the replied media and downloads it to superos local storage"
 ).add_command(
   "rnupload", "<reply to media> <new name>", "Renames the replied media and directly uploads it to the chat"
 ).add_command(

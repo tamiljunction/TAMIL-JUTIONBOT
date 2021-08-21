@@ -1,8 +1,8 @@
 # Plugin made by @Legendboi_atul and bug fixes By Shivam Patel(Team Cobra)
 # Give credits... Dont remove or edit these lines
 # uses ytdl 
-# made for DARK COBRA userbot..
-# Now in Dark ultra userbot..
+# made for DARK COBRA superos..
+# Now in Dark ultra superos..
 import os
 import time
 import math

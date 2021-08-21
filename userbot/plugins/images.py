@@ -5,7 +5,7 @@
 import os
 import shutil
 
-from userbot.google_imgs import googleimagesdownload
+from superos.google_imgs import googleimagesdownload
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from superos.Config.Config import Config
 

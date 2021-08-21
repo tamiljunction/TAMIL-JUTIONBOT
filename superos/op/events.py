@@ -1,4 +1,4 @@
-from userbot import *
+from superos import *
 
 # Copyright (C) 2019 The Raphielscape Company LLC.
 
@@ -12,7 +12,7 @@ from userbot import *
 
 """ Userbot module for managing events.
 
- One of the main components of the userbot. """
+ One of the main components of the superos. """
 
 import sys
 
@@ -28,7 +28,7 @@ from traceback import format_exc
 
 from telethon import events
 
-from userbot import bot, BOTLOG_CHATID, LOGSPAMMER
+from superos import bot, BOTLOG_CHATID, LOGSPAMMER
 
 def register(**args):
 
@@ -206,9 +206,9 @@ def register(**args):
 
                         await check.client.respond(
 
-                            "`Sorry, my userbot has crashed😔, check logs for more info.\
+                            "`Sorry, my superos has crashed😔, check logs for more info.\
 
-                        \nThe error logs are stored in the userbot's log chat.`"
+                        \nThe error logs are stored in the superos's log chat.`"
 
                         )
 

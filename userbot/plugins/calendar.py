@@ -6,7 +6,7 @@ from datetime import datetime
 import requests
 import json
 from superos.utils import admin_cmd
-from userbot import CmdHelp
+from superos import CmdHelp
 from . import *
 
 @borg.on(admin_cmd(pattern="calendar (.*)"))

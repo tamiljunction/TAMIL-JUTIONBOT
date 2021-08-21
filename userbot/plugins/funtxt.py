@@ -1,7 +1,7 @@
 import nekos
 
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot import CMD_HELP
+from superos import CMD_HELP
 from superos.supercmds.cmdhelp import CmdHelp
 
 

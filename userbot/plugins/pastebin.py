@@ -14,7 +14,7 @@ from requests import exceptions, get
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot import CMD_HELP
+from superos import CMD_HELP
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from superos.supercmds.cmdhelp import CmdHelp
 

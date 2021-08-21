@@ -1,4 +1,4 @@
-from userbot import *
+from superos import *
 from superos.utils import *
 from superos.Config.Config import Config
 from superos.helperss.functions import *

@@ -1,7 +1,7 @@
 from telethon.tl.functions.messages import EditChatDefaultBannedRightsRequest
 from telethon.tl.types import ChatBannedRights
 
-from userbot import ALIVE_NAME, CMD_HELP
+from superos import ALIVE_NAME, CMD_HELP
 from superos.op.events import errors_handler, register
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from superos.supercmds.cmdhelp import CmdHelp

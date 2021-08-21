@@ -13,7 +13,7 @@ from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest
 from telethon.tl.functions.photos import DeletePhotosRequest, GetUserPhotosRequest
 from telethon.tl.types import Channel, Chat, InputPhoto, User
 
-from userbot import CMD_HELP, bot
+from superos import CMD_HELP, bot
 from LEGENDBOT.utils import admin_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 

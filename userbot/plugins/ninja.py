@@ -8,8 +8,8 @@ import telethon.utils
 from telethon.errors import rpcbaseerrors
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, errors_handler
-from userbot import bot as LEGENDBOT
-from userbot import BOTLOG, BOTLOG_CHATID
+from superos import bot as LEGENDBOT
+from superos import BOTLOG, BOTLOG_CHATID
 
 
 @LEGENDBOT.on(admin_cmd(outgoing=True, pattern="del$"))

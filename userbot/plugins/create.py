@@ -7,7 +7,7 @@ Available Commands:
 from telethon.tl import functions
 from telethon.tl.types import MessageEntityMentionName
 
-from userbot import CMD_HELP
+from superos import CMD_HELP
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 

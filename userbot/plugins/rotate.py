@@ -6,8 +6,8 @@ from superos.supercmds.cmdhelp import CmdHelp
 #MADE BY Legend DONT KANG
 from telethon.tl.types import MessageMediaPhoto
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-from userbot import bot 
-from userbot import bot as bot
+from superos import bot 
+from superos import bot as bot
 import os , shutil
 
 from PIL import Image

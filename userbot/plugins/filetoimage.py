@@ -6,7 +6,7 @@ from telethon import types
 from telethon.errors import PhotoInvalidDimensionsError
 from telethon.tl.functions.messages import SendMediaRequest
 
-from userbot import *
+from superos import *
 
 from superos.supercmds.cmdhelp import CmdHelp
 CmdHelp("ftoimg").add_command(

@@ -10,7 +10,7 @@ from subprocess import run as runapp
 
 import pybase64
 
-#from userbot import CMD_HELP
+#from superos import CMD_HELP
 from LEGENDBOT.utils import errors_handler, admin_cmd, sudo_cmd, edit_or_reply
 from superos.supercmds.cmdhelp import CmdHelp
 

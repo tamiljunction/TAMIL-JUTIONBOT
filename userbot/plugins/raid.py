@@ -1,6 +1,6 @@
 import asyncio
 import random
-from userbot import *
+from superos import *
 from . import *
 NUMBER = ["0", "1"] 
 

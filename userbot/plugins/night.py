@@ -6,7 +6,7 @@ import datetime
 from telethon import events
 from telethon.tl import functions, types
 
-from userbot import ALIVE_NAME
+from superos import ALIVE_NAME
 from LEGENDBOT.utils import admin_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 
@@ -94,7 +94,7 @@ async def on_night(event):
     night_since = "**a while ago**"
     current_message_text = event.message.message.lower()
     if "night" in current_message_text:
-        # userbot's should not reply to other userbot's
+        # superos's should not reply to other superos's
         # https://core.telegram.org/bots/faq#why-doesn-39t-my-bot-see-messages-from-other-bots
         return False
     if USER_night and not (await event.get_sender()).bot:  # pylint:disable=E0602

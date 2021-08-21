@@ -13,8 +13,8 @@ from pytz import country_names as c_n
 from pytz import country_timezones as c_tz
 from pytz import timezone as tz
 
-from userbot import CMD_HELP
-from userbot import OPEN_WEATHER_MAP_APPID as OWM_API
+from superos import CMD_HELP
+from superos import OPEN_WEATHER_MAP_APPID as OWM_API
 from superos.op.events import errors_handler
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from superos.supercmds.cmdhelp import CmdHelp
@@ -147,7 +147,7 @@ async def get_weather(weather):
 @bot.on(sudo_cmd(pattern="setcity(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def set_default_city(city):
-    """ For .ctime command, change the default userbot country for date and time commands. """
+    """ For .ctime command, change the default superos country for date and time commands. """
 
     if not OWM_API:
         await edit_or_reply(city, "`Get an API key from` https://openweathermap.org/ `first.`")

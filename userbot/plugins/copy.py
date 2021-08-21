@@ -1,5 +1,5 @@
 from superos.utils import admin_cmd
-from userbot import CmdHelp
+from superos import CmdHelp
 
 
 @borg.on(admin_cmd(pattern="cop"))

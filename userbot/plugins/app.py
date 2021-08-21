@@ -3,7 +3,7 @@
 import bs4
 import requests
 
-from userbot import ALIVE_NAME, CMD_HELP
+from superos import ALIVE_NAME, CMD_HELP
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 

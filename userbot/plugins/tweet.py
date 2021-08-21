@@ -1,6 +1,6 @@
 
 
-from userbot import CMD_HELP
+from superos import CMD_HELP
 from superos.helperss.functions import (
     changemymind,
     deEmojify,

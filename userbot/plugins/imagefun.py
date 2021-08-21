@@ -7,9 +7,9 @@ import requests, re
 from PIL import Image
 from telegraph import upload_file
 from telethon.tl.types import MessageMediaPhoto
-from userbot import bot
+from superos import bot
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
-pathdc = "./userbot/"
+pathdc = "./superos/"
 if not os.path.isdir(pathdc):
     os.makedirs(pathdc)
 

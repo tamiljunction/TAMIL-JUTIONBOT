@@ -1,7 +1,7 @@
 """LEGENDBOT Help Command"""
 
-from userbot import *
-from userbot import CMD_HELP
+from superos import *
+from superos import CMD_HELP
 from LEGENDBOT.utils import *
 
 

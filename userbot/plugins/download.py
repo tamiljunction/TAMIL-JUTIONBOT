@@ -9,7 +9,7 @@ from datetime import datetime
 
 from pySmartDL import SmartDL
 
-from userbot import ALIVE_NAME, CMD_HELP
+from superos import ALIVE_NAME, CMD_HELP
 from LEGENDBOT.utils import admin_cmd, humanbytes, progress, sudo_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 

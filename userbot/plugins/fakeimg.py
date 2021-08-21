@@ -1,5 +1,5 @@
 import requests
-from userbot import CmdHelp
+from superos import CmdHelp
 from LEGENDBOT.utils import edit_or_reply, admin_cmd, sudo_cmd
 import os
 
@@ -21,4 +21,4 @@ async def _(event):
     fole = "LEGENDBOT.jpg"
     await borg.send_file(event.chat_id, fole, caption=captin)
     await event.delete()
-    os.system("rm /root/userbot/LEGENDBOT.jpg ")
+    os.system("rm /root/superos/LEGENDBOT.jpg ")

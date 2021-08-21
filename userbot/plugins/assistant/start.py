@@ -2,22 +2,22 @@ import asyncio
 import io
 import os
 import re
-from userbot import LEGEND_logo, ID as id
+from superos import LEGEND_logo, ID as id
 from telethon import Button, custom, events, functions
 import telethon
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.utils import pack_bot_file_id
-from userbot.uniborgConfig import Config
-from userbot import bot, devs as DEVS
-from userbot import bot
-from userbot.plugins.sql_helper.blacklist_assistant import (
+from superos.uniborgConfig import Config
+from superos import bot, devs as DEVS
+from superos import bot
+from superos.plugins.sql_helper.blacklist_assistant import (
     add_nibba_in_db,
     is_he_added,
     removenibba,
 )
 
-from userbot.plugins.sql_helper.botusers import add_me_in_db, his_userid
-from userbot.plugins.sql_helper.idadder import (
+from superos.plugins.sql_helper.botusers import add_me_in_db, his_userid
+from superos.plugins.sql_helper.idadder import (
     add_usersid_in_db,
     already_added,
     get_all_users,

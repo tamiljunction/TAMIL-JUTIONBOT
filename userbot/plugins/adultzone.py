@@ -8,7 +8,7 @@ import urllib
 
 import requests
 
-from userbot import *
+from superos import *
 from LEGENDBOT.utils import *
 from superos.supercmds.cmdhelp import CmdHelp
 

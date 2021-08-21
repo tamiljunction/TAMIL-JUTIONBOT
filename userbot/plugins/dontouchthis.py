@@ -1,5 +1,5 @@
 """
-Files Batch Uploader Plugin for userbot.
+Files Batch Uploader Plugin for superos.
 usage:- .upb 
 Note:- set TEMP_DIR in Your ENV Vars First.
 By:-@Zero_cool7870	

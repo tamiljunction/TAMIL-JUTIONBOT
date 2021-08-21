@@ -4,7 +4,7 @@ import random
 from telethon import events
 from LEGENDBOT.utils import admin_cmd
 from superos.supercmds.cmdhelp import CmdHelp
-from userbot import ALIVE_NAME
+from superos import ALIVE_NAME
 from telethon.tl.types import ChannelParticipantsAdmins
 # 🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔🤔
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"

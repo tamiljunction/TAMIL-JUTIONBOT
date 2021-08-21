@@ -3,7 +3,7 @@ import asyncio
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 
-from userbot.plugins.sql_helper import antiflood_sql as sql
+from superos.plugins.sql_helper import antiflood_sql as sql
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 

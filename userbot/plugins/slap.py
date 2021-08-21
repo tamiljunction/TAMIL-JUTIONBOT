@@ -11,7 +11,7 @@ from telethon.tl.types import MessageEntityMentionName
 from uniborg.util import admin_cmd, sudo_cmd, edit_or_reply
 from superos.supercmds.cmdhelp import CmdHelp
 
-from userbot import ALIVE_NAME
+from superos import ALIVE_NAME
 
 SLAP_TEMPLATES = [
     "{user1} {hits} {user2} with a {item}.",

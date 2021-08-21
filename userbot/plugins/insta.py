@@ -4,7 +4,7 @@ import re
 
 from telethon import functions
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot import ALIVE_NAME
+from superos import ALIVE_NAME
 from . import *
 
 

@@ -30,7 +30,7 @@ from telethon.tl.types import (
 )
 from telethon.utils import get_input_location
 
-from userbot import BOTLOG, BOTLOG_CHATID
+from superos import BOTLOG, BOTLOG_CHATID
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from superos.supercmds.cmdhelp import CmdHelp

@@ -11,7 +11,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.messages import SendMediaRequest
 
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, progress, sudo_cmd
-from userbot import CMD_HELP
+from superos import CMD_HELP
 from superos.helperss.functions import unzip
 from superos.supercmds.cmdhelp import CmdHelp
 

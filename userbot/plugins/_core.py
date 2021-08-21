@@ -6,7 +6,7 @@ from pathlib import Path
 from telethon import events, functions, types
 from telethon.tl.types import InputMessagesFilterDocument
 from LEGENDBOT.utils import *
-from userbot import *
+from superos import *
 from . import *
 DELETE_TIMEOUT = 5
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
@@ -23,7 +23,7 @@ async def send(event):
     thumb = LEGEND_logo
     input_str = event.pattern_match.group(1)
     omk = f"**⍟ Plugin name ≈** `{input_str}`\n**⍟ Uploaded by ≈** {LEGEND}\n\n⚡ **[Legendary LEGENDBOT](t.me/LEGEND_Userbot)** ⚡"
-    the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
+    the_plugin_file = "./superos/plugins/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         lauda = await event.client.send_file(
             event.chat_id,
@@ -52,7 +52,7 @@ async def install(event):
         try:
             downloaded_file_name = await event.client.download_media(  # pylint:disable=E0602
                 await event.get_reply_message(),
-                "./userbot/plugins/"  # pylint:disable=E0602
+                "./superos/plugins/"  # pylint:disable=E0602
             )
             if "(" not in downloaded_file_name:
                 path1 = Path(downloaded_file_name)
@@ -85,7 +85,7 @@ async def uninstall(event):
     if event.fwd_from:
         return
     shortname = event.pattern_match["shortname"]
-    dir_path =f"./userbot/plugins/{shortname}.py"
+    dir_path =f"./superos/plugins/{shortname}.py"
     try:
         remove_plugin(shortname)
         os.remove(dir_path)
@@ -138,7 +138,7 @@ async def install(event):
     reply_to_id = event.message.id
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
-    cmd = "ls userbot/plugins"
+    cmd = "ls superos/plugins"
     thumb = LEGEND_logo
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
@@ -165,15 +165,15 @@ async def install(event):
 
 
 CmdHelp("ϲοяє").add_command(
-  "install", "<reply to a .py file>", "Installs the replied python file if suitable to userbot codes. (TEMPORARILY DISABLED AS HACKERS MAKE YOU INSTALL SOME PLUGINS AND GET YOUR DATA)"
+  "install", "<reply to a .py file>", "Installs the replied python file if suitable to superos codes. (TEMPORARILY DISABLED AS HACKERS MAKE YOU INSTALL SOME PLUGINS AND GET YOUR DATA)"
 ).add_command(
-  "uninstall", "<plugin name>", "Uninstalls the given plugin from userbot. To get that again do .restart", "uninstall alive"
+  "uninstall", "<plugin name>", "Uninstalls the given plugin from superos. To get that again do .restart", "uninstall alive"
 ).add_command(
-  "load", "<plugin name>", "Loades the unloaded plugin to your userbot", "load alive"
+  "load", "<plugin name>", "Loades the unloaded plugin to your superos", "load alive"
 ).add_command(
-  "unload", "<plugin name>", "Unloads the plugin from your userbot", "unload alive"
+  "unload", "<plugin name>", "Unloads the plugin from your superos", "unload alive"
 ).add_command(
-  "send", "<file name>", "Sends the given file from your userbot server, if any.", "send alive"
+  "send", "<file name>", "Sends the given file from your superos server, if any.", "send alive"
 ).add_command(
   "cmds", None, "Gives out the list of modules in LEGENDBOT."
 ).add()

@@ -2,8 +2,8 @@
 from . import *
 from telethon import Button, custom
 
-from userbot import bot
-from userbot import ALIVE_NAME
+from superos import bot
+from superos import ALIVE_NAME
 OWNER_NAME = ALIVE_NAME
 OWNER_ID = bot.uid
 

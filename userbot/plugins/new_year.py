@@ -9,7 +9,7 @@ from asyncio import sleep
 # credits to legend, john snow
 import asyncio
 # credits to legend, john snow
-from userbot import CMD_HELP, ALIVE_NAME
+from superos import CMD_HELP, ALIVE_NAME
 # credits to legend, john snow
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 # credits to legend, john snow

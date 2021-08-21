@@ -8,7 +8,7 @@ from telethon.errors import ChatAdminRequiredError
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.users import GetFullUserRequest
 
-from userbot import CMD_HELP
+from superos import CMD_HELP
 from superos.supercmds.cmdhelp import CmdHelp
 
 from ..utils import admin_cmd , sudo_cmd

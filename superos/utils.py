@@ -18,15 +18,15 @@ from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from var import Var
 
-from userbot import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
+from superos import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
 from superos.helperss.exceptions import CancelProcess
 from superos.Config.Config import Config
-from userbot import bot
+from superos import bot
 from telethon import events
 from pathlib import Path
 from var import Var
-from userbot import LOAD_PLUG
-from userbot import CMD_LIST, SUDO_LIST
+from superos import LOAD_PLUG
+from superos import CMD_LIST, SUDO_LIST
 import logging
 import inspect
 import asyncio
@@ -126,8 +126,8 @@ def load_module(shortname):
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"userbot/plugins/{shortname}.py")
-        name = "userbot.plugins.{}".format(shortname)
+        path = Path(f"superos/plugins/{shortname}.py")
+        name = "superos.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -137,8 +137,8 @@ def load_module(shortname):
         import sys
         import importlib
         from pathlib import Path
-        path = Path(f"userbot/plugins/{shortname}.py")
-        name = "userbot.plugins.{}".format(shortname)
+        path = Path(f"superos/plugins/{shortname}.py")
+        name = "superos.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = bot
@@ -155,12 +155,12 @@ def load_module(shortname):
         mod.delete_LEGEND = delete_LEGEND
         # support for LEGENDBOT originals
         sys.modules["LEGENDBOT.utils"] = superos.utils
-        sys.modules["LEGENDBOT"] = userbot
+        sys.modules["LEGENDBOT"] = superos
         # support for paperplaneextended
         sys.modules["superos.op.events"] = superos.utils
         spec.loader.exec_module(mod)
         # for imports
-        sys.modules["userbot.plugins." + shortname] = mod
+        sys.modules["superos.plugins." + shortname] = mod
         LOGS.info("𝕷єgєи∂𝕭οτ 2.o " + shortname)
 
 
@@ -172,7 +172,7 @@ def remove_plugin(shortname):
             del LOAD_PLUG[shortname]
 
         except BaseException:
-            name = f"userbot.plugins.{shortname}"
+            name = f"superos.plugins.{shortname}"
 
             for i in reversed(range(len(bot._event_builders))):
                 ev, cb = bot._event_builders[i]
@@ -705,8 +705,8 @@ def start_assistant(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"userbot/plugins/assistant/{shortname}.py")
-        name = "userbot.plugins.assistant.{}".format(shortname)
+        path = Path(f"superos/plugins/assistant/{shortname}.py")
+        name = "superos.plugins.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
@@ -717,11 +717,11 @@ def start_assistant(shortname):
         import sys
         from pathlib import Path
 
-        path = Path(f"userbot/plugins/assistant/{shortname}.py")
-        name = "userbot.plugins.assistant.{}".format(shortname)
+        path = Path(f"superos/plugins/assistant/{shortname}.py")
+        name = "superos.plugins.assistant.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.tgbot = bot.tgbot
         spec.loader.exec_module(mod)
-        sys.modules["userbot.plugins.assistant" + shortname] = mod
+        sys.modules["superos.plugins.assistant" + shortname] = mod
         print("LegendBot Assistant " + shortname)  

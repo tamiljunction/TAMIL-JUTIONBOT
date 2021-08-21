@@ -8,7 +8,7 @@ import os
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot import CmdHelp, bot
+from superos import CmdHelp, bot
 from . import *
 # from superos.utils import admin_cmd
 from superos.op.events import register

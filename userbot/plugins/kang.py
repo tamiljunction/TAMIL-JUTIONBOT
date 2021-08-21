@@ -335,7 +335,7 @@ async def get_pack_info(event):
     await eor(event, OUTPUT)
 
 CmdHelp("kang").add_command(
-    'kang', None, 'reply .kang to a sticker or an image to kang it to your userbot pack'
+    'kang', None, 'reply .kang to a sticker or an image to kang it to your superos pack'
 ).add_command(
     'kang emojis', None, 'Works just like .kang but uses the emojis you picked.'
 ).add_command(

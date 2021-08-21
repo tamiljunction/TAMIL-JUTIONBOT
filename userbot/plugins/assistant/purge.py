@@ -18,7 +18,7 @@ from telethon import events
 from telethon.errors.rpcerrorlist import MessageDeleteForbiddenError
 from telethon.tl.types import ChannelParticipantsAdmins
 
-from userbot import bot
+from superos import bot
 
 
 OWNER_ID = bot.uid

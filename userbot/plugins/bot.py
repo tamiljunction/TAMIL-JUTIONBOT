@@ -1,4 +1,4 @@
-from userbot import *
+from superos import *
 from LEGENDBOT.utils import *
 from superos.supercmds.cmdhelp import CmdHelp
 from telethon import events, version

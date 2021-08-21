@@ -15,7 +15,7 @@ from hachoir.parser import createParser
 from pySmartDL import SmartDL
 from telethon.tl.types import DocumentAttributeVideo
 
-from userbot import CMD_HELP, LOGS, TEMP_DOWNLOAD_DIRECTORY
+from superos import CMD_HELP, LOGS, TEMP_DOWNLOAD_DIRECTORY
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from superos.supercmds.cmdhelp import CmdHelp
 
@@ -82,8 +82,8 @@ def time_formatter(milliseconds: int) -> str:
 @bot.on(admin_cmd(pattern=r"download(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"download(?: |$)(.*)", allow_sudo=True))
 async def download(target_file):
-    """ For .dl command, download files to the userbot's server. """
-    await target_file.edit("Processing using userbot server ( ◜‿◝ )♡")
+    """ For .dl command, download files to the superos's server. """
+    await target_file.edit("Processing using superos server ( ◜‿◝ )♡")
     input_str = target_file.pattern_match.group(1)
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
@@ -247,10 +247,10 @@ async def uploadir(udir_event):
 @bot.on(admin_cmd(pattern=r"upload (.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern=r"upload (.*)", allow_sudo=True))
 async def upload(u_event):
-    """ For .upload command, allows you to upload a file from the userbot's server """
+    """ For .upload command, allows you to upload a file from the superos's server """
     await u_event.edit("Processing ...")
     input_str = u_event.pattern_match.group(1)
-    if input_str in ("userbot.session", "config.env"):
+    if input_str in ("superos.session", "config.env"):
         await u_event.edit("`That's a dangerous operation! Not Permitted!`")
         return
     if os.path.exists(input_str):

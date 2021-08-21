@@ -1,5 +1,5 @@
-# (c) @userbot
-# Original written by @userbot edit by @INF1N17Y
+# (c) @superos
+# Original written by @superos edit by @INF1N17Y
 
 import asyncio
 from collections import deque

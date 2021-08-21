@@ -13,9 +13,9 @@ from telethon.tl.types import (ChannelParticipantsAdmins,
                                        MessageMediaPhoto)
 from superos.utils import register, errors_handler
 from superos.utils import admin_cmd
-from userbot import CMD_HELP
+from superos import CMD_HELP
 from superos.supercmds.cmdhelp import CmdHelp
-from userbot import bot as borg
+from superos import bot as borg
 async def get_full_user(event):  
     args = event.pattern_match.group(1).split(':', 1)
     extra = None
@@ -58,22 +58,22 @@ async def get_user_from_id(user, event):
         return None
     return user_obj
 @borg.on(admin_cmd(pattern="gpromote ?(.*)"))
-async def gben(userbot):
-    dc = dark = userbot
+async def gben(superos):
+    dc = dark = superos
     i = 0
     sender = await dc.get_sender()
-    me = await userbot.client.get_me()
+    me = await superos.client.get_me()
     await dark.edit("`promoting...`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
-    await userbot.get_chat()
-    if userbot.is_private:
-        user = userbot.chat
-        rank = userbot.pattern_match.group(1)
+    await superos.get_chat()
+    if superos.is_private:
+        user = superos.chat
+        rank = superos.pattern_match.group(1)
     else:
-        userbot.chat.title
+        superos.chat.title
     try:
-        user, rank = await get_full_user(userbot)
+        user, rank = await get_full_user(superos)
     except:
         pass
     if me == user:
@@ -86,7 +86,7 @@ async def gben(userbot):
         return await dark.edit(f"**Something W3NT Wrong**")
     if user:
         telchanel = [d.entity.id
-                     for d in await userbot.client.get_dialogs()
+                     for d in await superos.client.get_dialogs()
                      if (d.is_group or d.is_channel)
                      ]
         rgt = ChatAdminRights(add_admins=True,
@@ -97,7 +97,7 @@ async def gben(userbot):
                                    pin_messages=True)
         for x in telchanel:
           try:
-             await userbot.client(EditAdminRequest(x, user, rgt, rank))
+             await superos.client(EditAdminRequest(x, user, rgt, rank))
              i += 1
              await dark.edit(f"**Promoted in Chats **: `{i}`")
           except:
@@ -108,22 +108,22 @@ async def gben(userbot):
         f"**Globally promoted [{user.first_name}](tg://user?id={user.id})\n On Chats😏 : {i} **"
     )
 @borg.on(admin_cmd(pattern="gdemote ?(.*)"))
-async def gben(userbot):
-    dc = dark = userbot
+async def gben(superos):
+    dc = dark = superos
     i = 0
     sender = await dc.get_sender()
-    me = await userbot.client.get_me()
+    me = await superos.client.get_me()
     await dark.edit("`demoting...`")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
-    await userbot.get_chat()
-    if userbot.is_private:
-        user = userbot.chat
-        rank = userbot.pattern_match.group(1)
+    await superos.get_chat()
+    if superos.is_private:
+        user = superos.chat
+        rank = superos.pattern_match.group(1)
     else:
-        userbot.chat.title
+        superos.chat.title
     try:
-        user, rank = await get_full_user(userbot)
+        user, rank = await get_full_user(superos)
     except:
         pass
     if me == user:
@@ -136,7 +136,7 @@ async def gben(userbot):
         return await dark.edit(f"**Something W3NT Wrong**")
     if user:
         telchanel = [d.entity.id
-                     for d in await userbot.client.get_dialogs()
+                     for d in await superos.client.get_dialogs()
                      if (d.is_group or d.is_channel)
                      ]
         rgt = ChatAdminRights(add_admins=None,
@@ -147,7 +147,7 @@ async def gben(userbot):
                                    pin_messages=None)
         for x in telchanel:
           try:
-             await userbot.client(EditAdminRequest(x, user, rgt, rank))
+             await superos.client(EditAdminRequest(x, user, rgt, rank))
              i += 1
              await dark.edit(f"**Demoted in Chats **: `{i}`")
           except:

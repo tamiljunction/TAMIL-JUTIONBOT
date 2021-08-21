@@ -1,4 +1,4 @@
-from userbot import CmdHelp, bot
+from superos import CmdHelp, bot
 from superos.utils import admin_cmd, sudo_cmd
 import asyncio
 from . import *

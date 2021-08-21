@@ -9,7 +9,7 @@ import asyncio
 import sys
 import io
 from superos.utils import admin_cmd, sudo_cmd, edit_or_reply 
-from userbot import CmdHelp
+from superos import CmdHelp
 
 @bot.on(admin_cmd("eval"))
 @bot.on(sudo_cmd("eval", allow_sudo=True))
