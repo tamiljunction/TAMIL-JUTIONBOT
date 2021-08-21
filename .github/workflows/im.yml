@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "from var import var"
+          find: "TG_BOT_TOKEN_BF_HER"
 
-          replace: "from . import *"
+          replace: "BOT_TOKEN"
 
       - name: Create Pull Request
 
