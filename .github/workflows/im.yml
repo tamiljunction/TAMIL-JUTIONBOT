@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "userbot.main_startup"
+          find: "userbot.broadcast_db"
 
-          replace: "superos.main_startup"
+          replace: "superos.plugins.sql_helper"
 
       - name: Create Pull Request
 
