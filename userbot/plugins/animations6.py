@@ -297,7 +297,7 @@ async def _(event):
         await event.edit("".join(deq))
         deq.rotate(1)
 
-CmdHelp("αɳเɱαƭเσɳร6").add_command(
+CmdHelp("𝚊𝚗𝚒𝚖𝚊𝚝𝚒𝚘𝚗𝚜6").add_command(
   'bigoof', None, '🇮🇳🇮🇳🇮🇳'
 ).add_command(
   'g1', None, 'Use and see'
