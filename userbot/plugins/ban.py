@@ -213,7 +213,7 @@ async def get_user_from_id(user, event):
         return None
 
     return user_obj
-CmdHelp("ban").add_command(
+CmdHelp("𝚋𝚊𝚗").add_command(
   'ban', None, 'Ban A Person From Group'
 ).add_command(
   'unban', None, 'Unban A Person From Group'
