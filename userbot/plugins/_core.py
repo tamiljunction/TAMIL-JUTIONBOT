@@ -42,7 +42,7 @@ async def send(event):
 async def install(event):
     if event.fwd_from:
         return
-    a = "__Installing.__"
+    a = "__𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚒𝚗𝚐.__"
     b = 1
     await event.edit(a)
     if event.fwd_from:
@@ -63,17 +63,17 @@ async def install(event):
                         string += "  •  `" + i 
                         string += "`\n"
                         if b == 1:
-                            a = "__Installing..__"
+                            a = "__𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚒𝚗𝚐..__"
                             b = 2
                         else:
-                            a = "__Installing...__"
+                            a = "__𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚒𝚗𝚐...__"
                             b = 1
                         await event.edit(a)
-                    return await event.edit(f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {LEGEND}\n\n{string}\n\n        ⚡ **[✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳](t.me/LEGEND_Userbot)** ⚡", link_preview=False)
+                    return await event.edit(f"✅ **𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍 𝙼𝚘𝚍𝚞𝚕𝚎** :- `{shortname}` \n✨ BY :- {LEGEND}\n\n{string}\n\n        ⚡ **[✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳](t.me/LEGEND_Userbot)** ⚡", link_preview=False)
                 return await event.edit(f"Installed module `{os.path.basename(downloaded_file_name)}`")
             else:
                 os.remove(downloaded_file_name)
-                return await event.edit(f"**Failed to Install** \n`Error`\nModule already installed or unknown format")
+                return await event.edit(f"**𝐅𝐚𝐢𝐥𝐞𝐝 𝐓𝐨 𝐈𝐧𝐬𝐭𝐚𝐥𝐥** \n`𝐄𝐫𝐫𝐨𝐫`\n𝐌𝐨𝐝𝐮𝐥𝐞 𝐀𝐥𝐫𝐞𝐚𝐝𝐲 𝐈𝐧𝐬𝐭𝐚𝐥𝐥𝐞𝐝 𝐎𝐫 𝐔𝐧𝐤𝐧𝐨𝐰 𝐅𝐨𝐫𝐦𝐚𝐭")
         except Exception as e: 
             await event.edit(f"**Failed to Install** \n`Error`\n{str(e)}")
             return os.remove(downloaded_file_name)
@@ -88,7 +88,7 @@ async def uninstall(event):
     try:
         remove_plugin(shortname)
         os.remove(dir_path)
-        await event.edit(f"Uninstalled `{shortname}` successfully")
+        await event.edit(f"**𝚄𝚗𝚒𝚜𝚝𝚊𝚕𝚕𝚎𝚍**`{shortname}` 𝚂𝚞𝚌𝚌𝚎𝚜𝚜𝚏𝚞𝚕𝚕𝚢")
     except OSError as e:
         await event.edit("Error: %s : %s" % (dir_path, e.strerror))
 
@@ -138,7 +138,7 @@ async def install(event):
     if event.reply_to_msg_id:
         reply_to_id = event.reply_to_msg_id
     cmd = "ls userbot/plugins"
-    thumb = LEGEND_logo
+    thumb = LEGEND_logo1
     process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
