@@ -21,7 +21,8 @@ LEGEND_emoji = Config.EMOJI_IN_HELP
 # thats how a lazy guy imports
 # LEGENDBOT
 # sαlҽ ískօ kαղց ตαԵ kαɾ ตc ճc
-# αϐє τυ ρα∂н нι яαнα н γαнα ѕє ϐнαg
+# αϐє τυ ρα∂н нι яαнα н γαнα ѕє ϐ
+
 def button(page, modules):
     Row = LEGEND_row
     Column = 3
