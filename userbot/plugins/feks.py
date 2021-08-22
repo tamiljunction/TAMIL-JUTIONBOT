@@ -6,20 +6,20 @@ from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 import random, re
 import asyncio
 from userbot.cmdhelp import CmdHelp
+from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
 
 
-
-@bot.on(admin_cmd(pattern="gbun"))
+@bot.on(admin_cmd(pattern="gbuns"))
 async def gbun(event):
     if event.fwd_from:
         return
     gbunVar = event.text
     gbunVar = gbunVar[6:]
-    mentions = "`Warning!! User 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\n`"
+    mentions = "`𝚆𝙰𝚁𝙽𝙸𝙽𝙶!! 𝚄𝚂𝙴𝚁 𝙶𝙱𝙰𝙽𝙽𝙴𝙳 𝙱𝚈 𝙰𝙳𝙼𝙸𝙽\n`"
     no_reason = "__Reason: Potential spammer. __"
     await event.edit("**Summoning out le Gungnir ❗️⚜️☠️**")
     await asyncio.sleep(3.5)
-    chat = await event.get_input_chat()
+    chat = await event.get_chat()
     async for x in bot.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
     reply_message = None
@@ -28,8 +28,8 @@ async def gbun(event):
         replied_user = await event.client(GetFullUserRequest(reply_message.sender_id))
         firstname = replied_user.user.first_name
         usname = replied_user.user.username
-        idd = reply_message.sender_id
-        if idd == 1856561912:
+        id = reply_message.sender_id
+        if chat.id == 1856561912:
             await event.reply("`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 69$ to my master__ ✰@Legend_Mr_Hacker™️✰ __to release your account__😏")
         else:
             jnl=("`Warning!! `"
