@@ -11,10 +11,10 @@ LEGEND_USER = bot.me.first_name
 LEGEND = bot.uid
 mention = f"[{LEGEND_USER}](tg://user?id={LEGEND})"
 LEGEND_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
-cjb = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-restlo = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-shuru = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-shhh = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+LEGEND_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+LEGEND_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+LEGEND_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+LEGEBD_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 
 
 async def get_user_id(ids):
