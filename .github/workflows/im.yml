@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "Hell"
+          find: "David99q"
 
-          replace: "Legend"
+          replace: "Legend_Mr_Hacker"
 
       - name: Create Pull Request
 
