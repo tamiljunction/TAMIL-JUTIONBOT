@@ -206,7 +206,7 @@ async def _(event):
         "What",
         "What The",
         "What The F",
-        "What The Hell Are U Telling",
+        "What The Legend Are U Telling",
         "U Don't Know Who Is This. \nhttps://telegra.ph/file/4e573d69ff89b5f077b21.jpg",
     ]
     for i in animation_ttl:

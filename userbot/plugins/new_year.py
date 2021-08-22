@@ -1,5 +1,5 @@
 # Made By @David99q. Keep Credit if you are gonna copy paste it. LOL NOOBS....
-# Happy New Year plugin by David99q for Hellbot
+# Happy New Year plugin by David99q for Legendbot
 # Kangers keep credits...
 # Now in LEGENDBOT
 
