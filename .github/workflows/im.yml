@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "Hello"
+          find: "Hell_regex"
 
-          replace: "TomalKk"
+          replace: "Legend_regex"
 
       - name: Create Pull Request
 
