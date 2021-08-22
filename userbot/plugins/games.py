@@ -1,6 +1,6 @@
 # Made by @David99q for @LEGEND_Userbot
 # Now in LEGENDBOT
-# Thanks to HellBot
+# Thanks to LegendBot
 
 import asyncio
 from telethon import events
