@@ -44,13 +44,13 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-               f"**⭅ϐαϲκ**", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+               f"⭅ϐαϲκ", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
-               f"**☣️ ❎ ☣️**", data="close"
+               f"☣️ ❎ ☣️", data="close"
             ),
             custom.Button.inline(
-               f"**ղҽxԵ⭆**", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+               f"ղҽxԵ⭆", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
@@ -91,14 +91,14 @@ if Var.BOT_USERNAME is not None and tgbot is not None:
                 text="""**[✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳](https://t.me/Legend_Userbot) \nγου ϲαи κиοω мοяє αϐουτ мє👇**""",
                 buttons=[
                     [
-                        custom.Button.url("**♦️ Gяουρ ♦️**", "https://t.me/Legend_Userbot"),
+                        custom.Button.url("♦️ Gяουρ ♦️", "https://t.me/Legend_Userbot"),
                         custom.Button.url(
-                            "**♥️ 𝙾𝚆𝙽𝙴𝚁 ♥️**", "https://t.me/Legend_Mr_Hacker"
+                            "♥️ 𝙾𝚆𝙽𝙴𝚁 ♥️", "https://t.me/Legend_Mr_Hacker"
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "**🚀 𝚁𝙴𝙿𝙾 🚀**", "https://github.com/LEGEND-OS/LEGENDBOT"),
+                            "🚀 𝚁𝙴𝙿𝙾 🚀", "https://github.com/LEGEND-OS/LEGENDBOT"),
                     ],
                 ],
                 link_preview=False,
