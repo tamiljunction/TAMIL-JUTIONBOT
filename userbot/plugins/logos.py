@@ -18,7 +18,7 @@ PICS_STR = []
 @bot.on(sudo_cmd(pattern=r"logo ?(.*)", allow_sudo=True))
 async def lg1(LEGENDevent):
     event = await edit_or_reply(LEGENDevent, "`Processing.....`")
-    fnt = await get_font_file(event.client, "@LEGEND_MR_FRONTS")
+    fnt = await get_font_file(event.client, "@LegendFonts")
     if LEGENDevent.reply_to_msg_id:
         rply = await LEGENDevent.get_reply_message()
         logo_ = await rply.download_media()
