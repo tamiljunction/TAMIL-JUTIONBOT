@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "David99q"
+          find: "Legend_Mr_Fronts"
 
-          replace: "Legend_Mr_Hacker"
+          replace: "LegendFonts"
 
       - name: Create Pull Request
 
