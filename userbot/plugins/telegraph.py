@@ -89,9 +89,9 @@ async def _(event):
             response = telegraph.create_page(title_of_page, html_content=page_content)
             end = datetime.now()
             ms = (end - start).seconds
-            David99q = f"https://telegra.ph/{response['path']}"
+            Legend_Mr_Hacker = f"https://telegra.ph/{response['path']}"
             await edit_or_reply(event, 
-                  f"✓ **Pasted to** [telegraph]({David99q}) \n✓ **Time Taken :-** `{ms}` secs\n✓** By :- **[{LEGEND_NAME}](tg://user?id={legend})", link_preview=True)
+                  f"✓ **Pasted to** [telegraph]({Legend_Mr_Hacker}) \n✓ **Time Taken :-** `{ms}` secs\n✓** By :- **[{LEGEND_NAME}](tg://user?id={legend})", link_preview=True)
     else:
         await edit_or_reply(event, 
             "Reply to a message to get a permanent telegra.ph link."

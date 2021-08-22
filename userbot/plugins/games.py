@@ -1,4 +1,4 @@
-# Made by @David99q for @LEGEND_Userbot
+# Made by @Legend_Mr_Hacker for @LEGEND_Userbot
 # Now in LEGENDBOT
 # Thanks to LegendBot
 

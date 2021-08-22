@@ -1,4 +1,4 @@
-# Added more fonts by @David99q
+# Added more fonts by @Legend_Mr_Hacker
 # Ported from saitama i guess
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply

@@ -25,7 +25,7 @@ print(Style.BRIGHT + Fore.BLUE + logo)
 print(Style.RESET_ALL)
 print(Style.BRIGHT + Fore.CYAN + Back.BLUE + baap_bolte)
 print(Style.RESET_ALL)
-print("""Welcome To LEGENDBOT String Generator By @David99q""")
+print("""Welcome To LEGENDBOT String Generator By @Legend_Mr_Hacker""")
 print("""Kindly Enter Your Details To Continue ! """)
 
 API_KEY = input("API_KEY: ")
