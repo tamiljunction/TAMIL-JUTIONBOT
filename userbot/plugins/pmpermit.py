@@ -33,10 +33,10 @@ LEGEND = (
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ℓєgєи∂"
 USER_BOT_WARN_ZERO = "**TomalKk Sir/Miss, ʏᴏᴜ ᴅɪᴅ'ɴᴛ sᴇᴇ ᴡʜᴀᴛ ɪ sᴀɪᴅ ᴍʏ ᴍᴀsᴛᴇʀ ɪs ᴄᴜʀʀᴇɴᴛʟʏ ᴏғғʟɪɴᴇ ᴅᴏɴᴛ sᴘᴀᴍ.`\n**ɴᴏᴡ sʜᴜᴛ ᴜᴘ.... ᴀɴᴅ ɢᴇᴛ ʟᴏsᴛ**"
 USER_BOT_NO_WARN = (
-    "**нєℓℓο ѕιя/мιѕѕ,ι нανєи'τ αρρяονє∂ γου γєτ το ρєяѕοиαℓ мєѕѕαgє мє😎⚠️**.\n\n"
-    f"𝔗𝔥𝔦𝔰 ℑ𝔰 𝔪𝔶 𝔒𝔴𝔫𝔢𝔯 {DEFAULTUSER}'s\n"
+    "**𝙷𝙴𝙻𝙻𝙾 𝚂𝙸𝚁/𝙼𝙸𝚂𝚂\𝚗𝙼𝚈 𝙼𝙰𝚂𝚃𝙴𝚁 𝙷𝙰𝚅𝙴'𝙽𝚃 𝙰𝙿𝙿𝚁𝙾𝚅𝙴𝙳 𝚃𝙾 𝚈𝙴𝚃 𝙿𝙴𝚁𝚂𝙾𝙽𝙰𝙻 𝙼𝙴𝚂𝚂𝙰𝙶𝙴 𝙼𝙴😎⚠️**.\n\n"
+    f"𝐓𝐇𝐈𝐒 𝐈𝐒 𝐌𝐘 𝐋𝐄𝐆𝐄𝐍𝐃 𝐌𝐀𝐒𝐓𝐄𝐑 {DEFAULTUSER}'s\n"
     f"\n**{LEGEND}**\n\n"
-    "⚡Register Your Request!⚡\nSend `/start` To Register Your Request🔥**"
+    "⚡𝐑𝐄𝐆𝐈𝐒𝐓𝐄𝐑 𝐔𝐑 𝐑𝐄𝐐𝐔𝐄𝐒𝐓⚡\nSend `/start` 𝐓𝐎 𝐑𝐄𝐆𝐈𝐒𝐓𝐄𝐑 𝐔𝐑 𝐑𝐄𝐐𝐔𝐄𝐒𝐓🔥"
 )
  
 if Var.PRIVATE_GROUP_ID is not None:
@@ -58,7 +58,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     del PREV_REPLY_MESSAGE[chat.id]
                 pmpermit_sql.approve(chat.id, reason)
                 await event.edit(
-                    "αρρяονє∂ [{}](tg://user?id={}) τo ρм γου.".format(
+                    "✔️αρρяονє∂ [{}](tg://user?id={}) τo ρм γου.".format(
                         firstname, chat.id
                     )
                 )
@@ -94,7 +94,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             if not pmpermit_sql.is_approved(chat.id):
                 if not chat.id in PM_WARNS:
                     pmpermit_sql.approve(chat.id, "outgoing")
-                    bruh = "✔️αµƭσ αρρɾσѵε∂ ɓcµƶ σµƭɠσเɳɦ 🚶"
+                    bruh = "✔️𝙰𝚞𝚝𝚘 𝙰𝚙𝚙𝚛𝚘𝚟𝚎𝚍 𝙱𝚎𝚌𝚊𝚞𝚜𝚎 𝙸𝚝𝚜 𝙾𝚞𝚝𝚐𝚘𝚒𝚗𝚐 🚶"
                     rko = await borg.send_message(event.chat_id, bruh)
                     await asyncio.sleep(3)
                     await rko.delete()
@@ -110,7 +110,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if chat.id == 1856561912:
                 await event.edit(
-                    "You tried to block my master😡. GoodBye for 100 seconds!🥱😴😪💤"
+                    "𝚈𝙾𝚄 𝚃𝚁𝙸𝙴𝙳 𝚃𝙾 𝙱𝙻𝙾𝙲𝙺 𝙼𝚈 𝙾𝚆𝙽𝙴𝚁😡. 𝙶𝙾𝙾𝙳 𝙱𝚈𝙴 𝙵𝙾𝚁 100 𝚂𝙴𝙲𝙾𝙽𝙳𝚂😏!🥱😴😪💤"
                 )
                 time.sleep(100)
             else:
@@ -126,7 +126,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         elif event.is_group:
             if chat.id == 1856561912:
                 await event.edit(
-                    "You tried to block my master😡. GoodBye for 100 seconds!🥱😴😪💤"
+                    "𝚈𝙾𝚄 𝚃𝚁𝙸𝙴𝙳 𝚃𝙾 𝙱𝙻𝙾𝙲𝙺 𝙼𝚈 𝙾𝚆𝙽𝙴𝚁😡. 𝙶𝙾𝙾𝙳 𝙱𝚈𝙴 𝙵𝙾𝚁 100 𝚂𝙴𝙲𝙾𝙽𝙳𝚂😏!🥱😴😪💤"
                 )
                 time.sleep(100)
             else:
@@ -153,7 +153,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         chat = await event.get_chat()
         if event.is_private:
             if chat.id == 1856561912:
-                await event.edit("Sorry, I Can't Disapprove My Master")
+                await event.edit("𝚂𝚘𝚛𝚛𝚢 𝙸 𝚌𝚊𝚗𝚝 𝙳𝚒𝚜𝚊𝚙𝚙𝚛𝚘𝚟𝚎 𝙼𝚢 𝙾𝚠𝚗𝚎𝚛")
             else:
                 if pmpermit_sql.is_approved(chat.id):
                     pmpermit_sql.disapprove(chat.id)
@@ -308,7 +308,7 @@ async def hehehe(event):
             )
             await borg.send_message(chat, "**Here comes my Master! Lucky you!!😏**")
 
-CmdHelp("ρмρєямιτ").add_command(
+CmdHelp("𝚙𝚖𝚙𝚎𝚛𝚖𝚒𝚝").add_command(
   "allow|.a|approve", "<pm use only>", "It allow the user to PM you."
 ).add_command(
   "disallow|.da|disapprove", "<pm use only>", "It disallows the user to PM. If user crosses the PM limit after disallow he/she will get blocked automatically"
