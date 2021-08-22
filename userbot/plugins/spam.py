@@ -34,20 +34,17 @@ async def spammer(e):
 @bot.on(admin_cmd(pattern="bigspam"))
 @bot.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
 async def bigspam(LEGEND):
-    if not LEGEND.text[0].isalpha() and LEGEND.text[0] not in ("/", "#", "@", "!"):
+    if not LEGEND.text[0].isalpha() and W2H.text[0] not in ("/", "#", "@", "!"):
         LEGEND_msg = LEGEND.text
         LEGENDBOT_count = int(LEGEND_msg[9:13])
-        reply_msg = await LEGEND.get_reply_message()
-        if reply_msg:
-            LEGEND_spam = reply_msg
-        else:
-            LEGEND_spam = str(LEGEN.text[13:])
+        LEGEND_spam = str(LEGEND.text[13:])
         for i in range(1, LEGENDBOT_count):
             await LEGEND.respond(LEGEND_spam)
         await LEGEND.delete()
-        await LEGEND.client.send_message(
-                lg_id, f"#BIGSPAM \n\nBigspammed  `{LEGENDBOT_count}`  messages !!"
-        )
+        if LOGGER:
+            await LEGEND.client.send_message(
+                LOGGER_GROUP, "#BIGSPAM \n\n" "Bigspam was executed successfully"
+            )
 
 
 @bot.on(admin_cmd("dspam (.*)"))
@@ -96,7 +93,7 @@ async def tiny_pic_spam(e):
         )
 
 
-CmdHelp("ѕραм").add_command(
+CmdHelp("𝚜𝚙𝚊𝚖").add_command(
   "spam", "<number> <text>", "Sends the text 'X' number of times.", ".spam 99 TomalKk"
 ).add_command(
   "mspam", "<reply to media> <number>", "Sends the replied media (gif/ video/ sticker/ pic) 'X' number of times", ".mspam 100 <reply to media>"
