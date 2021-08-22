@@ -14,8 +14,8 @@ LEGEND_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
 LEGEND_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 LEGEND_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 LEGEND_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGEBD_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-
+LEGEND_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
+LEGENDversion = ♥️𝚅2.𝙾♥️
 
 async def get_user_id(ids):
     if str(ids).isdigit():
