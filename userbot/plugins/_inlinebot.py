@@ -44,13 +44,13 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-               f"⭅ϐαϲκ", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+               f"**⭅ϐαϲκ**", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
-               f"☣️ ❎ ☣️", data="close"
+               f"**☣️ ❎ ☣️**", data="close"
             ),
             custom.Button.inline(
-               f"ղҽxԵ⭆", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+               f"**ղҽxԵ⭆**", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
@@ -73,7 +73,7 @@ if Var.BOT_USERNAME is not None and tgbot is not None:
                     apn.append(y)
             result = await builder.article(
                 f"Hey! Only use .help please", 
-                text=f"𓆩♥️[{ALIVE_NAME}](https://t.me/Legend_Userbot)♥️𓆪\n\n🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}` \n⌨️Tοταℓ Cοммαи∂ѕ⭆ `{len(apn)}`\n🎒Pαցҽ⭆ 1/{veriler[0]}",
+                text=f"𓆩♥️[{ALIVE_NAME}](https://t.me/Legend_Userbot)♥️𓆪\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`**\n**⌨️Tοταℓ Cοммαи∂ѕ⭆ `{len(apn)}`**\n**🎒Pαցҽ⭆ 1/{veriler[0]}**",
                 buttons=veriler[1],
                 link_preview=False,
             )
@@ -91,14 +91,14 @@ if Var.BOT_USERNAME is not None and tgbot is not None:
                 text="""**[✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳](https://t.me/Legend_Userbot) \nγου ϲαи κиοω мοяє αϐουτ мє👇**""",
                 buttons=[
                     [
-                        custom.Button.url("♦️ Gяουρ ♦️", "https://t.me/Legend_Userbot"),
+                        custom.Button.url("**♦️ Gяουρ ♦️**", "https://t.me/Legend_Userbot"),
                         custom.Button.url(
-                            "♥️ Oωиєя ♥️", "https://t.me/Legend_Mr_Hacker"
+                            "**♥️ 𝙾𝚆𝙽𝙴𝚁 ♥️**", "https://t.me/Legend_Mr_Hacker"
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "🚀 яєρο 🚀", "https://github.com/LEGEND-OS/LEGENDBOT"),
+                            "**🚀 𝚁𝙴𝙿𝙾 🚀**", "https://github.com/LEGEND-OS/LEGENDBOT"),
                     ],
                 ],
                 link_preview=False,
@@ -183,30 +183,30 @@ if Var.BOT_USERNAME is not None and tgbot is not None:
         page = int(event.data_match.group(2).decode("UTF-8"))
         commands = event.data_match.group(3).decode("UTF-8")
 
-        result = f"📗 Fɪʟᴇ: `{cmd}`\n"
+        result = f"📗 𝙵𝙸𝙻𝙴: `{cmd}`\n"
         if CMD_HELP_BOT[cmd]["info"]["info"] == "":
             if not CMD_HELP_BOT[cmd]["info"]["warning"] == "":
-                result += f"**⬇️ σƒƒเcเαℓ ᚛** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
-                result += f"**⚠️ ωαяиιиg ᚛** {CMD_HELP_BOT[cmd]['info']['warning']}\n\n"
+                result += f"**⬇️ 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 ᚛** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
+                result += f"**⚠️ 𝚆𝙰𝚁𝙽𝙸𝙽𝙷 ᚛** {CMD_HELP_BOT[cmd]['info']['warning']}\n\n"
             else:
-                result += f"**⬇️ σƒƒเcเαℓ ᚛** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n\n"
+                result += f"**⬇️ 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 ᚛** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n\n"
         else:
-            result += f"**⬇️ σƒƒเcเαℓ ᚛** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
+            result += f"**⬇️ 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 ᚛** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
             if not CMD_HELP_BOT[cmd]["info"]["warning"] == "":
                 result += f"**⚠️ ɪɴғᴏ ᚛** {CMD_HELP_BOT[cmd]['info']['warning']}\n"
-            result += f"**ℹ️ ɪɴғᴏ ᚛** {CMD_HELP_BOT[cmd]['info']['info']}\n\n"
+            result += f"**ℹ️ 𝙸𝙽𝙵𝙾 ᚛** {CMD_HELP_BOT[cmd]['info']['info']}\n\n"
 
         command = CMD_HELP_BOT[cmd]["commands"][commands]
         if command["params"] is None:
-            result += f"🛠 𝕮οммαи∂ѕ: `{COMMAND_HAND_LER[:1]}{command['command']}`\n"
+            result += f"🛠 **𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂**: `{COMMAND_HAND_LER[:1]}{command['command']}`\n"
         else:
-            result += f"🛠 𝕮οммαи∂ѕ: `{COMMAND_HAND_LER[:1]}{command['command']} {command['params']}`\n"
+            result += f"🛠 **𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂**: `{COMMAND_HAND_LER[:1]}{command['command']} {command['params']}`\n"
 
         if command["example"] is None:
-            result += f"💬 𝔈ϰρℓαиατιοи: `{command['usage']}`\n\n"
+            result += f"💬 **𝙴𝚇𝙿𝙻𝙰𝙽𝙰𝚃𝙸𝙾𝙽**: `{command['usage']}`\n\n"
         else:
-            result += f"💬 𝔈ϰρℓαиατιοи: `{command['usage']}`\n"
-            result += f"⌨️ ℱℴ𝓇 ℰ𝓍𝒶𝓂𝓅𝓁ℯ: `{COMMAND_HAND_LER[:1]}{command['example']}`\n\n"
+            result += f"💬 **𝙴𝚇𝙿𝙻𝙰𝙽𝙰𝚃𝙸𝙾𝙽**: `{command['usage']}`\n"
+            result += f"⌨️ **𝐅𝐨𝐫 𝐄𝐱𝐚𝐦𝐩𝐥𝐞**: `{COMMAND_HAND_LER[:1]}{command['example']}`\n\n"
 
         await event.edit(
             result,
