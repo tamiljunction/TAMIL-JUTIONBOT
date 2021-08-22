@@ -159,12 +159,12 @@ HELLOSTR = [
     "‘Ello, gov'nor!",
     "What’s crackin’?",
     "Howdy, howdy ,howdy!",
-    "Hello, who's there, I'm talking.",
+    "TomalKk, who's there, I'm talking.",
     "You know who this is.",
     "Yo!",
     "Whaddup.",
     "Greetings and salutations!",
-    "Hello, sunshine!",
+    "TomalKk, sunshine!",
     "`Hey, howdy, hi!`",
     "What’s kickin’, little chicken?",
     "Peek-a-boo!",
@@ -378,7 +378,7 @@ CmdHelp("quotes").add_command(
 ).add_command(
   'gdbye', None, 'Sends a random Good Byee Quote'
 ).add_command(
-  'qhi', None, 'Sends a random Hello msg'
+  'qhi', None, 'Sends a random TomalKk msg'
 ).add_command(
   'congo', None, 'Sends a random congratulations quote'
 ).add_command(

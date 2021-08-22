@@ -25,7 +25,7 @@ async def _(event):
             return
         if event.is_private:
          
-         PM = ("`Hello. You are accessing the availabe menu of my peru master,`"
+         PM = ("`TomalKk. You are accessing the availabe menu of my peru master,`"
                f"{DEFAULTUSER}.\n"
                "__Let's make this smooth and let me know why you are here.__\n"
                "**Choose one of the following reasons why you are here:**\n\n"

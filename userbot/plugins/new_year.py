@@ -25,7 +25,7 @@ legend = bot.uid
 async def _(event):
     if event.fwd_from:
         return
-    event = await edit_or_reply(event, "Hello!!!")
+    event = await edit_or_reply(event, "TomalKk!!!")
     await asyncio.sleep(1)
     h = random.randrange(1, 18)
     if h == 1:
@@ -82,7 +82,7 @@ async def _(event):
         )# credits to legend, john snow
     if h == 14:
         await event.edit(
-            f"Here’s to the next chapter! New year, new beginnings! Goodbye 2020, Hello 2021 \n\n[{DEFAULTUSER}](tg://user?id={legend})"
+            f"Here’s to the next chapter! New year, new beginnings! Goodbye 2020, TomalKk 2021 \n\n[{DEFAULTUSER}](tg://user?id={legend})"
         ) # creadit to legend, john snow    
     if h == 15:
         await event.edit(
