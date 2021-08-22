@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "TMP_DOWNLOAD_DIRECTORY"
+          find: "HellBot"
 
-          replace: "TEMP_DOWNLOAD_DIRECTORY"
+          replace: "LegendBot"
 
       - name: Create Pull Request
 
