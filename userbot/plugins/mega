@@ -37,7 +37,7 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply, humanbytes, time
 from userbot.cmdhelp import CmdHelp
 
 
-TEMP_DOWNLOAD_DIRECTORY = Config.TMP_DOWNLOAD_DIRECTORY
+TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
 
 
 async def subprocess_run(megadl, cmd):

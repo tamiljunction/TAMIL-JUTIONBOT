@@ -111,12 +111,12 @@ async def parse_ocr_space_api(event):
     if event.fwd_from:
         return
     await edit_or_reply(event, "Processing weit...🤓")
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
     lang_code = event.pattern_match.group(1)
     downloaded_file_name = await borg.download_media(
         await event.get_reply_message(),
-        Config.TMP_DOWNLOAD_DIRECTORY,
+        Config.TEMP_DOWNLOAD_DIRECTORY,
         progress_callback=progress,
     )
     test_file = ocr_space_file(filename=downloaded_file_name, language=lang_code)

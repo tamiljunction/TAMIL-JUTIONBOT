@@ -58,15 +58,15 @@ async def _(event):
     await edit_or_reply(event, "Processing ...")
     input_str = event.pattern_match.group(1)
     response = google_images_download.googleimagesdownload()
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
     arguments = {
         "keywords": input_str,
         "limit": Config.TG_GLOBAL_ALBUM_LIMIT,
         "format": "jpg",
         "delay": 1,
         "safe_search": True,
-        "output_directory": Config.TMP_DOWNLOAD_DIRECTORY,
+        "output_directory": Config.TEMP_DOWNLOAD_DIRECTORY,
     }
     paths = response.download(arguments)
     logger.info(paths)
@@ -108,7 +108,7 @@ async def _(event):
         previous_message_text = previous_message.message
         if previous_message.media:
             downloaded_file_name = await borg.download_media(
-                previous_message, Config.TMP_DOWNLOAD_DIRECTORY
+                previous_message, Config.TEMP_DOWNLOAD_DIRECTORY
             )
             SEARCH_URL = "{}/searchbyimage/upload".format(BASE_URL)
             multipart = {

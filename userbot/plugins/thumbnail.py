@@ -13,7 +13,7 @@ from PIL import Image
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
+thumb_image_path = Config.TEMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
 
 
 def get_video_thumb(file, output=None, width=320):
@@ -48,11 +48,11 @@ async def _(event):
     if event.fwd_from:
         return
     await edit_or_reply(event, "Processing ...")
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
         downloaded_file_name = await borg.download_media(
-            await event.get_reply_message(), Config.TMP_DOWNLOAD_DIRECTORY
+            await event.get_reply_message(), Config.TEMP_DOWNLOAD_DIRECTORY
         )
         if downloaded_file_name.endswith(".mp4"):
             downloaded_file_name = get_video_thumb(downloaded_file_name)
@@ -97,7 +97,7 @@ async def _(event):
         r = await event.get_reply_message()
         try:
             a = await borg.download_media(
-                r.media.document.thumbs[0], Config.TMP_DOWNLOAD_DIRECTORY
+                r.media.document.thumbs[0], Config.TEMP_DOWNLOAD_DIRECTORY
             )
         except Exception as e:
             await edit_or_reply(event, str(e))

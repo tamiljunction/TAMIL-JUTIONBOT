@@ -30,7 +30,7 @@ async def _(event):
         if previous_message.media:
             downloaded_file_name = await bot.download_media(
                 previous_message,
-                Config.TMP_DOWNLOAD_DIRECTORY,
+                Config.TEMP_DOWNLOAD_DIRECTORY,
             )
             m_list = None
             with open(downloaded_file_name, "rb") as fd:

@@ -26,8 +26,8 @@ async def _(event):
         await edit_or_reply(event, "Please set the required environment variable `PLUGIN_CHANNEL` for this plugin to work\n\nGo to [LEGENDBOT Chat Group](t.me/LEGENDSupport) for assistance"
         )
         return
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
     await event.client.send_message(
         Config.PLUGIN_CHANNEL,
         "Created New Telegraph account {} for the current session. \n**Do not give this url to anyone, even if they say they are from Telegram!**".format(
@@ -41,7 +41,7 @@ async def _(event):
         input_str = event.pattern_match.group(1)
         if input_str == "m":
             downloaded_file_name = await borg.download_media(
-                r_message, Config.TMP_DOWNLOAD_DIRECTORY
+                r_message, Config.TEMP_DOWNLOAD_DIRECTORY
             )
             end = datetime.now()
             ms = (end - start).seconds
@@ -77,7 +77,7 @@ async def _(event):
                 if page_content != "":
                     title_of_page = page_content
                 downloaded_file_name = await borg.download_media(
-                    r_message, Config.TMP_DOWNLOAD_DIRECTORY
+                    r_message, Config.TEMP_DOWNLOAD_DIRECTORY
                 )
                 m_list = None
                 with open(downloaded_file_name, "rb") as fd:

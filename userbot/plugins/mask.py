@@ -56,8 +56,8 @@ async def _(LEGENDBOT):
 @bot.on(sudo_cmd(pattern="awooify$", allow_sudo=True))
 async def LEGENDBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
     if not replied:
         await edit_or_reply(LEGENDmemes, "reply to a supported media file")
         return
@@ -73,7 +73,7 @@ async def LEGENDBOT(LEGENDmemes):
     except BaseException:
         pass
     download_location = await LEGENDmemes.client.download_media(
-        replied, Config.TMP_DOWNLOAD_DIRECTORY
+        replied, Config.TEMP_DOWNLOAD_DIRECTORY
     )
     if download_location.endswith((".webp")):
         download_location = convert_toimage(download_location)
@@ -107,8 +107,8 @@ async def LEGENDBOT(LEGENDmemes):
 @bot.on(sudo_cmd(pattern="lolice$", allow_sudo=True))
 async def LEGENDBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
     if not replied:
         await edit_or_reply(LEGENDmemes, "reply to a supported media file")
         return
@@ -124,7 +124,7 @@ async def LEGENDBOT(LEGENDmemes):
     except BaseException:
         pass
     download_location = await LEGENDmemes.client.download_media(
-        replied, Config.TMP_DOWNLOAD_DIRECTORY
+        replied, Config.TEMP_DOWNLOAD_DIRECTORY
     )
     if download_location.endswith((".webp")):
         download_location = convert_toimage(download_location)
@@ -158,8 +158,8 @@ async def LEGENDBOT(LEGENDmemes):
 @bot.on(sudo_cmd(pattern="bun$", allow_sudo=True))
 async def LEGENDBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
     if not replied:
         await edit_or_reply(LEGENDmemes, "reply to a supported media file")
         return
@@ -175,7 +175,7 @@ async def LEGENDBOT(LEGENDmemes):
     except BaseException:
         pass
     download_location = await LEGENDmemes.client.download_media(
-        replied, Config.TMP_DOWNLOAD_DIRECTORY
+        replied, Config.TEMP_DOWNLOAD_DIRECTORY
     )
     if download_location.endswith((".webp")):
         download_location = convert_toimage(download_location)
@@ -209,8 +209,8 @@ async def LEGENDBOT(LEGENDmemes):
 @bot.on(sudo_cmd(pattern="iphx$", allow_sudo=True))
 async def LEGENDBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
     if not replied:
         await edit_or_reply(LEGENDmemes, "reply to a supported media file")
         return
@@ -226,7 +226,7 @@ async def LEGENDBOT(LEGENDmemes):
     except BaseException:
         pass
     download_location = await LEGENDmemes.client.download_media(
-        replied, Config.TMP_DOWNLOAD_DIRECTORY
+        replied, Config.TEMP_DOWNLOAD_DIRECTORY
     )
     if download_location.endswith((".webp")):
         download_location = convert_toimage(download_location)

@@ -54,7 +54,7 @@ async def get(event):
 
 
 
-thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "thumb_image.jpg"
+thumb_image_path = Config.TEMP_DOWNLOAD_DIRECTORY + "thumb_image.jpg"
 
 
 @bot.on(admin_cmd(pattern="stoi"))
@@ -70,14 +70,14 @@ async def danish(hehe):
     
   
     input_str = "dc.jpeg"
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
     if cobra.reply_to_msg_id:
         start = datetime.now()
         file_name = input_str
         reply_message = await cobra.get_reply_message()
       
-        to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
+        to_download_directory = Config.TEMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
         downloaded_file_name = await hehe.client.download_media(
             reply_message,
@@ -125,14 +125,14 @@ async def teamcobra(hehe):
     
   
     input_str = "dc.webp"
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
     if cobra.reply_to_msg_id:
         start = datetime.now()
         file_name = input_str
         reply_message = await cobra.get_reply_message()
       
-        to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
+        to_download_directory = Config.TEMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
         downloaded_file_name = await hehe.client.download_media(
             reply_message,

@@ -23,8 +23,8 @@ async def _(event):
         await edit_or_reply(event, "**Already in Offline Mode.**")
         return
     await edit_or_reply(event, "**Changing Profile to Offline...**")
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
+    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
+        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
     urllib.request.urlretrieve(
         "https://telegra.ph/file/249f27d5b52a87babcb3f.jpg", "donottouch.jpg"
     )
@@ -66,8 +66,8 @@ async def _(event):
     else:
         await edit_or_reply(event, "**Already Online.**")
         return
-    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
-        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
+    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
+        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
     urllib.request.urlretrieve(PROFILE_IMAGE, "donottouch.jpg")
     photo = "donottouch.jpg"
     if photo:
