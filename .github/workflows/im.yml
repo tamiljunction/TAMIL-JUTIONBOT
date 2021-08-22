@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "MY_GROUP"
+          find: "TMP_DOWNLOAD_DIRECTORY"
 
-          replace: "YOUR_GROUP"
+          replace: "TEMP_DOWNLOAD_DIRECTORY"
 
       - name: Create Pull Request
 
