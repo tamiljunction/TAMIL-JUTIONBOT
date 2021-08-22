@@ -7,9 +7,9 @@ from . import *
 async def _(event):
     if event.fwd_from:
         return
-    event = await edit_or_reply(event, "I am angry.....")
-    deq = deque(list("😡🔥😡🔥🤬🔥🤬🔥✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎"))
-    for _ in range(48):
+    event = await edit_or_reply(event, "𝙸 𝚊𝚖 𝚊𝚗𝚐𝚛𝚢 ")
+    deq = deque(list("😡🔥😡🔥🤬🔥🤬🔥🤬𝚅2.𝙾🔥😡🔥🤬😡🔥🤬🤬🔥😡"))
+    for _ in range(100):
         await asyncio.sleep(0.3)
         await event.edit("".join(deq))
         deq.rotate(1)
