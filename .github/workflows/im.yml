@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "1784197722"
+          find: "TomalKk"
 
-          replace: "1856561912"
+          replace: "hello"
 
       - name: Create Pull Request
 
