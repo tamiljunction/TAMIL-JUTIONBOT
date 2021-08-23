@@ -10,13 +10,13 @@ from . import *
 #-------------------------------------------------------------------------------
 
 LEGEND_pic = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
-LEGEND_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
-LEGEND_caption += f"        ♥️ẞø✞︎ ẞ✞︎α✞︎µѕ♥️ \n"
-LEGEND_caption += f"•⚜️• Øաղ̃ҽ̈ɾ          : {mention}\n\n"
-LEGEND_caption += f"•📍• 𝖑𝖊ɠêɳ̃dẞø✞︎  : {LEGENDversion}\n"
-LEGEND_caption += f"•📍• ✞︎ҽ̀lҽ́ƭhøղ̃     : `{version.__version__}`\n"
-LEGEND_caption += f"•📍• 𝚄ρƭเɱε         : `{uptime}`\n"
-LEGEND_caption += f"•📍• 𝖦ɾσµρ           : [𝔾ɾσµρ](t.me/Legend_Userbot)\n"  
+alive_c += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
+alive_c += f"        ♥️ẞø✞︎ ẞ✞︎α✞︎µѕ♥️ \n"
+alive_c += f"•⚜️• Øաղ̃ҽ̈ɾ          : {mention}\n\n"
+alive_c += f"•📍• 𝖑𝖊ɠêɳ̃dẞø✞︎  : {LEGENDversion}\n"
+alive_c += f"•📍• ✞︎ҽ̀lҽ́ƭhøղ̃     : `{version.__version__}`\n"
+alive_c += f"•📍• 𝚄ρƭเɱε         : `{uptime}`\n"
+alive_c += f"•📍• 𝖦ɾσµρ           : [𝔾ɾσµρ](t.me/Legend_Userbot)\n"  
 
 #-------------------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ async def up(alive):
         return
     await alive.get_chat()
     await alive.delete()
-    await bot.send_file(alive.chat_id, LEGEND_pic, caption=LEGEND_caption)
+    await bot.send_file(alive.chat_id, LEGEND_pic, caption=alive_c)
     await alive.delete()
 
 msg = f"""
