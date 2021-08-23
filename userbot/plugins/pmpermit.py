@@ -16,9 +16,13 @@ PM_ON_OFF = Config.PM_DATA
 CSTM_PMP = Config.PM_MSG or "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
 HELL_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
 HELL_FIRST = (
-    "**🔥 Hêllẞø† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
-    "{} is currently unavailable.\nThis is an automated message.\n\n"
-    "{}\n\n**Please Choose Why You Are Here!!**".format(mention, CSTM_PMP)
+    "**нєℓℓο ѕιя/мιѕѕ,ι нανєи'τ αρρяονє∂ γου γєτ το ρєяѕοиαℓ мєѕѕαgє мє😎⚠️**.\n\n"
+
+    f"𝔗𝔥𝔦𝔰 ℑ𝔰 𝔪𝔶 𝔒𝔴𝔫𝔢𝔯 {DEFAULTUSER}'s\n"
+
+    f"\n**{LEGEND}**\n\n"
+
+    "⚡Register Your Request!⚡\nSend `/start` To Register Your Request🔥"
 )
 
  
