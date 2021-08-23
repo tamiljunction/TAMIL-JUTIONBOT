@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "Legend_Mr_Fronts"
+          find: "hell_mention"
 
-          replace: "LegendFonts"
+          replace: "mention"
 
       - name: Create Pull Request
 
