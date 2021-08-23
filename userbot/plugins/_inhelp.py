@@ -17,9 +17,9 @@ from telethon.tl.functions.messages import ExportChatInviteRequest
 
 from . import *
 
-hell_row = Config.BUTTONS_IN_HELP
-hell_emoji = Config.EMOJI_IN_HELP
-hell_pic = Config.PM_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
+LEGEND_row = Config.BUTTONS_IN_HELP
+LEGEND_emoji = Config.EMOJI_IN_HELP
+LEGEND_pic = Config.PM_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
 cstm_pmp = Config.PM_MSG
 ALV_PIC = Config.ALIVE_PIC
 help_pic = Config.PM_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
