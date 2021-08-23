@@ -11,11 +11,11 @@ from . import *
 
 hell_pic = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
 alive_c = f"__**🔥🔥ɦɛʟʟɮօt ɨs օռʟɨռɛ🔥🔥**__\n\n"
-alive_c += f"__↼ Øwñêr ⇀__ : 『 {hell_mention} 』\n\n"
-alive_c += f"•♦• Telethon     :  `{tel_ver}` \n"
-alive_c += f"•♦• Hêllẞø†       :  __**{hell_ver}**__\n"
+alive_c += f"__↼ Øwñêr ⇀__ : 『 {mention} 』\n\n"
+alive_c += f"•♦• Telethon     :  `{LEGENDversiom}` \n"
+alive_c += f"•♦• Hêllẞø†       :  __**{LEGENDversion}**__\n"
 alive_c += f"•♦• Sudo            :  `{is_sudo}`\n"
-alive_c += f"•♦• Channel      :  {hell_channel}\n"
+alive_c += f"•♦• Channel      :  {Legend_channel}\n"
 
 #-------------------------------------------------------------------------------
 
@@ -33,8 +33,8 @@ msg = f"""
 **⚡ нєℓℓвσт ιѕ σиℓιиє ⚡**
 {Config.ALIVE_MSG}
 **🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
-**Telethon :**  `{tel_ver}`
-**Hêllẞø†  :**  **{hell_ver}**
+**Telethon :**  `{LEGENDversion}`
+**Hêllẞø†  :**  **{LEGENDversion}**
 **Abuse    :**  **{abuse_m}**
 **Sudo      :**  **{is_sudo}**
 """
