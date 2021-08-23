@@ -8,8 +8,8 @@ from userbot import ALIVE_NAME, CMD_LIST, SUDO_LIST
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
-@bot.on(admin_cmd(pattern="op ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="op ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="help ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="help ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -17,13 +17,13 @@ async def _(event):
     chat = "@Botfather"
     if tgbotusername is not None:
         try:
-            results = await event.client.inline_query(tgbotusername, "hellbot_help")
+            results = await event.client.inline_query(tgbotusername, "@LEGEND_userbot")
             await results[0].click(
                 event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True
             )
             await event.delete()
         except noinline:
-            hell = await eor(event, "**Inline Mode is disabled.** \n__Turning it on, please wait for a minute...__")
+            legend = await eor(event, "**Inline Mode is disabled.** \n__Turning it on, please wait for a minute...__")
             async with bot.conversation(chat) as conv:
                 try:
                     first = await conv.send_message("/setinline")
@@ -35,7 +35,7 @@ async def _(event):
                     await bot.send_read_acknowledge(conv.chat_id)
                 except YouBlockedUserError:
                     return await hell.edit("Unblock @Botfather first.")
-                await hell.edit(f"**Turned On Inline Mode Successfully.** \n\nDo `{hl}help` again to get the help menu.")
+                await legend.edit(f"**Turned On Inline Mode Successfully.** \n\nDo `{hl}help` again to get the help menu.")
             await bot.delete_messages(
                 conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id, sixth.id]
             )
@@ -45,7 +45,7 @@ async def _(event):
 
 @bot.on(admin_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="plinfo(?: |$)(.*)", allow_sudo=True))
-async def hellbott(event):
+async def LEGENDbott(event):
     if event.fwd_from:
         return
     args = event.pattern_match.group(1).lower()
