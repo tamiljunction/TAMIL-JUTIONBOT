@@ -9,39 +9,40 @@ from . import *
 
 #-------------------------------------------------------------------------------
 
-hell_pic = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
-alive_c = f"__**🔥🔥ɦɛʟʟɮօt ɨs օռʟɨռɛ🔥🔥**__\n\n"
-alive_c += f"__↼ Øwñêr ⇀__ : 『 {mention} 』\n\n"
-alive_c += f"•♦• Telethon     :  `{LEGENDversion}` \n"
-alive_c += f"•♦• Hêllẞø†       :  __**{LEGENDversion}**__\n"
-alive_c += f"•♦• Sudo            :  `{is_sudo}`\n"
-alive_c += f"•♦• Channel      :  {Legend_channel}\n"
+LEGEND_pic = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
+LEGEND_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
+LEGEND_caption += f"        ♥️ẞø✞︎ ẞ✞︎α✞︎µѕ♥️ \n"
+LEGEND_caption += f"•⚜️• Øաղ̃ҽ̈ɾ          : {mention}\n\n"
+LEGEND_caption += f"•📍• 𝖑𝖊ɠêɳ̃dẞø✞︎  : {LEGENDversion}\n"
+LEGEND_caption += f"•📍• ✞︎ҽ̀lҽ́ƭhøղ̃     : `{version.__version__}`\n"
+LEGEND_caption += f"•📍• 𝚄ρƭเɱε         : `{uptime}`\n"
+LEGEND_caption += f"•📍• 𝖦ɾσµρ           : [𝔾ɾσµρ](t.me/Legend_Userbot)\n"  
 
 #-------------------------------------------------------------------------------
 
 @bot.on(admin_cmd(outgoing=True, pattern="alive$"))
 @bot.on(sudo_cmd(pattern="alive$", allow_sudo=True))
-async def up(hell):
+async def up(alive):
     if hell.fwd_from:
         return
-    await hell.get_chat()
-    await hell.delete()
-    await bot.send_file(hell.chat_id, hell_pic, caption=alive_c)
-    await hell.delete()
+    await alive.get_chat()
+    await alive.delete()
+    await bot.send_file(alive.chat_id, LEGEND_pic, caption=LEGEND_caption)
+    await alive.delete()
 
 msg = f"""
 **⚡ нєℓℓвσт ιѕ σиℓιиє ⚡**
 {Config.ALIVE_MSG}
 **🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
-**Telethon :**  `{LEGENDversion}`
-**Hêllẞø†  :**  **{LEGENDversion}**
+**𝖑𝖊ɠêɳ̃dẞø† :**  `{LEGENDversion}`
+**𝚃𝚎𝚕𝚎𝚝𝚑𝚘𝚗  :**  **{version.__version__}**
 **Abuse    :**  **{abuse_m}**
 **Sudo      :**  **{is_sudo}**
 """
 botname = Config.BOT_USERNAME
 
-@bot.on(admin_cmd(pattern="hell$"))
-@bot.on(sudo_cmd(pattern="hell$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="legend$"))
+@bot.on(sudo_cmd(pattern="legend$", allow_sudo=True))
 async def hell_a(event):
     try:
         hell = await bot.inline_query(botname, "alive")
