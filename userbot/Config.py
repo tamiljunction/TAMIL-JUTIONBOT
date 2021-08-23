@@ -146,6 +146,7 @@ if ENV:
         AWAKE_PIC = os.environ.get("AWAKE_PIC", None)
         ALIVE_MSG = os.environ.get("ALIVE_MSG", None)
         PM_MSG = os.environ.get("PM_MSG", None)
+        INSTANT_BLOCK = os.environ.get("INSTANT_BLOCK", "DISABLE")
         YOUR_GROUP = os.environ.get("YOUR_GROUP", "@Legend_Userbot")
         MY_CHANNEL = os.environ.get("MY_CHANNEL", "@Its_Legend")
         BOT_PIC = os.environ.get("ALIVE_PIC", None)
