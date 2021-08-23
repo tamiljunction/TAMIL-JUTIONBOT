@@ -91,14 +91,14 @@ if Var.BOT_USERNAME is not None and tgbot is not None:
                 text="""**[✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳](https://t.me/Legend_Userbot) \nγου ϲαи κиοω мοяє αϐουτ мє👇**""",
                 buttons=[
                     [
-                        custom.Button.url("**♦️ Gяουρ ♦️**", "https://t.me/Legend_Userbot"),
+                        custom.Button.url("♦️ Gяουρ ♦️", "https://t.me/Legend_Userbot"),
                         custom.Button.url(
-                            "**♥️ 𝙾𝚆𝙽𝙴𝚁 ♥️**", "https://t.me/Legend_Mr_Hacker"
+                            "♥️ 𝙾𝚆𝙽𝙴𝚁 ♥️", "https://t.me/Legend_Mr_Hacker"
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "**🚀 𝚁𝙴𝙿𝙾 🚀**", "https://github.com/LEGEND-OS/LEGENDBOT"),
+                            "🚀 𝚁𝙴𝙿𝙾 🚀", "https://github.com/LEGEND-OS/LEGENDBOT"),
                     ],
                 ],
                 link_preview=False,
