@@ -472,7 +472,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         r = await borg.send_file(
 
-            event.chat_id, LEGENDPIC, caption=HELL_FIRST, force_document=False
+            event.chat_id, WARN_PIC, caption=HELL_FIRST, force_document=False
 
         )
 
