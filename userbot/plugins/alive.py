@@ -40,7 +40,7 @@ msg = f"""
 """
 botname = Config.BOT_USERNAME
 
-@bot.on(hell_cmd(pattern="hell$"))
+@bot.on(admin_cmd(pattern="hell$"))
 @bot.on(sudo_cmd(pattern="hell$", allow_sudo=True))
 async def hell_a(event):
     try:
