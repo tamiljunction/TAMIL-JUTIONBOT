@@ -15,7 +15,7 @@ LEGEND_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 LEGEND_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 LEGEND_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 LEGEND_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGENDversion = "♥️β2.𝙾♥️"
+LEGENDversion = "♥️𝚅2.𝙾♥️"
 
 
 DEVLIST = [
