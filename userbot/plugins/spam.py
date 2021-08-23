@@ -34,7 +34,7 @@ async def spammer(e):
 @bot.on(admin_cmd(pattern="bigspam"))
 @bot.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
 async def bigspam(LEGEND):
-    if not LEGEND.text[0].isalpha() and W2H.text[0] not in ("/", "#", "@", "!"):
+    if not LEGEND.text[0].isalpha() and LEGEND.text[0] not in ("/", "#", "@", "!"):
         LEGEND_msg = LEGEND.text
         LEGENDBOT_count = int(LEGEND_msg[9:13])
         LEGEND_spam = str(LEGEND.text[13:])
