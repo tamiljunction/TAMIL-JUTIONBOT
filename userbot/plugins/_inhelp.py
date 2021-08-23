@@ -22,7 +22,7 @@ hell_emoji = Config.EMOJI_IN_HELP
 hell_pic = Config.PM_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
 cstm_pmp = Config.CUSTOM_PMPERMIT
 ALV_PIC = Config.ALIVE_PIC
-help_pic = https://telegra.ph/file/62b0f29c8887887f259ac.jpg
+help_pic = Config.PM_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
