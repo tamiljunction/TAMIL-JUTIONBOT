@@ -31,7 +31,7 @@ async def up(alive):
     await alive.delete()
 
 msg = f"""
-**⚡ нєℓℓвσт ιѕ σиℓιиє ⚡**
+**⚡ 𝖑𝖊ɠêɳ̃dẞø† ιѕ σиℓιиє ⚡**
 {Config.ALIVE_MSG}
 **🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
 **𝖑𝖊ɠêɳ̃dẞø† :**  `{LEGENDversion}`
