@@ -42,7 +42,7 @@ async def add(event):
     await ok.edit(f"✅** Added**  `{target}`  **in Sudo User.**\n\n 𝚁𝚎𝚜𝚝𝚊𝚛𝚝𝚒𝚗𝚐 𝙷𝚎𝚛𝚘𝚔𝚞 𝚝𝚘 𝙲𝚑𝚊𝚗𝚐𝚎𝚜 𝙸𝚗 𝚟𝚊𝚛. 𝚆𝚊𝚒𝚝 𝙵𝚘𝚛 𝙰 𝙼𝚒𝚗𝚞𝚝𝚎.")
     heroku_Config[bot] = newsudo
 
-@bot.on(hell_cmd(pattern="rmsudo(?: |$)"))
+@bot.on(admin_cmd(pattern="rmsudo(?: |$)"))
 async def _(event):
     ok = await eor(event, "**🚫 Removing Sudo User...**")
     bot = "SUDO_USERS"
