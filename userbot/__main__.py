@@ -14,7 +14,7 @@ import asyncio
 import telethon.utils
 os.system("pip install -U telethon")
 
-hl = Config.SUDO_COMMAND_HAND_LER
+
 LEGEND_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
 
 
@@ -37,7 +37,7 @@ else:
         print("Initiating Inline Bot")
         # ForTheGreatrerGood of beautification
         bot.tgbot = TelegramClient(
-            "TG_BOT_TOKEN",
+            "BOT_TOKEN",
             api_id=Var.APP_ID,
             api_hash=Var.API_HASH
         ).start(bot_token=Var.BOT_TOKEN)
