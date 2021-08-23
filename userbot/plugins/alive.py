@@ -10,7 +10,6 @@ from . import *
 #-------------------------------------------------------------------------------
 
 LEGEND_pic = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
-alive_c += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
 alive_c += f"        ♥️ẞø✞︎ ẞ✞︎α✞︎µѕ♥️ \n"
 alive_c += f"•⚜️• Øաղ̃ҽ̈ɾ          : {mention}\n\n"
 alive_c += f"•📍• 𝖑𝖊ɠêɳ̃dẞø✞︎  : {LEGENDversion}\n"
