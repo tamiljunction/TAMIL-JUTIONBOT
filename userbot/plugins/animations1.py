@@ -16,7 +16,7 @@ async def _(event):
         return
     animation_interval = 0.5
     animation_ttl = range(0, 36)
-    await edit_or_reply(event, "TomalKk")
+    await edit_or_reply(event, "hello")
     animation_chars = [
         "Indian Flag",
         "**🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧\n🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧\n🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧\n⬜️⬜️⬜️⬜️⬜️🟦🟦🟦⬜️⬜️⬜️⬜️⬜️\n⬜️⬜️⬜️⬜️⬜️🟦🟦🟦⬜️⬜️⬜️⬜️⬜️\n⬜️⬜️⬜️⬜️⬜️🟦🟦🟦⬜️⬜️⬜️⬜️⬜️\n🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩\n🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩\n🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩\n\n                🧡🤍💚\n\nProud To Be An Indian❣️!!**",
@@ -132,12 +132,12 @@ async def _(event):
     animation_chars = [
         "`Connecting To Raj Bhawan Delhi`",
         "`Call Connected.`",
-        "`Secretary: TomalKk This is Raj Bhawan. Who is this?`",
-        f"`Me: TomalKk this is` `{DEFAULTUSER}` .Please connect me to Sweetie Kumari",
+        "`Secretary: hello This is Raj Bhawan. Who is this?`",
+        f"`Me: hello this is` `{DEFAULTUSER}` .Please connect me to Sweetie Kumari",
         "`User Authorised.`",
         "`Calling`  `At +9189*#*#*#56`",
         "`Private  Call Connected...`",
-        "`Me: TomalKk Dear, How are you!!`",
+        "`Me: hello Dear, How are you!!`",
         "`Sweetie Kumari: May I Know Who Is This?`",
         f"`Me: Yes sur, itz me` `{DEFAULTUSER}`",
         "`Sweetie Kumari: OMG!!! After long time to see u, Wassup Dear...\nI'm fine btw... how are you?`",

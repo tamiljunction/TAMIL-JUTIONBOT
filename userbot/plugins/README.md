@@ -21,6 +21,6 @@ async def hello_world(event):
     await eor(event, "**HELLO WORLD**")
 
 CmdHelp("hello").add_command(
-  "hello", None, "TomalKk World Edit."
+  "hello", None, "hello World Edit."
 ).add()
 ```

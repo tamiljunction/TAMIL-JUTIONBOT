@@ -16,12 +16,12 @@ HELLOSTR = [
     "`What’s crackin’?`",
     "`‘Sup, homeslice?`",
     "`Howdy, howdy ,howdy!`",
-    "`TomalKk, who's there, I'm talking.`",
+    "`hello, who's there, I'm talking.`",
     "`You know who this is.`",
     "`Yo!`",
     "`Whaddup.`",
     "`Greetings and salutations!`",
-    "`TomalKk, sunshine!`",
+    "`hello, sunshine!`",
     "`Hey, howdy, hi!`",
     "`What’s kickin’, little chicken?`",
     "`Peek-a-boo!`",
@@ -30,7 +30,7 @@ HELLOSTR = [
     "`I come in peace!`",
     "`Ahoy, matey!`",
     "`Hiya!`",
-    "`Oh retarded gey! Well TomalKk`",
+    "`Oh retarded gey! Well hello`",
 ]
 
 SHGS = [
@@ -205,7 +205,7 @@ CmdHelp("иοιϲє").add_command(
 ).add_command(
   "shrug", None, "¯\_(ツ)_/¯"
 ).add_command(
-  "hey", None, "Random 'TomalKk' String."
+  "hey", None, "Random 'hello' String."
 ).add_command(
   "cri", None, "Random Crying emojies..."
 ).add_command(

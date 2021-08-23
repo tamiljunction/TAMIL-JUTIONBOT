@@ -31,5 +31,5 @@ def scramble_word(word):
     return first_letter + "".join(middle_letters) + last_letter
 
 CmdHelp("scramble").add_command(
-  "scramble", "<your message>", "Jumbles the sentence.", ".scramble TomalKk world"
+  "scramble", "<your message>", "Jumbles the sentence.", ".scramble hello world"
 ).add()

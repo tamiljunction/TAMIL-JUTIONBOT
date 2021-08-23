@@ -94,11 +94,11 @@ async def tiny_pic_spam(e):
 
 
 CmdHelp("𝚜𝚙𝚊𝚖").add_command(
-  "spam", "<number> <text>", "Sends the text 'X' number of times.", ".spam 99 TomalKk"
+  "spam", "<number> <text>", "Sends the text 'X' number of times.", ".spam 99 hello"
 ).add_command(
   "mspam", "<reply to media> <number>", "Sends the replied media (gif/ video/ sticker/ pic) 'X' number of times", ".mspam 100 <reply to media>"
 ).add_command(
-  "dspam", "<delay> <spam count> <text>", "Sends the text 'X' number of times in 'Y' seconds of delay", ".dspam 5 100 TomalKk"
+  "dspam", "<delay> <spam count> <text>", "Sends the text 'X' number of times in 'Y' seconds of delay", ".dspam 5 100 hello"
 ).add_command(
-  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what LEGENDBOT iz known for. The Best BigSpam Ever", ".bigspam 5000 TomalKk"
+  "bigspam", "<count> <text>", "Sends the text 'X' number of times. This what LEGENDBOT iz known for. The Best BigSpam Ever", ".bigspam 5000 hello"
 ).add()
