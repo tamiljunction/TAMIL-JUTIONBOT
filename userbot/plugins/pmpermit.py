@@ -6,7 +6,7 @@ from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
 from . import *
-from userbot.plugins.sql_helper import pmpermit_sql as pm_sql
+from userbot.plugins.sql_helper import pmpermit_sql as pmpermit_sql
 
 
 WARN_PIC = Config.PM_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
