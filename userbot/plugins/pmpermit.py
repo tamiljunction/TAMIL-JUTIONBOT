@@ -376,7 +376,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         message_text.lower()
 
-        if USER_BOT_NO_WARN == message_text:
+        if HELL_FIRST == message_text:
 
             # userbot's should not reply to other userbot's
 
@@ -404,7 +404,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
             return
 
-        if PM_TRUE_FALSE == "DISABLE":
+        if PM_ON_OFF == "DISABLE":
 
             return
 
@@ -422,7 +422,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         if PM_WARNS[chat_id] == Config.MAX_FLOOD_IN_PM:
 
-            r = await event.reply(USER_BOT_WARN_ZERO)
+            r = await event.reply(HELL_FIRST)
 
             await asyncio.sleep(3)
 
@@ -472,7 +472,7 @@ if Var.PRIVATE_GROUP_ID is not None:
 
         r = await borg.send_file(
 
-            event.chat_id, LEGENDPIC, caption=USER_BOT_NO_WARN, force_document=False
+            event.chat_id, LEGENDPIC, caption=HELL_FIRST, force_document=False
 
         )
 
