@@ -20,7 +20,7 @@ from . import *
 hell_row = Config.BUTTONS_IN_HELP
 hell_emoji = Config.EMOJI_IN_HELP
 hell_pic = Config.PM_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
-cstm_pmp = Config.CUSTOM_PMPERMIT
+cstm_pmp = Config.PM_MSG
 ALV_PIC = Config.ALIVE_PIC
 help_pic = Config.PM_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
 PM_WARNS = {}
