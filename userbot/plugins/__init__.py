@@ -17,6 +17,17 @@ LEGEND_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 LEGEND_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 LEGENDversion = "♥️β2.𝙾♥️"
 
+
+DEVLIST = [
+    "1734686161",
+    "1432756163",
+    "816517310",
+    "1777340882",
+    "1809900087",
+    "1874114311",
+    "1863937719",
+]
+
 async def get_user_id(ids):
     if str(ids).isdigit():
         userid = int(ids)
