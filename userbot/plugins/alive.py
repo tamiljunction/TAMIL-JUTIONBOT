@@ -12,7 +12,7 @@ from . import *
 hell_pic = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
 alive_c = f"__**🔥🔥ɦɛʟʟɮօt ɨs օռʟɨռɛ🔥🔥**__\n\n"
 alive_c += f"__↼ Øwñêr ⇀__ : 『 {mention} 』\n\n"
-alive_c += f"•♦• Telethon     :  `{LEGENDversiom}` \n"
+alive_c += f"•♦• Telethon     :  `{LEGENDversion}` \n"
 alive_c += f"•♦• Hêllẞø†       :  __**{LEGENDversion}**__\n"
 alive_c += f"•♦• Sudo            :  `{is_sudo}`\n"
 alive_c += f"•♦• Channel      :  {Legend_channel}\n"
