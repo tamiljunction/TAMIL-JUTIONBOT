@@ -19,7 +19,7 @@ alive_c += f"•♦• Channel      :  {Legend_channel}\n"
 
 #-------------------------------------------------------------------------------
 
-@bot.on(hell_cmd(outgoing=True, pattern="alive$"))
+@bot.on(admin_cmd(outgoing=True, pattern="alive$"))
 @bot.on(sudo_cmd(pattern="alive$", allow_sudo=True))
 async def up(hell):
     if hell.fwd_from:
