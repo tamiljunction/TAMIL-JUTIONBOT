@@ -1,2 +1,2 @@
-from .legendconfig import *
+from .legend_config import *
 from .vars import Config
