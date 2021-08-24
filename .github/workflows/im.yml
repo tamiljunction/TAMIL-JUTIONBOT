@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "EMOJI_IN_HELP11112"
+          find: "EMOJI_IN_HELP115"
 
-          replace: "EMOJI_IN_HELP2"
+          replace: "EMOJI_IN_HELP1"
 
       - name: Create Pull Request
 
