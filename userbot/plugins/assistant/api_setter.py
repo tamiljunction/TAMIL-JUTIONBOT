@@ -20,7 +20,7 @@ from LEGENDBOT.utils import *
 from userbot.Config import Config
 from userbot import ALIVE_NAME
 LEGEND_row = Config.BUTTONS_IN_HELP
-LEGEND_emoji = Config.EMOJI_IN_HELP111
+LEGEND_emoji = Config.EMOJI_IN_HELP1111
 
 from . import *
 # main menu for api setting
