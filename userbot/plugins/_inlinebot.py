@@ -17,7 +17,8 @@ from LEGENDBOT.utils import *
 from userbot.Config import Config
 from userbot import ALIVE_NAME
 LEGEND_row = Config.BUTTONS_IN_HELP
-LEGEND_emoji = Config.EMOJI_IN_HELP
+LEGEND_emoji1 = Config.EMOJI_IN_HELP1
+LEGEND_emoji2 = Config.EMOJI_IN_HELP2
 # thats how a lazy guy imports
 # LEGENDBOT
 # sαlҽ ískօ kαղց ตαԵ kαɾ ตc ճc
@@ -36,7 +37,7 @@ def button(page, modules):
     for pairs in pairs[page]:
         buttons.append(
             [
-                custom.Button.inline(f"{LEGEND_emoji} " + pair + f" ⚜️", data=f"Information[{page}]({pair})")
+                custom.Button.inline(f"{LEGEND_emoji1} " + pair + f" {LEGEND_emoji2", data=f"Information[{page}]({pair})")
                 for pair in pairs
             ]
         )
