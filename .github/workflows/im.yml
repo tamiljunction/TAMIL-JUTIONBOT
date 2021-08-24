@@ -19,7 +19,7 @@ jobs:
 
         with:
 
-          find: "EMOJI_IN_HELP"
+          find: "EMOJI_IN_HELP111111111"
 
           replace: "EMOJI_IN_HELP1"
 
