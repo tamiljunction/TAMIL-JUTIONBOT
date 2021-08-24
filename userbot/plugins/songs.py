@@ -137,7 +137,6 @@ async def download_video(v_url):
     url = v_url.pattern_match.group(1)
     if not url:
         return await rkp.edit("**Error** \n__Usage:__ `song <song name>`")
-    search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
     q = p.get("search_result")
@@ -167,8 +166,8 @@ async def download_video(v_url):
             "quiet": True,
             "logtostderr": False,
         }
-        video = False
-        song = True
+        video = True
+        song = False
     try:
         await rkp.edit("**Fetching Song**")
         with YoutubeDL(opts) as rip:
