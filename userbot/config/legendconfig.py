@@ -61,8 +61,8 @@ class Config(object):
     AUTH_TOKEN_DATA = os.environ.get("AUTH_TOKEN_DATA", None)
     PMSECURITY = os.environ.get("PMSECURITY", "ON")
     # for autopic
-    EMOJI_IN_HELP1 = os.environ.get("EMOJI_IN_HELP1", "🔱 ")
-    EMOJI_IN_HELP2 = os.environ.get("EMOJI_IN_HELP2", "🔱 ")
+    EMOJI_IN_HELP11 = os.environ.get("EMOJI_IN_HELP11", "🔱 ")
+    EMOJI_IN_HELP12 = os.environ.get("EMOJI_IN_HELP12", "🔱 ")
     AUTOPIC_TEXT = os.environ.get(
         "AUTOPIC_TEXT", "Life Is too Short.\n And so is your TG account."
     )
