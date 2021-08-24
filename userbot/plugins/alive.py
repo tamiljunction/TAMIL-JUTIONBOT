@@ -66,13 +66,13 @@ async def amireallyalive(alive):
         LEGEND_caption = f"**{CUSTOM_ALIVE_TEXT}**\n"
         
         LEGEND_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
-        LEGEND_caption += f"        ♥️ẞø✞︎ ẞ✞︎α✞︎µѕ♥️ \n"
-        LEGEND_caption += f"•⚜️• Øաղ̃ҽ̈ɾ          : {mention}\n\n"
-        LEGEND_caption += f"•📍• 𝖑𝖊ɠêɳ̃dẞø✞︎  : {LEGENDversion}\n"
-        LEGEND_caption += f"•📍• ✞︎ҽ̀lҽ́ƭhøղ̃     : `{version.__version__}`\n"
-        LEGEND_caption += f"•📍• 𝚄ρƭเɱε         : `{uptime}`\n"
-        LEGEND_caption += f"•📍• 𝖦ɾσµρ           : [𝔾ɾσµρ](t.me/Legend_Userbot)\n"
-        LEGEND_caption += f"•📍• 𝚈𝚘𝚞𝚛 𝙶𝚛𝚘𝚞𝚙   : {CUSTOM_YOUR_GROUP}\n"   
+        LEGEND_caption += f"        **♥️ẞø✞︎ ẞ✞︎α✞︎µѕ♥️** \n"
+        LEGEND_caption += f"**•⚜️• Øաղ̃ҽ̈ɾ          : {mention}**\n\n"
+        LEGEND_caption += f"**•📍• 𝖑𝖊ɠêɳ̃dẞø✞︎   : {LEGENDversion}\n"
+        LEGEND_caption += f"**•📍• ✞︎ҽ̀lҽ́ƭhøղ̃**     : `{version.__version__}`\n"
+        LEGEND_caption += f"**•📍• 𝚄ρƭเɱε**         : `{uptime}`\n"
+        LEGEND_caption += f"**•📍• 𝖦ɾσµρ**           : [𝔾ɾσµρ](t.me/Legend_Userbot)\n"
+        LEGEND_caption += f"**•📍• 𝚈𝚘𝚞𝚛 𝙶𝚛𝚘𝚞𝚙**  : {CUSTOM_YOUR_GROUP}\n"   
 
         await alive.client.send_file(
             alive.chat_id, LEGEND_IMG, caption=LEGEND_caption, reply_to=reply_to_id
