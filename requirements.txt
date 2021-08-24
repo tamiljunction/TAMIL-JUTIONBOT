@@ -69,9 +69,11 @@ numpy
 oauth2client
 opencv-python--headless
 patool
+PyDictionary
 psycopg2
 psycopg2-binary
 PIL
+PyPDF2
 Pillow>=5.3.0
 pySmartDL
 PyLyrics
@@ -85,7 +87,7 @@ python-dotenv
 python-magic
 pytube>=9.5.1
 PyGithub
-Pygments
+pygments
 pymediainfo
 pySmartDL
 pytz
@@ -100,6 +102,7 @@ shutil
 speedtest-cli>=2.0.2
 spotify_token
 spotdl
+sqlalchemy
 sqlalchemy==1.3.23
 telegraph
 twitter_scraper
