@@ -17,8 +17,8 @@ from LEGENDBOT.utils import *
 from userbot.Config import Config
 from userbot import ALIVE_NAME
 LEGEND_row = Config.BUTTONS_IN_HELP
-LEGEND_emoji1 = Config.EMOJI_IN_HELP11
-LEGEND_emoji2 = Config.EMOJI_IN_HELP12
+LEGEND_emoji1 = Config.EMOJI_IN_HELP115
+LEGEND_emoji2 = Config.EMOJI_IN_HELP125
 # thats how a lazy guy imports
 # LEGENDBOT
 # sαlҽ ískօ kαղց ตαԵ kαɾ ตc ճc
