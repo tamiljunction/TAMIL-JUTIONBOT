@@ -93,8 +93,8 @@ async def amireallyalive(alive):
 
 
 msg = f"""
-** ⚜️ LegendBot ιѕ σиℓιиє ⚜️**
-{Config.ALIVE_MSG}
+** ⚜️ Lêɠêɳ̃dẞø† ιѕ σиℓιиє ⚜️**\n
+{Config.ALIVE_MSG}\n
 **  ♥️ ẞø✞︎ ẞ✞︎α✞︎µѕ ♥️**
 **•⚜️•Øաղ̃ҽ̈r :** **{mention}**
 **•📍•𝖑𝖊ɠêɳ̃dẞø✞︎ :**  `{LEGENDversion}`
