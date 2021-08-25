@@ -21,10 +21,72 @@ LEGEND_emoji1 = Config.EMOJI_IN_HELP1
 LEGEND_emoji2 = Config.EMOJI_IN_HELP2
 # thats how a lazy guy imports
 # LEGENDBOT
-# sαlҽ ískօ kαղց ตαԵ kαɾ ตc ճc
-# αϐє τυ ρα∂н нι яαнα н γαнα ѕє ϐнαg
+# 
+
+from math import ceil
+from re import compile
+import asyncio
+import html
+import os
+import re
+import sys
+
+from telethon import Button, custom, events, functions
+from telethon.tl.functions.users import GetFullUserRequest
+from telethon.events import InlineQuery, callbackquery
+from telethon.sync import custom
+from telethon.errors.rpcerrorlist import UserNotParticipantError
+from telethon.tl.functions.channels import GetParticipantRequest
+from telethon.tl.functions.channels import JoinChannelRequest
+from telethon.tl.functions.messages import ExportChatInviteRequest
+
+from . import * 
+legend = bot.uid 
+
+hell_mention = f"[{DEFAULTUSER}](tg://user?id={Legend})"
+
+legend_row = Config.BUTTONS_IN_HELP
+hell_emoji = Config.EMOJI_IN_HELP1
+legend_pic = Config.PM_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
+cstm_pmp = Config.PM_MSG
+ALV_PIC = Config.ALIVE_PIC
+help_pic = Config.AWAKE_PIC or "https://telegra.ph/file/62b0f29c8887887f259ac.jpg"
+PM_WARNS = {}
+PREV_REPLY_MESSAGE = {}
+
+mybot = Config.BOT_USERNAME
+if mybot.startswith("@"):
+    botname = mybot
+else:
+    botname = f"@{mybot}"
+LOG_GP = Config.LOGGER_ID
+mssge = (
+    str(cstm_pmp)
+    if cstm_pmp
+    else "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
+)
+
+USER_BOT_WARN_ZERO = "Enough Of Your Flooding In My Master's PM!! \n\n**🚫 Blocked and Reported**"
+
+HELL_FIRST = (
+    "**🔥 Hêllẞø† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
+    "{} is currently unavailable.\nThis is an automated message.\n\n"
+    "{}\n\n**Please Choose Why You Are Here!!**"
+)
+
+alive_txt = """
+**⚜️ нєℓℓвσт ιѕ σиℓιиє ⚜️**
+{}
+**🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
+
+**Telethon :**  `{}`
+**Hêllẞø†  :**  **{}**
+**Abuse    :**  **{}**
+**Sudo      :**  **{}**
+"""
+
 def button(page, modules):
-    Row = LEGEND_row
+    Row = legend_row
     Column = 3
 
     modules = sorted([modul for modul in modules if not modul.startswith("_")])
@@ -37,47 +99,140 @@ def button(page, modules):
     for pairs in pairs[page]:
         buttons.append(
             [
-                custom.Button.inline(f"{LEGEND_emoji1} " + pair + f" {LEGEND_emoji2}", data=f"Information[{page}]({pair})")
+                custom.Button.inline(f"{hell_emoji} " + pair + f" {hell_emoji}", data=f"Information[{page}]({pair})")
                 for pair in pairs
             ]
         )
-        
+
     buttons.append(
         [
             custom.Button.inline(
-               f"⭅ϐαϲκ", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+               f"◀️ Back {hell_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
-               f"☣️ ❎ ☣️", data="close"
+               f"• ❌ •", data="close"
             ),
             custom.Button.inline(
-               f"ղҽxԵ⭆", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+               f"{hell_emoji} Next ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
     return [max_pages, buttons]
-    # Changing this line may give error in bot as i added some special cmds in LEGENDBOT channel to get this module work...
+
 
     modules = CMD_HELP
-if Var.BOT_USERNAME is not None and tgbot is not None:
+if Config.BOT_USERNAME is not None and tgbot is not None:
     @tgbot.on(InlineQuery)  # pylint:disable=E0602
     async def inline_handler(event):
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "@LEGEND_Userbot":
+        if event.query.user_id == bot.uid and query == "legendbot_help":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             apn = []
             for x in CMD_LIST.values():
                 for y in x:
                     apn.append(y)
-            result = await builder.article(
-                f"Hey! Only use .help please", 
-                text=f"𓆩♥️[{ALIVE_NAME}](https://t.me/Legend_Userbot)♥️𓆪\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`**\n**⌨️Tοταℓ Cοммαи∂ѕ⭆ `{len(apn)}`**\n**🎒Pαցҽ⭆ 1/{veriler[0]}**",
-                buttons=veriler[1],
-                link_preview=False,
+            help_msg = f"🔰 **{hell_mention}**\n\n📜 __No.of Plugins__ : `{len(CMD_HELP)}` \n🗂️ __Commands__ : `{len(apn)}`\n🗒️ __Page__ : 1/{veriler[0]}"
+            if help_pic and help_pic.endswith((".jpg", ".png")):
+                result = builder.photo(
+                    help_pic,
+                    text=help_msg,
+                    buttons=veriler[1],
+                    link_preview=False,
+                )
+            elif help_pic:
+                result = builder.document(
+                    help_pic,
+                    text=help_msg,
+                    title="HellBot Alive",
+                    buttons=veriler[1],
+                    link_preview=False,
+                )
+            else:
+                result = builder.article(
+                    f"Hey! Only use .help please",
+                    text=help_msg,
+                    buttons=veriler[1],
+                    link_preview=False,
+                )
+        elif event.query.user_id == bot.uid and query.startswith("fsub"):
+            hunter = event.pattern_match.group(1)
+            hell = hunter.split("+")
+            user = await bot.get_entity(int(hell[0]))
+            channel = await bot.get_entity(int(hell[1]))
+            msg = f"**👋 Welcome** [{user.first_name}](tg://user?id={user.id}), \n\n**📍 You need to Join** {channel.title} **to chat in this group.**"
+            if not channel.username:
+                link = (await bot(ExportChatInviteRequest(channel))).link
+            else:
+                link = "https://t.me/" + channel.username
+            result = [
+                await builder.article(
+                    title="force_sub",
+                    text = msg,
+                    buttons=[
+                        [Button.url(text="Channel", url=link)],
+                        [custom.Button.inline("🔓 Unmute Me", data=unmute)],
+                    ],
+                )
+            ]
+
+        elif event.query.user_id == bot.uid and query == "alive":
+            he_ll = alive_txt.format(Config.ALIVE_MSG, LEGENDversion, LEGENDversion, abuse_m, is_sudo)
+            alv_btn = [
+                [Button.url(f"{HELL_USER}", f"tg://openmessage?user_id={ForGo10God}")],
+                [Button.url("My Channel", f"https://t.me/{my_channel}"), 
+                Button.url("My Group", f"https://t.me/{my_group}")],
+            ]
+            if ALV_PIC and ALV_PIC.endswith((".jpg", ".png")):
+                result = builder.photo(
+                    ALV_PIC,
+                    text=he_ll,
+                    buttons=alv_btn,
+                    link_preview=False,
+                )
+            elif ALV_PIC:
+                result = builder.document(
+                    ALV_PIC,
+                    text=he_ll,
+                    title="HellBot Alive",
+                    buttons=alv_btn,
+                    link_preview=False,
+                )
+            else:
+                result = builder.article(
+                    text=he_ll,
+                    title="HellBot Alive",
+                    buttons=alv_btn,
+                    link_preview=False,
+                )
+
+        elif event.query.user_id == bot.uid and query == "pm_warn":
+            hel_l = HELL_FIRST.format(hell_mention, mssge)
+            result = builder.photo(
+                file=hell_pic,
+                text=hel_l,
+                buttons=[
+                    [
+                        custom.Button.inline("📝 Request 📝", data="req"),
+                        custom.Button.inline("💬 Chat 💬", data="chat"),
+                    ],
+                    [custom.Button.inline("🚫 Spam 🚫", data="heheboi")],
+                    [custom.Button.inline("Curious ❓", data="pmclick")],
+                ],
             )
+
+        elif event.query.user_id == bot.uid and query == "repo":
+            result = builder.article(
+                title="Repository",
+                text=f"**⚡ ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt ⚡**",
+                buttons=[
+                    [Button.url("📑 Repo 📑", "https://github.com/The-HellBot/HellBot")],
+                    [Button.url("🚀 Deploy 🚀", "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-HellBot%2FHellBot&template=https%3A%2F%2Fgithub.com%2Fthe-hellbot%2Fhellbot")],
+                ],
+            )
+
         elif query.startswith("http"):
             part = query.split(" ")
             result = builder.article(
@@ -86,73 +241,181 @@ if Var.BOT_USERNAME is not None and tgbot is not None:
                 buttons=[[custom.Button.url("URL", part[0])]],
                 link_preview=True,
             )
+
         else:
             result = builder.article(
                 "@LEGEND_Userbot",
-                text="""**[✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳](https://t.me/Legend_Userbot) \nγου ϲαи κиοω мοяє αϐουτ мє👇**""",
+                text="""**Hey! This is [Hêllẞø†](https://t.me/its_hellbot) \nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("♦️ Gяουρ ♦️", "https://t.me/Legend_Userbot"),
+                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/Its_HellBot"),
                         custom.Button.url(
-                            "♥️ 𝙾𝚆𝙽𝙴𝚁 ♥️", "https://t.me/Legend_Mr_Hacker"
+                            "⚡ GROUP ⚡", "https://t.me/hellbot_chat"
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "🚀 𝚁𝙴𝙿𝙾 🚀", "https://github.com/LEGEND-OS/LEGENDBOT"),
+                            "✨ REPO ✨", "https://github.com/The-HellBot/HellBot"),
+                        custom.Button.url
+                    (
+                            "🔰 TUTORIAL 🔰", "https://youtu.be/M2FQJq_sHp4"
+                    )
                     ],
                 ],
                 link_preview=False,
             )
         await event.answer([result] if result else None)
 
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
+    async def on_pm_click(event):
+        if event.query.user_id == bot.uid:
+            reply_pop_up_alert = "This is for Other Users..."
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        else:
+            await event.edit(
+                f"🔰 This is Hêllẞø† PM Security for {hell_mention} to keep away unwanted retards from spamming PM..."
+            )
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
+    async def on_pm_click(event):
+        if event.query.user_id == bot.uid:
+            reply_pop_up_alert = "This is for other users!"
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        else:
+            await event.edit(
+                f"✅ **Request Registered** \n\n{hell_mention} will now decide to look for your request or not.\n😐 Till then wait patiently and don't spam!!"
+            )
+            target = await event.client(GetFullUserRequest(event.query.user_id))
+            first_name = html.escape(target.user.first_name)
+            ok = event.query.user_id
+            if first_name is not None:
+                first_name = first_name.replace("\u2060", "")
+            tosend = f"**👀 Hey {hell_mention} !!** \n\n⚜️ You Got A Request From [{first_name}](tg://user?id={ok}) In PM!!"
+            await bot.send_message(LOG_GP, tosend)
+
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"chat")))
+    async def on_pm_click(event):
+        event.query.user_id
+        if event.query.user_id == bot.uid:
+            reply_pop_up_alert = "This is for other users!"
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        else:
+            await event.edit(
+                f"Ahh!! You here to do chit-chat!!\n\nPlease wait for {hell_mention} to come. Till then keep patience and don't spam."
+            )
+            target = await event.client(GetFullUserRequest(event.query.user_id))
+            ok = event.query.user_id
+            first_name = html.escape(target.user.first_name)
+            if first_name is not None:
+                first_name = first_name.replace("\u2060", "")
+            tosend = f"**👀 Hey {hell_mention} !!** \n\n⚜️ You Got A PM from  [{first_name}](tg://user?id={ok})  for random chats!!"
+            await bot.send_message(LOG_GP, tosend)
+
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
+    async def on_pm_click(event):
+        if event.query.user_id == bot.uid:
+            reply_pop_up_alert = "This is for other users!"
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        else:
+            await event.edit(
+                f"🥴 **Nikal lawde\nPehli fursat me nikal**"
+            )
+            await bot(functions.contacts.BlockRequest(event.query.user_id))
+            target = await event.client(GetFullUserRequest(event.query.user_id))
+            ok = event.query.user_id
+            first_name = html.escape(target.user.first_name)
+            if first_name is not None:
+                first_name = first_name.replace("\u2060", "")
+            first_name = html.escape(target.user.first_name)
+            await bot.send_message(
+                LOG_GP,
+                f"**Blocked**  [{first_name}](tg://user?id={ok}) \n\nReason:- Spam",
+            )
+
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"unmute")))
+    async def on_pm_click(event):
+        hunter = (event.data_match.group(1)).decode("UTF-8")
+        hell = hunter.split("+")
+        if not event.sender_id == int(hell[0]):
+            return await event.answer("This Ain't For You!!", alert=True)
+        try:
+            await bot(GetParticipantRequest(int(hell[1]), int(hell[0])))
+        except UserNotParticipantError:
+            return await event.answer(
+                "You need to join the channel first.", alert=True
+            )
+        await bot.edit_permissions(
+            event.chat_id, int(hell[0]), send_message=True, until_date=None
+        )
+        await event.edit("Yay! You can chat now !!")
+
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"reopen")))
+    async def reopn(event):
+            if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
+                current_page_number=0
+                simp = button(current_page_number, CMD_HELP)
+                veriler = button(0, sorted(CMD_HELP))
+                apn = []
+                for x in CMD_LIST.values():
+                    for y in x:
+                        apn.append(y)
+                await event.edit(
+                    f"🔰 **{hell_mention}**\n\n📜 __No.of Plugins__ : `{len(CMD_HELP)}` \n🗂️ __Commands__ : `{len(apn)}`\n🗒️ __Page__ : 1/{veriler[0]}",
+                    buttons=simp[1],
+                    link_preview=False,
+                )
+            else:
+                reply_pop_up_alert = "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Hêllẞø† ™"
+                await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+        
+
+    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"close")))
+    async def on_plug_in_callback_query_handler(event):
+        if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
+            veriler = custom.Button.inline(f"{hell_emoji} Re-Open Menu {hell_emoji}", data="reopen")
+            await event.edit(f"**⚜️ Hêllẞø† Mêñû Prõvîdêr ìs ñôw Çlösëd ⚜️**\n\n**Bot Of :**  {hell_mention}\n\n        [©️ Hêllẞø† ™️]({chnl_link})", buttons=veriler, link_preview=False)
+        else:
+            reply_pop_up_alert = "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Hêllẞø† ™"
+            await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+   
+
     @tgbot.on(callbackquery.CallbackQuery(data=compile(b"page\((.+?)\)")))
     async def page(event):
-        if not event.query.user_id == bot.uid:
-            return await event.answer(
-                "мιℓ gγι ταѕαℓℓι..? καϐѕє мєяє ϐοτ мє υиgℓι κя янє н. κнυ∂κα ϐиα ℓο иα αgя ϲнαιγє το ρτα инι καнα ѕє ααנατє н ∂ιѕτυяϐ κяиє. ©ℓєgєи∂ϐοτ™(https://t.me/Legend_Userbot)",
-                cache_time=0,
-                alert=True,
-            )
         page = int(event.data_match.group(1).decode("UTF-8"))
         veriler = button(page, CMD_HELP)
         apn = []
         for x in CMD_LIST.values():
             for y in x:
                 apn.append(y)
-        await event.edit(
-            f"**𓆩♥️[{ALIVE_NAME}](https://t.me/Legend_Mr_Hacker)♥️𓆪**\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`**\n**⌨️𝚃𝚘𝚝𝚊𝚕 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜⭆ `{len(apn)}`**\n**🎒𝙿𝚊𝚐𝚎⭆ {page + 1}/{veriler[0]}**",
-            buttons=veriler[1],
-            link_preview=False,
-        )
-        
-    @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
-    async def on_plug_in_callback_query_handler(event):
-        if event.query.user_id == bot.uid:
-            await delete_LEGEND(event,
-              "**📍𝙼𝚎𝚗𝚞 𝙿𝚛𝚘𝚟𝚒𝚍𝚎𝚛 𝙷𝚊𝚜 𝙱𝚎𝚎𝚗 𝙲𝚕𝚘𝚜𝚎𝚍 𝙱𝚢 𝙼𝚢 𝖑𝖊ɠêɳ̃d 𝙼𝚊𝚜𝚝𝚎𝚛❣️**\n\n                       [✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳](https://t.me/Legend_Userbot)", 5, link_preview=False
+        if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
+            await event.edit(
+                f"🔰 **{hell_mention}**\n\n📜 __No.of Plugins__ : `{len(CMD_HELP)}`\n🗂️ __Commands__ : `{len(apn)}`\n🗒️ __Page__ : {page + 1}/{veriler[0]}",
+                buttons=veriler[1],
+                link_preview=False,
             )
         else:
-            LEGEND_alert = "οн ϲοммοи γαяя υ τнιиκ υ ϲαи ϲℓιϲκ οи ιτ😁😁😁. ∂єρℓογ υя οωи ϐοτ ©ℓεɠεɳ∂ɓσƭ(https://t.me/Legend_Userbot)"
-            await event.answer(LEGEND_alert, cache_time=0, alert=True)
-          
-    @tgbot.on(
-        callbackquery.CallbackQuery(data=compile(b"Information\[(\d*)\]\((.*)\)"))
-    )
-    async def Information(event):
-        if not event.query.user_id == bot.uid:
             return await event.answer(
-                "κγα υиgℓι καя янє нο мєяє ϐοτ ραя αgαя ϲнαнιγє τοн κнυ∂ κα ϐαиα ℓο иα αα נατє нο υиgℓι καяиє мєяє ϐοτ ρє.   ©ℓεɠεɳ∂ɓσƭ(https://t.me/Legend_Userbot)",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Hêllẞø† ™",
                 cache_time=0,
                 alert=True,
             )
 
+
+    @tgbot.on(
+        callbackquery.CallbackQuery(data=compile(b"Information\[(\d*)\]\((.*)\)"))
+    )
+    async def Information(event):
         page = int(event.data_match.group(1).decode("UTF-8"))
         commands = event.data_match.group(2).decode("UTF-8")
         try:
             buttons = [
                 custom.Button.inline(
-                    "🎖️ " + cmd[0] + " 🎖️", data=f"commands[{commands}[{page}]]({cmd[0]})"
+                    "⚡ " + cmd[0] + " ⚡", data=f"commands[{commands}[{page}]]({cmd[0]})"
                 )
                 for cmd in CMD_HELP_BOT[commands]["commands"].items()
             ]
@@ -162,57 +425,63 @@ if Var.BOT_USERNAME is not None and tgbot is not None:
             )
 
         buttons = [buttons[i : i + 2] for i in range(0, len(buttons), 2)]
-        buttons.append([custom.Button.inline("☚ɓαcҡ", data=f"page({page})")])
-        await event.edit(
-            f"📗 Fɪʟᴇ: `{commands}`\n🔢 иο. οƒ ϲοммαи∂ѕ☞ `{len(CMD_HELP_BOT[commands]['commands'])}`",
-            buttons=buttons,
-            link_preview=False,
-        )
+        buttons.append([custom.Button.inline(f"{hell_emoji} Main Menu {hell_emoji}", data=f"page({page})")])
+        if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
+            await event.edit(
+                f"**📗 File :**  `{commands}`\n**🔢 Number of commands :**  `{len(CMD_HELP_BOT[commands]['commands'])}`",
+                buttons=buttons,
+                link_preview=False,
+            )
+        else:
+            return await event.answer(
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Hêllẞø† ™",
+                cache_time=0,
+                alert=True,
+            )
+
 
     @tgbot.on(
         callbackquery.CallbackQuery(data=compile(b"commands\[(.*)\[(\d*)\]\]\((.*)\)"))
     )
     async def commands(event):
-        if not event.query.user_id == bot.uid:
+        cmd = event.data_match.group(1).decode("UTF-8")
+        page = int(event.data_match.group(2).decode("UTF-8"))
+        commands = event.data_match.group(3).decode("UTF-8")
+        result = f"**📗 File :**  `{cmd}`\n"
+        if CMD_HELP_BOT[cmd]["info"]["info"] == "":
+            if not CMD_HELP_BOT[cmd]["info"]["warning"] == "":
+                result += f"**⚠️ Warning :**  {CMD_HELP_BOT[cmd]['info']['warning']}\n\n"
+        else:
+            if not CMD_HELP_BOT[cmd]["info"]["warning"] == "":
+                result += f"**⚠️ Warning :**  {CMD_HELP_BOT[cmd]['info']['warning']}\n"
+            result += f"**ℹ️ Info :**  {CMD_HELP_BOT[cmd]['info']['info']}\n\n"
+        command = CMD_HELP_BOT[cmd]["commands"][commands]
+        if command["params"] is None:
+            result += f"**🛠 Commands :**  `{HANDLER[:1]}{command['command']}`\n"
+        else:
+            result += f"**🛠 Commands :**  `{HANDLER[:1]}{command['command']} {command['params']}`\n"
+        if command["example"] is None:
+            result += f"**💬 Explanation :**  `{command['usage']}`\n\n"
+        else:
+            result += f"**💬 Explanation :**  `{command['usage']}`\n"
+            result += f"**⌨️ For Example :**  `{HANDLER[:1]}{command['example']}`\n\n"
+        if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
+            await event.edit(
+                result,
+                buttons=[
+                    custom.Button.inline(f"{hell_emoji} Return {hell_emoji}", data=f"Information[{page}]({cmd})")
+                ],
+                link_preview=False,
+            )
+        else:
             return await event.answer(
-                "ᵃᵇʰⁱ ᵗᵃᵏ ⁿʰⁱ ˢᵃᵐʲʰᵃ ᵏʰᵘᵈᵏᵃ ᵇᵃⁿᵃ ˡᵒ ⁿᵃ ᵗᵒʰ ᵘˢᵉ ᵏᵃʳⁿᵃ ʰ ᵗᵒʰ ᵏʸᵃ ᵘⁿᵍˡⁱ ᵏᵃʳ ʳʰᵉ ʰᵒ.🤦‍♂️🤦‍♂️🤦‍♂️ ©ℓєgєи∂ϐοτ ",
+                "Hoo gya aapka. Kabse tapar tapar dabae jaa rhe h. Khudka bna lo na agr chaiye to. © Hêllẞø† ™",
                 cache_time=0,
                 alert=True,
             )
 
-        cmd = event.data_match.group(1).decode("UTF-8")
-        page = int(event.data_match.group(2).decode("UTF-8"))
-        commands = event.data_match.group(3).decode("UTF-8")
 
-        result = f"📗 𝙵𝙸𝙻𝙴: `{cmd}`\n"
-        if CMD_HELP_BOT[cmd]["info"]["info"] == "":
-            if not CMD_HELP_BOT[cmd]["info"]["warning"] == "":
-                result += f"**⬇️ 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 ᚛** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
-                result += f"**⚠️ 𝚆𝙰𝚁𝙽𝙸𝙽𝙷 ᚛** {CMD_HELP_BOT[cmd]['info']['warning']}\n\n"
-            else:
-                result += f"**⬇️ 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 ᚛** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n\n"
-        else:
-            result += f"**⬇️ 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻 ᚛** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
-            if not CMD_HELP_BOT[cmd]["info"]["warning"] == "":
-                result += f"**⚠️ ɪɴғᴏ ᚛** {CMD_HELP_BOT[cmd]['info']['warning']}\n"
-            result += f"**ℹ️ 𝙸𝙽𝙵𝙾 ᚛** {CMD_HELP_BOT[cmd]['info']['info']}\n\n"
+# hellbot
 
-        command = CMD_HELP_BOT[cmd]["commands"][commands]
-        if command["params"] is None:
-            result += f"🛠 **𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂**: `{COMMAND_HAND_LER[:1]}{command['command']}`\n"
-        else:
-            result += f"🛠 **𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂**: `{COMMAND_HAND_LER[:1]}{command['command']} {command['params']}`\n"
 
-        if command["example"] is None:
-            result += f"💬 **𝙴𝚇𝙿𝙻𝙰𝙽𝙰𝚃𝙸𝙾𝙽**: `{command['usage']}`\n\n"
-        else:
-            result += f"💬 **𝙴𝚇𝙿𝙻𝙰𝙽𝙰𝚃𝙸𝙾𝙽**: `{command['usage']}`\n"
-            result += f"⌨️ **𝐅𝐨𝐫 𝐄𝐱𝐚𝐦𝐩𝐥𝐞**: `{COMMAND_HAND_LER[:1]}{command['example']}`\n\n"
-
-        await event.edit(
-            result,
-            buttons=[
-                custom.Button.inline("☚ɓαcҡ", data=f"Information[{page}]({cmd})")
-            ],
-            link_preview=False,
-        )
+    
