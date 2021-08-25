@@ -24,10 +24,10 @@ from . import *
 legend_row = Config.BUTTONS_IN_HELP
 legend_emoji1 = Config.EMOJI_IN_HELP1
 legend_emoji2 = Config.EMOJI_IN_HELP2
-legend_pic = Config.PM_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
+legend_pic = Config.PM_PIC or ""
 cstm_pmp = Config.PM_MSG
 ALV_PIC = Config.ALIVE_PIC
-help_pic = Config.AWAKE_PIC or "https://telegra.ph/file/62b0f29c8887887f259ac.jpg"
+help_pic = Config.AWAKE_PIC or ""
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
@@ -52,14 +52,16 @@ LEGEND_FIRST = (
 )
 
 alive_txt = """
-**  ⚜️ Lêɠêɳ̃dẞø† ιѕ σиℓιиє ⚜️**\n
-  {}\n
-**♥️ẞø✞︎ ẞ✞︎α✞︎µѕ♥️**
-**•⚜️•Øաղ̃ҽ̈r :** **{}**
-**•📍•Lêɠêɳ̃dẞø† :**  `{}`
-**•📍•✞︎ҽ̀lҽ́ƭhøղ  :**  **{}**
-**•📍•Ãbûßê    :**  **{}**
-**•📍•ßudø     :**  **{}**
+**   ⚜️ Lêɠêɳ̃dẞø† ιѕ σиℓιиє ⚜️**\n
+ {}\n
+**   ♥️ẞø✞︎ ẞ✞︎α✞︎µѕ♥️**
+**•⚜️•Øաղ̃ҽ̈r :** {}\n
+
+**•🌹•Lêɠêɳ̃dẞø† :**  {}
+**•🌹•†ҽ̀lҽ́ƭhøղ  :**  {}
+**•🌹•Ãbûßê     :**  {}
+**•🌹•ßudø      :**  {}
+**•🌹•Bø†       :**  {}
 """
 
 def button(page, modules):
@@ -87,7 +89,7 @@ def button(page, modules):
                f"⭅ϐαϲκ", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
-               f"☣️ ❎ ☣️", data="close"
+               f"• ❎ •", data="close"
             ),
             custom.Button.inline(
                f"ղҽxԵ⭆", data=f"page({0 if page == (max_pages - 1) else page + 1})"
@@ -135,7 +137,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     link_preview=False,
                 )
         elif event.query.user_id == bot.uid and query == "alive":
-            leg_end = alive_txt.format(Config.ALIVE_MSG, legend_mention, LEGENDversion, version.__version__, abuse_m, is_sudo)
+            leg_end = alive_txt.format(Config.ALIVE_MSG, legend_mention, LEGENDversion, version.__version__, abuse_m, is_sudo, Config.BOY_OR_GIRL)
             alv_btn = [
                 [Button.url(f"{LEGEND_USER}", f"tg://openmessage?user_id={Legend_Mr_Hacker}")],
                 [Button.url("My Channel", f"https://t.me/its_legendbot"), 
