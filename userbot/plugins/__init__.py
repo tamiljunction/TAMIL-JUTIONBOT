@@ -6,7 +6,7 @@ from userbot.cmdhelp import CmdHelp
 import datetime
 from telethon import version
 from . import *
-
+LEGEND_USER = ALIVE_NAME or "LEGEND"
 Legend_Mr_Hacker = bot.uid
 mention = f"[{LEGEND_USER}](tg://user?id={Legend_Mr_Hacker})"
 LEGEND_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
