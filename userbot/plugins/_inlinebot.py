@@ -35,7 +35,7 @@ from telethon.errors.rpcerrorlist import UserNotParticipantError
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
-
+DEFAULTUSER = ALIVE_NAME or "LEGEND"
 from . import * 
 legend = bot.uid 
 
