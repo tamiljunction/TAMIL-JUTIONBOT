@@ -6,7 +6,7 @@ import os
 import re
 import sys
 HELL_USER = bot.me.first_name
-For10God = bot.uid
+ForGo10God = bot.uid
 from telethon.events import InlineQuery, callbackquery
 from userbot import *
 from userbot.cmdhelp import *
