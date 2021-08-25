@@ -36,9 +36,7 @@ if ENV:
         # MIRROR ACE API KEY AND TOKEN
         MIRROR_ACE_API_KEY = os.environ.get("MIRROR_ACE_API_KEY", None)
         MIRROR_ACE_API_TOKEN = os.environ.get("MIRROR_ACE_API_KEY", None)
-        # Telegram BOT Token from @BotFather
-        BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
-        BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
+        # Telegram BOT Token from @Bot
         #spootifie
         SPOTIFY_USERNAME = os.environ.get("SPOTIFY_USERNAME", None)
         SPOTIFY_PASS = os.environ.get("SPOTIFY_PASS", None)
@@ -169,7 +167,7 @@ if ENV:
         BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
         FORCE_SUB = os.environ.get("FORCE_SUB", None)
         FORCE_CHANNEL_UN = os.environ.get("FORCE_CHANNEL_UN", None)
-        LOGGER_ID = os.environ.get("", None)
+        LOGGER_ID = os.environ.get("PM_PERMIT_GROUP_ID", None)
         if LOGGER_ID:
             LOGGER_ID = int(LOGGER_ID)
         FORCE_CHANNEL_ID = int(os.environ.get("FORCE_CHANNEL_ID", False))
