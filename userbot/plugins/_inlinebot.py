@@ -52,12 +52,12 @@ HELL_FIRST = (
 )
 
 alive_txt = """
-**⚜️ le ιѕ σиℓιиє ⚜️**
+**⚜️ LegendBot ιѕ σиℓιиє ⚜️**
 {}
 **🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
 
 **Telethon :**  `{}`
-**Hêllẞø†  :**  **{}**
+**LegendBot  :**  **{}**
 **Abuse    :**  **{}**
 **Sudo      :**  **{}**
 """
@@ -135,7 +135,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     link_preview=False,
                 )
         elif event.query.user_id == bot.uid and query == "alive":
-            leg_end = alive_txt.format(Config.ALIVE_MSG, LEGENDversion, LEGENDversion, abuse_m, is_sudo)
+            leg_end = alive_txt.format(Config.ALIVE_MSG, version.__version__, LEGENDversion, abuse_m, is_sudo)
             alv_btn = [
                 [Button.url(f"{LEGEND_USER}", f"tg://openmessage?user_id={Legend_Mr_Hacker}")],
                 [Button.url("My Channel", f"https://t.me/{my_channel}"), 
