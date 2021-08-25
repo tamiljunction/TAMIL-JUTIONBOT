@@ -140,7 +140,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             leg_end = alive_txt.format(Config.ALIVE_MSG, legend_mention, LEGENDversion, version.__version__, abuse_m, is_sudo, Config.BOY_OR_GIRL)
             alv_btn = [
                 [Button.url(f"{LEGEND_USER}", f"tg://openmessage?user_id={Legend_Mr_Hacker}")],
-                [Button.url("My Channel", f"https://t.me/its_legendbot"), 
+                [Button.url("My Channel", f"https://t.me/{my_channel}"), 
                 Button.url("My Group", f"https://t.me/{my_group}")],
             ]
             if ALV_PIC and ALV_PIC.endswith((".jpg", ".png")):
