@@ -69,7 +69,7 @@ async def _(event):
                 conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id, sixth.id]
             )
     else:
-        await eor(event, "**⚠️ ERROR !!** \nPlease Re-Check BOT_TOKEN & BOT_USERNAME on Heroku.")
+        await eor(event, "**⚠️ 𝙴𝚁𝚁𝙾𝚁 !!** \n𝙿𝚕𝚎𝚊𝚜𝚎 𝚁𝚎-𝙲𝚑𝚎𝚌𝚔 BOT_TOKEN & BOT_USERNAME on Heroku.")
 
 
 @bot.on(admin_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
@@ -82,7 +82,7 @@ async def legendbott(event):
         if args in CMD_HELP:
             await eor(event, str(CMD_HELP[args]))
         else:
-            await eor(event, "**⚠️ Error !** \nNeed a module name to show plugin info.")
+            await eor(event, "**⚠️ 𝙴𝚛𝚛𝚘𝚛 !** \n𝙽𝚎𝚎𝚍 𝚊 𝙼𝚘𝚍𝚞𝚕𝚎 𝚗𝚊𝚖𝚎 𝚝𝚘 𝚜𝚑𝚘𝚠 𝚙𝚕𝚞𝚐𝚒𝚗 𝚒𝚗𝚏𝚘")
     else:
         string = ""
         sayfa = [
