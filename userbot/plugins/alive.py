@@ -91,6 +91,29 @@ async def amireallyalive(alive):
             f"🔱 σωɳεɾ         : [ℓєgєи∂](t.me/Legend_Mr_Hacker)\n"
         )
 
+
+msg = f"""
+**⚡ LegendBot ιѕ σиℓιиє ⚡**
+{Config.ALIVE_MSG}
+**🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
+**Telethon :**  `{LEGENDversion}`
+**Hêllẞø†  :**  **{LEGENDversion}**
+**Abuse    :**  **{abuse_m}**
+**Sudo      :**  **{is_sudo}**
+"""
+botname = Config.BOT_USERNAME
+
+@bot.on(admin_cmd(pattern="hell$"))
+@bot.on(admin_cmd(pattern="hell$", allow_sudo=True))
+async def hell_a(event):
+    try:
+        hell = await bot.inline_query(botname, "alive")
+        await hell[0].click(event.chat_id)
+        if event.sender_id == ForGo10God:
+            await event.delete()
+    except (noin, dedbot):
+        await eor(event, msg)
+
 CmdHelp("𝚋𝚘𝚝𝚜𝚝𝚊𝚝𝚜").add_command(
     'bot', None, 'υѕє αи∂ ѕєє'
 ).add()
