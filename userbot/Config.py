@@ -162,7 +162,7 @@ if ENV:
         LEGEND_STRING = os.environ.get("LEGEND_STRING", None)
         BOT_MODE = os.environ.get("BOT_MODE", "ON")
         ABUSE = os.environ.get("ABUSE", None)
-        BOY_OR_GIRL = os eniviron.get("BOY_OR_GIRL", "BOY")
+        BOY_OR_GIRL = os.eniviron.get("BOY_OR_GIRL", "BOY")
         BOT_TRIGGER = os.environ.get("BOT_TRIGGER", "^/")
         BOTMODE_LOG = int(os.environ.get("BOTMODE_LOG", False))
         BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
