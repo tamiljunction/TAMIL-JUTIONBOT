@@ -17,10 +17,10 @@ from userbot.Config import Config
 from . import *
 
 msg = f"""
-**⚜**
+**⚜ 𝙻𝚎𝚐𝚎𝚗𝚍𝚊𝚛𝚢 𝙰𝚏 𝙻𝚎𝚐𝚎𝚗𝚍𝙱𝚘𝚝 ⚜**
 
-  •        [📑 Repo 📑](https://github.com/The-HellBot/HellBot)
-  •        [🚀 Deploy 🚀](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FThe-HellBot%2FHellBot&template=https%3A%2F%2Fgithub.com%2Fthe-hellbot%2Fhellbot)
+  •        [♥️ 𝚁𝚎𝚙𝚘 ♥️](https://github.com/LEGEND-OS/LEGENDBOT)
+  •        [♦️ Deploy ♦️](https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FLEGEND-OS%2FLEGENDBOT&template=https%3A%2F%2Fgithub.com%2FLEGEND-OS%2FLEGENDBOT)
 
   •  ©️ {Legend_channel} ™
 """
@@ -58,14 +58,14 @@ async def _(event):
                 try:
                     first = await conv.send_message("/setinline")
                     second = await conv.get_response()
-                    third = await conv.send_message(tgbotusername)
+                    third = await conv.send_message(@tgbotusername)
                     fourth = await conv.get_response()
                     fifth = await conv.send_message(perf)
                     sixth = await conv.get_response()
                     await bot.send_read_acknowledge(conv.chat_id)
                 except YouBlockedUserError:
                     return await legend.edit("Unblock @Botfather first.")
-                await legend.edit(f"**Turned On Inline Mode Successfully.** \n\nDo `{hl}help` again to get the help menu.")
+                await legend.edit(f"**Turned On Inline Mode Successfully.** \n\nDo `{l1}help` again to get the help menu.")
             await bot.delete_messages(
                 conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id, sixth.id]
             )
