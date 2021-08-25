@@ -149,7 +149,7 @@ if ENV:
         PM_MSG = os.environ.get("PM_MSG", None)
         INSTANT_BLOCK = os.environ.get("INSTANT_BLOCK", "DISABLE")
         YOUR_GROUP = os.environ.get("YOUR_GROUP", "@Legend_Userbot")
-        MY_CHANNEL = os.environ.get("MY_CHANNEL", "@Its_Legend")
+        YOUR_CHANNEL = os.environ.get("YOUR_CHANNEL", "@Its_LegendBot.")
         BOT_PIC = os.environ.get("ALIVE_PIC", None)
         #auto bio
         BIO_MSG = os.environ.get("ALIVE_MSG", None)
@@ -162,6 +162,7 @@ if ENV:
         LEGEND_STRING = os.environ.get("LEGEND_STRING", None)
         BOT_MODE = os.environ.get("BOT_MODE", "ON")
         ABUSE = os.environ.get("ABUSE", None)
+        BOY_OR_GIRL = os eniviron.get("BOY_OR_GIRL", None)
         BOT_TRIGGER = os.environ.get("BOT_TRIGGER", "^/")
         BOTMODE_LOG = int(os.environ.get("BOTMODE_LOG", False))
         BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
