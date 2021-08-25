@@ -55,8 +55,8 @@ def get_readable_time(seconds: int) -> str:
 uptime = get_readable_time((time.time() - StartTime))
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="alive$"))
-@bot.on(sudo_cmd(pattern="alive$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="legend$"))
+@bot.on(sudo_cmd(pattern="legend$", allow_sudo=True))
 async def amireallyalive(alive):
     if alive.fwd_from:
         return
@@ -96,20 +96,20 @@ msg = f"""
 **⚡ LegendBot ιѕ σиℓιиє ⚡**
 {Config.ALIVE_MSG}
 **🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
-**Telethon :**  `{LEGENDversion}`
-**Hêllẞø†  :**  **{LEGENDversion}**
+**Telethon :**  `{version.__version__}`
+**Legendbot  :**  **{LEGENDversion}**
 **Abuse    :**  **{abuse_m}**
 **Sudo      :**  **{is_sudo}**
 """
 botname = Config.BOT_USERNAME
 
-@bot.on(admin_cmd(pattern="hell$"))
-@bot.on(admin_cmd(pattern="hell$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="alive$"))
+@bot.on(admin_cmd(pattern="alive$", allow_sudo=True))
 async def hell_a(event):
     try:
-        hell = await bot.inline_query(botname, "alive")
-        await hell[0].click(event.chat_id)
-        if event.sender_id == ForGo10God:
+        legend = await bot.inline_query(botname, "alive")
+        await legend[0].click(event.chat_id)
+        if event.sender_id == Legend_Mr_Hacker:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg)
