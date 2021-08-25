@@ -30,8 +30,8 @@ botname = Config.BOT_USERNAME
 @bot.on(sudo_cmd(pattern="repo$", allow_sudo=True))
 async def repo(event):
     try:
-        legend = await bot.inline_query(botname, "repo")
-        await legend[0].click(event.chat_id)
+        hell = await bot.inline_query(botname, "repo")
+        await hell[0].click(event.chat_id)
         if event.sender_id == Legend_Mr_Hacker:
             await event.delete()
     except (noin, dedbot):
