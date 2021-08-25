@@ -24,6 +24,7 @@ LEGENDPIC = (
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 myid = bot.uid
+mention = f"[{DEFAULTUSER}](tg://user?id={myid})"
 
 LEGEND = (
     str(PM_MSG)
