@@ -14,7 +14,7 @@ from userbot.Config import Config
 from LEGENDBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 PM_TRUE_FALSE = Config.PM_DATA
-
+from . import *
 PM_PIC = os.environ.get("PM_PIC", None)
 LEGENDPIC = (
     PM_PIC
