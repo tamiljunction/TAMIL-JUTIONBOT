@@ -58,7 +58,7 @@ async def _(event):
                 try:
                     first = await conv.send_message("/setinline")
                     second = await conv.get_response()
-                    third = await conv.send_message(@tgbotusername)
+                    third = await conv.send_message(tgbotusername)
                     fourth = await conv.get_response()
                     fifth = await conv.send_message(perf)
                     sixth = await conv.get_response()
