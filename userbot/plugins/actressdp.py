@@ -107,6 +107,6 @@ async def autopic(event):
             await asyncio.sleep(60)
         except:
             return
-CmdHelp("𝚊𝚌𝚝𝚛𝚜𝚍𝚙").add_command(
+CmdHelp("actressdp").add_command(
        'actressdp', None, 'Starts autodp of Actress'
 ).add()
