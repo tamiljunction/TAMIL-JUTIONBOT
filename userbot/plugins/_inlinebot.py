@@ -37,7 +37,7 @@ from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
 DEFAULTUSER = ALIVE_NAME or "LEGEND"
 from . import * 
-legend = bot.uid 
+Legend = bot.uid 
 
 hell_mention = f"[{DEFAULTUSER}](tg://user?id={Legend})"
 
