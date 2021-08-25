@@ -19,7 +19,7 @@ LEGENDversion = "♥️𝚅2.𝙾♥️"
 
 DEVLIST = [
     "1856561912",
-]
+    ]
 
 async def get_user_id(ids):
     if str(ids).isdigit():
@@ -27,6 +27,7 @@ async def get_user_id(ids):
     else:
         userid = (await bot.get_entity(ids)).id
     return userid
+
 l1 = Config.COMMAND_HAND_LER
 l2 = Config.SUDO_COMMAND_HAND_LER
 sudos = Config.SUDO_USERS
