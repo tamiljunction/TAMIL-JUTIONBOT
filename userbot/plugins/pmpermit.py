@@ -274,11 +274,11 @@ if Var.PRIVATE_GROUP_ID is not None:
         
         botusername = Config.BOT_USERNAME
         tap = await bot.inline_query(botusername, "pm_warn")
-        hel_ = await tap[0].click(event.chat_id)
+        lege_ = await tap[0].click(event.chat_id)
         PM_WARNS[chat_ids] += 1
         if chat_ids in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_ids].delete()
-        PREV_REPLY_MESSAGE[chat_ids] = hel_
+        PREV_REPLY_MESSAGE[chat_ids] = lege_
 
 NEEDIT = Config.INSTANT_BLOCK
 if NEEDIT == "ENABLE":

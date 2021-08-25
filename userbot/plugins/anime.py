@@ -85,7 +85,7 @@ async def nope(lege):
     legend = lege.pattern_match.group(1)
     if not legend:
         if lege.is_reply:
-            (await hel_.get_reply_message()).message
+            (await lege_.get_reply_message()).message
         else:
             await eor(lege, "Sir please give some query to search and download it for you..!"
             )
@@ -94,9 +94,9 @@ async def nope(lege):
     troll = await bot.inline_query("AniFluidbot", f".anime {(deEmojify(hell))}")
 
     await troll[0].click(
-        hel_.chat_id,
-        reply_to=hel_.reply_to_msg_id,
-        silent=True if hel_.is_reply else False,
+        lege_.chat_id,
+        reply_to=lege_.reply_to_msg_id,
+        silent=True if lege_.is_reply else False,
         hide_via=True,
     )
     await lege.delete()
@@ -104,48 +104,48 @@ async def nope(lege):
     
 @bot.on(admin_cmd(pattern="manga(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="manga(?: |$)(.*)", allow_sudo=True))
-async def nope(hel_):
-    hell = hel_.pattern_match.group(1)
+async def nope(lege_):
+    hell = lege_.pattern_match.group(1)
     if not hell:
-        if hel_.is_reply:
-            (await hel_.get_reply_message()).message
+        if lege_.is_reply:
+            (await lege_.get_reply_message()).message
         else:
-            await eod(hel_, "Sir please give some query to search and download it for you..!"
+            await eod(lege_, "Sir please give some query to search and download it for you..!"
             )
             return
 
     troll = await bot.inline_query("AniFluidbot", f".manga {(deEmojify(hell))}")
 
     await troll[0].click(
-        hel_.chat_id,
-        reply_to=hel_.reply_to_msg_id,
-        silent=True if hel_.is_reply else False,
+        lege_.chat_id,
+        reply_to=lege_.reply_to_msg_id,
+        silent=True if lege_.is_reply else False,
         hide_via=True,
     )
-    await hel_.delete()
+    await lege_.delete()
     
 
 @bot.on(admin_cmd(pattern="character(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="character(?: |$)(.*)", allow_sudo=True))
-async def nope(hel_):
-    hell = hel_.pattern_match.group(1)
+async def nope(lege_):
+    hell = lege_.pattern_match.group(1)
     if not hell:
-        if hel_.is_reply:
-            (await hel_.get_reply_message()).message
+        if lege_.is_reply:
+            (await lege_.get_reply_message()).message
         else:
-            await eod(hel_, "Sir please give some query to search and download it for you..!"
+            await eod(lege_, "Sir please give some query to search and download it for you..!"
             )
             return
 
     troll = await bot.inline_query("AniFluidbot", f".character {(deEmojify(hell))}")
 
     await troll[0].click(
-        hel_.chat_id,
-        reply_to=hel_.reply_to_msg_id,
-        silent=True if hel_.is_reply else False,
+        lege_.chat_id,
+        reply_to=lege_.reply_to_msg_id,
+        silent=True if lege_.is_reply else False,
         hide_via=True,
     )
-    await hel_.delete()
+    await lege_.delete()
 #ℓєgєи∂
 
 CmdHelp("anime").add_command(
