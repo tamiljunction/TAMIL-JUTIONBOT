@@ -23,7 +23,7 @@ LEGENDPIC = (
 )
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
-DEFAULTUSER = ALIVE_NAME else "LEGEND"
+DEFAULTUSER = ALIVE_NAME or "LEGEND"
 myid = bot.uid
 mention = f"[{DEFAULTUSER}](tg://user?id={myid})"
 
