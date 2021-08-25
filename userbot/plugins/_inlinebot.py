@@ -7,10 +7,6 @@ import re
 import sys
 
 from telethon.events import InlineQuery, callbackquery
-from telethon.sync import custom
-from telethon.tl.functions.channels import GetParticipantRequest
-from telethon.tl.functions.channels import JoinChannelRequest
-
 from userbot import *
 from userbot.cmdhelp import *
 from LEGENDBOT.utils import *
