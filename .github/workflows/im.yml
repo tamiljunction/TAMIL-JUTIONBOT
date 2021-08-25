@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "EMOJI_IN_HELP125"
+          find: "LEGENDgalaxy"
 
-          replace: "EMOJI_IN_HELP2"
+          replace: "LEGEND"
 
       - name: Create Pull Request
 
