@@ -93,13 +93,14 @@ async def amireallyalive(alive):
 
 
 msg = f"""
-**⚡ LegendBot ιѕ σиℓιиє ⚡**
+** ⚜️ LegendBot ιѕ σиℓιиє ⚜️**
 {Config.ALIVE_MSG}
-**🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
-**Telethon :**  `{version.__version__}`
-**Legendbot  :**  **{LEGENDversion}**
-**Abuse    :**  **{abuse_m}**
-**Sudo      :**  **{is_sudo}**
+**  ♥️ ẞø✞︎ ẞ✞︎α✞︎µѕ ♥️**
+**•⚜️•Øաղ̃ҽ̈r :** **{mention}**
+**•📍•𝖑𝖊ɠêɳ̃dẞø✞︎ :**  `{LEGENDversion}`
+**•📍•✞︎ҽ̀lҽ́ƭhøղ  :**  **{version.__version__}**
+**•📍•Ãbûßê    :**  **{abuse_m}**
+**•📍•ßudø     :**  **{is_sudo}**
 """
 botname = Config.BOT_USERNAME
 
