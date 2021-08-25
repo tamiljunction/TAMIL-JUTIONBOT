@@ -81,13 +81,13 @@ async def anilist(event):
 
 @bot.on(admin_cmd(pattern="anime(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="anime(?: |$)(.*)", allow_sudo=True))
-async def nope(hel_):
-    hell = hel_.pattern_match.group(1)
-    if not hell:
-        if hel_.is_reply:
+async def nope(lege):
+    legend = lege.pattern_match.group(1)
+    if not legend:
+        if lege.is_reply:
             (await hel_.get_reply_message()).message
         else:
-            await eod(hel_, "Sir please give some query to search and download it for you..!"
+            await eor(lege, "Sir please give some query to search and download it for you..!"
             )
             return
 
@@ -99,7 +99,7 @@ async def nope(hel_):
         silent=True if hel_.is_reply else False,
         hide_via=True,
     )
-    await hel_.delete()
+    await lege.delete()
     
     
 @bot.on(admin_cmd(pattern="manga(?: |$)(.*)"))
@@ -148,7 +148,7 @@ async def nope(hel_):
     await hel_.delete()
 #ℓєgєи∂
 
-CmdHelp("𝚊𝚗𝚒𝚖𝚎").add_command(
+CmdHelp("anime").add_command(
   "anime", "<anime name>", "Searches for the given anime and sends the details.", "anime violet evergarden"
 ).add_command(
   "manga", "<manga name>", "Searches for the given manga and sends the details.", "manga Jujutsu kaisen"
