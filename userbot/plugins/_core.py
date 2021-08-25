@@ -9,7 +9,7 @@ from LEGENDBOT.utils import *
 from userbot import *
 from . import *
 DELETE_TIMEOUT = 5
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "『Lêɠêɳ̃dẞø†』"
 legend = bot.uid
 LEGEND = f"[{DEFAULTUSER}](tg://user?id={legend})"
 
@@ -21,7 +21,7 @@ async def send(event):
     message_id = event.message.id
     thumb = LEGEND_logo
     input_str = event.pattern_match.group(1)
-    omk = f"**⍟ Plugin name ≈** `{input_str}`\n**⍟ Uploaded by ≈** {LEGEND}\n\n⚡ **[✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳](t.me/LEGEND_Userbot)** ⚡"
+    omk = f"**⍟ 𝙿𝚕𝚞𝚐𝚒𝚗 𝚗𝚊𝚖𝚎 ≈** `{input_str}`\n**⍟ 𝚄𝚙𝚕𝚘𝚊𝚍𝚎𝚍 𝙱𝚢 ≈** {legend_mention}\n\n⚡ **[Lêɠêɳ̃dẞø†](https://t.me/LEGEND_Userbot)** ⚡"
     the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         lauda = await event.client.send_file(
@@ -69,7 +69,7 @@ async def install(event):
                             a = "__𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚒𝚗𝚐...__"
                             b = 1
                         await event.edit(a)
-                    return await event.edit(f"✅ **𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍 𝙼𝚘𝚍𝚞𝚕𝚎** :- `{shortname}` \n✨ BY :- {LEGEND}\n\n{string}\n\n        ⚡ **[✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳](t.me/LEGEND_Userbot)** ⚡", link_preview=False)
+                    return await event.edit(f"✅ **𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍 𝙼𝚘𝚍𝚞𝚕𝚎** :- `{shortname}` \n✨ BY :- {legend_mention}\n\n{string}\n\n        ⚡ **[『Lêɠêɳ̃dẞø†』](t.me/LEGEND_Userbot)** ⚡", link_preview=False)
                 return await event.edit(f"Installed module `{os.path.basename(downloaded_file_name)}`")
             else:
                 os.remove(downloaded_file_name)
@@ -163,7 +163,7 @@ async def install(event):
 
 
 
-CmdHelp("𝚌𝚘𝚛𝚎").add_command(
+CmdHelp("core").add_command(
   "install", "<reply to a .py file>", "Installs the replied python file if suitable to userbot codes. (TEMPORARILY DISABLED AS HACKERS MAKE YOU INSTALL SOME PLUGINS AND GET YOUR DATA)"
 ).add_command(
   "uninstall", "<plugin name>", "Uninstalls the given plugin from userbot. To get that again do .restart", "uninstall alive"
