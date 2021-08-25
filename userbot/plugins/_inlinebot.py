@@ -36,7 +36,7 @@ legend_mention = f"[{DEFAULTUSER}](tg://user?id={Legend})"
 
 legend_row = Config.BUTTONS_IN_HELP
 legend_emoji1 = Config.EMOJI_IN_HELP1
-legend_emoji2 = Confih.EMOJI_IN_HELP2
+legend_emoji2 = Config.EMOJI_IN_HELP2
 legend_pic = Config.PM_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
 cstm_pmp = Config.PM_MSG
 ALV_PIC = Config.ALIVE_PIC
