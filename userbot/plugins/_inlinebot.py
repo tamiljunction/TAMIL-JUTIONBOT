@@ -54,12 +54,12 @@ HELL_FIRST = (
 alive_txt = """
 **  ⚜️ LegendBot ιѕ σиℓιиє ⚜️**
   {}
-**🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅**
-
-**LegendBot :**  `{}`
-**Telethon  :**  **{}**
-**Abuse    :**  **{}**
-**Sudo      :**  **{}**
+**♥️ẞø✞︎ ẞ✞︎α✞︎µѕ♥️**
+**•⚜️•Øաղ̃ҽ̈r :** **{}**
+**•📍•𝖑𝖊ɠêɳ̃dẞø✞︎ :**  `{}`
+**•📍•✞︎ҽ̀lҽ́ƭhøղ  :**  **{}**
+**•📍•Ãbûßê    :**  **{}**
+**•📍•ßudø     :**  **{}**
 """
 
 def button(page, modules):
@@ -111,7 +111,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             for x in CMD_LIST.values():
                 for y in x:
                     apn.append(y)
-            help_msg = f"𓆩♥️[{ALIVE_NAME}](https://t.me/Legend_Userbot)♥️𓆪\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`**\n**⌨️Tοταℓ Cοммαи∂ѕ⭆ `{len(apn)}`**\n**🎒Pαցҽ⭆ 1/{veriler[0]}** \n"
+            help_msg = f"𓆩♥️{legend_mention}♥️𓆪\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`**\n**⌨️Tοταℓ Cοммαи∂ѕ⭆ `{len(apn)}`**\n**🎒Pαցҽ⭆ 1/{veriler[0]}** \n"
             if help_pic and help_pic.endswith((".jpg", ".png")):
                 result = builder.photo(
                     help_pic,
@@ -135,10 +135,10 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                     link_preview=False,
                 )
         elif event.query.user_id == bot.uid and query == "alive":
-            leg_end = alive_txt.format(Config.ALIVE_MSG, version.__version__, LEGENDversion, abuse_m, is_sudo)
+            leg_end = alive_txt.format(Config.ALIVE_MSG, legend_mention, LEGENDversion, version.__version__, abuse_m, is_sudo)
             alv_btn = [
                 [Button.url(f"{LEGEND_USER}", f"tg://openmessage?user_id={Legend_Mr_Hacker}")],
-                [Button.url("My Channel", f"https://t.me/{my_channel}"), 
+                [Button.url("My Channel", f"https://t.me/its_legendbot"), 
                 Button.url("My Group", f"https://t.me/{my_group}")],
             ]
             if ALV_PIC and ALV_PIC.endswith((".jpg", ".png")):
