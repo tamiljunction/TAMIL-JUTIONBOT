@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "LEGENDgalaxy"
+          find: "hel_"
 
-          replace: "LEGEND"
+          replace: "lege_"
 
       - name: Create Pull Request
 
