@@ -83,7 +83,7 @@ async def legendbott(event):
         if args in CMD_HELP:
             await eor(event, str(CMD_HELP[args]))
         else:
-            await eod(event, "**⚠️ Error !** \nNeed a module name to show plugin info.")
+            await eor(event, "**⚠️ Error !** \nNeed a module name to show plugin info.")
     else:
         string = ""
         sayfa = [
@@ -100,4 +100,4 @@ async def legendbott(event):
                 else:
                     string += "`, "
             string += "\n"
-        await eod(event, "Please Specify A Module Name Of Which You Want Info" + "\n\n" + string)
+        await eor(event, "Please Specify A Module Name Of Which You Want Info" + "\n\n" + string)
