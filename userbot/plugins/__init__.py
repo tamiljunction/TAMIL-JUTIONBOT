@@ -5,7 +5,7 @@ from userbot.helpers.functions import *
 from userbot.cmdhelp import CmdHelp
 import datetime
 from telethon import version
-
+from . import *
 
 LEGEND_USER = bot.uid.first_name
 Legend_Mr_Hacker = bot.uid
