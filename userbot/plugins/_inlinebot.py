@@ -5,21 +5,12 @@ import html
 import os
 import re
 import sys
-LEGEND_USER = bot.me.first_name
-Legend_Mr_Hacker = bot.uid
 from telethon.events import InlineQuery, callbackquery
 from userbot import *
 from userbot.cmdhelp import *
 from LEGENDBOT.utils import *
 from userbot.Config import Config
 from userbot import ALIVE_NAME
-LEGEND_row = Config.BUTTONS_IN_HELP
-LEGEND_emoji1 = Config.EMOJI_IN_HELP1
-LEGEND_emoji2 = Config.EMOJI_IN_HELP2
-# thats how a lazy guy imports
-# LEGENDBOT
-
-
 from telethon import Button, custom, events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.events import InlineQuery, callbackquery
@@ -30,10 +21,6 @@ from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.functions.messages import ExportChatInviteRequest
 DEFAULTUSER = ALIVE_NAME or "LEGEND"
 from . import * 
-Legend = bot.uid 
-
-legend_mention = f"[{DEFAULTUSER}](tg://user?id={Legend})"
-
 legend_row = Config.BUTTONS_IN_HELP
 legend_emoji1 = Config.EMOJI_IN_HELP1
 legend_emoji2 = Config.EMOJI_IN_HELP2
@@ -363,7 +350,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 apn.append(y)
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             await event.edit(
-                f"🔰 **{legend_mention}**\n\n📜 __No.of Plugins__ : `{len(CMD_HELP)}`\n🗂️ __Commands__ : `{len(apn)}`\n🗒️ __Page__ : {page + 1}/{veriler[0]}",
+                f"**𓆩♥️[{ALIVE_NAME}](https://t.me/Legend_Mr_Hacker)♥️𓆪**\n\n**🕹️𝚃𝚘𝚝𝚊𝚕 𝙼𝚘𝚍𝚞𝚕𝚎𝚜 𝙸𝚗𝚜𝚝𝚊𝚕𝚕𝚎𝚍⭆ `{len(CMD_HELP)}`**\n**⌨️𝚃𝚘𝚝𝚊𝚕 𝙲𝚘𝚖𝚖𝚊𝚗𝚍𝚜⭆ `{len(apn)}`**\n**🎒𝙿𝚊𝚐𝚎⭆ {page + 1}/{veriler[0]}**",
                 buttons=veriler[1],
                 link_preview=False,
             )
