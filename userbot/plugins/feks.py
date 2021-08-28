@@ -29,7 +29,7 @@ async def gbun(event):
         firstname = replied_user.user.first_name
         usname = replied_user.user.username
         id = reply_message.sender_id
-        if chat.id == 1856561912:
+        if chat.id == 1938996006:
             await event.reply("`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 69$ to my master__ ✰@Legend_Mr_Hacker™️✰ __to release your account__😏")
         else:
             jnl=("`Warning!! `"
