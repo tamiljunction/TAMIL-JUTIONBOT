@@ -8,7 +8,7 @@ from telethon.events import InlineQuery, callbackquery
 from telethon.sync import custom
 from telethon import events, functions, Button, custom
 from telethon.tl.functions.users import GetFullUserRequest
-from userbot.plugins.sql_helper import pmpermit_sql as pm_sql
+from userbot.plugins.sql_helper import pm_sql as pm_sql
 from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
 from userbot.Config import Config
 from LEGENDBOT.utils import admin_cmd
@@ -56,13 +56,13 @@ if Var.PRIVATE_GROUP_ID is not None:
         reason = event.pattern_match.group(1)
         chat = await event.get_chat()
         if event.is_private:
-            if not pmpermit_sql.is_approved(chat.id):
+            if not pm_sql.is_approved(chat.id):
                 if chat.id in PM_WARNS:
                     del PM_WARNS[chat.id]
                 if chat.id in PREV_REPLY_MESSAGE:
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
-                pmpermit_sql.approve(chat.id, reason)
+                pm_sql.approve(chat.id, reason)
                 await event.edit(
                     "αρρяονє∂ [{}](tg://user?id={}) τo ρм γου.".format(
                         firstname, chat.id
@@ -75,16 +75,16 @@ if Var.PRIVATE_GROUP_ID is not None:
             if not reply_s:
                 await event.edit('`Reply To User To Approve Him !`')
                 return
-            if not pmpermit_sql.is_approved(reply_s.sender_id):
+            if not pm_sql.is_approved(reply_s.sender_id):
                 replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
                 firstname = replied_user.user.first_name
-                pmpermit_sql.approve(reply_s.sender_id, "Approved")
+                pm_sql.approve(reply_s.sender_id, "Approved")
                 await event.edit(
                         "✔️αρρяονє∂ [{}](tg://user?id={}) to pm γου.".format(firstname, reply_s.sender_id)
                     )
                 await asyncio.sleep(3)
                 await event.delete()
-            elif pmpermit_sql.is_approved(reply_s.sender_id):
+            elif pm_sql.is_approved(reply_s.sender_id):
                 await event.edit('`User ιѕ Already Approved !`')
                 await event.delete()
 
@@ -97,9 +97,9 @@ if Var.PRIVATE_GROUP_ID is not None:
             return
         chat = await event.get_chat()
         if event.is_private:
-            if not pmpermit_sql.is_approved(chat.id):
+            if not pm_sql.is_approved(chat.id):
                 if not chat.id in PM_WARNS:
-                    pmpermit_sql.approve(chat.id, "outgoing")
+                    pm_sql.approve(chat.id, "outgoing")
                     bruh = "✔️αµƭσ αρρɾσѵε∂ ɓcµƶ σµƭɠσเɳɦ 🚶"
                     rko = await borg.send_message(event.chat_id, bruh)
                     await asyncio.sleep(3)
@@ -120,8 +120,8 @@ if Var.PRIVATE_GROUP_ID is not None:
                 )
                 time.sleep(100)
             else:
-                if pmpermit_sql.is_approved(chat.id):
-                    pmpermit_sql.disapprove(chat.id)
+                if pm_sql.is_approved(chat.id):
+                    pm_sql.disapprove(chat.id)
                     await event.edit(
                         "gєτ ℓοѕτ мγ мαѕτєя нαѕ ϐℓοϲκє∂ υ!!.\nϐℓοϲκє∂ [{}](tg://user?id={})".format(
                             firstname, chat.id
@@ -142,8 +142,8 @@ if Var.PRIVATE_GROUP_ID is not None:
                     return
                 replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
                 firstname = replied_user.user.first_name
-                if pmpermit_sql.is_approved(event.chat_id):
-                    pmpermit_sql.disapprove(event.chat_id)
+                if pm_sql.is_approved(event.chat_id):
+                    pm_sql.disapprove(event.chat_id)
                 await event.edit("ϐℓοϲκє∂ [{}](tg://user?id={})".format(firstname, reply_s.sender_id))
                 await event.client(functions.contacts.BlockRequest(reply_s.sender_id))
                 await asyncio.sleep(3)
@@ -161,8 +161,8 @@ if Var.PRIVATE_GROUP_ID is not None:
             if chat.id == 1856561912:
                 await event.edit("Sorry, I Can't Disapprove My Master")
             else:
-                if pmpermit_sql.is_approved(chat.id):
-                    pmpermit_sql.disapprove(chat.id)
+                if pm_sql.is_approved(chat.id):
+                    pm_sql.disapprove(chat.id)
                     await event.edit(
                         "[{}](tg://user?id={}) disapproved to PM.".format(
                             firstname, chat.id
@@ -173,16 +173,16 @@ if Var.PRIVATE_GROUP_ID is not None:
             if not reply_s:
                 await event.edit('`Reply To User To DisApprove`')
                 return
-            if pmpermit_sql.is_approved(reply_s.sender_id):
+            if pm_sql.is_approved(reply_s.sender_id):
                 replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
                 firstname = replied_user.user.first_name
-                pmpermit_sql.disapprove(reply_s.sender_id)
+                pm_sql.disapprove(reply_s.sender_id)
                 await event.edit(
                     "∂ιѕαρρяονє∂ [{}](tg://user?id={}) το ρм υ.".format(firstname, reply_s.sender_id)
                 )
                 await asyncio.sleep(3)
                 await event.delete()
-            elif not pmpermit_sql.is_approved(reply_s.sender_id):
+            elif not pm_sql.is_approved(reply_s.sender_id):
                 await event.edit('`User Not Approved Yet`')
                 await event.delete()    
                 
@@ -191,7 +191,7 @@ if Var.PRIVATE_GROUP_ID is not None:
     async def approve_p_m(event):
         if event.fwd_from:
             return
-        approved_users = pmpermit_sql.get_all_approved()
+        approved_users = pm_sql.get_all_approved()
         APPROVED_PMs = "Currently Approved PMs\n"
         if len(approved_users) > 0:
             for a_user in approved_users:
@@ -298,7 +298,7 @@ if NEEDIT == "ENABLE":
             return
         if sender.verified:
             return
-        if not pmpermit_sql.is_approved(chat_id):
+        if not pm_sql.is_approved(chat_id):
             await bot(functions.contacts.BlockRequest(chat_id))
 
 CmdHelp("ρмρєямιτ").add_command(
