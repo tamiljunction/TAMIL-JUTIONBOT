@@ -45,7 +45,7 @@ HELL_FIRST = (
 )
 
  
-if Var.LOGGER_D is not None:
+if Config.LOGGER_ID is not None:
 
     @borg.on(admin_cmd(pattern="allow|.a|.approve ?(.*)"))
     async def approve_p_m(event):
