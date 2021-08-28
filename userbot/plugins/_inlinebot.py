@@ -57,11 +57,11 @@ alive_txt = """
 **   ♥️ẞø✞︎ ẞ✞︎α✞︎µѕ♥️**
 **•⚜️•Øաղ̃ҽ̈r :** {}\n
 
-**•🌹•Lêɠêɳ̃dẞø† :**  {}
-**•🌹•†ҽ̀lҽ́ƭhøղ  :**  {}
-**•🌹•Ãbûßê     :**  {}
-**•🌹•ßudø      :**  {}
-**•🌹•Bø†       :**  {}
+**•🌹•Lêɠêɳ̃dẞø† :** {}
+**•🌹•†ҽ̀lҽ́ƭhøղ  :** {}
+**•🌹•Ãbûßê     :** {}
+**•🌹•ßudø      :** {}
+**•🌹•Bø†       :** {}
 """
 
 def button(page, modules):
@@ -89,7 +89,7 @@ def button(page, modules):
                f"⭅ϐαϲκ", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
-               f"• ❎ •", data="close"
+               f"♦️ ❎ ♦️", data="close"
             ),
             custom.Button.inline(
                f"ղҽxԵ⭆", data=f"page({0 if page == (max_pages - 1) else page + 1})"
@@ -131,7 +131,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 )
             else:
                 result = builder.article(
-                    f"Hey! Only use .help please",
+                    f"Hey! Only use .op please",
                     text=help_msg,
                     buttons=veriler[1],
                     link_preview=False,
@@ -336,9 +336,9 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             veriler = custom.Button.inline(f"{legend_emoji1} Re-Open Menu {legend_emoji2}", data="reopen")
-            await event.edit(f"**⚜️ Lêɠêɳ̃dẞø† Mêñû Prõvîdêr háš běěn čłøšĕd bý ⚜️**\n\n**Bot Of :**  {legend_mention}\n\n        [©️Lêɠêɳ̃dẞø†™️]({chnl_link})", buttons=veriler, link_preview=False)
+            await event.edit(f"**⚜️ Lêɠêɳ̃dẞø† Mêñû Prõvîdêr háš běěn čłøšĕd by {legend_mention} ⚜️**\n\n**Bot Of :**  {legend_mention}\n\n            [©️Lêɠêɳ̃dẞø†]({chnl_link})", buttons=veriler, link_preview=False)
         else:
-            reply_pop_up_alert = "κγα υиgℓι καя янє нο мєяє ϐοτ ραя αgαя ϲнαнιγє τοн κнυ∂ κα ϐαиα ℓο иα αα נατє нο υиgℓι καяиє мєяє ϐοτ ρє.   ©Lêɠêɳ̃dẞø†™"
+            reply_pop_up_alert = "κγα υиgℓι καя янє нο мєяє ϐοτ ραя αgαя ϲнαнιγє τοн κнυ∂ κα ϐαиα ℓο иα. Aα נατє нο υиgℓι καяиє мєяє ϐοτ ρє.   ©Lêɠêɳ̃dẞø†"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
    
 
@@ -358,7 +358,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
         else:
             return await event.answer(
-                "κγα υиgℓι καя янє нο мєяє ϐοτ ραя αgαя ϲнαнιγє τοн κнυ∂ κα ϐαиα ℓο иα αα נατє нο υиgℓι καяиє мєяє ϐοτ ρє.   ©Lêɠêɳ̃dẞø†™",
+                "κγα υиgℓι καя янє нο мєяє ϐοτ ραя αgαя ϲнαнιγє τοн κнυ∂ κα ϐαиα ℓο иα αα נατє нο υиgℓι καяиє мєяє ϐοτ ρє.   ©Lêɠêɳ̃dẞø†",
                 cache_time=0,
                 alert=True,
             )
