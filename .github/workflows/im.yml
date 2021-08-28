@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "hel_"
+          find: "pmpermit_sql"
 
-          replace: "lege_"
+          replace: "pm_sql"
 
       - name: Create Pull Request
 
