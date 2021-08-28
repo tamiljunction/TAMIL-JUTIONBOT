@@ -103,8 +103,8 @@ async def get_users(event):
     )
 
 
-@bot.on(admin_cmd(pattern="adds ?(.*)"))
-@bot.on(sudo_cmd(pattern="adds ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="invite ?(.*)"))
+@bot.on(sudo_cmd(pattern="invite ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -140,7 +140,7 @@ async def _(event):
 
 
 CmdHelp("invite").add_command(
-  "adds", "<username/id>", "Adds the given user to the group"
+  "invite", "<username/id>", "Adds the given user to the group"
 ).add_command(
   "inviteall", "<group username>", "Scraps user from the targeted group to your group. Basically Kidnapps user from one chat to another"
 ).add()
