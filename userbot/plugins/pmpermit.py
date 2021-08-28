@@ -8,7 +8,7 @@ from telethon.events import InlineQuery, callbackquery
 from telethon.sync import custom
 from telethon import events, functions, Button, custom
 from telethon.tl.functions.users import GetFullUserRequest
-from userbot.plugins.sql_helper import pmpermit_sql as pmpermit_sql
+from userbot.plugins.sql_helper import pmpermit_sql as pm_sql
 from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
 from userbot.Config import Config
 from LEGENDBOT.utils import admin_cmd
@@ -39,7 +39,7 @@ PM_ON_OFF = Config.PM_DATA
 CSTM_PMP = Config.PM_MSG or "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
 HELL_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
 HELL_FIRST = (
-    "**🔥 Hêllẞø† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
+    "**🔥 LegendBot Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n\n**Please Choose Why You Are Here!!**".format(mention, CSTM_PMP)
 )
