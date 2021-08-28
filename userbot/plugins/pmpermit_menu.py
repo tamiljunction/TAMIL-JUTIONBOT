@@ -8,7 +8,7 @@ import asyncio
 
 from telethon import functions
 
-from userbot.plugins.sql_helper import pm_sql as pm_sql
+from userbot.plugins.sql_helper import pmpermit_sql as pmpermit_sql
 from userbot import ALIVE_NAME
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
@@ -19,7 +19,7 @@ PREV_REPLY_MESSAGE = {}
 async def _(event):
     chat_id = event.from_id
     userid = event.sender_id
-    if not pm_sql.is_approved(chat_id):
+    if not pmpermit_sql.is_approved(chat_id):
         chat = await event.get_chat()
         if event.fwd_from:
             return
