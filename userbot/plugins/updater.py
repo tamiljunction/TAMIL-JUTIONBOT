@@ -6,7 +6,7 @@ import git
 
 from userbot.Config import Config
 from LEGENDBOT.utils import admin_cmd
-
+from . import *
 # -- Constants -- #
 IS_SELECTED_DIFFERENT_BRANCH = (
     "looks like a custom branch {branch_name} "
@@ -32,6 +32,7 @@ RESTARTING_APP = "re-starting heroku application"
 
 
 @borg.on(admin_cmd("update ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="update$", allow_sudo=True))
 async def updater(message):
     try:
         repo = git.Repo()
@@ -136,7 +137,7 @@ def generate_change_log(git_repo, diff_marker):
 async def deploy_start(tgbot, message, refspec, remote):
     await message.edit(RESTARTING_APP)
     await message.edit(
-        "🤟✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 𝙸𝚜 𝚘𝚗 𝚞𝚙𝚍𝚊𝚝𝚒𝚗𝚐 𝚝𝚘 𝚕𝚊𝚝𝚎𝚜𝚝 𝚅2.O !!!\n𝚊𝚏𝚝𝚎𝚛 10 𝚖𝚒𝚗 𝚝𝚢𝚙𝚎 `.op` οя `.alive` το ϲнєϲκ ιƒ ι αм οи ѕιя ♣️"
+        "🤟✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 𝙸𝚜 𝚘𝚗 𝚞𝚙𝚍𝚊𝚝𝚒𝚗𝚐 𝚝𝚘 𝚕𝚊𝚝𝚎𝚜𝚝 {LEGENDversion} !!!\n𝚊𝚏𝚝𝚎𝚛 10 𝚖𝚒𝚗 𝚝𝚢𝚙𝚎 `.op` οя `.alive` το ϲнєϲκ ιƒ ι αм οи ѕιя ♣️"
     )
     await remote.push(refspec=refspec)
     await tgbot.disconnect()
