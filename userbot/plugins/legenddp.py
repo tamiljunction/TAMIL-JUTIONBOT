@@ -9,7 +9,7 @@ from pySmartDL import SmartDL
 from telethon.tl import functions
 from LEGENDBOT.utils import admin_cmd, sudo_cmd
 from userbot.cmdhelp import CmdHelp
-FONT_FILE_TO_USE = "./userbot/helpers/styles/Voice In My Head_080621160753.otf"
+FONT_FILE_TO_USE = "/userbot/helpers/styles/Windu_080621160753.ttf"
 
 # Add telegraph media links of profile pics that are to be used
 TELEGRAPH_MEDIA_LINKS = [
