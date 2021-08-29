@@ -14,7 +14,7 @@ from pySmartDL import SmartDL
 from telethon.tl import functions
 from LEGENDBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
-FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+FONT_FILE_TO_USE = "./userbot/helpers/styles/Voice In My Head_080621160753.otf"
 
 # Add telegraph media links of profile pics that are to be used
 TELEGRAPH_MEDIA_LINKS = [
