@@ -24,7 +24,7 @@ async def _(event):
     query = event.text[6:]
     max_results = 1
     if query == "":
-        return await eod(event, "__Please give a song name to search.__")
+        return await eor(event, "__Please give a song name to search.__")
     legend = await eor(event, f"__Searching for__ `{query}`")
     legen_ = await song_search(event, query, max_results, details=True)
     x, title, views, duration, thumb = legen_[0], legen_[1], legen_[2], legen_[3], legen_[4]
@@ -37,23 +37,23 @@ async def _(event):
         with YoutubeDL(song_opts) as somg:
             legend_data = somg.extract_info(url)
     except DownloadError as DE:
-        return await eod(legend, f"`{str(DE)}`")
+        return await eor(legend, f"`{str(DE)}`")
     except ContentTooShortError:
-        return await eod(legend, "`The download content was too short.`")
+        return await eor(legend, "`The download content was too short.`")
     except GeoRestrictedError:
-        return await eod(legend, "`Video is not available from your geographic location due to geographic restrictions imposed by a website.`")
+        return await eor(legend, "`Video is not available from your geographic location due to geographic restrictions imposed by a website.`")
     except MaxDownloadsReached:
-        return await eod(legend, "`Max-downloads limit has been reached.`")
+        return await eor(legend, "`Max-downloads limit has been reached.`")
     except PostProcessingError:
-        return await eod(legend, "`There was an error during post processing.`")
+        return await eor(legend, "`There was an error during post processing.`")
     except UnavailableVideoError:
-        return await eod(legend, "`Media is not available in the requested format.`")
+        return await eor(legend, "`Media is not available in the requested format.`")
     except XAttrMetadataError as XAME:
         return await eod(legend, f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
     except ExtractorError:
-        return await eod(legend, "`There was an error during info extraction.`")
+        return await eor(legend, "`There was an error during info extraction.`")
     except Exception as e:
-        return await eod(legend, f"{str(type(e)): {str(e)}}")
+        return await eor(legend, f"{str(type(e)): {str(e)}}")
     c_time = time.time()
     await legend.edit(f"**🎶 Preparing to upload song 🎶 :** \n\n{legend_data['title']} \n**By :** {legend_data['uploader']}")
     await event.client.send_file(
