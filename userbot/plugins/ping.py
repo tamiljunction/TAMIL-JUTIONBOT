@@ -68,10 +68,10 @@ async def _(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await event.edit(
-        f"**♦️𝙿𝚘𝚗𝚐!♦️**\n\n🧬{ms}\n🔥𝙼𝚢 𝙾𝚠𝚗𝚎𝚛 [{DEFAULTUSER}](tg://user?id={legend})\n                  [𝕴tß 𝕷êgëñd𝕭øt 🇮🇳](https://t.me/Legend_Userbot)" 
+        f"**♦️𝙿𝚘𝚗𝚐!♦️**\n⚡️{ms}\n🔥𝙼𝚢 𝙾𝚠𝚗𝚎𝚛 [{DEFAULTUSER}](tg://user?id={legend})"
     )
 
-CmdHelp("𝙿𝚒𝚗𝚐").add_command(
+CmdHelp("Ping").add_command(
   "ping", None, "Shows you the ping speed of server"
 ).add_command(
   "hbping", None, "Shows you the ping speed of server with an animation"
