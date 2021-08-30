@@ -458,7 +458,7 @@ async def _(event):
     )
     await asyncio.sleep(6)
 
-CmdHelp("𝚊𝚗𝚒𝚖𝚊𝚝𝚒𝚘𝚗𝚜3").add_command(
+CmdHelp("animations3").add_command(
   'kiler', '<text>', 'Cool killing animation with name'
 ).add_command(
   'eye', None, 'Use and see'
