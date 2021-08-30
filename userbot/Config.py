@@ -153,7 +153,7 @@ if ENV:
         BIO_MSG = os.environ.get("ALIVE_MSG", None)
         #Lydia API
         LYDIA_API = os.environ.get("LYDIA_API",None)
-        PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL", None))
+        PLUGIN_CHANNEL = os.environ.get("PLUGIN_CHANNEL", ))
         UPSTREAM_REPO = os.environ.get(
             "UPSTREAM_REPO", "https://github.com/LEGEND-OS/LEGENDBOT"
         )
