@@ -217,7 +217,7 @@ async def _(event):
         await event.edit(animation_chars[i % 192])
         
         
-CmdHelp("𝚊𝚗𝚒𝚖𝚊𝚝𝚘𝚛").add_command(
+CmdHelp("animator").add_command(
   'animator', None, 'Try It'
 ).add()
         
