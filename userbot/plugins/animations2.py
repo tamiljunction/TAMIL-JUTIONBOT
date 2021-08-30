@@ -380,7 +380,7 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
         
         
-CmdHelp("𝚊𝚗𝚒𝚖𝚊𝚝𝚒𝚘𝚗𝚜2").add_command(
+CmdHelp("animation2").add_command(
   'boxs', None, 'Use and see'
 ).add_command(
   'rain', None, 'Use and see'
