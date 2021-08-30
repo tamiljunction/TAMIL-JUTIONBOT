@@ -56,7 +56,6 @@ justwatch
 langdetect
 lxml
 lottie
-math
 nekos.py
 numpy
 oauth2client
