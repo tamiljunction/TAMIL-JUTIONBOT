@@ -108,7 +108,7 @@ async def legend_is_on():
 #        pass
 
 
-bot.loop.create_task(hell_is_on())
+bot.loop.create_task(legend_is_on())
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
