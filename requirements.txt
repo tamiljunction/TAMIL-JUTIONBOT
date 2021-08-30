@@ -98,7 +98,6 @@ twitter_scraper
 telethon
 tswift
 html-telegraph-poster
-urllib
 urbandict>=0.5
 validators
 vcam
