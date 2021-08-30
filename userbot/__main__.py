@@ -102,12 +102,13 @@ async def legend_is_on():
 
 # Why not come here and chat??
 #    try:
-#        await bot(JoinChannelRequest("@HellBot_Chat"))
+#        await bot(JoinChannelRequest("@Its_Legendbot"))
 #    except BaseException:
 #        pass
 
 
 bot.loop.create_task(legend_is_on())
+
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:
