@@ -64,7 +64,6 @@ patool
 PyDictionary
 psycopg2
 psycopg2-binary
-PIL
 PyPDF2
 Pillow>=5.3.0
 pySmartDL
