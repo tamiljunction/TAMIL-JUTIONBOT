@@ -26,9 +26,8 @@ async def add_bot(bot_token):
         await bot.start(bot_token)
         bot.me = await bot.get_me()
         bot.uid = telethon.utils.get_peer_id(bot.me)
-    except Exception as e:
-        LOGS.error(f"LEGENDBOT_SESSION - {str(e)}")
-        sys.exit()
+
+    
 
 
 if len(argv) not in (1, 3, 4):
