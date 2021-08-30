@@ -122,8 +122,8 @@ except:
     from youtubesearchpython import SearchVideos
 
 
-@bot.on(admin_cmd(pattern="song(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="song(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="slong(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="slong(?: |$)(.*)", allow_sudo=True))
 async def download_video(v_url):
 
     lazy = v_url
