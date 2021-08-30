@@ -181,7 +181,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 await event.delete()    
                 
 
-    @borg.on(admin_cmd(pattern="listallowed|.la"))
+    @borg.on(admin_cmd(pattern="listallowed"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -315,7 +315,7 @@ CmdHelp("ρмρєямιτ").add_command(
 ).add_command(
   "block|.blk", "<pm use only>", "You know what it does.... Blocks the user"
 ).add_command(
-  "listallowed|.la", None, "Gives you the list of allowed PM's list"
+  "listallowed", None, "Gives you the list of allowed PM's list"
 ).add_command(
   "set var PM_DATA", "DISABLE", "Turn off pm protection by your userbot. Your PM will not be protected."
 ).add()
