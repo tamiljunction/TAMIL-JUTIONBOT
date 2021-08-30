@@ -30,7 +30,7 @@ async def add_bot(bot_token):
     
 
 
-if len(argv) not in (1, 3, 4):
+if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:
     bot.tgbot = None
@@ -108,7 +108,7 @@ async def legend_is_on():
 
 
 bot.loop.create_task(legend_is_on())
-if len(argv) not in (1, 3, 4):
+if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:
     bot.run_until_disconnected()
