@@ -26,7 +26,7 @@ async def _(event):
     if query == "":
         return await eor(event, "__Please give a song name to search.__")
     legend = await eor(event, f"__Searching for__ `{query}`")
-    legen_ = await search_song(event, query, max_results, details=True)
+    legen_ = await song_search(event, query, max_results, details=True)
     x, title, views, duration, thumb = legen_[0], legen_[1], legen_[2], legen_[3], legen_[4]
     thumb_name = f'thumb{Legend_Mr_Hacker}.jpg'
     thumbnail = requests.get(thumb, allow_redirects=True)
