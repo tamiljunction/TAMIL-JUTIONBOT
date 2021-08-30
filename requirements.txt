@@ -14,7 +14,6 @@ async_generator
 asgiref==3.3.1
 async==0.6.2
 asyncio
-asyncurban==0.3.3
 attrs==20.3.0
 beautifulsoup4
 bs4
@@ -44,7 +43,6 @@ emoji==0.6.0
 faker
 getpass
 glitch_this
-glitch_this==1.0.1
 gTTS_token>=1.1.3
 gTTS>=2.0.1
 gitpython
