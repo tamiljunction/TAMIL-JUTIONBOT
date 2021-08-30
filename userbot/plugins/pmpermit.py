@@ -9,7 +9,6 @@ from telethon.sync import custom
 from telethon import events, functions, Button, custom
 from telethon.tl.functions.users import GetFullUserRequest
 from userbot.plugins.sql_helper import pmpermit_sql as pmpermit_sql
-from userbot.Config import ALIVE_NAME, PM_MSG
 from userbot.Config import Config
 from LEGENDBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
@@ -34,7 +33,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "ℓєgєи∂"
 USER_BOT_WARN_ZERO = "**Hello Sir/Miss, ʏᴏᴜ ᴅɪᴅ'ɴᴛ sᴇᴇ ᴡʜᴀᴛ ɪ sᴀɪᴅ ᴍʏ ᴍᴀsᴛᴇʀ ɪs ᴄᴜʀʀᴇɴᴛʟʏ ᴏғғʟɪɴᴇ ᴅᴏɴᴛ sᴘᴀᴍ.`\n**ɴᴏᴡ sʜᴜᴛ ᴜᴘ.... ᴀɴᴅ ɢᴇᴛ ʟᴏsᴛ**"
 USER_BOT_NO_WARN = (
     "**𝙷𝚎𝚕𝚕𝚘 𝚂𝚒𝚛/𝙼𝚒𝚜𝚜,\n𝙸 𝚑𝚊𝚟𝚎𝚗'𝚝 𝚊𝚙𝚙𝚛𝚘𝚟𝚎𝚍 𝚢𝚘𝚞 𝚢𝚎𝚝 𝚝𝚘 𝚙𝚎𝚛𝚜𝚘𝚗𝚊𝚕 𝚖𝚎𝚜𝚜𝚊𝚐𝚎 𝚖𝚎😎⚠️**.\n\n"
-    f"𝐓𝐡𝐢𝐬 𝐈𝐬 𝐌𝐲 𝐎𝐰𝐧𝐞𝐫 {DEFAULTUSER}'s\n"
+    f"𝐓𝐡𝐢𝐬 𝐈𝐬 𝐌𝐲 𝐎𝐰𝐧𝐞𝐫 {legend_mention}'s\n"
     f"\n**{LEGEND}**\n\n"
     "⚡𝐑𝐞𝐠𝐢𝐬𝐭𝐞𝐫 𝐔𝐫 𝐑𝐞𝐪𝐮𝐞𝐬𝐭⚡\n𝐒𝐞𝐧𝐝 `/start` 𝐓𝐨 𝐑𝐞𝐠𝐢𝐬𝐭𝐞𝐫 𝐔𝐫 𝐫𝐞𝐪𝐮𝐞𝐬𝐭🔥"
 )
