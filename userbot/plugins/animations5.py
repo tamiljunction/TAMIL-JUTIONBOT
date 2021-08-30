@@ -242,7 +242,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 5])
 
-CmdHelp("𝚊𝚗𝚒𝚖𝚊𝚝𝚒𝚘𝚗𝚜5").add_command(
+CmdHelp("animations5").add_command(
 
   'bufferedd', None, 'use and see'
 
