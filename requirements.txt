@@ -115,5 +115,5 @@ validators
 vcam
 wikipedia>=1.4.0
 youtube_dl
-youtube-search-python
-youtube-search
+youtube_search_python
+youtube_search
