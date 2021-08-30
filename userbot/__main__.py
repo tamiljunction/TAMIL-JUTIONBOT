@@ -80,6 +80,32 @@ TYPE :- " .gpromote @Legend_Mr_Hacker " OR .legend OR .ping CHECK IF I'M ON!
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱""")
 
+
+async def legend_is_on():
+    try:
+        if Config.LOGGER_ID != 0:
+            await bot.send_file(
+                Config.LOGGER_ID,
+                LEGEND_PIC,
+                caption=f"#START \n\nDeployed LEGENDBOT Successfully\n\n**LEGENDBOT- {LEGENDversion}**\n\nType `{ll}ping` or `{ll}alive` to check! \n\nJoin [LegendBot Channel](t.me/Its_LegendBot) for Updates & [Hêllẞø† Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
+            )
+    except Exception as e:
+        LOGS.info(str(e))
+
+# Join HellBot Channel after deploying 🤐😅
+    try:
+        await bot(JoinChannelRequest("@Legend_Userbot"))
+    except BaseException:
+        pass
+
+# Why not come here and chat??
+#    try:
+#        await bot(JoinChannelRequest("@HellBot_Chat"))
+#    except BaseException:
+#        pass
+
+
+bot.loop.create_task(hell_is_on())
 if len(argv) not in (1, 3, 4):
     bot.disconnect()
 else:
