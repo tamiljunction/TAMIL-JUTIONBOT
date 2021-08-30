@@ -6,6 +6,7 @@ import os
 from telethon import TelegramClient
 from var import Var
 from userbot.Config import Config
+from telethon.tl.functions.channels import InviteToChannelRequest, JoinChannelRequest
 from userbot.utils import load_module, start_assistant
 from userbot import LOAD_PLUG, LOGS, LEGENDversion
 from pathlib import Path
@@ -13,9 +14,9 @@ import asyncio
 import telethon.utils
 os.system("pip install -U telethon")
 
-hl = Config.SUDO_COMMAND_HAND_LER
+l2= Config.SUDO_COMMAND_HAND_LER
 LEGEND_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.mp4"
-
+l1 = Config.COMMAND_HAND_LER
 
 
 LOAD_USERBOT = os.environ.get("LOAD_USERBOT", True)
@@ -26,10 +27,9 @@ async def add_bot(bot_token):
         await bot.start(bot_token)
         bot.me = await bot.get_me()
         bot.uid = telethon.utils.get_peer_id(bot.me)
-
-    
-
-
+    except Exception as e:
+        pint(f"HELLBOT_SESSION - {str(e)}")
+        sys.exit()
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:
