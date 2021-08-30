@@ -1,9 +1,4 @@
-# Originally made by @rekcah for @javes05
-# porting to hellbot by @Legend_Mr_Hacker...
-# i asked rekcah before porting...not like other kangers....
-# keep credit if u wanna kang...
-# Now in LEGENDBOT
-# else u are a gay...no doubt in that....
+
 
 # --------------------------------------------------------------------------------------------------------------------------------
 
@@ -81,12 +76,12 @@ async def get_users(event):
     f = 0
     error = "None"
 
-    await LEGEND.edit("**⚜️[Ͳєямιиαℓ Տτατυѕ](https://t.me/Legend_Userbot)**\n\n`🔸ιиνιτιиg Ⴎѕєяѕ.......`")
+    await LEGEND.edit("**⚜️[Ͳєямιиαℓ Տτατυѕ](https://t.me/Legend_Userbot)**\n\n`🔸Inviting Users.......`")
     async for user in event.client.iter_participants(legend.full_chat.id):
         try:
             if error.startswith("Too"):
                 return await LEGEND.edit(
-                    f"[τєямιиαℓ ƒιиιѕнє∂ ωιτн єяяοя](https;//t.me/Legend_Userbot)\n`🔸 мαγ gοτ ℓιмιτє∂ ƒяοм τєℓєτнοи ρℓєαѕє τяγ αgαιи ℓατєя`\n🔸 єяяοя : \n`{error}`\n\n🔸 ιиνιτє∂ `{s}` ρєορℓє \n ⚠️ƒαιℓє∂ το ιиνιτє `{f}` ρєορℓє"
+                    f"[τєямιиαℓ ƒιиιѕнє∂ ωιτн єяяοя](https;//t.me/Legend_Userbot)\n`🔸 мαγ gοτ ℓιмιτє∂ ƒяοм τєℓєτнοи ρℓєαѕє τяγ αgαιи ℓατєя`\n🔸 єяяοя : \n`{error}`\n\n🔸 Invited `{s}` ρєορℓє \n ⚠️ƒαιℓє∂ το ιиνιτє `{f}` ρєορℓє"
                 )
             await event.client(
                 functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
@@ -103,8 +98,8 @@ async def get_users(event):
     )
 
 
-@bot.on(admin_cmd(pattern="invite ?(.*)"))
-@bot.on(sudo_cmd(pattern="invite ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="invites ?(.*)"))
+@bot.on(sudo_cmd(pattern="invites ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -140,7 +135,7 @@ async def _(event):
 
 
 CmdHelp("invite").add_command(
-  "invite", "<username/id>", "Adds the given user to the group"
+  "invites", "<username/id>", "Adds the given user to the group"
 ).add_command(
   "inviteall", "<group username>", "Scraps user from the targeted group to your group. Basically Kidnapps user from one chat to another"
 ).add()
