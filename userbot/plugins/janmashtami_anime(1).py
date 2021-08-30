@@ -13,7 +13,7 @@ async def xd(event):
         if tele.is_group:
             chat = tele.id
             try:
-                await bot.send_message(chat, f"╭╮╱╭╮\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n┃┃╱┃┃\n╰╯╱╰╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n╰╯╱╰╯\n╭━━━╮\n┃╭━╮┃\n┃╰━╯┃\n┃╭━━╯\n┃┃\n╰╯\n╭━━━╮\n┃╭━╮┃\n┃╰━╯┃\n┃╭━━╯\n┃┃\n╰╯\b╭╮╱╱╭╮\n┃╰╮╭╯┃\n╰╮╰╯╭╯\n╱╰╮╭╯\n╱╱┃┃\n╱╱╰╯\n╱╱╭╮\n╱╱┃┃\n╱╱┃┃\n╭╮┃┃\n┃╰╯┃\n╰━━╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n╰╯╱╰╯\n╭━╮╱╭╮\n┃┃╰╮┃┃\n┃╭╮╰╯┃\n┃┃╰╮┃┃\n┃┃╱┃┃┃\n╰╯╱╰━╯\n╭━╮╭━╮\n┃┃╰╯┃┃\n┃╭╮╭╮┃\n┃┃┃┃┃┃\n┃┃┃┃┃┃\n╰╯╰╯╰╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n╰╯╱╰╯\n╭━━━╮\n┃╭━╮┃\n┃╰━━╮\n╰━━╮┃\n┃╰━╯┃\n╰━━━╯\n╭╮╱╭╮\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n┃┃╱┃┃\n╰╯╱╰╯\n╭━━━━╮\n┃╭╮╭╮┃\n╰╯┃┃╰╯\n╱╱┃┃\n╱╱┃┃\n╱╱╰╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n╰╯╱╰╯\n╭━╮╭━╮\n┃┃╰╯┃┃\n┃╭╮╭╮┃\n┃┃┃┃┃┃\n┃┃┃┃┃┃\n╰╯╰╯╰╯\n╭━━╮\n╰┫┣╯\n╱┃┃\n╱┃┃\n╭┫┣╮\n╰━━╯\n\n\n[Happy Janmashtami To All Of U](https://t.me/Legend_Userbot")
+                await bot.send_message(chat, f"╭╮╱╭╮\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n┃┃╱┃┃\n╰╯╱╰╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n╰╯╱╰╯\n╭━━━╮\n┃╭━╮┃\n┃╰━╯┃\n┃╭━━╯\n┃┃\n╰╯\n╭━━━╮\n┃╭━╮┃\n┃╰━╯┃\n┃╭━━╯\n┃┃\n╰╯\b╭╮╱╱╭╮\n┃╰╮╭╯┃\n╰╮╰╯╭╯\n╱╰╮╭╯\n╱╱┃┃\n╱╱╰╯\n╱╱╭╮\n╱╱┃┃\n╱╱┃┃\n╭╮┃┃\n┃╰╯┃\n╰━━╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n╰╯╱╰╯\n╭━╮╱╭╮\n┃┃╰╮┃┃\n┃╭╮╰╯┃\n┃┃╰╮┃┃\n┃┃╱┃┃┃\n╰╯╱╰━╯\n╭━╮╭━╮\n┃┃╰╯┃┃\n┃╭╮╭╮┃\n┃┃┃┃┃┃\n┃┃┃┃┃┃\n╰╯╰╯╰╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n╰╯╱╰╯\n╭━━━╮\n┃╭━╮┃\n┃╰━━╮\n╰━━╮┃\n┃╰━╯┃\n╰━━━╯\n╭╮╱╭╮\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n┃┃╱┃┃\n╰╯╱╰╯\n╭━━━━╮\n┃╭╮╭╮┃\n╰╯┃┃╰╯\n╱╱┃┃\n╱╱┃┃\n╱╱╰╯\n╭━━━╮\n┃╭━╮┃\n┃┃╱┃┃\n┃╰━╯┃\n┃╭━╮┃\n╰╯╱╰╯\n╭━╮╭━╮\n┃┃╰╯┃┃\n┃╭╮╭╮┃\n┃┃┃┃┃┃\n┃┃┃┃┃┃\n╰╯╰╯╰╯\n╭━━╮\n╰┫┣╯\n╱┃┃\n╱┃┃\n╭┫┣╮\n╰━━╯\n\n[Happy Janmashtami To All Of U](https://t.me/Legend_Userbot)")
                 done += 1
             except:
                 lol += 1
@@ -21,6 +21,6 @@ async def xd(event):
     await event.reply(f"happy Janmashtami from LegendBot support\nthanks for using this Plugin.")
 
 
-CmdHelp("krisnanime").add_command(
+CmdHelp("janmashtami").add_command(
     "krisnanime", None, "Wish u happy JANMASHTAMI day"
 ).add()
