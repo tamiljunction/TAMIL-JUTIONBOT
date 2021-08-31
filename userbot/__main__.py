@@ -84,7 +84,6 @@ TYPE :- " .gpromote @Legend_Mr_Hacker " OR .legend OR .ping CHECK IF I'M ON!
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱""")
 
-
 async def legend_is_on():
     try:
         if Config.LOGGER_ID != 0:
@@ -96,9 +95,9 @@ async def legend_is_on():
     except Exception as e:
         LOGS.info(str(e))
 
-# Join HellBot Channel after deploying 🤐😅
+# Join LegndBot Channel after deploying 🤐😅
     try:
-        await bot(JoinChannelRequest("@Legend_Userbot"))
+        await bot(JoinChannelRequest("@Its_LegendBot"))
     except BaseException:
         pass
 
