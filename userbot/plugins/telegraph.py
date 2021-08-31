@@ -41,7 +41,7 @@ async def _(event):
         input_str = event.pattern_match.group(1)
         if input_str == "m":
             downloaded_file_name = await borg.download_media(
-                r_message, Config.TEMP_DOWNLOAD_DIRECTORY
+                r_message, Config.TMP_DOWNLOAD_DIRECTORY
             )
             end = datetime.now()
             ms = (end - start).seconds
@@ -77,7 +77,7 @@ async def _(event):
                 if page_content != "":
                     title_of_page = page_content
                 downloaded_file_name = await borg.download_media(
-                    r_message, Config.TEMP_DOWNLOAD_DIRECTORY
+                    r_message, Config.TMP_DOWNLOAD_DIRECTORY
                 )
                 m_list = None
                 with open(downloaded_file_name, "rb") as fd:
