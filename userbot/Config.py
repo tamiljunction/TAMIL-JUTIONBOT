@@ -160,6 +160,7 @@ if ENV:
         LEGEND_STRING = os.environ.get("LEGEND_STRING", None)
         BOT_MODE = os.environ.get("BOT_MODE", "ON")
         ABUSE = os.environ.get("ABUSE", None)
+        BOTLOG_CHATID = os.environ.get("PM_LOGGR_BOT_API_ID", None)
         ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
         BOY_OR_GIRL = os.environ.get("BOY_OR_GIRL", "BOY")
         BOT_TRIGGER = os.environ.get("BOT_TRIGGER", "^/")
