@@ -15,7 +15,7 @@ from hachoir.parser import createParser
 from pySmartDL import SmartDL
 from telethon.tl.types import DocumentAttributeVideo
 
-from userbot import CMD_HELP, LOGS, TEMP_DOWNLOAD_DIRECTORY
+from userbot import CMD_HELP, LOGS, TMP_DOWNLOAD_DIRECTORY
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
@@ -85,8 +85,8 @@ async def download(target_file):
     """ For .dl command, download files to the userbot's server. """
     await target_file.edit("Processing using userbot server ( ◜‿◝ )♡")
     input_str = target_file.pattern_match.group(1)
-    if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(TMP_DOWNLOAD_DIRECTORY)
     if "|" in input_str:
         url, file_name = input_str.split("|")
         url = url.strip()
@@ -94,10 +94,10 @@ async def download(target_file):
         file_name = file_name.strip()
         head, tail = os.path.split(file_name)
         if head:
-            if not os.path.isdir(os.path.join(TEMP_DOWNLOAD_DIRECTORY, head)):
-                os.makedirs(os.path.join(TEMP_DOWNLOAD_DIRECTORY, head))
+            if not os.path.isdir(os.path.join(TMP_DOWNLOAD_DIRECTORY, head)):
+                os.makedirs(os.path.join(TMP_DOWNLOAD_DIRECTORY, head))
                 file_name = os.path.join(head, tail)
-        downloaded_file_name = TEMP_DOWNLOAD_DIRECTORY + "" + file_name
+        downloaded_file_name = TMP_DOWNLOAD_DIRECTORY + "" + file_name
         downloader = SmartDL(url, downloaded_file_name, progress_bar=False)
         downloader.start(blocking=False)
         c_time = time.time()
@@ -142,7 +142,7 @@ async def download(target_file):
             c_time = time.time()
             downloaded_file_name = await target_file.client.download_media(
                 await target_file.get_reply_message(),
-                TEMP_DOWNLOAD_DIRECTORY,
+                TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
                     progress(d, t, target_file, c_time, "Downloading...")
                 ),

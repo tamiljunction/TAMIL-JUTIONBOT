@@ -28,8 +28,8 @@ async def _(event):
         )
         return False
     input_str = event.pattern_match.group(1)
-    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     required_file_name = None
     start = datetime.now()
     if event.reply_to_msg_id and not input_str:
@@ -38,7 +38,7 @@ async def _(event):
             c_time = time.time()
             downloaded_file_name = await borg.download_media(
                 reply_message,
-                Config.TEMP_DOWNLOAD_DIRECTORY,
+                Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
                     progress(d, t, mone, c_time, "trying to download")
                 ),

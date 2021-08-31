@@ -13,8 +13,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-extracted = Config.TEMP_DOWNLOAD_DIRECTORY + "extracted/"
-thumb_image_path = Config.TEMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
+extracted = Config.TMP_DOWNLOAD_DIRECTORY + "extracted/"
+thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
 
 
 @bot.on(admin_cmd(pattern="zip", outgoing=True))
@@ -26,14 +26,14 @@ async def _(event):
         await edit_or_reply(event, "Reply to a file to compress it. Bruh.")
         return
     mone = await edit_or_reply(event, "Processing ...")
-    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
         reply_message = await event.get_reply_message()
         try:
             downloaded_file_name = await borg.download_media(
                 reply_message,
-                Config.TEMP_DOWNLOAD_DIRECTORY,
+                Config.TMP_DOWNLOAD_DIRECTORY,
             )
             directory_name = downloaded_file_name
             await edit_or_reply(event, downloaded_file_name)
@@ -68,8 +68,8 @@ async def _(event):
     if event.fwd_from:
         return
     mone = await edit_or_reply(event, "Processing ...")
-    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
+    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
         start = datetime.now()
         reply_message = await event.get_reply_message()
@@ -77,7 +77,7 @@ async def _(event):
             t.time()
             downloaded_file_name = await bot.download_media(
                 reply_message,
-                Config.TEMP_DOWNLOAD_DIRECTORY,
+                Config.TMP_DOWNLOAD_DIRECTORY,
             )
         except Exception as e:  # pylint:disable=C0103,W0703
             await mone.edit(str(e))

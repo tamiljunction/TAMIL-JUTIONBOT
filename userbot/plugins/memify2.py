@@ -29,7 +29,7 @@ async def handler(event):
 
         return
 
-    file = await borg.download_media(reply_message, Var.TEMP_DOWNLOAD_DIRECTORY)
+    file = await borg.download_media(reply_message, Var.TMP_DOWNLOAD_DIRECTORY)
 
     a = await edit_or_reply(event, "Hahaha...Memifying this image....")
 
@@ -185,7 +185,7 @@ async def drawText(image_path, text):
 
     image_name = "memify.webp"
 
-    webp_file = os.path.join(Var.TEMP_DOWNLOAD_DIRECTORY, image_name)
+    webp_file = os.path.join(Var.TMP_DOWNLOAD_DIRECTORY, image_name)
 
     img.save(webp_file, "webp")
 

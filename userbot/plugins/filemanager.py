@@ -15,8 +15,8 @@ from userbot.cmdhelp import CmdHelp
 
 if not os.path.isdir("./SAVED"):
     os.makedirs("./SAVED")
-if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
-    os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
+if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
+    os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
 
 
 @bot.on(admin_cmd(pattern="ls ?(.*)", outgoing=True))

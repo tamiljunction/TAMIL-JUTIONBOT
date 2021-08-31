@@ -51,11 +51,11 @@ async def _(event):
 
     lan = lan.strip()
 
-    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
+    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
 
-        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
+        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
 
-    required_file_name = Config.TEMP_DOWNLOAD_DIRECTORY + "voice.ogg"
+    required_file_name = Config.TMP_DOWNLOAD_DIRECTORY + "voice.ogg"
 
     try:
 

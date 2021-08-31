@@ -70,9 +70,9 @@ async def _(event):
         return
     text = text.strip()
     lan = lan.strip()
-    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
-        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
-    required_file_name = Config.TEMP_DOWNLOAD_DIRECTORY + "voice.ogg"
+    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
+        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
+    required_file_name = Config.TMP_DOWNLOAD_DIRECTORY + "voice.ogg"
     try:
         tts = gTTS(text, lang=lan)
         tts.save(required_file_name)

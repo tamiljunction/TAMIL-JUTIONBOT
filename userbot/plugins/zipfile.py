@@ -18,9 +18,9 @@ async def _(event):
 
     mone = await edit_or_reply(event, "Processing ...")
 
-    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):
+    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
 
-        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)
+        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
 
     if event.reply_to_msg_id:
 
@@ -31,7 +31,7 @@ async def _(event):
             time.time()
 
             downloaded_file_name = await borg.download_media(
-                reply_message, Config.TEMP_DOWNLOAD_DIRECTORY
+                reply_message, Config.TMP_DOWNLOAD_DIRECTORY
             )
 
             directory_name = downloaded_file_name

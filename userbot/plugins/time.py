@@ -30,11 +30,11 @@ async def _(event):
     elif event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         reply_msg_id = previous_message.id
-    if not os.path.isdir(Config.TEMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
-        os.makedirs(Config.TEMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
+    if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):  # pylint:disable=E0602
+        os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)  # pylint:disable=E0602
     # pylint:disable=E0602
     required_file_name = (
-        Config.TEMP_DOWNLOAD_DIRECTORY + " " + str(datetime.now()) + ".webp"
+        Config.TMP_DOWNLOAD_DIRECTORY + " " + str(datetime.now()) + ".webp"
     )
     img = Image.new("RGBA", (350, 220), color=(0, 0, 0, 115))
     fnt = ImageFont.truetype(FONT_FILE_TO_USE, 30)

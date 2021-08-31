@@ -11,9 +11,9 @@ class Config(object):
     API_HASH = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
     DB_URI = os.environ.get("DATABASE_URL", None)
-    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", None)
+    TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", None)
     # This is required for the modules involving the file system.
-    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
+    TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
     # warn mode for anti flood
     ANTI_FLOOD_WARN_MODE = ChatBannedRights(
         until_date=None, view_messages=None, send_messages=True
@@ -69,8 +69,8 @@ class Config(object):
     AUTO_PIC_FONT = os.environ.get("AUTOPIC_FONT", "DejaVuSans.ttf")
     AUTOPIC_FONT_COLOUR = os.environ.get("AUTOPIC_FONT_COLOUR", None)
     if AUTH_TOKEN_DATA is not None:
-        os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
-        t_file = open(TEMP_DOWNLOAD_DIRECTORY + "auth_token.txt", "w")
+        os.makedirs(TMP_DOWNLOAD_DIRECTORY)
+        t_file = open(TMP_DOWNLOAD_DIRECTORY + "auth_token.txt", "w")
         t_file.write(AUTH_TOKEN_DATA)
         t_file.close()
     LOAD_MYBOT = os.environ.get("LOAD_MYBOT", "True")

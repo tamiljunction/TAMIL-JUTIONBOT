@@ -6,7 +6,7 @@ class Var(object):
     API_HASH = os.environ.get("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
     LEGEND_STRING = os.environ.get("LEGEND_STRING", None)
     DB_URI = os.environ.get("DATABASE_URL", None)
-    TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", None)
+    TMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY", None)
     LOGGER = True
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
@@ -30,8 +30,8 @@ class Var(object):
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", "root")
     AUTH_TOKEN_DATA = os.environ.get("AUTH_TOKEN_DATA", None)
     if AUTH_TOKEN_DATA != None:
-        os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
-        t_file = open(TEMP_DOWNLOAD_DIRECTORY+"auth_token.txt","w")
+        os.makedirs(TMP_DOWNLOAD_DIRECTORY)
+        t_file = open(TMP_DOWNLOAD_DIRECTORY+"auth_token.txt","w")
         t_file.write(AUTH_TOKEN_DATA)
         t_file.close()
     PRIVATE_GROUP_ID = os.environ.get("PRIVATE_GROUP_ID", None)
