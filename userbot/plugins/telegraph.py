@@ -7,7 +7,7 @@ from telegraph import Telegraph, exceptions, upload_file
 from userbot import ALIVE_NAME
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
-
+from . import *
 LEGEND_NAME = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
 
 legend = bot.uid
