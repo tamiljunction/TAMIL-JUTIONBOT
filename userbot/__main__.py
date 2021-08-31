@@ -50,7 +50,7 @@ else:
     else:
         bot.start()
     except Exception as e:
-        LOGS.error(f"BOT_TOKEN - {str(e)}")
+        print(f"BOT_TOKEN - {str(e)}")
         sys.exit()
 
 
