@@ -169,7 +169,7 @@ if ENV:
         BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
         FORCE_SUB = os.environ.get("FORCE_SUB", None)
         FORCE_CHANNEL_UN = os.environ.get("FORCE_CHANNEL_UN", None)
-        LOGGER_ID = os.environ.get("PM_PERMIT_GROUP_ID", None)
+        LOGGER_ID = os.environ.get("LOGGER_ID", None)
         if LOGGER_ID:
             LOGGER_ID = int(LOGGER_ID)
         FORCE_CHANNEL_ID = int(os.environ.get("FORCE_CHANNEL_ID", False))
