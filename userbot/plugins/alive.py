@@ -110,7 +110,7 @@ botname = Config.BOT_USERNAME
 
 @bot.on(admin_cmd(pattern="alive$"))
 @bot.on(admin_cmd(pattern="alive$", allow_sudo=True))
-async def hell_a(event):
+async def legend_a(event):
     try:
         legend = await bot.inline_query(botname, "alive")
         await legend[0].click(event.chat_id)
