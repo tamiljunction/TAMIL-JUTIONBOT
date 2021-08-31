@@ -49,9 +49,6 @@ else:
         print("Startup Completed")
     else:
         bot.start()
-    except Exception as e:
-        print(f"BOT_TOKEN - {str(e)}")
-        sys.exit()
 
 
 import glob
