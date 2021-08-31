@@ -93,7 +93,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             if not pmpermit_sql.is_approved(chat.id):
                 if not chat.id in PM_WARNS:
                     pmpermit_sql.approve(chat.id, "outgoing")
-                    bruh = "✔️αµƭσ αρρɾσѵε∂ ɓcµƶ σµƭɠσเɳɦ 🚶"
+                    bruh = "✔️αµťø âppřôvéđ bčûż øüţğõïng 🚶"
                     rko = await borg.send_message(event.chat_id, bruh)
                     await asyncio.sleep(3)
                     await rko.delete()
@@ -109,7 +109,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if chat.id == 1938996006:
                 await event.edit(
-                    "You tried to block my master😡. GoodBye for 100 seconds!🥱😴😪💤"
+                    "You tried to block my master😡. GoodBye for 100 seconds!🥱😴😪💤 Ur Bot is Off For 100 Sec"
                 )
                 time.sleep(100)
             else:
@@ -152,7 +152,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         chat = await event.get_chat()
         if event.is_private:
             if chat.id == 1938996006:
-                await event.edit("Sorry, I Can't Disapprove My Master")
+                await event.edit("Sorry, I Can't Disapprove My Owner of LegendBot")
             else:
                 if pmpermit_sql.is_approved(chat.id):
                     pmpermit_sql.disapprove(chat.id)
