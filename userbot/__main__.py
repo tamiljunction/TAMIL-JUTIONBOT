@@ -38,7 +38,6 @@ else:
     bot.tgbot = None
     if Var.BOT_USERNAME is not None:
         print("Initiating Inline Bot")
-        # ForTheGreatrerGood of beautification
         bot.tgbot = TelegramClient(
             "TG_BOT_TOKEN",
             api_id=Var.APP_ID,
@@ -50,6 +49,9 @@ else:
         print("Startup Completed")
     else:
         bot.start()
+    except Exception as e:
+        LOGS.error(f"BOT_TOKEN - {str(e)}")
+        sys.exit()
 
 
 import glob
@@ -93,7 +95,7 @@ async def legend_is_on():
                 caption=f"#START \n\nDeployed LEGENDBOT Successfully\n\n**LEGENDBOT- {LEGENDversion}**\n\nType `{l1}ping` or `{l1}alive` to check! \n\nJoin [LegendBot Channel](t.me/Its_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
             )
     except Exception as e:
-        LOGS.info(str(e))
+        print(str(e))
 
 # Join LegndBot Channel after deploying 🤐😅
     try:
@@ -101,11 +103,10 @@ async def legend_is_on():
     except BaseException:
         pass
 
-# Why not come here and chat??
-#    try:
-#        await bot(JoinChannelRequest("@Its_Legendbot"))
-#    except BaseException:
-#        pass
+    try:
+        await bot(JoinChannelRequest("@Legend_Userbot"))
+    except BaseException:
+         pass
 
 
 bot.loop.create_task(legend_is_on())
