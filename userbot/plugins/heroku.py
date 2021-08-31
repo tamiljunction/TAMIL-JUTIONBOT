@@ -23,7 +23,6 @@ HEROKU_API_KEY = Config.HEROKU_API_KEY
 
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
-LEGEND_logo = "./LEGEND_logo.jpg"
 
 @borg.on(
     admin_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", outgoing=True)
@@ -181,12 +180,12 @@ async def dyno_usage(dyno):
 @bot.on(sudo_cmd(pattern="logs$", allow_sudo=True))
 async def _(event):
     if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
-        return await eor(dyno, f"Make Sure Your HEROKU_APP_NAME & HEROKU_API_KEY are filled correct. Visit {mentiom} for help.", link_preview=False)
+        return await eor(dyno, f"Make Sure Your HEROKU_APP_NAME & HEROKU_API_KEY are filled correct. Visit {my_group} for help.", link_preview=False)
     try:
         Heroku = heroku3.from_key(HEROKU_API_KEY)
         app = Heroku.app(HEROKU_APP_NAME)
     except BaseException:
-        return await event.reply(f"Make Sure Your Heroku AppName & API Key are filled correct. Visit {mention} for help.", link_preview=False)
+        return await event.reply(f"Make Sure Your Heroku AppName & API Key are filled correct. Visit {my_group} for help.", link_preview=False)
    # event = await eor(dyno, "Downloading Logs...")
     LEGEND_data = app.get_log()
     await eor(event, LEGEND_data)
