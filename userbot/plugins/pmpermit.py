@@ -6,7 +6,7 @@ from telethon import events, functions
 from telethon.tl.functions.users import GetFullUserRequest
 
 from . import *
-from hellbot.sql import pmpermit_sql as pm_sql
+from userbot.sql_helper import pmpermit_sql as pm_sql
 
 
 WARN_PIC = Config.PMPERMIT_PIC or "https://telegra.ph/file/58df4d86400922aa32acd.jpg"
@@ -21,7 +21,7 @@ HELL_FIRST = (
     "{}\n\n**Please Choose Why You Are Here!!**".format(hell_mention, CSTM_PMP)
 )
 
-@bot.on(hell_cmd(pattern="block$"))
+@bot.on(admin_cmd(pattern="block$"))
 async def approve_p_m(event):
     if event.fwd_from:
         return
@@ -248,11 +248,11 @@ if PM_ON_OFF != "DISABLE":
         
         botusername = Config.BOT_USERNAME
         tap = await bot.inline_query(botusername, "pm_warn")
-        hel_ = await tap[0].click(event.chat_id)
+        legend_ = await tap[0].click(event.chat_id)
         PM_WARNS[chat_ids] += 1
         if chat_ids in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_ids].delete()
-        PREV_REPLY_MESSAGE[chat_ids] = hel_
+        PREV_REPLY_MESSAGE[chat_ids] = legend_
 
 NEEDIT = Config.INSTANT_BLOCK
 if NEEDIT == "ENABLE":
@@ -272,7 +272,7 @@ if NEEDIT == "ENABLE":
             return
         if sender.verified:
             return
-        if not pmpermit_sql.is_approved(chat_id):
+        if not pm_sql.is_approved(chat_id):
             await bot(functions.contacts.BlockRequest(chat_id))
 
 
