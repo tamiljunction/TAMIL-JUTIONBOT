@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "1856561912"
+          find: "TMP_DOWNLOAD_DIRECTORY"
 
-          replace: "1938996006"
+          replace: "TEMP_DOWNLOAD_DIRECTORY"
 
       - name: Create Pull Request
 
