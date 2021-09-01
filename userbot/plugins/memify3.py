@@ -37,14 +37,14 @@ async def _(event):
         stdout, stderr = await process.communicate()
         stderr.decode().strip()
         stdout.decode().strip()
-    elif hell.endswith((".webp", ".png")):
-        hel_ = await eor(event, "**Memifying 🌚🌝**")
-        pics = Image.open(hell)
+    elif legend.endswith((".webp", ".png")):
+        legen_ = await eor(event, "**Memifying 🌚🌝**")
+        pics = Image.open(legend)
         pics.save("pic.png", format="PNG", optimize=True)
         file = "pic.png"
     else:
-        hel_ = await eor(event, "**Memifying 🌚🌝**")
-        img = cv2.VideoCapture(hell)
+        legen_ = await eor(event, "**Memifying 🌚🌝**")
+        img = cv2.VideoCapture(legend)
         tal, semx = img.read()
         cv2.imwrite("pic.png", semx)
         file = "pic.png"
@@ -54,7 +54,7 @@ async def _(event):
     )
     await legen_.delete()
     try:
-        os.remove(hell)
+        os.remove(legend)
         os.remove(file)
         os.remove(output)
     except BaseException:
