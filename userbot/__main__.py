@@ -1,3 +1,5 @@
+
+  
 from userbot import bot
 from sys import argv
 import sys
@@ -19,14 +21,6 @@ LEGEND_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.
 l1 = Config.COMMAND_HAND_LER
 
 
-CMD_LIST = {}
-# for later purposes
-CMD_HELP = {}
-CMD_HELP_BOT = {}
-BRAIN_CHECKER = []
-INT_PLUG = ""
-LOAD_PLUG = {}
-
 LOAD_USERBOT = os.environ.get("LOAD_USERBOT", True)
 LOAD_ASSISTANT = os.environ.get("LOAD_ASSISTANT", True)    
 
@@ -46,8 +40,9 @@ else:
     bot.tgbot = None
     if Var.BOT_USERNAME is not None:
         print("Initiating Inline Bot")
+        # ForTheGreatrerGood of beautification
         bot.tgbot = TelegramClient(
-            "BOT_TOKEN",
+            "TG_BOT_TOKEN",
             api_id=Var.APP_ID,
             api_hash=Var.API_HASH
         ).start(bot_token=Var.BOT_TOKEN)
@@ -91,27 +86,29 @@ TYPE :- " .gpromote @Legend_Mr_Hacker " OR .legend OR .ping CHECK IF I'M ON!
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱""")
 
+
 async def legend_is_on():
     try:
         if Config.LOGGER_ID != 0:
             await bot.send_file(
                 Config.LOGGER_ID,
                 LEGEND_PIC,
-                caption=f"#START \n\nDeployed LEGENDBOT Successfully\n\n**LEGENDBOT- {LEGENDversion}**\n\nType `{l1}ping` or `{l1}alive` to check! \n\nJoin [LegendBot Channel](t.me/Its_LegendBot) for Updates & [LegendBot Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
+                caption=f"#START \n\nDeployed LEGENDBOT Successfully\n\n**LEGENDBOT- {LEGENDversion}**\n\nType `{ll}ping` or `{ll}alive` to check! \n\nJoin [LegendBot Channel](t.me/Its_LegendBot) for Updates & [Hêllẞø† Chat](t.me/Legend_Userbot) for any query regarding LegendBot",
             )
     except Exception as e:
-        print(str(e))
+        LOGS.info(str(e))
 
-# Join LegndBot Channel after deploying 🤐😅
-    try:
-        await bot(JoinChannelRequest("@Its_LegendBot"))
-    except BaseException:
-        pass
-
+# 
     try:
         await bot(JoinChannelRequest("@Legend_Userbot"))
     except BaseException:
-         pass
+        pass
+
+# Why not come here and chat??
+    try:
+        await bot(JoinChannelRequest("@Its_Legendbot"))
+    except BaseException:
+        pass
 
 
 bot.loop.create_task(legend_is_on())
@@ -119,4 +116,3 @@ bot.loop.create_task(legend_is_on())
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:
-    bot.run_until_disconnected()
