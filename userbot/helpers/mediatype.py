@@ -1,4 +1,4 @@
-from userbot.utils import humanbytes
+from userbot import humanbytes
 from .formats import yaml_format
 
 
