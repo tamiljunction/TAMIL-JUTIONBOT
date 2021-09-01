@@ -272,8 +272,8 @@ if PM_ON_OFF != "DISABLE":
         tap = await bot.inline_query(botusername, "pm_warn")
         legend_ = await tap[0].click(event.chat_id)
         PM_WARNS[chat_id] += 1
-        chat_ids = chat_id
-        if chat_ids in PREV_REPLY_MESSAGE:
+        chat_id = chat_id
+        if chat_id in PREV_REPLY_MESSAGE:
             await PREV_REPLY_MESSAGE[chat_id].delete()
         PREV_REPLY_MESSAGE[chat_id] = legend_
 
