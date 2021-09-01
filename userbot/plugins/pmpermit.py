@@ -243,7 +243,7 @@ if PM_ON_OFF != "DISABLE":
     async def do_pm_permit_action(chat_id, event):
         if chat_id not in PM_WARNS:
             PM_WARNS.update({chat_id: 0})
-        if PM_WARNS[chat_ids] == Config.MAX_FLOOD_IN_PM:
+        if PM_WARNS[chat_id] == Config.MAX_FLOOD_IN_PM:
             r = await event.reply(HELL_ZERO)
             await asyncio.sleep(3)
             await event.client(functions.contacts.BlockRequest(chat_id))
