@@ -6,6 +6,7 @@ from telethon import TelegramClient
 from userbot.helpers import functions as simpdef
 from userbot.Config import Config
 from var import Var
+from . import *
 BOTLOG = True
 StartTime = time.time()
 LEGENDversion = "♥️𝚅2.𝙾♥️"
