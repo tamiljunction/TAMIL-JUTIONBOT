@@ -28,7 +28,7 @@ legend_emoji2 = Config.EMOJI_IN_HELP2
 legend_pic = Config.PM_PIC or ""
 cstm_pmp = Config.PM_MSG
 ALV_PIC = Config.ALIVE_PIC
-help_pic = Config.AWAKE_PIC or ""
+help_pic = Config.HELP_PIC or "https://telegra.ph/file/6a08bc3d83b51923f47b2.jpg"
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
 
