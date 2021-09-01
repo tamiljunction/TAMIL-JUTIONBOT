@@ -201,3 +201,6 @@ ENV = os.environ.get("ENV", False)
 LEGEND_ID = ["1856561912"]
 
 
+from userbot.helpers import *
+from userbot.helpers import functions as LEGENDdef
+from userbot.cmdhelp import CmdHelp
