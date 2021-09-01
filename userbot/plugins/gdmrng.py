@@ -1,6 +1,6 @@
 from . import *
 
-@bot.on(admin_cmd(pattern="gm(.*)"))
+@bot.on(admin_cmd(pattern="gdmrng(.*)"))
 async def xd(event):
     await event.edit("Sending To all Group good Morning")
     themessage = event.pattern_match.group(1)
@@ -10,7 +10,7 @@ async def xd(event):
         if tele.is_group:
             chat = tele.id
             try:
-                await bot.send_message(chat, f"🅶🅾🅾🅳 🅼🅾🆁🅽🅸🅽🅶.")
+                await bot.send_message(chat, f"╭━━━┳━━━┳━━━┳━━━╮\n┃╭━╮┃╭━╮┃╭━╮┣╮╭╮┃\n┃┃╱╰┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃┃╭━┫┃╱┃┃┃╱┃┃┃┃┃┃\n┃╰┻━┃╰━╯┃╰━╯┣╯╰╯┃\n╰━━━┻━━━┻━━━┻━━━╯.")
                 done += 1
             except:
                 lol += 1
@@ -18,6 +18,6 @@ async def xd(event):
     await event.reply(f"I hope your morning is as bright and gorgeous as your smile.")
 
 
-CmdHelp("GM").add_command(
-    ".gm", None, "Wishs Good moning in all groups"
+CmdHelp("GdMrng").add_command(
+    "gdmrng", None, "Wishs Good moning in all groups just one command"
 ).add()
