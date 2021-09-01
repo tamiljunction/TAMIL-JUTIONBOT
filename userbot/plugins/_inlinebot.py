@@ -281,7 +281,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.edit(
                 f"🥴 **Nikal lawde\nPehli fursat me nikal**"
             )
-            await event.client(functions.contacts.BlockRequest(event.query.user_id))
+            await event.client(telethon.tl.functions.contacts.BlockRequest(event.query.user_id))
             target = await event.client(GetFullUserRequest(event.query.user_id))
             ok = event.query.user_id
             first_name = html.escape(target.user.first_name)
