@@ -1,4 +1,4 @@
-from userbot import humanbytes
+from LEGENDBOT.utils import humanbytes
 from .formats import yaml_format
 
 
