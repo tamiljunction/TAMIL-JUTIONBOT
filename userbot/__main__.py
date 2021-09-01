@@ -19,6 +19,14 @@ LEGEND_PIC = Config.ALIVE_PIC or "https://telegra.ph/file/ea9e11f7c9db21c1b8d5e.
 l1 = Config.COMMAND_HAND_LER
 
 
+CMD_LIST = {}
+# for later purposes
+CMD_HELP = {}
+CMD_HELP_BOT = {}
+BRAIN_CHECKER = []
+INT_PLUG = ""
+LOAD_PLUG = {}
+
 LOAD_USERBOT = os.environ.get("LOAD_USERBOT", True)
 LOAD_ASSISTANT = os.environ.get("LOAD_ASSISTANT", True)    
 
