@@ -9,6 +9,7 @@ from telethon.events import InlineQuery, callbackquery
 from userbot import *
 from userbot.cmdhelp import *
 from LEGENDBOT.utils import *
+import telethon.tl.functions
 from userbot.Config import Config
 from userbot import ALIVE_NAME
 from telethon import Button, custom, events, functions
