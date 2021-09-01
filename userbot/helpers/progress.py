@@ -16,10 +16,10 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from hellbot import *
-from hellbot.config import Config
-from hellbot.helpers import *
-from hellbot.utils import *
+from userbot import *
+from userbot.config import Config
+from userbot.helpers import *
+from userbot.utils import *
 
 async def reply_id(event):
     reply_to_id = None
