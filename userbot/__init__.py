@@ -61,10 +61,7 @@ else:
 tbot = TelegramClient('legendbot', api_id=Var.APP_ID, api_hash=Var.API_HASH).start(bot_token=Config.BOT_TOKEN)
 
 BOTLOG_CHATID = os.environ.get("BOTLOG_CHATID", None)
-    try:
-        BOTLOG_CHATID = int(BOTLOG_CHATID)
-    except:
-        pass
+    
 
     # Userbot logging feature switch.
     BOTLOG = sb(os.environ.get("BOTLOG", "False"))
