@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from requests import get
 from telethon import TelegramClient
 from telethon.sessions import StringSession
-
+from var import Var
 from userbot.Config import Config
 
 StartTime = datetime.datetime.now()
@@ -55,9 +55,9 @@ if Config.LEGEND_STRING:
         sys.exit()
 else:
     session_name = "startup"
-    bot = TelegramClient(session_name, Config.APP_ID, Config.API_HASH)
+    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
-tbot = TelegramClient('legendbot', api_id=Config.APP_ID, api_hash=Config.API_HASH).start(bot_token=Config.BOT_TOKEN)
+tbot = TelegramClient('legendbot', api_id=Var.APP_ID, api_hash=Var.API_HASH).start(bot_token=Config.BOT_TOKEN)
 
 
 # global variables
