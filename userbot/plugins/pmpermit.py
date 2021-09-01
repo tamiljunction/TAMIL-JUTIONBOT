@@ -16,41 +16,54 @@ PM_ON_OFF = Config.PM_DATA
 CSTM_PMP = Config.PM_MSG or "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
 HELL_ZERO = "Go get some sleep retard. \n\n**Blocked !!**"
 HELL_FIRST = (
-    "**🔥 Hêllẞø† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
+    "**🔥 LegendBo† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\nThis is to inform you that "
     "{} is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n\n**Please Choose Why You Are Here!!**".format(legend_mention, CSTM_PMP)
 )
 
-@bot.on(admin_cmd(pattern="block$"))
-async def approve_p_m(event):
-    if event.fwd_from:
-        return
-    if event.is_private:
-        replied_user = await event.client(GetFullUserRequest(await event.get_input_chat()))
+@borg.on(admin_cmd(pattern="block|.blk ?(.*)"))
+    async def approve_p_m(event):
+        if event.fwd_from:
+            return
+        replied_user = await event.client(GetFullUserRequest(event.chat_id))
         firstname = replied_user.user.first_name
-        if str(event.chat_id) in DEVLIST:
-            await event.edit("**I can't block my creator !!**")
-            return
-        if pm_sql.is_approved(event.chat_id):
-            pm_sql.disapprove(event.chat_id)
-        await event.edit("Go Get Some Sleep Retard !! \n\n**Blocked** [{}](tg://user?id={})".format(firstname, event.chat_id))
-        await event.client(functions.contacts.BlockRequest(event.chat_id))
-    elif event.is_group:
-        reply_s = await event.get_reply_message()
-        if not reply_s:
-            await eod(event, "Reply to someone to block them..")
-            return
-        replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
-        firstname = replied_user.user.first_name
-        if str(reply_s.sender_id) in DEVLIST:
-            await event.edit("**I can't Block My Creator !!**")
-            return
-        if pm_sql.is_approved(event.chat_id):
-            pm_sql.disapprove(event.chat_id)
-        await event.edit("Go fuck yourself !! \n\n**Blocked** [{}](tg://user?id={})".format(firstname, reply_s.sender_id))
-        await event.client(functions.contacts.BlockRequest(reply_s.sender_id))
-        await asyncio.sleep(3)
-        await event.delete()
+        event.pattern_match.group(1)
+        chat = await event.get_chat()
+        if event.is_private:
+            if chat.id == 1938996006:
+                await event.edit(
+                    "You tried to block my master😡. GoodBye for 100 seconds!🥱😴😪💤"
+                )
+                time.sleep(100)
+            else:
+                if pmpermit_sql.is_approved(chat.id):
+                    pmpermit_sql.disapprove(chat.id)
+                    await event.edit(
+                        "gєτ ℓοѕτ мγ мαѕτєя нαѕ ϐℓοϲκє∂ υ!!.\nϐℓοϲκє∂ [{}](tg://user?id={})".format(
+                            firstname, chat.id
+                        )
+                    )
+                    await asyncio.sleep(3)
+                    await event.client(functions.contacts.BlockRequest(chat.id))
+        elif event.is_group:
+            if chat.id == 1938996006:
+                await event.edit(
+                    "You tried to block my master😡. GoodBye for 100 seconds!🥱😴😪💤"
+                )
+                time.sleep(100)
+            else:
+                reply_s = await event.get_reply_message()
+                if not reply_s:
+                    await event.edit('`Reply To User To Block Him !`')
+                    return
+                replied_user = await event.client(GetFullUserRequest(reply_s.sender_id))
+                firstname = replied_user.user.first_name
+                if pmpermit_sql.is_approved(event.chat_id):
+                    pmpermit_sql.disapprove(event.chat_id)
+                await event.edit("ϐℓοϲκє∂ [{}](tg://user?id={})".format(firstname, reply_s.sender_id))
+                await event.client(functions.contacts.BlockRequest(reply_s.sender_id))
+                await asyncio.sleep(3)
+                await event.delete()
         
         
 if PM_ON_OFF != "DISABLE":
