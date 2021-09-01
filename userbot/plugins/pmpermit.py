@@ -24,8 +24,8 @@ HELL_FIRST = (
     "{} is currently unavailable.\nThis is an automated message.\n\n"
     "{}\n\n**Please Choose Why You Are Here!!**".format(legend_mention, CSTM_PMP)
 )
-
-@borg.on(admin_cmd(pattern="block|.blk ?(.*)"))
+if Var.PRIVATE_GROUP_ID is not None:
+    @borg.on(admin_cmd(pattern="block|.blk ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -95,7 +95,7 @@ if PM_ON_OFF != "DISABLE":
                 pm_sql.approve(event.chat_id, "outgoing")
                 
     @bot.on(admin_cmd(pattern="(a|approve|allow)$"))
-    async def approve(event):
+    async def approve_p_m(event):
         if event.fwd_from:
             return
         if event.is_private:
