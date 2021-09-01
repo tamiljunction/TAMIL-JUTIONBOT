@@ -12,7 +12,7 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 from var import Var
 from userbot.Config import Config
-LEGENDversion = "V2.Ø"h
+LEGENDversion = "V2.Ø"
 botversion = "♥️𝚅1.𝙾♥️"
 StartTime = datetime.datetime.now()
 
