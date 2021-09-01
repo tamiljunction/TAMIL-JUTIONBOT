@@ -11,7 +11,7 @@ from requests import get
 from telethon import TelegramClient
 from telethon.sessions import StringSession
 
-from hellbot.config import Config
+from userbot.Config import Config
 
 StartTime = datetime.datetime.now()
 
@@ -39,8 +39,8 @@ except Exception:
     HEROKU_APP = None
 
 
-if Config.HELLBOT_SESSION:
-    session_name = str(Config.HELLBOT_SESSION)
+if Config.LEGEND_STRING:
+    session_name = str(Config.LEGEND_STRING)
     try:
         if session_name.endswith("="):
             bot = TelegramClient(
@@ -49,15 +49,15 @@ if Config.HELLBOT_SESSION:
         else:
             bot = TelegramClient(
                 "BOT_TOKEN", api_id=Config.APP_ID, api_hash=Config.API_HASH
-            ).start(bot_token=Config.HELLBOT_SESSION)
+            ).start(bot_token=Config.LEGEND_STRING)
     except Exception as e:
-        LOGS.warn(f"HELLBOT_SESSION - {str(e)}")
+        LOGS.warn(f"LEGEND_STRING - {str(e)}")
         sys.exit()
 else:
     session_name = "startup"
     bot = TelegramClient(session_name, Config.APP_ID, Config.API_HASH)
 
-tbot = TelegramClient('hellbot', api_id=Config.APP_ID, api_hash=Config.API_HASH).start(bot_token=Config.BOT_TOKEN)
+tbot = TelegramClient('legendbot', api_id=Config.APP_ID, api_hash=Config.API_HASH).start(bot_token=Config.BOT_TOKEN)
 
 
 # global variables
