@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "TEMP_DOWNLOAD_DIRECTORY"
+          find: "hell_cmd"
 
-          replace: "TMP_DOWNLOAD_DIRECTORY"
+          replace: "admin_cmd"
 
       - name: Create Pull Request
 
