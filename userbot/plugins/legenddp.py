@@ -7,12 +7,12 @@ from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
 from pySmartDL import SmartDL
 from telethon.tl import functions
-from LEGENDBOT.utils import admin_cmd, sudo_cmd
+from LEGENDBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
-FONT_FILE_TO_USE = "/userbot/helpers/styles/Windu_080621160753.ttf"
+FONT_FILE_TO_USE = "./userbot/helpers/styles/Voice In My Head_080621160753.otf"
 
 # Add telegraph media links of profile pics that are to be used
-TELEGRAPH_MEDIA_LINKS = [
+TELEGRAPH_MEDIA_LINKS = [ 
     "https://telegra.ph/file/5692988b0d53ae24da716.jpg",
     "https://telegra.ph/file/5692988b0d53ae24da716.jpg",
     "https://telegra.ph/file/be0cc8912bece1b1e4783.jpg",
@@ -24,7 +24,6 @@ TELEGRAPH_MEDIA_LINKS = [
 
 
 @borg.on(admin_cmd(pattern="ldp ?(.*)"))
-@borg.on(sudo_cmd(pattern="ldp ?(.*)"))
 async def autopic(event):
     while True:
         piclink = random.randint(0, len(TELEGRAPH_MEDIA_LINKS) - 1)
@@ -56,6 +55,6 @@ async def autopic(event):
             await asyncio.sleep(60)
         except:
             return
-CmdHelp("Legenddp").add_command(
-       'ldp', None, 'Starts autodp of Legend Userbot'
+CmdHelp("Legend").add_command(
+       'ldp', None, 'Starts autodp of Action Hero & Some Actress Pic'
 ).add()
