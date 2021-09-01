@@ -5,6 +5,8 @@ import time
 from telethon.events import InlineQuery, callbackquery
 from telethon.sync import custom
 from telethon import events, functions, Button, custom
+from telethon.tl.functions.users import GetFullUserRequest
+
 from . import *
 from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
 from userbot.Config import Config
