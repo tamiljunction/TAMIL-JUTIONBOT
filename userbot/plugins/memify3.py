@@ -104,7 +104,7 @@ async def _(event):
     os.remove(pic)
 
     
-@bot.on(legend_cmd(pattern="doge(?: |$)(.*)", outgoing=True))
+@bot.on(admin_cmd(pattern="doge(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="doge(?: |$)(.*)", allow_sudo=True))
 async def nope(lip):
     legend = lip.pattern_match.group(1)
