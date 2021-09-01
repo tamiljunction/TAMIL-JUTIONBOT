@@ -3,7 +3,6 @@ import sys
 import time
 from telethon.sessions import StringSession
 from telethon import TelegramClient
-from userbot.helpers import functions as simpdef
 from userbot.Config import Config
 from var import Var
 BOTLOG = True
