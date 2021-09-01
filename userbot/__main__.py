@@ -116,3 +116,5 @@ bot.loop.create_task(legend_is_on())
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:
+    bot.tgbot = None
+    bot.run_until_disconnected()
