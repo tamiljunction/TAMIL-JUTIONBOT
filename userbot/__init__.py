@@ -44,11 +44,11 @@ if Config.LEGEND_STRING:
     try:
         if session_name.endswith("="):
             bot = TelegramClient(
-                StringSession(session_name), Config.APP_ID, Config.API_HASH
+                StringSession(session_name), Var.APP_ID, Var.API_HASH
             )
         else:
             bot = TelegramClient(
-                "BOT_TOKEN", api_id=Config.APP_ID, api_hash=Config.API_HASH
+                "BOT_TOKEN", api_id=Var.APP_ID, api_hash=Var.API_HASH
             ).start(bot_token=Config.LEGEND_STRING)
     except Exception as e:
         LOGS.warn(f"LEGEND_STRING - {str(e)}")
