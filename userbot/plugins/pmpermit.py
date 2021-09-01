@@ -271,10 +271,10 @@ if PM_ON_OFF != "DISABLE":
         botusername = Config.BOT_USERNAME
         tap = await bot.inline_query(botusername, "pm_warn")
         legend_ = await tap[0].click(event.chat_id)
-        PM_WARNS[chat_ids] += 1
+        PM_WARNS[chat_id] += 1
         if chat_ids in PREV_REPLY_MESSAGE:
-            await PREV_REPLY_MESSAGE[chat_ids].delete()
-        PREV_REPLY_MESSAGE[chat_ids] = legend_
+            await PREV_REPLY_MESSAGE[chat_id].delete()
+        PREV_REPLY_MESSAGE[chat_id] = legend_
 
 NEEDIT = Config.INSTANT_BLOCK
 if NEEDIT == "ENABLE":
@@ -305,7 +305,7 @@ CmdHelp("pm_permit").add_command(
 ).add_command(
   "block", "<in pm>", "Blocks the user"
 ).add_command(
-  "listapproved", None, "Sends the list of all users approved by Hêllẞø†"
+  "listapproved", None, "Sends the list of all users approved by LegendBot"
 ).add_info(
   "PM SECURITY"
 ).add_warning(
