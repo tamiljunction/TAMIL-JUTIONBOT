@@ -12,7 +12,7 @@ from telethon import TelegramClient
 from telethon.sessions import StringSession
 from var import Var
 from userbot.Config import Config
-LEGENDversion = V2.Ø
+LEGENDversion = "V2.Ø"
 StartTime = datetime.datetime.now()
 
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
