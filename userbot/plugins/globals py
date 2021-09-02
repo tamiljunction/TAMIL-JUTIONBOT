@@ -10,7 +10,7 @@ from userbot.plugins.sql_helper.gban_sql import is_gbanned, gbaner, ungbaner, al
 from userbot.plugins.sql_helper import gmute_sql as gsql
 from . import *
 
-gbpic = Config.AWAKE_PIC or cjb
+gbpic = Config.ALIVE_PIC or cjb
 
 async def get_full_user(event):  
     args = event.pattern_match.group(1).split(':', 1)
@@ -78,7 +78,7 @@ async def _(legendevent):
        return
     try:
         if not rank:
-            rank = "ㅤ"
+            rank = "legend"
     except:
         return await legend.edit("**ERROR !!**")
     if user:
@@ -131,7 +131,7 @@ async def _(legendevent):
        return
     try:
         if not rank:
-            rank = "ㅤ"
+            rank = "legend"
     except:
         return await legend.edit("**ERROR !!**")
     if user:
