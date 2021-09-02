@@ -1,7 +1,7 @@
 
 from userbot.cmdhelp import CmdHelp
 
-CmdHelp("fuck").add_command(
+CmdHelp("kk").add_command(
    'kk', None, 'Fuck OFF'
 ).add() 
 
