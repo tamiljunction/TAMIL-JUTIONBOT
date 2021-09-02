@@ -160,8 +160,8 @@ async def _(legendevent):
     await bot.send_message(Config.LOGGER_ID, f"#GDEMOTE \n\n**Globally Demoted :** [{user.first_name}](tg://user?id={user.id}) \n\n**Total Chats :** `{i}`")
 
 
-@bot.on(admin_cmd(pattern=r"gban ?(.*)"))
-@bot.on(sudo_cmd(pattern=r"gban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"gbans ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"gbans ?(.*)", allow_sudo=True))
 async def _(event):
     legend = await eor(event, "`Gbanning...`")
     reason = ""
@@ -218,8 +218,8 @@ async def _(event):
         await legend.edit(ogmsg)
 
 
-@bot.on(admin_cmd(pattern=r"ungban ?(.*)"))
-@bot.on(sudo_cmd(pattern=r"ungban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"ungbans ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"ungbans ?(.*)", allow_sudo=True))
 async def _(event):
     legend = await eor(event, "`Ungban in progress...`")
     if event.reply_to_msg_id:
@@ -247,8 +247,8 @@ async def _(event):
     )
 
 
-@bot.on(admin_cmd(pattern="listgban$"))
-@bot.on(sudo_cmd(pattern="listgban$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="listgbanned$"))
+@bot.on(sudo_cmd(pattern="listgbanned$", allow_sudo=True))
 async def already(event):
     hmm = await eor(event, "`Fetching Gbanned users...`")
     gbanned_users = all_gbanned()
@@ -321,8 +321,8 @@ async def gkick(event):
         await legend.edit(gkmsg)
 
 
-@bot.on(admin_cmd(pattern=r"gmute ?(\d+)?"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern=r"gmute ?(\d+)?"))
+@bot.on(admin_cmd(pattern=r"gmuted ?(\d+)?"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern=r"gmuted ?(\d+)?"))
 async def gm(event):
     private = False
     if event.fwd_from:
@@ -362,8 +362,8 @@ async def gm(event):
         
 
 
-@bot.on(admin_cmd(outgoing=True, pattern=r"ungmute ?(\d+)?"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern=r"ungmute ?(\d+)?"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"ungmuted ?(\d+)?"))
+@bot.on(sudo_cmd(allow_sudo=True, pattern=r"ungmuted ?(\d+)?"))
 async def endgmute(event):
     private = False
     if event.fwd_from:
@@ -399,17 +399,17 @@ async def watcher(event):
 
 
 CmdHelp("global").add_command(
-  "gban", "<reply>/<userid>", "Globally Bans the mentioned user in 'X' chats you are admin with ban permission."
+  "gbanned", "<reply>/<userid>", "Globally Bans the mentioned user in 'X' chats you are admin with ban permission."
 ).add_command(
-  "ungban", "<reply>/<userid>", "Globally Unbans the user in 'X' chats you are admin!"
+  "ungbanned", "<reply>/<userid>", "Globally Unbans the user in 'X' chats you are admin!"
 ).add_command(
-  "listgban", None, "Gives the list of all GBanned Users."
+  "listgbanned", None, "Gives the list of all GBanned Users."
 ).add_command(
   "gkick", "<reply>/<userid>", "Globally Kicks the user in 'X' chats you are admin!"
 ).add_command(
-  "gmute", "<reply> or <userid>", "Globally Mutes the User."
+  "gmuted", "<reply> or <userid>", "Globally Mutes the User."
 ).add_command(
-  "ungmute", "<reply> or <userid>", "Globally Unmutes the gmutes user."
+  "ungmuted", "<reply> or <userid>", "Globally Unmutes the gmutes user."
 ).add_command(
   "gpro", "<reply> or <username>", "Globally Promotes the mentioned user in all the chats you are admin with Add Admins permission."
 ).add_command(
