@@ -3,7 +3,6 @@ from datetime import datetime
 
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
-from . import *
 from userbot import ALIVE_NAME
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
@@ -23,7 +22,7 @@ async def _(event):
     if event.fwd_from:
         return
     if Config.PLUGIN_CHANNEL is None:
-        await edit_or_reply(event, "Please set the required environment variable `PLUGIN_CHANNEL` for this plugin to work\n\nGo to [LEGENDBOT Chat Group](t.me/LEGENDSupport) for assistance"
+        await edit_or_reply(event, "Please set the required environment variable `PLUGIN_CHANNEL` for this plugin to work\n\nGo to [LEGENDBOT Chat Group](t.me/Legend_Userbot) for assistance"
         )
         return
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
