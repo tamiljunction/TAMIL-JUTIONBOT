@@ -11,7 +11,7 @@ async def song_search(event, query, max_results, details=False):
     try:
         results = json.loads(YoutubeSearch(query, max_results=max_results).to_json())
     except KeyError:
-        return await eod(event, "Unable to find relevant search query.")
+        return await eor(event, "Unable to find relevant search query.")
     x = ""
     for i in results["videos"]:
         x += f"https://www.youtube.com{i['url_suffix']}\n"
