@@ -52,7 +52,7 @@ async def _(event):
                 os.remove(downloaded_file_name)
                 await eor(event, 
                    "✓ **[File uploaded to telegraph](https://telegra.ph{})** \n✓ **Time Taken :-** `{}` secs \n✓ **By :- {}** \n✓  `https://telegra.ph{}`".format(
-                        media_urls[0], (ms + ms_two), hell_mention, media_urls[0],
+                        media_urls[0], (ms + ms_two), legend_mention, media_urls[0],
                     ),
                     link_preview=True,
                 )
