@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "hell_cmd"
+          find: "HELL"
 
-          replace: "admin_cmd"
+          replace: "LEGEND"
 
       - name: Create Pull Request
 
