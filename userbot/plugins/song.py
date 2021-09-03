@@ -60,7 +60,7 @@ async def _(event):
         event.chat_id,
         f"{hell_data['id']}.mp3",
         supports_streaming=True,
-        caption=f"**✘ Song -** `{title}` \n**✘ Views -** `{views}` \n**✘ Duration -** `{duration}` \n\n**✘ By :** {hell_mention}",
+        caption=f"**✘ Song -** `{title}` \n**✘ Views -** `{views}` \n**✘ Duration -** `{duration}` \n\n**✘ By :** {legend_mention}",
         thumb=thumb_name,
         attributes=[
             DocumentAttributeAudio(
@@ -77,8 +77,8 @@ async def _(event):
     os.remove(f"{hell_data['id']}.mp3")
 
 
-@bot.on(admin_cmd(pattern="vslong ?(.*)"))
-@bot.on(sudo_cmd(pattern="vslong ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="vsong ?(.*)"))
+@bot.on(sudo_cmd(pattern="vsong ?(.*)", allow_sudo=True))
 async def _(event):
     query = event.text[7:]
     max_results = 1
@@ -119,7 +119,7 @@ async def _(event):
         event.chat_id,
         f"{hell_data['id']}.mp4",
         supports_streaming=True,
-        caption=f"**✘ Video :** `{title}` \n\n**✘ By :** {hell_mention}",
+        caption=f"**✘ Video :** `{title}` \n\n**✘ By :** {legend_mention}",
         thumb=thumb_name,
         progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
             progress(d, t, event, c_time, "Uploading..", f"{hell_data['title']}.mp4")
