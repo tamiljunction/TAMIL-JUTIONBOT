@@ -28,7 +28,7 @@ async def _(event):
     legend = await eor(event, f"__Searching for__ `{query}`")
     legen_ = await song_search(event, query, max_results, details=True)
     x, title, views, duration, thumb = legen_[0], legen_[1], legen_[2], legen_[3], legen_[4]
-    thumb_name = f'thumb{Legend_Mr_Hacker}.jpg'
+    thumb_name = f'thumb{LOGO1}'
     thumbnail = requests.get(thumb, allow_redirects=True)
     open(thumb_name, 'wb').write(thumbnail.content)
     url = x.replace("\n", "")
