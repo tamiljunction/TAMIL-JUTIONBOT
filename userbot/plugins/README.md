@@ -18,7 +18,7 @@ from LEGENDBOT import CmdHelp
 async def hello_world(event):
     if event.fwd_from:
         return
-    await eor(event, "**LEGENDO WORLD**")
+    await eor(event, "**HELLO WORLD**")
 
 CmdHelp("hello").add_command(
   "hello", None, "hello World Edit."
