@@ -129,7 +129,7 @@ async def _(event):
     os.remove(f"{hell_data['id']}.mp4")
 
 
-@bot.on(hell_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
+@bot.on(admin_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
 @bot.on(sudo_cmd(pattern="lyrics(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
     hell = kraken.text[8:]
@@ -150,7 +150,7 @@ async def nope(kraken):
     await owo.delete()
 
 
-@bot.on(hell_cmd(pattern="lsong ?(.*)"))
+@bot.on(admin_cmd(pattern="lsong ?(.*)"))
 @bot.on(sudo_cmd(pattern="lsong ?(.*)", allow_sudo=True))
 async def _(event):
     hell_ = event.text[6:]
@@ -172,7 +172,7 @@ async def _(event):
         await hell.edit("**ERROR 404 :** __NOT FOUND__")
 
 
-@bot.on(hell_cmd(pattern="wsong ?(.*)"))
+@bot.on(admin_cmd(pattern="wsong ?(.*)"))
 async def _(event):
     if not event.reply_to_msg_id:
         return await eor(event, "Reply to a mp3 file.")
