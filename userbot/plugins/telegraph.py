@@ -3,13 +3,14 @@ from datetime import datetime
 
 from PIL import Image
 from telegraph import Telegraph, exceptions, upload_file
+
 from userbot import ALIVE_NAME
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-LEGEND_NAME = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+W2H_NAME = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
 
-legend = bot.uid
+aura = bot.uid
 
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=Config.TELEGRAPH_SHORT_NAME)
@@ -22,7 +23,7 @@ async def _(event):
     if event.fwd_from:
         return
     if Config.PLUGIN_CHANNEL is None:
-        await edit_or_reply(event, "Please set the required environment variable `PLUGIN_CHANNEL` for this plugin to work\n\nGo to [LEGENDBOT Chat Group](t.me/Legend_Userbot) for assistance"
+        await edit_or_reply(event, "Please set the required environment variable `PLUGIN_CHANNEL` for this plugin to work\n\nGo to [W2HBOT Chat Group](t.me/W2HSupport) for assistance"
         )
         return
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
@@ -61,7 +62,7 @@ async def _(event):
                 os.remove(downloaded_file_name)
                 await edit_or_reply(event, 
                    "✓ **YOUR FILE :-** https://telegra.ph{} \n✓ **Time Taken :-** `{}` secs \n✓ **By :- [{}](tg://user?id={})**".format(
-                        media_urls[0], (ms + ms_two), LEGEND_NAME, legend
+                        media_urls[0], (ms + ms_two), W2H_NAME, aura
                     ),
                     link_preview=True,
                 )
@@ -88,9 +89,9 @@ async def _(event):
             response = telegraph.create_page(title_of_page, html_content=page_content)
             end = datetime.now()
             ms = (end - start).seconds
-            Legend_Mr_Hacker = f"https://telegra.ph/{response['path']}"
+            David99q = f"https://telegra.ph/{response['path']}"
             await edit_or_reply(event, 
-                  f"✓ **Pasted to** [telegraph]({Legend_Mr_Hacker}) \n✓ **Time Taken :-** `{ms}` secs\n✓** By :- **[{LEGEND_NAME}](tg://user?id={legend})", link_preview=True)
+                  f"✓ **Pasted to** [telegraph]({David99q}) \n✓ **Time Taken :-** `{ms}` secs\n✓** By :- **[{W2H_NAME}](tg://user?id={aura})", link_preview=True)
     else:
         await edit_or_reply(event, 
             "Reply to a message to get a permanent telegra.ph link."
