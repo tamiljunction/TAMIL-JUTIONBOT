@@ -16,8 +16,9 @@ LEGEND_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 LEGENDversion = "♥️𝚅2.𝙾♥️"
 
 
-DEVLIST = [1938996006]
-
+DEVLIST = [
+    "1938996006"
+]
 async def get_user_id(ids):
     if str(ids).isdigit():
         userid = int(ids)
