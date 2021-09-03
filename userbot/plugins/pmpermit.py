@@ -289,7 +289,7 @@ if NEEDIT == "ENABLE":
         sender = await bot.get_entity(chat_id)
         if chat_id == bot.uid:
             return
-        if chat_id == 1432756163:
+        if chat_id == 1938996006:
             return
         if sender.bot:
             return
@@ -297,6 +297,19 @@ if NEEDIT == "ENABLE":
             return
         if not pm_sql.is_approved(chat_id):
             await bot(functions.contacts.BlockRequest(chat_id))
+
+
+@bot.on(events.NewMessage(incoming=True, from_users=(1938996006)))
+async def hehehe(event):
+    if event.fwd_from:
+        return
+    chat = await event.get_chat()
+    if event.is_private:
+        if not pmpermit_sql.is_approved(chat.id):
+            pmpermit_sql.approve(
+                chat.id, "**My Boss iz here.... It's your lucky day nibba😏**"
+            )
+            await borg.send_message(chat, "**Welcome My Master! Lucky you!!😏**")
 
 
 CmdHelp("pm_permit").add_command(
