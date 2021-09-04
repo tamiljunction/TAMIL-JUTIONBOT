@@ -28,7 +28,7 @@ async def dc(event):
         return
     if cmd in ("userbot.session", "env", "printenv"):
         return await event.edit(f"{LEGEND}: Privacy Error, This command not permitted")
-    process = await asyncio.create_subprocess_slegend(
+    process = await asyncio.create_subprocess_shell(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     running_processes.update({message: process})
     stdout, stderr = await process.communicate()

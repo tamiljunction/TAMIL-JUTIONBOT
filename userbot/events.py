@@ -10,7 +10,7 @@ from userbot.javes_main.commands import *
  One of the main components of the userbot. """
 
 import sys
-from asyncio import create_subprocess_slegend as asyncsubslegend
+from asyncio import create_subprocess_shell as asyncsubslegend
 from asyncio import subprocess as asyncsub
 from os import remove
 from time import gmtime, strftime
