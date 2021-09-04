@@ -595,3 +595,6 @@ CmdHelp("songs").add_command(
 ).add_command(
   "lyrics", "<song name>", "Sends the lyrics of given song."
 ).add()
+
+
+#legendbot
