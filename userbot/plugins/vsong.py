@@ -1,4 +1,4 @@
-# Plugin made by @hellboi_atul and bug fixes By Shivam Patel(Team Cobra)
+# Plugin made by @legendboi_atul and bug fixes By Shivam Patel(Team Cobra)
 # Give credits... Dont remove or edit these lines
 # uses ytdl 
 # made for DARK COBRA userbot..

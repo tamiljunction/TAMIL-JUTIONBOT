@@ -79,9 +79,9 @@ async def _(event):
             response = telegraph.create_page(title_of_page, html_content=page_content)
             end = datetime.datetime.now()
             ms = (end - start).seconds
-            hellboy = f"https://telegra.ph/{response['path']}"
+            legendboy = f"https://telegra.ph/{response['path']}"
             await edit_or_reply(event, 
-                  f"✓ **[Pasted to telegraph]({hellboy})** \n✓ **Time Taken :-** `{ms}` secs\n✓** By :**  {hell_mention} \n✓  `{hellboy}`", link_preview=True)
+                  f"✓ **[Pasted to telegraph]({legendboy})** \n✓ **Time Taken :-** `{ms}` secs\n✓** By :**  {legend_mention} \n✓  `{legendboy}`", link_preview=True)
     else:
         await eod(event, 
             "Reply to a message to get a permanent telegra.ph link."

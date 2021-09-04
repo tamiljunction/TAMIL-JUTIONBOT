@@ -23,5 +23,5 @@ async def shout(args):
         await args.edit("`" + msg + "`")
 
 CmdHelp("shout").add_command(
-  "shout", "<text>", "Shouts your message in meme way.", ".shout hello"
+  "shout", "<text>", "Shouts your message in meme way.", ".shout legendo"
 ).add()

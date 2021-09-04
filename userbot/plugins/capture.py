@@ -14,7 +14,7 @@ async def _(event):
     if Config.GOOGLE_CHROME_BIN is None:
         await eod(event, "need to install Google Chrome. Module Stopping.")
         return
-    hell = await eor(event, "Processing ...weit")
+    legend = await eor(event, "Processing ...weit")
     start = datetime.datetime.now()
     try:
         chrome_options = webdriver.ChromeOptions()
@@ -58,7 +58,7 @@ async def _(event):
         ms = (end - start).seconds
         await event.edit(f"Completed screencapture Process in {ms} seconds")
     except Exception:
-        await eod(hell, traceback.format_exc())
+        await eod(legend, traceback.format_exc())
 
 CmdHelp("capture").add_command(
         "screenshot", "<link>", "Gives out the web screenshot of given link via Google Crome Bin in .png format", ".screenshot https://github.com/LEGEND-OS/LEGENDBOT"

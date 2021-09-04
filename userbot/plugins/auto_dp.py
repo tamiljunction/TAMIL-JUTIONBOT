@@ -76,7 +76,7 @@ COLLECTION_STRING9 = [
     "Classical-Music-Wallpapers-for-Desktop",
     "Prs-Guitar-Wallpaper",
     "Iron-Man-Wallpaper-1920x1080",
-    "Dodge-Challenger-Black-hellcat-Wallpaper",
+    "Dodge-Challenger-Black-legendcat-Wallpaper",
     "V-for-Vendetta-Mask-Wallpaper",
     "Toxic-Mask-Wallpapers",
     "Minion-Desktop-Wallpaper",

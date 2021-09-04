@@ -28,5 +28,5 @@ async def _(event):
         await event.edit(message)
 
 CmdHelp("schedule").add_command(
-  "schd", "<time in secs> - <msg to send>", "Sends the message in given time(seconds)", ".schd 60 - hello"
+  "schd", "<time in secs> - <msg to send>", "Sends the message in given time(seconds)", ".schd 60 - legendo"
 ).add()

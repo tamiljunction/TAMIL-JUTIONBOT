@@ -15,7 +15,7 @@ def ocr_space_file(
     :param overlay: Is OCR.space overlay required in your response.
                     Defaults to False.
     :param api_key: OCR.space API key.
-                    Defaults to 'helloworld'.
+                    Defaults to 'legendoworld'.
     :param language: Language code to be used in OCR.
                     List of available language codes can be found on https://ocr.space/OCRAPI
                     Defaults to 'en'.
@@ -43,7 +43,7 @@ def ocr_space_url(url, overlay=False, api_key=Config.OCR_SPACE_API_KEY, language
     :param overlay: Is OCR.space overlay required in your response.
                     Defaults to False.
     :param api_key: OCR.space API key.
-                    Defaults to 'helloworld'.
+                    Defaults to 'legendoworld'.
     :param language: Language code to be used in OCR.
                     List of available language codes can be found on https://ocr.space/OCRAPI
                     Defaults to 'en'.

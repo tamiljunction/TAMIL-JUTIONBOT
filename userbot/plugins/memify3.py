@@ -13,7 +13,7 @@ from PIL import Image, ImageDraw, ImageEnhance, ImageFont, ImageOps
 from . import *
 
 
-path = "./hellmify/"
+path = "./legendmify/"
 if not os.path.isdir(path):
     os.makedirs(path)
 
@@ -82,7 +82,7 @@ async def _(event):
         stdout.decode().strip()
     elif legend.endswith((".webp", ".png")):
         legen_ = await eor(event, "**Memifying 🌚🌝**")
-        pic = Image.open(hell)
+        pic = Image.open(legend)
         pic.save("pic.png", format="PNG", optimize=True)
         file = "pic.png"
     else:
@@ -189,9 +189,9 @@ async def nope(kraken):
 
     
 CmdHelp("memify3").add_command(
-  "mmf", "<reply to a img/stcr/gif> <upper text> ; <lower text>", "Memifies the replied image/gif/sticker with your text and sends output in sticker format.", "mmf <reply to a img/stcr/gif> hii ; hello"
+  "mmf", "<reply to a img/stcr/gif> <upper text> ; <lower text>", "Memifies the replied image/gif/sticker with your text and sends output in sticker format.", "mmf <reply to a img/stcr/gif> hii ; legendo"
 ).add_command(
-  "mms", "<reply to a img/stcr/gif> <upper text> ; <lower text>", "Memifies the replied image/gif/sticker with your text and sends output in image format.", "mms <reply to a img/stcr/gif> hii ; hello"
+  "mms", "<reply to a img/stcr/gif> <upper text> ; <lower text>", "Memifies the replied image/gif/sticker with your text and sends output in image format.", "mms <reply to a img/stcr/gif> hii ; legendo"
 ).add_command(
   "doge", "<text>", "Makes A Sticker of Doge with given text.", "doge Hello"
 ).add_command(

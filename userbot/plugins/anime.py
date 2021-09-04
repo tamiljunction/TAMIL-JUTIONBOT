@@ -91,7 +91,7 @@ async def nope(lege):
             )
             return
 
-    troll = await bot.inline_query("AniFluidbot", f".anime {(deEmojify(hell))}")
+    troll = await bot.inline_query("AniFluidbot", f".anime {(deEmojify(legend))}")
 
     await troll[0].click(
         lege_.chat_id,
@@ -105,8 +105,8 @@ async def nope(lege):
 @bot.on(admin_cmd(pattern="manga(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="manga(?: |$)(.*)", allow_sudo=True))
 async def nope(lege_):
-    hell = lege_.pattern_match.group(1)
-    if not hell:
+    legend = lege_.pattern_match.group(1)
+    if not legend:
         if lege_.is_reply:
             (await lege_.get_reply_message()).message
         else:
@@ -114,7 +114,7 @@ async def nope(lege_):
             )
             return
 
-    troll = await bot.inline_query("AniFluidbot", f".manga {(deEmojify(hell))}")
+    troll = await bot.inline_query("AniFluidbot", f".manga {(deEmojify(legend))}")
 
     await troll[0].click(
         lege_.chat_id,
@@ -128,8 +128,8 @@ async def nope(lege_):
 @bot.on(admin_cmd(pattern="character(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="character(?: |$)(.*)", allow_sudo=True))
 async def nope(lege_):
-    hell = lege_.pattern_match.group(1)
-    if not hell:
+    legend = lege_.pattern_match.group(1)
+    if not legend:
         if lege_.is_reply:
             (await lege_.get_reply_message()).message
         else:
@@ -137,7 +137,7 @@ async def nope(lege_):
             )
             return
 
-    troll = await bot.inline_query("AniFluidbot", f".character {(deEmojify(hell))}")
+    troll = await bot.inline_query("AniFluidbot", f".character {(deEmojify(legend))}")
 
     await troll[0].click(
         lege_.chat_id,

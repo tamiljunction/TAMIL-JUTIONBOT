@@ -10,7 +10,7 @@ from userbot.javes_main.commands import *
  One of the main components of the userbot. """
 
 import sys
-from asyncio import create_subprocess_shell as asyncsubshell
+from asyncio import create_subprocess_slegend as asyncsubslegend
 from asyncio import subprocess as asyncsub
 from os import remove
 from time import gmtime, strftime
@@ -70,7 +70,7 @@ def register(**args):
             try:
                 await func(check)
 
-            # Thanks to @hellboi_atul for this HACK.
+            # Thanks to @legendboi_atul for this HACK.
             # Raise StopPropagation to Raise StopPropagation
             # This needed for AFK to working properly
 
@@ -117,7 +117,7 @@ def register(**args):
 
                     ftext += "\n\n\nLast 10 commits:\n"
 
-                    process = await asyncsubshell(command,
+                    process = await asyncsubslegend(command,
                                                   stdout=asyncsub.PIPE,
                                                   stderr=asyncsub.PIPE)
                     stdout, stderr = await process.communicate()

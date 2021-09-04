@@ -1,7 +1,7 @@
 try:
     from userbot.plugins.sql_helper import SESSION, BASE
 except ImportError:
-    raise Exception("hello!")
+    raise Exception("legendo!")
 
 from sqlalchemy import Column, String
 

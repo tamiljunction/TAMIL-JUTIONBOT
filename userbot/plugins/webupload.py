@@ -34,7 +34,7 @@ async def _(event):
         await event.edit("Invalid selected Transfer")
     cmd = selected_one
     time.time() + PROCESS_RUN_TIME
-    process = await asyncio.create_subprocess_shell(
+    process = await asyncio.create_subprocess_slegend(
         cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
     )
     stdout, stderr = await process.communicate()

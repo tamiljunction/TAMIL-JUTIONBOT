@@ -16,12 +16,12 @@ LEGENDOSTR = [
     "`What’s crackin’?`",
     "`‘Sup, homeslice?`",
     "`Howdy, howdy ,howdy!`",
-    "`hello, who's there, I'm talking.`",
+    "`legendo, who's there, I'm talking.`",
     "`You know who this is.`",
     "`Yo!`",
     "`Whaddup.`",
     "`Greetings and salutations!`",
-    "`hello, sunshine!`",
+    "`legendo, sunshine!`",
     "`Hey, howdy, hi!`",
     "`What’s kickin’, little chicken?`",
     "`Peek-a-boo!`",
@@ -30,7 +30,7 @@ LEGENDOSTR = [
     "`I come in peace!`",
     "`Ahoy, matey!`",
     "`Hiya!`",
-    "`Oh retarded gey! Well hello`",
+    "`Oh retarded gey! Well legendo`",
 ]
 
 SHGS = [
@@ -110,10 +110,10 @@ async def cri(e):
 
 @bot.on(admin_cmd(pattern="hey$", outgoing=True))
 @bot.on(sudo_cmd(pattern="hey$", allow_sudo=True))
-async def hoi(hello):
+async def hoi(legendo):
     """ Greet everyone! """
-    if not hello.text[0].isalpha() and hello.text[0] not in ("/", "#", "@", "!"):
-        await edit_or_reply(hello, random.choice(LEGENDOSTR))
+    if not legendo.text[0].isalpha() and legendo.text[0] not in ("/", "#", "@", "!"):
+        await edit_or_reply(legendo, random.choice(LEGENDOSTR))
 
 
 @bot.on(admin_cmd(pattern="shrug$", outgoing=True))
@@ -205,7 +205,7 @@ CmdHelp("иοιϲє").add_command(
 ).add_command(
   "shrug", None, "¯\_(ツ)_/¯"
 ).add_command(
-  "hey", None, "Random 'hello' String."
+  "hey", None, "Random 'legendo' String."
 ).add_command(
   "cri", None, "Random Crying emojies..."
 ).add_command(

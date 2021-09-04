@@ -159,12 +159,12 @@ LEGENDOSTR = [
     "‘Ello, gov'nor!",
     "What’s crackin’?",
     "Howdy, howdy ,howdy!",
-    "hello, who's there, I'm talking.",
+    "legendo, who's there, I'm talking.",
     "You know who this is.",
     "Yo!",
     "Whaddup.",
     "Greetings and salutations!",
-    "hello, sunshine!",
+    "legendo, sunshine!",
     "`Hey, howdy, hi!`",
     "What’s kickin’, little chicken?",
     "Peek-a-boo!",
@@ -378,7 +378,7 @@ CmdHelp("quotes").add_command(
 ).add_command(
   'gdbye', None, 'Sends a random Good Byee Quote'
 ).add_command(
-  'qhi', None, 'Sends a random hello msg'
+  'qhi', None, 'Sends a random legendo msg'
 ).add_command(
   'congo', None, 'Sends a random congratulations quote'
 ).add_command(

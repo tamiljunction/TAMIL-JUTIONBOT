@@ -118,12 +118,12 @@ async def make_gif(event, file):
             if response.text.startswith("Send me an animated sticker!"):
                 return "`This file is not supported`"
             response = response if response.media else await conv.get_response()
-            hellresponse = response if response.media else await conv.get_response()
+            legendresponse = response if response.media else await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
-            hellfile = await event.client.download_media(hellresponse, "./temp")
-            return await unzip(hellfile)
+            legendfile = await event.client.download_media(legendresponse, "./temp")
+            return await unzip(legendfile)
         except YouBlockedUserError:
             return "Unblock @tgstogifbot"
 
 
-# hellbot
+# legendbot
