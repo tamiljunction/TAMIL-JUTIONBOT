@@ -15,7 +15,14 @@ from youtube_dl.utils import (
 )
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from . import *
+import asyncio
+import re
+from telethon.errors.rpcerrorlist import YouBlockedUserError
+
+from userbot import bot
+from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply, progress
+from userbot.cmdhelp import CmdHelp
+from userbot.helpers.functions import deEmojify
 
 
 @bot.on(admin_cmd(pattern="song ?(.*)"))
@@ -66,7 +73,6 @@ async def _(event):
             DocumentAttributeAudio(
                 duration=int(legend_data["duration"]),
                 title=str(legend_data["title"]),
-                performer=perf,
             )
         ],
         progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
