@@ -119,7 +119,7 @@ async def _(event):
 CmdHelp("ggℓ αѕѕτ").add_command(
   "voices", "<reply to a msg> <lang code>", "Sends the replied msg content in audio format."
 ).add_command(
-    "trs", "<lang code> <reply to msg>", "Translates the replied message to desired language code. Type '.trc' to get all the language codes", f"trt en - legendo | .trt en <reply to msg>"
+    "trs", "<lang code> <reply to msg>", "Translates the replied message to desired language code. Type '.trc' to get all the language codes", f"trt en - hello | .trt en <reply to msg>"
 ).add_command(
   "trp", None, "Gets all the possible language codes for google translate module"
 ).add_info(

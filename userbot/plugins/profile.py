@@ -191,7 +191,7 @@ CmdHelp("profile").add_command(
 ).add_command(
   "delpfp", "<count>", "Deletes your Telegram profile picture(s)."
 ).add_command(
-  "pbio", "<text>", "Changes your Telegram bio", ".pbio legendo there, This iz my bio"
+  "pbio", "<text>", "Changes your Telegram bio", ".pbio hello there, This iz my bio"
 ).add_command(
   "ppic", "<reply to image>", "Changes your Telegram profie picture with the one you replied to"
 ).add_command(
