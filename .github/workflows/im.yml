@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "asyncsubslegend"
+          find: "legendo"
 
-          replace: "asyncsubshell"
+          replace: "hello"
 
       - name: Create Pull Request
 
