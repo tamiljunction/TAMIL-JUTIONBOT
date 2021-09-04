@@ -10,7 +10,7 @@ from userbot.javes_main.commands import *
  One of the main components of the userbot. """
 
 import sys
-from asyncio import create_subprocess_shell as asyncsubslegend
+from asyncio import create_subprocess_shell as asyncsubshell
 from asyncio import subprocess as asyncsub
 from os import remove
 from time import gmtime, strftime
@@ -117,7 +117,7 @@ def register(**args):
 
                     ftext += "\n\n\nLast 10 commits:\n"
 
-                    process = await asyncsubslegend(command,
+                    process = await asyncsubshell(command,
                                                   stdout=asyncsub.PIPE,
                                                   stderr=asyncsub.PIPE)
                     stdout, stderr = await process.communicate()
