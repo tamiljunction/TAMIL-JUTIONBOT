@@ -8,7 +8,7 @@ import os
 import time
 
 from telethon.tl.types import DocumentAttributeAudio
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply, eor
 from userbot.cmdhelp import CmdHelp
 from youtube_search import YoutubeSearch
 from youtube_dl import YoutubeDL
@@ -93,7 +93,7 @@ async def _(event):
     hell = await eor(event, f"__Searching for__ `{query}`")
     hel_ = await song_search(event, query, max_results, details=True)
     x, title, views, duration, thumb = hel_[0], hel_[1], hel_[2], hel_[3], hel_[4]
-    thumb_name = f'thumb{LOGO1}.jpg'
+    thumb_name = f'thumb{LOGO1}'
     thumbnail = requests.get(thumb, allow_redirects=True)
     open(thumb_name, 'wb').write(thumbnail.content)
     url = x.replace("\n", "")
@@ -192,8 +192,8 @@ async def _(event):
     os.remove(f"{hell_data['id']}.mp4")
 
 
-@bot.on(admin_cmd(pattern="lyricsd(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="lyricsd(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="lyricss(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="lyricss(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
     hell = kraken.text[8:]
     uwu = await eor(kraken, f"Searching lyrics for  `{hell}` ...")
@@ -213,8 +213,8 @@ async def nope(kraken):
     await owo.delete()
 
 
-@bot.on(admin_cmd(pattern="lsing ?(.*)"))
-@bot.on(sudo_cmd(pattern="lsing ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="lsongs ?(.*)"))
+@bot.on(sudo_cmd(pattern="lsongs ?(.*)", allow_sudo=True))
 async def _(event):
     hell_ = event.text[6:]
     if hell_ == "":
@@ -235,7 +235,7 @@ async def _(event):
         await hell.edit("**ERROR 404 :** __NOT FOUND__")
 
 
-@bot.on(admin_cmd(pattern="wsing ?(.*)"))
+@bot.on(admin_cmd(pattern="wsongs ?(.*)"))
 async def _(event):
     if not event.reply_to_msg_id:
         return await eor(event, "Reply to a mp3 file.")
@@ -265,15 +265,15 @@ async def _(event):
 
 
 CmdHelp("song").add_command(
-  "song", "<song name>", "Downloads the song from YouTube."
+  "songs", "<song name>", "Downloads the song from YouTube."
 ).add_command(
-  "vsong", "<song name>", "Downloads the Video Song from YouTube."
+  "vsongs", "<song name>", "Downloads the Video Song from YouTube."
 ).add_command(
-  "lsong", "<song name>", "Sends the searched song in current chat.", "lsong Alone"
+  "lsongs", "<song name>", "Sends the searched song in current chat.", "lsong Alone"
 ).add_command(
-  "wsong", "<reply to a song file>", "Searches for the details of replied mp3 song file and uploads it's details."
+  "wsongs", "<reply to a song file>", "Searches for the details of replied mp3 song file and uploads it's details."
 ).add_command(
-  "lyrics", "<song name>", "Gives the lyrics of that song.."
+  "lyricss", "<song name>", "Gives the lyrics of that song.."
 ).add_info(
   "Songs & Lyrics."
 ).add_warning(
