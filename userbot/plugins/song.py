@@ -75,8 +75,8 @@ async def _(event):
     await hell.delete()
     os.remove(f"{hell_data['id']}.mp3")
 
-@bot.on(hell_cmd(pattern="vsong ?(.*)"))
-@bot.on(sudo_cmd(pattern="vsong ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="vsing ?(.*)"))
+@bot.on(sudo_cmd(pattern="vsing ?(.*)", allow_sudo=True))
 async def _(event):
     query = event.text[7:]
     max_results = 1
@@ -127,8 +127,8 @@ async def _(event):
     os.remove(f"{hell_data['id']}.mp4")
 
 
-@bot.on(hell_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="lyrics(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="lyricsd(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="lyricsd(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
     hell = kraken.text[8:]
     uwu = await eor(kraken, f"Searching lyrics for  `{hell}` ...")
@@ -148,8 +148,8 @@ async def nope(kraken):
     await owo.delete()
 
 
-@bot.on(hell_cmd(pattern="lsong ?(.*)"))
-@bot.on(sudo_cmd(pattern="lsong ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="lsing ?(.*)"))
+@bot.on(sudo_cmd(pattern="lsing ?(.*)", allow_sudo=True))
 async def _(event):
     hell_ = event.text[6:]
     if hell_ == "":
@@ -170,7 +170,7 @@ async def _(event):
         await hell.edit("**ERROR 404 :** __NOT FOUND__")
 
 
-@bot.on(hell_cmd(pattern="wsong ?(.*)"))
+@bot.on(admin_cmd(pattern="wsing ?(.*)"))
 async def _(event):
     if not event.reply_to_msg_id:
         return await eor(event, "Reply to a mp3 file.")
@@ -199,7 +199,7 @@ async def _(event):
     await event.client.delete_messages(conv.chat_id, [first.id, second.id, third.id, fourth.id, fifth.id])
 
 
-CmdHelp("songs").add_command(
+CmdHelp("song").add_command(
   "song", "<song name>", "Downloads the song from YouTube."
 ).add_command(
   "vsong", "<song name>", "Downloads the Video Song from YouTube."
