@@ -28,7 +28,7 @@ async def _(event):
     hell = await eor(event, f"__Searching for__ `{query}`")
     hel_ = await song_search(event, query, max_results, details=True)
     x, title, views, duration, thumb = hel_[0], hel_[1], hel_[2], hel_[3], hel_[4]
-    thumb_name = f'thumb{Legend_Mr_Hacker}.jpg'
+    thumb_name = f'{LOGO1}'
     thumbnail = requests.get(thumb, allow_redirects=True)
     open(thumb_name, 'wb').write(thumbnail.content)
     url = x.replace("\n", "")
