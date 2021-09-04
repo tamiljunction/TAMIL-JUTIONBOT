@@ -16,10 +16,10 @@ from telethon import events
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
-from legendbot import *
-from legendbot.config import Config
-from legendbot.helpers import *
-from legendbot.utils import *
+from LEGENDBOT import *
+from LEGENDBOT.config import Config
+from LEGENDBOT.helpers import *
+from LEGENDBOT.utils import *
 
 async def reply_id(event):
     reply_to_id = None
