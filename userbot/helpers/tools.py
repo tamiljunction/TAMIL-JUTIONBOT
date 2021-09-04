@@ -3,8 +3,8 @@ import re
 
 from telethon import events
 
-from legendbot import bot
-from legendbot.config import Config
+from userbot import bot
+from userbot.config import Config
 
 
 # forward check
