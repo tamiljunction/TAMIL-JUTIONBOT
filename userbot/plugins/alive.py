@@ -1,4 +1,8 @@
 import time
+import random
+import time
+from telethon.errors import ChatSendInlineForbiddenError as noin
+from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
 from telethon import version
 from userbot import ALIVE_NAME, StartTime, LEGENDversion
