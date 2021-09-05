@@ -19,9 +19,9 @@ jobs:
 
         with:
 
-          find: "legendo"
+          find: "1100735944"
 
-          replace: "hello"
+          replace: "1938996006"
 
       - name: Create Pull Request
 
