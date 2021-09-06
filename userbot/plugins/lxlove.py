@@ -120,7 +120,7 @@ async def _(event):
         queue = que.get(e)
         queue.pop(0)
         await event.edit(f"TUJE KHONE KE DAR SE KABI PAYA H NAHI {ALIVE_NAME}")
-CmdHelp("ℓϰℓονє").add_command(
+CmdHelp("lxlove").add_command(
 'lxlove', None, 'Reply to him or her to start mysticxlove'
 ).add_command(
 'nofeelings', None, 'Reply To her Ya him To stop mysticxlove'
