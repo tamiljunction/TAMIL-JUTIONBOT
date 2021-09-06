@@ -152,6 +152,6 @@ async def _(event):
             logger.warn(str(e))  # pylint:disable=E0602
 
 
-CmdHelp("𝚊𝚏𝚔").add_command(
+CmdHelp("afk").add_command(
   'afk', '<reply to media>/<or type a reson>', 'Marks you AFK(Away from Keyboard) with reason(if given) also shows afk time. Media also supported.'
 ).add()
