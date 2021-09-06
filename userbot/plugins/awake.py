@@ -66,7 +66,7 @@ async def amireallyalive(event):
         LEGEND_caption = f"**{mention}**\n"
         
         LEGEND_caption += f"~~~~~~~~~~~~~~~~~~~~~~~\n"
-        LEGEND_caption += f"     💫 ✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ 🇮🇳 ιѕ αωακє 💫\n"
+        LEGEND_caption += f"     💫 ✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃dẞø✞︎ ιѕ αωακє 💫\n"
         LEGEND_caption += f"•🔥•     : ν2.ο\n"
         LEGEND_caption += f"•🔥• 𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽      : `{version.__version__}`\n"
         LEGEND_caption += f"•🔥• 𝚄𝙿𝚃𝙸𝙼𝙴         : `{uptime}`\n"
@@ -90,6 +90,6 @@ async def amireallyalive(event):
             f"🔱 σωɳεɾ         : [ℓєgєи∂](t.me/Legend_Mr_Hacker)\n"
         )
 
-CmdHelp("𝚊𝚠𝚊𝚔𝚎").add_command(
+CmdHelp("awake").add_command(
     'bot', None, 'υѕє αи∂ ѕєє'
 ).add()
