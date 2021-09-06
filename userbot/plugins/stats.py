@@ -64,7 +64,7 @@ async def stats(
     stop_time = time.time() - start_time
     full_name = inline_mention(await event.client.get_me())
     response = f"❣️**𝚂𝚝𝚊𝚝𝚜 𝙵𝚘𝚛  {full_name}**❣️\n\n"
-    response += f"🌷  : {private_chats} \n"
+    response += f"🌷private stats  : {private_chats} \n"
     response += f" ♦️               `υѕєяѕ: {private_chats - bots}` \n"
     response += f"♦️                  `ϐοτѕ: {bots}` \n"
     response += f"♦️              gяουρѕ: {groups} \n"
