@@ -898,7 +898,7 @@ async def _(event):
         
 
 CmdHelp("animation").add_command(
-  'eyes', None, 'Use And see'
+  'eye', None, 'Use And see'
 ).add_command(
   'think', None, 'Use and see'
 ).add_command(
