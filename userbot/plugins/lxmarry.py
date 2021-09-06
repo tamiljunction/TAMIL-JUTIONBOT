@@ -37,7 +37,7 @@ async def _(event):
         return
     await event.edit("AB DRAME NA KAR I LOVE YOU TOO BOL DAL❤️")
     await asyncio.sleep(999)
-CmdHelp("ℓϰмαяяγ").add_command(
+CmdHelp("lxmarry").add_command(
 'replymarry', None, 'Reply to ur lover'
 ).add_command(
 'replynehi', None, 'Reply to ur lover to stop sending'
