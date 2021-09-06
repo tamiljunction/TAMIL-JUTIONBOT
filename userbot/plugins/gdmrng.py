@@ -18,6 +18,6 @@ async def xd(event):
     await event.reply(f"I hope your morning is as bright and gorgeous as your smile.")
 
 
-CmdHelp("GdMrng").add_command(
+CmdHelp("gm").add_command(
     "gdmrng", None, "Wishs Good moning in all groups just one command"
 ).add()
