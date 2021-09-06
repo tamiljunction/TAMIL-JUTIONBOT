@@ -81,7 +81,7 @@ async def get_user(event):
     return target
 
 
-CmdHelp("𝚜𝚞𝚍𝚘").add_command(
+CmdHelp("sudo").add_command(
   "sudo", None, "Check If Your Bot Has Sudo Enabled!!"
 ).add_command(
   "addsudo", "<reply to user>", "Adds replied user to sudo list."
