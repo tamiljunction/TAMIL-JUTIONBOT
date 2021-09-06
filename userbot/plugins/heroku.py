@@ -196,7 +196,7 @@ async def _(event):
 
 
 
-CmdHelp("нєяοκυ").add_command(
+CmdHelp("heroku").add_command(
   "usage", None, "Check your heroku dyno hours status."
 ).add_command(
   "set var", "<NEW VAR> <value>", "Add new variable or update existing value/variable\nAfter setting a variable the bot will restart. So be calm for a minute😃"
