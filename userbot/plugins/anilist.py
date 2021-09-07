@@ -85,6 +85,6 @@ async def anilist(event):
     await event.edit(msg, link_preview=True)
 
 
-CmdHelp("𝚊𝚗𝚒𝚕𝚒𝚜𝚝").add_command(
+CmdHelp("anilist").add_command(
   'anilist', '<anime name>', 'Shows you the details of the anime'
 ).add()
