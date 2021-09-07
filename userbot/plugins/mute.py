@@ -163,7 +163,7 @@ async def endmute(event):
 async def watcher(event):
     if is_muted(event.sender_id, event.chat_id):
         await event.delete()
-CmdHelp("ɱµƭε").add_command(
+CmdHelp("mute").add_command(
    "mute", "<reply to user>", "Its help U to mute Any user to group if u are admin then"
 ).add_command(
    "unmute", "<reply to user>", "Its help u to unmute any user if u are admin in group"
