@@ -7,20 +7,94 @@ import random, re
 import asyncio
 from userbot.cmdhelp import CmdHelp
 from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
+from userbot import CMDHELP
 
 
-@bot.on(admin_cmd(pattern="gbuns"))
+@borg.on(admin_cmd(pattern="ftyping ?(.*)"))
+async def _(event):
+    if event.fwd_from:
+        return
+    await event.delete()
+    input_str = event.pattern_match.group(1)
+    action = "typing"
+    if input_str:
+        action = input_str
+    async with borg.action(event.chat_id, action):
+        await asyncio.sleep(600)  # type for 10 seconds
+
+@borg.on(admin_cmd(pattern="fcontact ?(.*)"))
+async def _(event):
+    if event.fwd_from:
+        return
+    await event.delete()
+    input_str = event.pattern_match.group(1)
+    action = "contact"
+    if input_str:
+        action = input_str
+    async with borg.action(event.chat_id, action):
+        await asyncio.sleep(600)  # type for 10 seconds
+
+@borg.on(admin_cmd(pattern="fgame ?(.*)"))
+async def _(event):
+    if event.fwd_from:
+        return
+    await event.delete()
+    input_str = event.pattern_match.group(1)
+    action = "game"
+    if input_str:
+        action = input_str
+    async with borg.action(event.chat_id, action):
+        await asyncio.sleep(600)  # type for 10 seconds
+
+@borg.on(admin_cmd(pattern="flocation ?(.*)"))
+async def _(event):
+    if event.fwd_from:
+        return
+    await event.delete()
+    input_str = event.pattern_match.group(1)
+    action = "location"
+    if input_str:
+        action = input_str
+    async with borg.action(event.chat_id, action):
+        await asyncio.sleep(600)  # type for 10 seconds
+
+@borg.on(admin_cmd(pattern="fvoice ?(.*)"))
+async def _(event):
+    if event.fwd_from:
+        return
+    await event.delete()
+    input_str = event.pattern_match.group(1)
+    action = "recording"
+    if input_str:
+        action = input_str
+    async with borg.action(event.chat_id, action):
+        await asyncio.sleep(600)  # type for 10 seconds
+
+@borg.on(admin_cmd(pattern="fvideo ?(.*)"))
+async def _(event):
+    if event.fwd_from:
+        return
+    await event.delete()
+    input_str = event.pattern_match.group(1)
+    action = "uploading"
+    if input_str:
+        action = input_str
+    async with borg.action(event.chat_id, action):
+        await asyncio.sleep(600)  # type for 10 seconds
+
+
+@borg.on(admin_cmd("fgben"))
 async def gbun(event):
     if event.fwd_from:
         return
     gbunVar = event.text
     gbunVar = gbunVar[6:]
-    mentions = "`𝚆𝙰𝚁𝙽𝙸𝙽𝙶!! 𝚄𝚂𝙴𝚁 𝙶𝙱𝙰𝙽𝙽𝙴𝙳 𝙱𝚈 𝙰𝙳𝙼𝙸𝙽\n`"
-    no_reason = "__Reason: Potential spammer. __"
-    await event.edit("**Summoning out le Gungnir ❗️⚜️☠️**")
-    await asyncio.sleep(3.5)
-    chat = await event.get_chat()
-    async for x in bot.iter_participants(chat, filter=ChannelParticipantsAdmins):
+    mentions = "`Warning!! User 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\n`"
+    no_reason = "__Reason: Madarchod Saala"
+    await event.edit("** Nikal Lawde❗️⚜️☠️**")
+    asyncio.sleep(3.5)
+    chat = await event.get_input_chat()
+    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
     reply_message = None
     if event.reply_to_msg_id:
@@ -28,35 +102,38 @@ async def gbun(event):
         replied_user = await event.client(GetFullUserRequest(reply_message.sender_id))
         firstname = replied_user.user.first_name
         usname = replied_user.user.username
-        id = reply_message.sender_id
-        if chat.id == 1938996006:
-            await event.reply("`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 69$ to my master__ ✰@Legend_Mr_Hacker™️✰ __to release your account__😏")
+        idd = reply_message.sender_id
+        # make meself invulnerable cuz why not xD
+        if idd == 1938996006:
+            await reply_message.reply(
+                "`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 99$ to my master__ [Legend_Mr_Hacker](https://t.me/Legend_Mr_Hacker) __to release your account__😏"
+            )
         else:
-            jnl=("`Warning!! `"
-                  "[{}](tg://user?id={})"
-                  "` 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\n\n`"
-                  "**user's Name: ** __{}__\n"
-                  "**ID : ** `{}`\n"
-                ).format(firstname, idd, firstname, idd)
+            jnl = (
+                "`Warning!! `"
+                "[{}](tg://user?id={})"
+                "` 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\n\n`"
+                "**Person's Name: ** __{}__\n"
+                "**ID : ** `{}`\n"
+            ).format(firstname, idd, firstname, idd)
             if usname == None:
                 jnl += "**Victim Nigga's username: ** `Doesn't own a username!`\n"
             elif usname != "None":
                 jnl += "**Victim Nigga's username** : @{}\n".format(usname)
             if len(gbunVar) > 0:
                 gbunm = "`{}`".format(gbunVar)
-                gbunr = "**Reason: **"+gbunm
+                gbunr = "**Reason: **" + gbunm
                 jnl += gbunr
             else:
                 jnl += no_reason
             await reply_message.reply(jnl)
     else:
-        mention = "`Warning!! User 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\nReason: Potential spammer. `"
+        mention = "`Warning!! User 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\nReason: Not Given `"
         await event.reply(mention)
     await event.delete()
 
 
-
-@bot.on(admin_cmd(pattern="fgben ?(.*)"))
+@bot.on(admin_cmd(pattern="fgban ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("Preparing to gban this nub nibba....")
@@ -149,7 +226,7 @@ async def _(event):
     
      
         
-@bot.on(admin_cmd(pattern="fungben ?(.*)"))
+@bot.on(admin_cmd(pattern="fungban ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("Preparing to Ungban this nub nibba please weit for a while.....")
@@ -240,16 +317,107 @@ async def _(event):
         await asyncio.sleep(1.5)
         await event.edit("UnGbanned this nub nibba successfully in 204 chats.\nUnBlocked and removed from gban watch")
 
+@borg.on(admin_cmd("fmute"))
+async def gbun(event):
+    if event.fwd_from:
+        return
+    gbunVar = event.text
+    gbunVar = gbunVar[6:]
+    mentions = "**Warning!! User Gmuted By Admin...\n**"
+    no_reason = "__Reason: ab sale Globally mute hi rah"
+    await event.edit("** Gmutting...**")
+    asyncio.sleep(3.5)
+    chat = await event.get_input_chat()
+    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
+        mentions += f""
+    reply_message = None
+    if event.reply_to_msg_id:
+        reply_message = await event.get_reply_message()
+        replied_user = await event.client(GetFullUserRequest(reply_message.sender_id))
+        firstname = replied_user.user.first_name
+        usname = replied_user.user.username
+        idd = reply_message.sender_id
+        # make meself invulnerable cuz why not xD
+        if idd == 1938996006:
+            await reply_message.reply(
+                "`Wait a second, This is my master!`\n**How dare you threaten to Mute my master nigger!**\n\n__Your account has been hacked! Pay 99$ to my master__ [Legend_Mr_Hacker](https://t.me/Legend_Mr_Hacker) __to release your account__😏"
+            )
+        else:
+            jnl = (
+                "`Warning!! `"
+                "[{}](tg://user?id={})"
+                "` Gmutted By Admin...\n\n`"
+                "**Name: ** __{}__\n"
+                "**ID : ** `{}`\n"
+            ).format(firstname, idd, firstname, idd)
+            if usname == None:
+                jnl += "**Victim Nigga's username: ** `Doesn't have a username!`\n"
+            elif usname != "None":
+                jnl += "**Victim Nigga's username** : @{}\n".format(usname)
+            if len(gbunVar) > 0:
+                gbunm = "`{}`".format(gbunVar)
+                gbunr = "**Reason: **" + gbunm
+                jnl += gbunr
+            else:
+                jnl += no_reason
+            await reply_message.reply(jnl)
+    else:
+        mention = "**Warning!! User Gmutted By Admin...\nReason: Not Given **"
+        await event.reply(mention)
+    await event.delete()
 
-@bot.on(admin_cmd(pattern="fgmute ?(.*)"))
-async def _(event):
-     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
-        await event.edit("Globally muted this nub nibba successfully..!")
 
-bot.on(admin_cmd(pattern="fungmute ?(.*)"))
-async def _(event):
-     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
-        await event.edit("Globally unmuted successfully..!")
+@borg.on(admin_cmd("funmute"))
+async def gbun(event):
+    if event.fwd_from:
+        return
+    gbunVar = event.text
+    gbunVar = gbunVar[6:]
+    mentions = "**Warning!! User Unmuted By Admin...\n**"
+    no_reason = "__Reason: Purani bat Bhool ja wo pakar ke jhool jha"
+    await event.edit("**Ungmutting...**")
+    asyncio.sleep(3.5)
+    chat = await event.get_input_chat()
+    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
+        mentions += f""
+    reply_message = None
+    if event.reply_to_msg_id:
+        reply_message = await event.get_reply_message()
+        replied_user = await event.client(GetFullUserRequest(reply_message.sender_id))
+        firstname = replied_user.user.first_name
+        usname = replied_user.user.username
+        idd = reply_message.sender_id
+        # make meself invulnerable cuz why not xD
+        if idd == 1938996006:
+            await reply_message.reply(
+                "Wait a second. Maine Gmute kab kiya Owner ko toh main unmute karu!!!"
+            )
+        else:
+            jnl = (
+                "`Warning!! `"
+                "[{}](tg://user?id={})"
+                "` Ungmutted By Admin...\n\n`"
+                "**Name: ** __{}__\n"
+                "**ID : ** `{}`\n"
+            ).format(firstname, idd, firstname, idd)
+            if usname == None:
+                jnl += "**Victim Nigga's username: ** `Doesn't have a username!`\n"
+            elif usname != "None":
+                jnl += "**Victim Nigga's username** : @{}\n".format(usname)
+            if len(gbunVar) > 0:
+                gbunm = "`{}`".format(gbunVar)
+                gbunr = "**Reason: **" + gbunm
+                jnl += gbunr
+            else:
+                jnl += no_reason
+            await reply_message.reply(jnl)
+    else:
+        mention = "**Warning!! User Gmutted By Admin...\nReason: Not Given **"
+        await event.reply(mention)
+    await event.delete()
+
+
+
 
 from userbot.cmdhelp import CmdHelp
 CmdHelp("feks").add_command(
@@ -262,4 +430,8 @@ CmdHelp("feks").add_command(
    'fgmute', None, 'A kind of fake gmute try it yourself'
 ).add_command(
    'fungmute', None, 'A kind of fake ungmute try it yourself'
+).add_command(
+   'ftyping', None, 'A kind of fake typing try it yourself Like this u can Use f-typing,contact,game,location,voice,round,video,photo,document,cancel'
+).add_command(
+   'fcontact', None, 'A kind of fake contact try it yourself'
 ).add()
