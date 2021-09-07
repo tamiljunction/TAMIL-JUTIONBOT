@@ -48,7 +48,7 @@ async def amireallyalive(alive):
     await alive.delete()
 
 
-CmdHelp("𝚋𝚝𝚊𝚕𝚟").add_command(
+CmdHelp("botalv").add_command(
   'alive', None, 'Check weather the bot is alive or not'
 ).add_command(
   'bot', None, 'Check weather the bot is alive or not. In your custom Alive Pic and Alive Msg'
