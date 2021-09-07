@@ -150,5 +150,5 @@ async def drawText(image_path, text):
 CmdHelp("memify").add_command(
   "memify", "<reply to img/stcr> <text>", "Memifies the replied image or sticker with the text you entered. Use and see"
 ).add_command(
-  "mmfs", "<reply to img/stcr> <text>", "Memfies the replied image or sticker with the text you entered. Font changed"
+  "mmf", "<reply to img/stcr> <text>", "Memfies the replied image or sticker with the text you entered. Font changed"
 ).add()
