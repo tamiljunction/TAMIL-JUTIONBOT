@@ -43,7 +43,7 @@ async def _(event):
     )
 
 
-CmdHelp("íղsԵαցɾαต").add_command(
+CmdHelp("instagram").add_command(
   "insta", "<link>", "Downloads the provided instagram video/pic from link.", "insta www.instagram.com/yeuehiwnwiqo"
 ).add_info(
   "Insta Downloader."
