@@ -1,20 +1,6 @@
-# LEGENDUSERBOT
-This is Plugins Of LEGENDBOT
-<h1 align="center">⚡ ˜”*°• L E G E N D U S E R B O T •°*”˜ ⚡</h1>
+👇👇DEPLOY👇👇
 
-
-[LEGENDBOT](https://t.me/Legend_Mr_Hacker)
-
-
-<h2 align="center">The owner would not be responsible for any kind of bans due to the bot.</h2>
-
-
-<h1 align="center">FORK AT YOUR OWN RISK</h1>
-
-
-<h1 align="center">⚙️ D E P L O Y I N G ⚙️</h1>
-
-<details>
+[LEGENDBOT](https://github.com/LEGEND-OS/LEGENDBOT)
   <summary> <h2>Generate String Session</h2> </summary>
 
 - Termux
