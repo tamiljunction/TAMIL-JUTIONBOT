@@ -159,7 +159,7 @@ async def gben(userbot):
     )
 
 
-CmdHelp("gρяοмο").add_command(
+CmdHelp("gpromote").add_command(
   'gpromote', '<user-id> or reply to a user' , 'Promote the user in all of your groups'
 ).add_command(
   'gdemote', '<User-id> or reply to a user', 'demote the user in all of your groups'
