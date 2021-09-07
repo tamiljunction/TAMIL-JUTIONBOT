@@ -75,7 +75,7 @@ async def cumshot(event):
 async def watcher(event):
     if is_muted(event.sender_id, "gmute"):
         await event.delete()
-CmdHelp("ɠɱµƭε").add_command(
+CmdHelp("gmute").add_command(
    "gmute", "<Reply To User>", "To Mute User In Which U are Admin"
 ).add_command(
    "gunmute", "<Reply Ro User", "To Unmute User In Which U are Admin"
