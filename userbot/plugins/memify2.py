@@ -7,8 +7,8 @@ from PIL import Image, ImageDraw, ImageFont
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 
-@bot.on(admin_cmd(pattern=r"mmfs ?(.*)"))
-@bot.on(sudo_cmd(pattern=r"mmfs ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"mmf ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"mmf ?(.*)", allow_sudo=True))
 async def handler(event):
 
     if event.fwd_from:
