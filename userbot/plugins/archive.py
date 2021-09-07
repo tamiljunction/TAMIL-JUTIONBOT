@@ -1,5 +1,3 @@
-
-
 import asyncio
 import os
 import shutil
@@ -557,7 +555,7 @@ def get_lst_of_files(input_directory, output_lst):
     return output_lst
 
 
-CmdHelp("αɾcɦเѵε").add_command(
+CmdHelp("archive").add_command(
   'zip', 'Reply to file/media', 'It will zip the file/media'
 ).add_command(
   'rar', 'Reply to file/media', 'It will rar the file/media'
