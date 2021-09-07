@@ -232,7 +232,7 @@ async def twrp(request):
     await edit_or_reply(request, reply)
 
 
-CmdHelp("𝚊𝚗𝚍𝚛𝚘𝚒𝚍").add_command(
+CmdHelp("android").add_command(
   'magisk', None, 'Get latest magisk release'
 ).add_command(
   'device', '<codename>', 'Get info about android device codename or model'
