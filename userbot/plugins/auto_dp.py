@@ -398,7 +398,7 @@ async def main(event):
         await asyncio.sleep(600)
         
 
-CmdHelp("αυτο∂ρ").add_command(
+CmdHelp("autodp").add_command(
   'batmandp', None, 'Starts autodp of batman'
 ).add_command(
   'thordp', None, 'Starts autodp of thor'
