@@ -7,7 +7,7 @@ import random, re
 import asyncio
 from userbot.cmdhelp import CmdHelp
 from userbot import ALIVE_NAME, PM_MSG, LEGEND_ID
-from userbot import CMDHELP
+from userbot import CMD_HELP
 
 
 @borg.on(admin_cmd(pattern="ftyping ?(.*)"))
