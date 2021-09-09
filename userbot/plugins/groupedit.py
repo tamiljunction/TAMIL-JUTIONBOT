@@ -5,7 +5,7 @@
 """
 Userbot module to help you manage a group
 """
-
+from . import *
 from asyncio import sleep
 
 from telethon import functions
@@ -147,17 +147,16 @@ async def promote(promt):
         return
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await LEGENDevent.edit("Promoted Successfully! Le bhai Ho Gya Promote Maj le ")
+        await LEGENDevent.edit("**🔥 Přômôťêđ  [{user.first_name}](tg://user?id={user.id})  Successfully In**  `{promt.chat.title}`!! \n**Admin Tag :**  `{rank}`")
     except BadRequestError:
         await LEGENDevent.edit(NO_PERM)
         return
-    if BOTLOG:
-        await promt.client.send_message(
-            BOTLOG_CHATID,
-            "#PROMOTE\n"
-            f"USER: [{user.first_name}](tg://user?id={user.id})\n"
-            f"CHAT: {promt.chat.title}(`{promt.chat_id}`)",
-        )
+    await promt.client.send_message(
+        lg_id,
+        "#PROMOTE\n"
+        f"\nUSER: [{user.first_name}](tg://user?id={user.id})\n"
+        f"CHAT: {promt.chat.title}(`{promt.chat_id}`)",
+    )
 
 
 @bot.on(admin_cmd("demote(?: |$)(.*)"))
