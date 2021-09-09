@@ -1,16 +1,7 @@
-import re
-import random
-import json
-from pathlib import Path
 import asyncio
-import math
-import os
 import time
 
 from telethon.tl.types import DocumentAttributeAudio
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply, eor
-from userbot.cmdhelp import CmdHelp
-from youtube_search import YoutubeSearch
 from youtube_dl import YoutubeDL
 from youtube_dl.utils import (
     ContentTooShortError,
@@ -22,69 +13,13 @@ from youtube_dl.utils import (
     UnavailableVideoError,
     XAttrMetadataError,
 )
+from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-LOGO1 = "https://telegra.ph/file/2ecaa4738213cff953388.jpg"
-async def progress(current, total, event, start, type_of_ps, file_name=None):
-    """Generic progress_callback for uploads and downloads."""
-    now = time.time()
-    diff = now - start
-    if round(diff % 10.00) == 0 or current == total:
-        percentage = current * 100 / total
-        speed = current / diff
-        elapsed_time = round(diff) * 1000
-        time_to_completion = round((total - current) / speed) * 1000
-        estimated_total_time = elapsed_time + time_to_completion
-        progress_str = "{0}{1} {2}%\n".format(
-            "".join(["▰" for i in range(math.floor(percentage / 10))]),
-            "".join(["▱" for i in range(10 - math.floor(percentage / 10))]),
-            round(percentage, 2),
-        )
-        tmp = progress_str + "{0} of {1}\nETA: {2}".format(
-            humanbytes(current), humanbytes(total), time_formatter(estimated_total_time)
-        )
-        if file_name:
-            await event.edit(
-                "{}\nFile Name: `{}`\n{}".format(type_of_ps, file_name, tmp)
-            )
-        else:
-            await event.edit("{}\n{}".format(type_of_ps, tmp))
+from . import *
 
 
-def humanbytes(size):
-    """Input size in bytes,
-    outputs in a human readable format"""
-    # https://stackoverflow.com/a/49361727/4723940
-    if not size:
-        return ""
-    # 2 ** 10 = 1024
-    power = 2 ** 10
-    raised_to_pow = 0
-    dict_power_n = {0: "", 1: "Ki", 2: "Mi", 3: "Gi", 4: "Ti"}
-    while size > power:
-        size /= power
-        raised_to_pow += 1
-    return str(round(size, 2)) + " " + dict_power_n[raised_to_pow] + "B"
-
-
-def time_formatter(milliseconds: int) -> str:
-    """Inputs time in milliseconds, to get beautified time,
-    as string"""
-    seconds, milliseconds = divmod(int(milliseconds), 1000)
-    minutes, seconds = divmod(seconds, 60)
-    hours, minutes = divmod(minutes, 60)
-    days, hours = divmod(hours, 24)
-    tmp = (
-        ((str(days) + " day(s), ") if days else "")
-        + ((str(hours) + " hour(s), ") if hours else "")
-        + ((str(minutes) + " minute(s), ") if minutes else "")
-        + ((str(seconds) + " second(s), ") if seconds else "")
-        + ((str(milliseconds) + " millisecond(s), ") if milliseconds else "")
-    )
-    return tmp[:-2]
-
-
-@bot.on(admin_cmd(pattern="songs ?(.*)"))
-@bot.on(sudo_cmd(pattern="songs ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="shift ?(.*)"))
+@bot.on(sudo_cmd(pattern="shift ?(.*)", allow_sudo=True))
 async def _(event):
     query = event.text[6:]
     max_results = 1
@@ -93,7 +28,7 @@ async def _(event):
     hell = await eor(event, f"__Searching for__ `{query}`")
     hel_ = await song_search(event, query, max_results, details=True)
     x, title, views, duration, thumb = hel_[0], hel_[1], hel_[2], hel_[3], hel_[4]
-    thumb_name = f'thumb{LOGO1}'
+    thumb_name = f'thumb{Legend_Mr_Hacker}.jpg'
     thumbnail = requests.get(thumb, allow_redirects=True)
     open(thumb_name, 'wb').write(thumbnail.content)
     url = x.replace("\n", "")
@@ -102,23 +37,23 @@ async def _(event):
         with YoutubeDL(song_opts) as somg:
             hell_data = somg.extract_info(url)
     except DownloadError as DE:
-        return await eor(hell, f"`{str(DE)}`")
+        return await eod(hell, f"`{str(DE)}`")
     except ContentTooShortError:
-        return await eor(hell, "`The download content was too short.`")
+        return await eod(hell, "`The download content was too short.`")
     except GeoRestrictedError:
-        return await eor(hell, "`Video is not available from your geographic location due to geographic restrictions imposed by a website.`")
+        return await eod(hell, "`Video is not available from your geographic location due to geographic restrictions imposed by a website.`")
     except MaxDownloadsReached:
-        return await eor(hell, "`Max-downloads limit has been reached.`")
+        return await eod(hell, "`Max-downloads limit has been reached.`")
     except PostProcessingError:
-        return await eor(hell, "`There was an error during post processing.`")
+        return await eod(hell, "`There was an error during post processing.`")
     except UnavailableVideoError:
-        return await eor(hell, "`Media is not available in the requested format.`")
+        return await eod(hell, "`Media is not available in the requested format.`")
     except XAttrMetadataError as XAME:
-        return await eor(hell, f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
+        return await eod(hell, f"`{XAME.code}: {XAME.msg}\n{XAME.reason}`")
     except ExtractorError:
-        return await eor(hell, "`There was an error during info extraction.`")
+        return await eod(hell, "`There was an error during info extraction.`")
     except Exception as e:
-        return await eor(hell, f"{str(type(e)): {str(e)}}")
+        return await eod(hell, f"{str(type(e)): {str(e)}}")
     c_time = time.time()
     await hell.edit(f"**🎶 Preparing to upload song 🎶 :** \n\n{hell_data['title']} \n**By :** {hell_data['uploader']}")
     await event.client.send_file(
@@ -131,6 +66,7 @@ async def _(event):
             DocumentAttributeAudio(
                 duration=int(hell_data["duration"]),
                 title=str(hell_data["title"]),
+                performer=perf,
             )
         ],
         progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
@@ -140,17 +76,18 @@ async def _(event):
     await hell.delete()
     os.remove(f"{hell_data['id']}.mp3")
 
-@bot.on(admin_cmd(pattern="vsongs ?(.*)"))
-@bot.on(sudo_cmd(pattern="vsongs ?(.*)", allow_sudo=True))
+
+@bot.on(admin_cmd(pattern="vsong ?(.*)"))
+@bot.on(sudo_cmd(pattern="vsong ?(.*)", allow_sudo=True))
 async def _(event):
     query = event.text[7:]
     max_results = 1
     if query == "":
-        return await eod(event, "__Please give a song name to search.__")
+        return await eor(event, "__Please give a song name to search.__")
     hell = await eor(event, f"__Searching for__ `{query}`")
     hel_ = await song_search(event, query, max_results, details=True)
     x, title, views, duration, thumb = hel_[0], hel_[1], hel_[2], hel_[3], hel_[4]
-    thumb_name = f'thumb{LOGO1}'
+    thumb_name = f'thumb{ForGo10God}.jpg'
     thumbnail = requests.get(thumb, allow_redirects=True)
     open(thumb_name, 'wb').write(thumbnail.content)
     url = x.replace("\n", "")
@@ -192,8 +129,8 @@ async def _(event):
     os.remove(f"{hell_data['id']}.mp4")
 
 
-@bot.on(admin_cmd(pattern="lyricss(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="lyricss(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="lyrics(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
     hell = kraken.text[8:]
     uwu = await eor(kraken, f"Searching lyrics for  `{hell}` ...")
@@ -213,8 +150,8 @@ async def nope(kraken):
     await owo.delete()
 
 
-@bot.on(admin_cmd(pattern="lsongs ?(.*)"))
-@bot.on(sudo_cmd(pattern="lsongs ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="lsong ?(.*)"))
+@bot.on(sudo_cmd(pattern="lsong ?(.*)", allow_sudo=True))
 async def _(event):
     hell_ = event.text[6:]
     if hell_ == "":
@@ -235,7 +172,7 @@ async def _(event):
         await hell.edit("**ERROR 404 :** __NOT FOUND__")
 
 
-@bot.on(admin_cmd(pattern="wsongs ?(.*)"))
+@bot.on(admin_cmd(pattern="wsong ?(.*)"))
 async def _(event):
     if not event.reply_to_msg_id:
         return await eor(event, "Reply to a mp3 file.")
@@ -265,15 +202,15 @@ async def _(event):
 
 
 CmdHelp("song").add_command(
-  "songs", "<song name>", "Downloads the song from YouTube."
+  "song", "<song name>", "Downloads the song from YouTube."
 ).add_command(
-  "vsongs", "<song name>", "Downloads the Video Song from YouTube."
+  "vsong", "<song name>", "Downloads the Video Song from YouTube."
 ).add_command(
-  "lsongs", "<song name>", "Sends the searched song in current chat.", "lsong Alone"
+  "lsong", "<song name>", "Sends the searched song in current chat.", "lsong Alone"
 ).add_command(
-  "wsongs", "<reply to a song file>", "Searches for the details of replied mp3 song file and uploads it's details."
+  "wsong", "<reply to a song file>", "Searches for the details of replied mp3 song file and uploads it's details."
 ).add_command(
-  "lyricss", "<song name>", "Gives the lyrics of that song.."
+  "lyrics", "<song name>", "Gives the lyrics of that song.."
 ).add_info(
   "Songs & Lyrics."
 ).add_warning(
