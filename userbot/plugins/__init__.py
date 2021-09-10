@@ -5,10 +5,11 @@ from userbot.cmdhelp import CmdHelp
 import datetime
 from telethon import version
 from . import *
-
+from userbot import ALIVE_NAME
 LEGEND_USER = bot.me.first_name
 Legend_Mr_Hacker = bot.uid
 USERID = bot.uid
+ALIVE_NAME = Config.ALIVE_NAME
 legend_mention = f"[{LEGEND_USER}](tg://user?id={Legend_Mr_Hacker})"
 
 lmention = f"<a href = tg://user?id={USERID}>{Config.ALIVE_NAME}</a>"
