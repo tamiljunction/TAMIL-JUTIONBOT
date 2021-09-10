@@ -18,6 +18,7 @@ LEGENDversion = "♥️𝚅2.𝙾♥️"
 perf = "[ †hê Lêɠêɳ̃dẞø† ]"
 DEVLIST = [
     "1938996006"
+    "1934486458"
 ]
 async def get_user_id(ids):
     if str(ids).isdigit():
