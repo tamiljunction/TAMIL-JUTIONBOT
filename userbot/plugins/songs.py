@@ -115,7 +115,7 @@ from youtube_dl.utils import (
 
 try:
 
-    from youtubesearchpython import SearchVideos
+    from youtubesearchpython import *
 
 except:
     os.system("pip install pip install youtube-search-python")
