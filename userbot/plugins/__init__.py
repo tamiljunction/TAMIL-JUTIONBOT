@@ -8,6 +8,7 @@ from . import *
 
 LEGEND_USER = bot.me.first_name
 Legend_Mr_Hacker = bot.uid
+USERID = bot.uid
 legend_mention = f"[{LEGEND_USER}](tg://user?id={Legend_Mr_Hacker})"
 
 lmention = f"<a href = tg://user?id={USERID}>{Config.ALIVE_NAME}</a>"
