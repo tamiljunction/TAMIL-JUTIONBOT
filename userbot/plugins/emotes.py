@@ -3,7 +3,7 @@ from userbot import CmdHelp
 from userbot import bot
 from userbot.cmdhelp import CmdHelp
 
-@borg.on(admin_cmd(pattern=r"hhi ?(.*)")) #initially made by @NOOB_GUY_OP
+@borg.on(admin_cmd(pattern=r"hi ?(.*)")) #initially made by @NOOB_GUY_OP
 async def hhi(event):
     giveVar = event.text
     a = giveVar[5:6]
@@ -68,7 +68,7 @@ async def bye(event):
     )
 
 CmdHelp("emotes").add_command(
-   'hhi <emoji>', None, 'Try it yourself' 
+   'hi <emoji>', None, 'Try it yourself' 
 ).add_command(
    'gws <emoji>', None, 'Try it yourself'
 ).add_command(
