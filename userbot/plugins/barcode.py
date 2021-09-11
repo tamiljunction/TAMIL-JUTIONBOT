@@ -1,6 +1,6 @@
 """BarCode Generator
 Command .barcode (your text)
-By @Legend_Mr_Hacker
+By @Its_LegendBoy
 """
 
 import asyncio

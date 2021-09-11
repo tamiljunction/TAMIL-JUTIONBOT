@@ -92,7 +92,7 @@ async def amireallyalive(alive):
             f"🇮🇳 ℓєgєи∂ϐοτ  : `{LEGENDversion}`\n"
             f"🇮🇳 υρτιмє        : `{uptime}`\n"
             f"🔱 ɱαรƭεɾ        : {mention}\n"
-            f"🔱 σωɳεɾ         : [ℓєgєи∂](t.me/Legend_Mr_Hacker)\n"
+            f"🔱 σωɳεɾ         : [ℓєgєи∂](t.me/Its_LegendBoy)\n"
         )
 
 
@@ -118,7 +118,7 @@ async def legend_a(event):
     try:
         legend = await bot.inline_query(botname, "alive")
         await legend[0].click(event.chat_id)
-        if event.sender_id == Legend_Mr_Hacker:
+        if event.sender_id == Its_LegendBoy:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg)

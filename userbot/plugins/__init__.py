@@ -7,10 +7,10 @@ from telethon import version
 from . import *
 from userbot import ALIVE_NAME
 LEGEND_USER = bot.me.first_name
-Legend_Mr_Hacker = bot.uid
+Its_LegendBoy = bot.uid
 USERID = bot.uid
 ALIVE_NAME = Config.ALIVE_NAME
-legend_mention = f"[{LEGEND_USER}](tg://user?id={Legend_Mr_Hacker})"
+legend_mention = f"[{LEGEND_USER}](tg://user?id={Its_LegendBoy})"
 
 lmention = f"<a href = tg://user?id={USERID}>{Config.ALIVE_NAME}</a>"
 

@@ -1,4 +1,4 @@
-# Echo remastered by @Legend_Mr_Hacker for legendbot
+# Echo remastered by @Its_LegendBoy for legendbot
 # Codes by @mrconfused
 # Kang with credits
 

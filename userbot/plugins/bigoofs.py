@@ -1,11 +1,11 @@
 """Available Commands:
 .bigoof
-Credits to @Legend_Mr_Hacker
+Credits to @Its_LegendBoy
 
    TeleBot
 """
 
-# Main Credits Goes to @Legend_Mr_Hacker
+# Main Credits Goes to @Its_LegendBoy
 # He Worked Very Hard to do this, So Please Respect Him!!
 from telethon import events
 

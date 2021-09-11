@@ -1,4 +1,4 @@
-# Made by @Legend_Mr_Hacker for @LEGEND_Userbot
+# Made by @Its_LegendBoy for @LEGEND_Userbot
 
 from LEGENDBOT.utils import *
 from userbot.cmdhelp import CmdHelp

@@ -26,8 +26,8 @@ logs_id = Config.FBAN_LOGGER_GROUP
 bot = "@MissRose_bot"
 LEGEND_logo = "./LEGEND_logo.jpg"
 # Keep all credits pls
-# madewith great effort by @Legend_Mr_Hacker
-# modified by @Legend_Mr_Hacker for fbans
+# madewith great effort by @Its_LegendBoy
+# modified by @Its_LegendBoy for fbans
 
 
 @LEGENDBOT.on(admin_cmd(pattern="fban ?(.*)"))

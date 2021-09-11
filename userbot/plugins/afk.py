@@ -1,4 +1,4 @@
-# by uniborg...Thanks @Legend_Mr_Hacker
+# by uniborg...Thanks @Its_LegendBoy
 # Now will be used in LEGENDBOT too....
 import asyncio
 import datetime

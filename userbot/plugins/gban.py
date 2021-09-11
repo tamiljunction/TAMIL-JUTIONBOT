@@ -11,7 +11,7 @@ from telethon.utils import get_input_location
 from telethon.events import ChatAction
 from . import *
 
-Legend_Mr_Hacker = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
+Its_LegendBoy = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
 papa = borg.uid
 
 

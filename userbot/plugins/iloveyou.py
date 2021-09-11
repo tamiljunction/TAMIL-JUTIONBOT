@@ -1,4 +1,4 @@
-# PLUGIN MADE BY @Legend_Mr_Hacker FOR LEGENDBOT
+# PLUGIN MADE BY @Its_LegendBoy FOR LEGENDBOT
 # KEEP CREDITS ELSE GAY
 
 import random, re

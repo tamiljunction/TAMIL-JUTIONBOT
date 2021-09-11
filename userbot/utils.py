@@ -1,4 +1,4 @@
-# credits to @Legend_Mr_Hacker 
+# credits to @Its_LegendBoy 
 
 import asyncio
 import datetime
@@ -516,7 +516,7 @@ def errors_handler(func):
 
             text = "**USERBOT CRASH REPORT**\n\n"
 
-            link = "[here](https://t.me/Legend_Mr_Hacker)"
+            link = "[here](https://t.me/Its_LegendBoy)"
             text += "If you wanna you can report it"
             text += f"- just forward this message {link}.\n"
             text += "Nothing is logged except the fact of error and date\n"
