@@ -185,6 +185,8 @@ CmdHelp("memify3").add_command(
 ).add_command(
   "doge", "<text>", "Makes A Sticker of Doge with given text.", "doge Hello"
 ).add_command(
+   "gogl", "<text>", "Makes Sticker"
+).add_command(
   "gg", "<text>", "Makes google search sticker.", "gg Hello"
 ).add_command(
   "honk", "<text>", "Makes a sticker with honka revealing given text.", "honk Hello"
