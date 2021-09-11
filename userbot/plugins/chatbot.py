@@ -16,8 +16,7 @@ from userbot.plugins.sql_helper.chatbot_sql import (
     remove_all_users,
     remove_users,
 )
-from userbot.plugins
-sql_helper.globalss import gvarstatus
+from userbot.plugins.sql_helper.globalss import gvarstatus
 
 
 tired_response = [
