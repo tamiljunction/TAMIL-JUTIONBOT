@@ -217,7 +217,7 @@ async def _(event):
     if event.fwd_from:
         return
     animation_interval = 0.3
-    animation_ttl = range(12)
+    animation_ttl = range(11)
     event = await edit_or_reply(event, "Police")
     animation_chars = [
         "🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵",
@@ -234,7 +234,7 @@ async def _(event):
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
-        await event.edit(animation_chars[i % 12])
+        await event.edit(animation_chars[i % 11])
         
 @bot.on(admin_cmd(pattern=f"hack$", outgoing=True))
 @bot.on(sudo_cmd(pattern=f"hack$", allow_sudo=True))
@@ -455,8 +455,6 @@ CmdHelp("animation2").add_command(
   'hack', None, 'Im a hacker bitch'
 ).add_command(
   'hnd', '<your text>', 'A handy animation with the text,'
-).add_command(
-  'owner', None, 'Use and see'
 ).add_command(
   'padmin', None, 'Prank promote a user'
 ).add()
