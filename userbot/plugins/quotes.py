@@ -367,7 +367,7 @@ async def quote_search(event):
     if response is not None:
         await catevent.edit(f"`{response['text']}`")
     else:
-        await edit_delete(catevent, "`Sorry Zero results found`", 5)
+        await edit_or_reply(catevent, "`Sorry Zero results found`", 5)
 
 CmdHelp("quotes").add_command(
   'quote', None, 'Sends a random mind-blowing quote'
