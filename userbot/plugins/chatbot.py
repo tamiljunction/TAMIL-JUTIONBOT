@@ -6,7 +6,7 @@ from userbot import bot
 
 from userbot.utils import edit_or_reply, admin_cmd, eor, delete_LEGEND
 
-from userbot.helpers.events import get_user_from_event, rs_client
+from userbot.helpers.events import get_user_from_event
 from userbot.plugins.sql_helper.chatbot_sql import (
     addai,
     get_all_users,
