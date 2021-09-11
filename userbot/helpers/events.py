@@ -3,9 +3,9 @@ import base64
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from telethon.tl.types import MessageEntityMentionName
 
-from ...Config import Config
-from ...core.logger import logging
-from ...core.managers import edit_delete
+from userbot.Config import Config
+from userbot.helper.logger import logging
+from userbot.utils import delet_LEGEND
 
 LOGS = logging.getLogger(__name__)
 
