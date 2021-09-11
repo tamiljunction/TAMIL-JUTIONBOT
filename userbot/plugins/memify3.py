@@ -146,6 +146,38 @@ async def nope(kraken):
      await eod(kraken, "Error 404:  Not Found")
 
     
+    
+    
+    
+@bot.on(admin_cmd(pattern="gogl(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="gogl(?: |$)(.*)", allow_sudo=True))
+async def nope(kraken):
+    hell = kraken.pattern_match.group(1)
+    if not hell:
+        if kraken.is_reply:
+            (await kraken.get_reply_message()).message
+        else:
+            if Config.ABUSE == "ON":
+                return await eor(kraken, "Abe chumtiye kuch likhne ke liye de")
+            else:
+                return await eor(kraken, "Need some text...")
+
+    troll = await bot.inline_query("stickerizerbot", f"#12{(deEmojify(hell))}")
+    if troll:
+        await kraken.delete()
+        hel_ = await troll[0].click(Config.LOGGER_ID)
+        if hel_:
+            await bot.send_file(
+                kraken.chat_id,
+                hel_,
+                caption="",
+            )
+        await hel_.delete()
+    else:
+     await eod(kraken, "Error 404:  Not Found")
+
+
+    
 CmdHelp("memify3").add_command(
   "mmf", "<reply to a img/stcr/gif> <upper text> ; <lower text>", "Memifies the replied image/gif/sticker with your text and sends output in sticker format.", "mmf <reply to a img/stcr/gif> hii ; hello"
 ).add_command(
