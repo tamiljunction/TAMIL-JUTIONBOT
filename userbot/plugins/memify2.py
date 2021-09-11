@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 
-legendfont = from userbot.plugins.helpers.styles import *
+from userbot.plugins.helpers.styles import *
 
 
 @bot.on(admin_cmd(pattern=r"mmf ?(.*)"))
