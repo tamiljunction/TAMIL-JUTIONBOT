@@ -326,7 +326,7 @@ async def gbun(event):
     mentions = "**Warning!! User Gmuted By Admin...\n**"
     no_reason = "__Reason: ab sale Globally mute hi rah"
     await event.edit("** Gmutting...**")
-    asyncio.sleep(3.5)
+    asyncio.sleep(2)
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
@@ -376,7 +376,7 @@ async def gbun(event):
     mentions = "**Warning!! User Unmuted By Admin...\n**"
     no_reason = "__Reason: Purani bat Bhool ja wo pakar ke jhool jha"
     await event.edit("**Ungmutting...**")
-    asyncio.sleep(3.5)
+    asyncio.sleep(2)
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
