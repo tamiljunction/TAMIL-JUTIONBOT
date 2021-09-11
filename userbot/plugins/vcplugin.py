@@ -167,7 +167,7 @@ async def _(e):
         )
     except Exception as ex:
         return await eod(xx, f"`{str(ex)}`", time=5)
-CmdHelp("νϲρℓαγєя").add_command(
+CmdHelp("vcplayer").add_command(
     'vcaccess', None, 'Reply to user and access vc'
 ).add_command(
     'rmvaccess', None, 'Reply to useer to denied to access vc'
