@@ -1,5 +1,5 @@
 import random
-
+from telethon import events
 from telethon.utils import get_display_name
 
 from userbot import bot
