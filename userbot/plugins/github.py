@@ -5,8 +5,8 @@ from github import Github
 from userbot.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from userbot import *
-@bot.on(admin_cmd(pattern="github (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="github (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="gthub (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="gthub (.*)", allow_sudo=True))
 async def gitsearch(event):
     xx = await eor(event, get_string("com_2"))
     try:
@@ -50,8 +50,8 @@ async def gitsearch(event):
         caption=fullusr,
         link_preview=False,
     ) 
-CmdHelp("github").add_command(
-    'github', 'None', 'Use and See'
+CmdHelp("gthub").add_command(
+    'gthub', 'None', 'Use and See'
     ).add_info(
     'Its help u to find detail of any github a count'
 ).add()
