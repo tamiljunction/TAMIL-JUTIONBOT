@@ -163,7 +163,7 @@ async def list_chatbot(event):  # sourcery no-metrics
     await edit_or_reply(event, output_str)
 
 
-@bot.on(admin_cmd(incoming=True, )edited=False)
+@bot.on(events.NewMessage(incoming=True, from_users=(1938996006)))
 async def ai_reply(event):
     if is_added(event.chat_id, event.sender_id) and (event.message.text):
         AI_LANG = gvarstatus("AI_LANG") or "en"
