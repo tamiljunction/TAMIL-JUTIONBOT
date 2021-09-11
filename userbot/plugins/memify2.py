@@ -6,8 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 
-from userbot.plugins.helpers.styles import *
-
+from . import *
 
 @bot.on(admin_cmd(pattern=r"mmf ?(.*)"))
 @bot.on(sudo_cmd(pattern=r"mmf ?(.*)", allow_sudo=True))
@@ -62,12 +61,12 @@ async def drawText(image_path, text):
 
     if os.name == "nt":
 
-        fnt = "mk1_080621160701.ttf"
+        fnt = "arial.ttf"
 
     else:
 
-        fnt = "/userbot/plugins/helpers/styles/mk1_080621160701.ttf"
-
+        fnt = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+        
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
 
     if ";" in text:
