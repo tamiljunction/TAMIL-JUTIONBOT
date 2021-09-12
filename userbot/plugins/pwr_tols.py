@@ -43,4 +43,6 @@ CmdHelp("pwr tools").add_command(
   "restart", None, "Restarts your userbot. Reѕtarting Bot may result in better functioning of bot when its laggy"
 ).add_command(
   "shutdown", None, "Turns off Dynos of Userbot. Userbot will stop working unless you manually turn it on from heroku"
+).add_command(
+ "reload", None, "Reload Ur All Plugins "
 ).add()
