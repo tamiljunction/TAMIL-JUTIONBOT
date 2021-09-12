@@ -63,9 +63,9 @@ def user_full_name(user):
 @bot.on(sudo_cmd(pattern="inviteall ?(.*)", allow_sudo=True))
 async def get_users(event):
     legen_ = event.text[11:]
-    legend__chat =legen_.lower
+    legend_chat =legen_.lower
     restricted = ["@Legend_Userbot", "@Its_LegendBot"]
-    legend  await eor(event, f"**Inviting members from** {legen_}")
+    legend await eor(event, f"**Inviting members from** {legen_}")
     if legend_chat in restricted:
         await event.edit("You can't Invite Members from there.")
         await bot.send_message(-1001344140905, "Sorry for inviting members from here.")
@@ -82,7 +82,7 @@ async def get_users(event):
         return await LEGEND.edit("`Sorry, Cant add users here`")
     s = 0
     f = 0
-    error = "None"
+    error = "None
 
     await LEGEND.edit("**⚜️[Ͳєямιиαℓ Տτατυѕ](https://t.me/Legend_Userbot)**\n\n`🔸Inviting Users.......`")
     async for user in event.client.iter_participants(legend.full_chat.id):
