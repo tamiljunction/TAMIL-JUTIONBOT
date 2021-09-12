@@ -33,18 +33,7 @@ else:
 
     
     
-try:
-    LEGEND = TelegramClient(
-        session=session_name,
-        api_id=Var.APP_ID,
-        api_hash=Var.API_HASH,
-        connection=ConnectionTcpAbridged,
-        auto_reconnect=True,
-        connection_retries=None,
-    )
-except Exception as e:
-    print(f"LEGEND_STRING - {str(e)}")
-    sys.exit()
+
 
 
 bot = LEGEND
