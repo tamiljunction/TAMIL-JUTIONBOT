@@ -6,8 +6,8 @@ Telegram :- @Zero_cool7870
 
 """
 from userbot.cmdhelp import CmdHelp
-CmdHelp("check").add_command(
-   'check', None, 'Use And See'
+CmdHelp("checker").add_command(
+   'chek', None, 'Use And See'
 ).add_command(
    'otaup', None, 'Use And See'
 ).add() 
