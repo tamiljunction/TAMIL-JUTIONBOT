@@ -34,6 +34,6 @@ async def _(event):
         parse_mode="HTML",
     )
 
-CmdHelp("cri sco").add_command(
+CmdHelp("cricketsco").add_command(
     'cs', None, 'Cricket Score'
 ).add()
