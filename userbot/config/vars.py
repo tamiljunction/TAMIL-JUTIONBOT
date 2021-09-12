@@ -5,9 +5,9 @@ import os
 ENV = bool(os.environ.get("ENV", False))
 
 if ENV:
-    from legend_config import Config
+    from legendconfig import Config
 else:
-    if os.path.exists("config.py"):
+    if os.path.exists("legendconfig.py"):
         from config import Development as Config
 
 # legendbot
