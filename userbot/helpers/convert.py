@@ -7,7 +7,7 @@ import PIL.ImageOps
 from PIL import Image
 from userbot.Config import Config
 from userbot.utils import edit_or_reply as eor
-from .progress import *
+from userbot.utils import *
 from .runner import runcmd
 # convertions are done here...
 
