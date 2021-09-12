@@ -6,7 +6,7 @@ from userbot.cmdhelp import CmdHelp
 import datetime
 from telethon import version
 from . import *
-from userbot.Config import ALIVE_NAME
+#from userbot.Config import ALIVE_NAME
 LEGEND_USER = bot.me.first_name
 Its_LegendBoy = bot.uid
 USERID = bot.uid
