@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 
 from userbot.plugins.waifu_sql import is_harem, add_grp, rm_grp, get_all_grp
 from . import *
-
+from userbot.utils import admin_cmd, sudo_cmd, eor, edit_or_reply
 qt = "A qt waifu appeared!"
 qt_ = "A waifu appeared!"
 
