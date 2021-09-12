@@ -93,7 +93,7 @@ async def _(event):
             caption=f"**Image Type :** LINE Art \n**Uploaded By :** {mention}",
         )
 
-CmdHelp("αѕϲιι").add_command(
+CmdHelp("ascii").add_command(
   'ascii', 'reply to any image file', 'Makes an image ascii style, try out your own'
 ).add_command(
   'line', 'reply to any image file', 'Makes an image in line style'
