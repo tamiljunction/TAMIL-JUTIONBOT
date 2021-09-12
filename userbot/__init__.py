@@ -47,16 +47,6 @@ except Exception as e:
     sys.exit()
 
 
-LEGENDBOT = TelegramClient(
-    session="LEGEND-TBot",
-    api_id=Var.APP_ID,
-    api_hash=Var.API_HASH,
-    connection=ConnectionTcpAbridged,
-    auto_reconnect=True,
-    connection_retries=None,
-).start(bot_token=Config.BOT_TOKEN)
-
-
 bot = LEGEND
 tbot = LEGENDBOT
 
