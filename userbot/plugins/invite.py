@@ -65,7 +65,7 @@ async def get_users(event):
     legen_ = event.text[11:]
     legend_chat =legen_.lower
     restricted = ["@Legend_Userbot", "@Its_LegendBot"]
-    legend await eor(event, f"**Inviting members from** {legen_}")
+    legend = await eor(event, f"**Inviting members from** {legen_}")
     if legend_chat in restricted:
         await event.edit("You can't Invite Members from there.")
         await bot.send_message(-1001344140905, "Sorry for inviting members from here.")
