@@ -1,27 +1,14 @@
 import os
 import sys
 import time
-import heroku3
-from distutils.util import strtobool as sb
-import asyncio
-
-import pylast
-from pySmartDL import SmartDL
-from requests import get
-from distutils.util import strtobool as sb
-from logging import DEBUG, INFO, basicConfig, getLogger
-
-from telethon import TelegramClient
-from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
+from telethon import TelegramClient
 from userbot.Config import Config
 from var import Var
-
-
 BOTLOG = True
 StartTime = time.time()
-LEGENDversion = "𝚅•2.𝙾"
-botversion = "𝚅•1.𝙾"
+LEGENDversion = "♥️𝚅2.𝙾♥️"
+botversion = "♥️𝚅1.𝙾♥️"
 
 os.system("pip install --upgrade pip")
 if Var.LEGEND_STRING:
@@ -31,17 +18,7 @@ else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
-    
-    
-
-
-
-#bot = LEGEND
-#tbot = LEGENDBOT
-
-DEVS = [
-    "1938996006"
-]
+DEVS = [1938996006]
 CMD_LIST = {}
 # for later purposes
 CMD_HELP = {}
@@ -53,13 +30,17 @@ LOAD_PLUG = {}
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
 
-LEGEND_ID = [
-    "1938996006"
-]
+LEGEND_ID = ["1938996006"]
 
 """ PPE initialization. """
 
+from logging import basicConfig, getLogger, INFO, DEBUG
+from distutils.util import strtobool as sb
+import asyncio
 
+import pylast
+from pySmartDL import SmartDL
+from requests import get
 # Bot Logs setup:
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -229,4 +210,5 @@ AFKREASON = None
 SUDO_LIST = {}
 
 
+from userbot.helpers import *
 from userbot.cmdhelp import CmdHelp
