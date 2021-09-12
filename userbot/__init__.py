@@ -43,7 +43,7 @@ try:
         connection_retries=None,
     )
 except Exception as e:
-    print(f"LEGEND_STRING - {e}")
+    print(f"LEGEND_STRING - {str(e)}")
     sys.exit()
 
 
