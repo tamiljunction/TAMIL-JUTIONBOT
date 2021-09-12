@@ -18,15 +18,15 @@ async def _(event):
     await edit_or_reply(event, result.stringify())
 
 
-@bot.on(admin_cmd(pattern=r"config"))  # pylint:disable=E0602
-@bot.on(sudo_cmd(pattern=r"config", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"owner"))  # pylint:disable=E0602
+@bot.on(sudo_cmd(pattern=r"owner", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
     result = await borg(functions.help.GetConfigRequest())  # pylint:disable=E0602
     result = result.stringify()
     logger.info(result)  # pylint:disable=E0602
-    await event.edit("""Telethon UserBot powered by @Its_LegendBoy""")
+    await event.edit("""This is my master @Its_LegendBoy. Support group~@Legend_Userbot.  Channel~@Its_LegendBoy""")
 
 CmdHelp("bot").add_command(
   "dc", None, "Gets the DataCenter Number"
