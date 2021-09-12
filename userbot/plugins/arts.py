@@ -602,7 +602,7 @@ async def bluedevildislike(dislike):
     await edit_or_reply(dislike, T)
 
 
-CmdHelp("αяτѕορ").add_command(
+CmdHelp("arts").add_command(
   'elove', None, 'Use and see'
 ).add_command(
   'monster', None, 'Use and see'
