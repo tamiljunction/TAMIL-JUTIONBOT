@@ -435,7 +435,7 @@ async def _(event):
         await event.edit(animation_chars[i % 18])
 
 
-CmdHelp("αղíตօյí").add_command(
+CmdHelp("animoji").add_command(
   'think', None, 'Use and see'
 ).add_command(
   'lmao', None, 'Use and see'
