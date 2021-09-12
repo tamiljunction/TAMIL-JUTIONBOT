@@ -14,7 +14,7 @@
 #
 
 
-rm -rf InVade
+rm -rf LEGEND-OS
 git clone https://github.com/LEGEND-OS/LEGENDUSERBOT
 cd LEGENDUSERBOT
 python3 -m userbot
