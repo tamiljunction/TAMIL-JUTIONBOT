@@ -34,3 +34,9 @@ async def _(event):
         else:
             await event.delete()
             await event.client.send_message(event.chat_id, response.message)
+
+
+from userbot.cmdhelp import CmdHelp
+CmdHelp("covids").add_command(
+   'covid', None, '.covid <country name>'
+).add()
