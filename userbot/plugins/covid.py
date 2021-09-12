@@ -29,8 +29,14 @@ async def _(event):
             return
         if response.text.startswith("Country"):
             await event.edit(
-                "😶**Country Not Found**😅\n\n[🔴🔴🔴🔴\n ⏩⏩ How to use ⏪⏪\n🔵🔵🔵🔵](https://t.me/blacklightningot)"
+                "😶**Country Not Found**😅\n\n[🔴🔴🔴🔴\n ⏩⏩ How to use ⏪⏪\n🔵🔵🔵🔵](https://t.me/Legend_Userbot)"
             )
         else:
             await event.delete()
             await event.client.send_message(event.chat_id, response.message)
+
+
+from userbot.cmdhelp import CmdHelp
+CmdHelp("covid").add_command(
+   'covid', None, '.covid country name'
+).add()
