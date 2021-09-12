@@ -1,14 +1,27 @@
 import os
 import sys
 import time
-from telethon.sessions import StringSession
+import heroku3
+from distutils.util import strtobool as sb
+import asyncio
+
+import pylast
+from pySmartDL import SmartDL
+from requests import get
+from distutils.util import strtobool as sb
+from logging import DEBUG, INFO, basicConfig, getLogger
+
 from telethon import TelegramClient
+from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
+from telethon.sessions import StringSession
 from userbot.Config import Config
 from var import Var
+
+
 BOTLOG = True
 StartTime = time.time()
-LEGENDversion = "♥️𝚅2.𝙾♥️"
-botversion = "♥️𝚅1.𝙾♥️"
+LEGENDversion = "𝚅•2.𝙾"
+botversion = "𝚅•1.𝙾"
 
 os.system("pip install --upgrade pip")
 if Var.LEGEND_STRING:
@@ -18,7 +31,38 @@ else:
     session_name = "startup"
     bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
 
-DEVS = [1938996006]
+    
+    
+try:
+    LEGEND = TelegramClient(
+        session=session_name,
+        api_id=Var.APP_ID,
+        api_hash=Var.API_HASH,
+        connection=ConnectionTcpAbridged,
+        auto_reconnect=True,
+        connection_retries=None,
+    )
+except Exception as e:
+    print(f"LEGEND_STRING - {e}")
+    sys.exit()
+
+
+LEGENDBOT = TelegramClient(
+    session="LEGEND-TBot",
+    api_id=Var.APP_ID,
+    api_hash=Var.API_HASH,
+    connection=ConnectionTcpAbridged,
+    auto_reconnect=True,
+    connection_retries=None,
+).start(bot_token=Config.BOT_TOKEN)
+
+
+bot = LEGEND
+tbot = LEGENDBOT
+
+DEVS = [
+    "1938996006"
+]
 CMD_LIST = {}
 # for later purposes
 CMD_HELP = {}
@@ -30,17 +74,13 @@ LOAD_PLUG = {}
 # PaperPlaneExtended Support Vars
 ENV = os.environ.get("ENV", False)
 
-LEGEND_ID = ["1938996006"]
+LEGEND_ID = [
+    "1938996006"
+]
 
 """ PPE initialization. """
 
-from logging import basicConfig, getLogger, INFO, DEBUG
-from distutils.util import strtobool as sb
-import asyncio
 
-import pylast
-from pySmartDL import SmartDL
-from requests import get
 # Bot Logs setup:
 if bool(ENV):
     CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
