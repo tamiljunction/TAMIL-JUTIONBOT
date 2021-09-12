@@ -39,6 +39,6 @@ async def _(event):
         await event.edit(
             animation_chars[i % 17], link_preview=True
         ) 
-CmdHelp("ϐιяτн∂αγ").add_command(
+CmdHelp("birthday").add_command(
     'hbd', None, 'For Wishing Happy Birthday'
 ).add()
