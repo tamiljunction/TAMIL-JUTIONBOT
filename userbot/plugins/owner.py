@@ -28,8 +28,8 @@ async def _(event):
     logger.info(result)  # pylint:disable=E0602
     await event.edit("""This is my master @Its_LegendBoy. Support group~@Legend_Userbot.  Channel~@Its_LegendBoy""")
 
-CmdHelp("bot").add_command(
+CmdHelp("owner").add_command(
   "dc", None, "Gets the DataCenter Number"
 ).add_command(
-  "config", None, "😒"
+  "owner", None, "😒"
 ).add()
