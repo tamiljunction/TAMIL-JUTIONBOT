@@ -3,7 +3,7 @@ import random
 import time
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
-
+from userbot.Config import Config
 from telethon import version
 from userbot import ALIVE_NAME, StartTime, LEGENDversion
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
@@ -108,7 +108,7 @@ msg = f"""
 **•🌹•✞︎ҽ̀lҽ́ƭhøղ  :** {version.__version__}
 **•🌹•Ãbûßê     :**  {abuse_m}
 **•🌹•ßudø      :**  {is_sudo}
-**
+**•🌹•Bøt.      :** {Config.BOY_OR_GIRL}
 """
 botname = Config.BOT_USERNAME
 
@@ -123,6 +123,6 @@ async def legend_a(event):
     except (noin, dedbot):
         await eor(event, msg)
 
-CmdHelp("botstats").add_command(
+CmdHelp("alive").add_command(
     'bot', None, 'υѕє αи∂ ѕєє'
 ).add()
