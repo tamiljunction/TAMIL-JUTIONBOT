@@ -600,6 +600,6 @@ async def _(event):
 
 from userbot.cmdhelp import CmdHelp
 
-CmdHelp("bibical").add_command(
+CmdHelp("biblical").add_command(
    'bbl', None, 'Say Something From Holy Bible'
 ).add() 
