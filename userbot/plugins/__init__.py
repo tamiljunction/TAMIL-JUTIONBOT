@@ -1,32 +1,23 @@
 from userbot import *
 from userbot.utils import *
-from userbot.helpers import *
 from userbot.Config import Config
 from userbot.cmdhelp import CmdHelp
 import datetime
 from telethon import version
 from . import *
-#from userbot.Config import ALIVE_NAME
 LEGEND_USER = bot.me.first_name
-Its_LegendBoy = bot.uid
-USERID = bot.uid
-ALIVE_NAME = Config.ALIVE_NAME
-legend_mention = f"[{LEGEND_USER}](tg://user?id={Its_LegendBoy})"
-
-lmention = f"<a href = tg://user?id={USERID}>{Config.ALIVE_NAME}</a>"
-
-
+Legend_Mr_Hacker = bot.uid
+legend_mention = f"[{LEGEND_USER}](tg://user?id={Legend_Mr_Hacker})"
 LEGEND_logo = "./userbot/resources/pics/-6163428037589314866_121.jpg"
 LEGEND_logo1 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 LEGEND_logo2 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 LEGEND_logo4 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
 LEGEND_logo3 = "./userbot/resources/pics/-4965507108355287505_121.jpg"
-LEGENDversion = "𝚅2.𝙾"
+LEGENDversion = "♥️𝚅2.𝙾♥️"
 
-perf = "[ †hê Lêɠêɳ̃dẞø† ]"
+
 DEVLIST = [
     "1938996006"
-    "1934486458"
 ]
 async def get_user_id(ids):
     if str(ids).isdigit():
