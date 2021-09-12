@@ -229,5 +229,4 @@ AFKREASON = None
 SUDO_LIST = {}
 
 
-from userbot.helpers import *
 from userbot.cmdhelp import CmdHelp
