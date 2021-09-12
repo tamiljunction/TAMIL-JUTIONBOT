@@ -32,8 +32,14 @@ async def _(event):
     else:
         sys.exit(0)
 
+@bot.on(admin_cmd(pattern="reload$"))
+@bot.on(sudo_cmd(pattern="reload$", allow_sudo=True))
+async def rel(event):
+    await eor(event, "Reloading Lêɠêɳ̃dẞø†... Wait for few seconds...")
+    await reload_LEGENDBOT()
 
-CmdHelp("ρωя τοℓѕ").add_command(
+
+CmdHelp("pwr tools").add_command(
   "restart", None, "Restarts your userbot. Reѕtarting Bot may result in better functioning of bot when its laggy"
 ).add_command(
   "shutdown", None, "Turns off Dynos of Userbot. Userbot will stop working unless you manually turn it on from heroku"
