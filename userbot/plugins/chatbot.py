@@ -3,7 +3,7 @@ from telethon import events
 from telethon.utils import get_display_name
 
 from userbot import bot
-
+from userbot.cmdhelp import CmdHelp
 from userbot.utils import edit_or_reply, admin_cmd, eor, delete_LEGEND
 
 from userbot.helpers.events import get_user_from_event
@@ -181,3 +181,14 @@ async def ai_reply(event):
         except Exception as e:
             LOGS.error(str(e))
             await event.reply(random.choice(tired_response))
+
+
+CmdHelp("chatbot").add_command(
+   'addai', None, 'add ai bot'
+).add_command(
+   'rmvai', None, 'remove ai'
+).add_command(
+   'listai', None, 'list ai'
+).add_command(
+    'delai', None, 'delte ai'
+).add()
