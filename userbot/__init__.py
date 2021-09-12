@@ -16,7 +16,7 @@ from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 from userbot.Config import Config
 from var import Var
-LEGEND_STRING = Var.LEGEND_STRING
+
 
 BOTLOG = True
 StartTime = time.time()
