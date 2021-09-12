@@ -3,9 +3,6 @@ import os
 
 from youtube_search import YoutubeSearch
 
-from userbot.utils import delete_LEGEND as eod
-
-
 # Gets yt link of given query.
 async def song_search(event, query, max_results, details=False):
     try:
