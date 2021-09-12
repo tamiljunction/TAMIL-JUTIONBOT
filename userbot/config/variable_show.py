@@ -1,4 +1,4 @@
-config_list = [
+variable_list = [
     "ALIVE_MSG",
     "ALIVE_PIC",
     "AWAKE_PIC",
