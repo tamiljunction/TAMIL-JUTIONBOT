@@ -1,8 +1,13 @@
 import asyncio
 import functools
+import os
 import shlex
+import sys
 from typing import Tuple
+from uuid import uuid4
 
+def rand_key():
+    return str(uuid4())[:8]
 
 async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
     args = shlex.split(cmd)
@@ -27,5 +32,11 @@ def run_sync(func, *args, **kwargs):
 def run_async(loop, coro):
     return asyncio.run_coroutine_threadsafe(coro, loop).result()
 
+
+async def reload_LEGENDBOT():
+    executable = sys.executable.replace(" ", "\\ ")
+    args = [executable, "-m", "userbot"]
+    os.execle(executable, *args, os.environ)
+    os._exit(143)
 
 # legendbot
