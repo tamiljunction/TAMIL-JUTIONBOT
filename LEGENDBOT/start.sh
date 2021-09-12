@@ -10,11 +10,7 @@
 #   See the GNU General Public License for more details.
 #
 #   You should have received a copy of the GNU General Public License along with this program. 
-#   If not, see <https://www.gnu.org/licenses/>.
-#
+#   If not, see 
 
 
-rm -rf LEGEND-OS
-git clone https://github.com/LEGEND-OS/LEGENDUSERBOT
-cd LEGENDUSERBOT
 python3 -m userbot
