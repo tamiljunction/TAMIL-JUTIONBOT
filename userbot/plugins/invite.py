@@ -82,7 +82,7 @@ async def get_users(event):
         return await LEGEND.edit("`Sorry, Cant add users here`")
     s = 0
     f = 0
-    error = "None
+    error = "None"
 
     await LEGEND.edit("**⚜️[Ͳєямιиαℓ Տτατυѕ](https://t.me/Legend_Userbot)**\n\n`🔸Inviting Users.......`")
     async for user in event.client.iter_participants(legend.full_chat.id):
