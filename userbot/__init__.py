@@ -36,8 +36,8 @@ else:
 
 
 
-bot = LEGEND
-tbot = LEGENDBOT
+#bot = LEGEND
+#tbot = LEGENDBOT
 
 DEVS = [
     "1938996006"
