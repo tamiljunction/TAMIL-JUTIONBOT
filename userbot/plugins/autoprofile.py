@@ -103,7 +103,7 @@ async def mine(event):
     await edit_or_reply(event, output_str)
 
 
-CmdHelp("αυτο").add_command(
+CmdHelp("autoprofile").add_command(
   'autobio', None, 'ϲhanges your bio with time. Need to set BIO_MSG in heroku vars(optional)'
 ).add_command(
   'autoname', None, 'Changes your name with time according to your ALIVE_NAME in heroku var'
