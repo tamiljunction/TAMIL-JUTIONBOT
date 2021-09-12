@@ -5,16 +5,16 @@ from . import *
 @bot.on(admin_cmd(pattern="byeall"))
 async def _(event):
 	await event.edit("Guys I Gotta Go!")
-	await asyncio.sleep(1)
+	await asyncio.sleep(3)
 	await event.edit("""
-	
-┏━━┳┓╋╋┏┳━━━┓
-┃┏┓┃┗┓┏┛┃┏━━┛
-┃┗┛┗┓┗┛┏┫┗━━┓
-┃┏━┓┣┓┏┛┃┏━━┛
-┃┗━┛┃┃┃╋┃┗━━┓
-┗━━━┛┗┛╋┗━━━┛
+╭━━┳╮╱╱╭┳━━━┳━━━┳╮╱╱╭╮
+┃╭╮┃╰╮╭╯┃╭━━┫╭━╮┃┃╱╱┃┃
+┃╰╯╰╮╰╯╭┫╰━━┫┃╱┃┃┃╱╱┃┃
+┃╭━╮┣╮╭╯┃╭━━┫╰━╯┃┃╱╭┫┃╱╭╮
+┃╰━╯┃┃┃╱┃╰━━┫╭━╮┃╰━╯┃╰━╯┃
+╰━━━╯╰╯╱╰━━━┻╯╱╰┻━━━┻━━━╯
+       [⚡️»»»『†hê~Lêɠêɳ̃dẞø†』«««⚡️](https://t.me/Legend_Userbot)
 """)
-CmdHelp("bye").add_command(
+CmdHelp("byeall").add_command(
 	'byeall', None, 'Say Bye to U all in anmation'
 ).add()
