@@ -1,7 +1,7 @@
 """
 Files Batch Uploader Plugin for userbot.
 usage:- .upb 
-Note:- set TEMP_DIR in Your ENV Vars First.
+Note:- .
 By:-@Zero_cool7870	
 
 """
@@ -26,11 +26,11 @@ async def batch_upload(event):
     else:
         await event.edit("Directory Not Found.")
         return
-    await event.edit("Successfull.")
+    await event.edit("Successfully.")
 
-from userbot import CmdHelp
+from userbot.cmdhelp import CmdHelp
 
 
 CmdHelp("batch").add_command(
-    'upb', None, 'Files batch uploader'
+    'upb', None, 'set TEMP_DIR in Your ENV Vars First'
 )
