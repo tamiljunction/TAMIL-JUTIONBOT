@@ -15,3 +15,8 @@ async def _(event):
         await event.edit(the_real_message)
     else:
         await event.edit("Reply to a  message .cop to copy nd paste ")
+
+
+CmdHelp("copy").add_command(
+   'cop', None, 'Use and See'
+).add()
