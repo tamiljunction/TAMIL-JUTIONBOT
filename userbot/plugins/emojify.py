@@ -3,7 +3,7 @@ from userbot import bot
 
 from userbot.utils import edit_or_reply ,admin_cmd 
 from userbot.helpers import fonts as emojify
-
+from userbot.cmdhelp import CmdHelp
 
 @bot.on(admin_cmd(pattern=r"emotes ?(.*)"))
 async def itachi(event):
@@ -53,3 +53,11 @@ async def itachi(event):
         else:
             result += a
     await edit_or_reply(event, result)
+
+  
+CmdHelp("emojify").add_command(
+    "emotes", "<text>", "Use and See"
+).add_command(
+    "cemotes", "<text>", "Use and See"
+).add()
+    
