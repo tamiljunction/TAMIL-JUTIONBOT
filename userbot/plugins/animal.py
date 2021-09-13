@@ -14,8 +14,8 @@ M = (
 
 
 @borg.on(admin_cmd(pattern=r"spong"))
-async def kek(admin):
-    await borg.edit(M)
+async def kek(kek):
+    await kek.edit(M)
 
     D = (
         "╭━┳━╭━╭━╮╮\n"
