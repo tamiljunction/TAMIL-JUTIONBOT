@@ -38,7 +38,8 @@ async def install(event):
             await edit_or_reply(LEGEND_file, f"Output Too Large. This is the file for the list of plugins in LEGENDBOT.\n\n**BY :-** {DEFAULTUSER}")
             await event.delete()
 
-from userbot.cmdhelp import CmdHelp(
+from userbot.cmdhelp import CmdHelp
+
 CmdHelp("listcmnd").add_command(
    'listcmnd', None, 'to see all cmnd list'
 ).add()
