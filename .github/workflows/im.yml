@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "Legend_Mr_Hacker"
+          find: "bot.on"
 
-          replace: "Its_LegendBoy"
+          replace: "LEGEND.on"
 
       - name: Create Pull Request
 
