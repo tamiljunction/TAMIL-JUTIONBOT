@@ -12,7 +12,7 @@ from telethon.tl.functions.channels import ExportMessageLinkRequest as ExpLink
 from telethon.tl.types import Chat, ChatAdminRights, InputMessagesFilterPinned
 
 from . import *
-CmdHelp("fll prom").add_command(
+CmdHelp("fullpromo").add_command(
     "fullpromote", None, "to give full promote to anyone with all rights"
 ).add()
 
