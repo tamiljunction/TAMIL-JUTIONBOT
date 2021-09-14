@@ -11,8 +11,8 @@ from telethon.utils import get_input_location
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 
-@bot.on(admin_cmd(pattern="info ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="info ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="info ?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="info ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

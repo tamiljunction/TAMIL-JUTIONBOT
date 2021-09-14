@@ -19,8 +19,8 @@ if not os.path.isdir("./temp"):
     os.makedirs("./temp")
 
 
-@bot.on(admin_cmd(pattern="stoi$"))
-@bot.on(sudo_cmd(pattern="stoi$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="stoi$"))
+@LEGEND.on(sudo_cmd(pattern="stoi$", allow_sudo=True))
 async def _(LEGEND):
     if LEGEND.fwd_from:
         return
@@ -54,8 +54,8 @@ async def _(LEGEND):
         await event.edit("Syntax : `.stoi` reply to a Telegram normal sticker")
 
 
-@bot.on(admin_cmd(pattern="itos$"))
-@bot.on(sudo_cmd(pattern="itos$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="itos$"))
+@LEGEND.on(sudo_cmd(pattern="itos$", allow_sudo=True))
 async def _(LEGEND):
     if LEGEND.fwd_from:
         return
@@ -96,8 +96,8 @@ async def silently_send_message(conv, text):
     return response
 
 
-@bot.on(admin_cmd(pattern="ttf ?(.*)"))
-@bot.on(sudo_cmd(pattern="ttf ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="ttf ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="ttf ?(.*)", allow_sudo=True))
 async def get(event):
     if event.fwd_from:
         return
@@ -116,8 +116,8 @@ async def get(event):
         await edit_or_reply(event, "reply to text message as `.ttf <file name>`")
 
 
-@bot.on(admin_cmd(pattern="ftoi$"))
-@bot.on(sudo_cmd(pattern="ftoi$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="ftoi$"))
+@LEGEND.on(sudo_cmd(pattern="ftoi$", allow_sudo=True))
 async def on_file_to_photo(event):
     if event.fwd_from:
         return
@@ -152,8 +152,8 @@ async def on_file_to_photo(event):
     await hbot.delete()
 
 
-@bot.on(admin_cmd(pattern="gif$"))
-@bot.on(sudo_cmd(pattern="gif$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="gif$"))
+@LEGEND.on(sudo_cmd(pattern="gif$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -205,8 +205,8 @@ async def _(event):
             return
 
 
-@bot.on(admin_cmd(pattern="nfc ?(.*)"))
-@bot.on(sudo_cmd(pattern="nfc ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="nfc ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="nfc ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

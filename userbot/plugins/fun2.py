@@ -8,8 +8,8 @@ from userbot import LOGS
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-@bot.on(admin_cmd(pattern="join$", outgoing=True))
-@bot.on(sudo_cmd(pattern="join$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="join$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="join$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -25,8 +25,8 @@ async def _(event):
         await edit_or_reply(event, mentions)
 
 
-@bot.on(admin_cmd(pattern="pay$", outgoing=True))
-@bot.on(sudo_cmd(pattern="pay$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="pay$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="pay$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -42,8 +42,8 @@ async def _(event):
         await edit_or_reply(event, mentions)
   
 
-@bot.on(admin_cmd(pattern="climb$", outgoing=True))
-@bot.on(sudo_cmd(pattern="climb$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="climb$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="climb$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -59,8 +59,8 @@ async def _(event):
         await edit_or_reply(event, mentions)
   
 
-@bot.on(admin_cmd(pattern="aag$", outgoing=True))
-@bot.on(sudo_cmd(pattern="aag$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="aag$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="aag$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -76,8 +76,8 @@ async def _(event):
         await edit_or_reply(event, mentions)
     
 
-@bot.on(admin_cmd(pattern="push$", outgoing=True))
-@bot.on(sudo_cmd(pattern="push$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="push$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="push$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -93,8 +93,8 @@ async def _(event):
         await edit_or_reply(event, mentions)
     
 
-@bot.on(admin_cmd(pattern="work$", outgoing=True))
-@bot.on(sudo_cmd(pattern="work$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="work$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="work$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -110,8 +110,8 @@ async def _(event):
         await edit_or_reply(event, mentions)
     
 
-@bot.on(admin_cmd(pattern="suckit$", outgoing=True))
-@bot.on(sudo_cmd(pattern="suckit$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="suckit$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="suckit$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -127,8 +127,8 @@ async def _(event):
         await edit_or_reply(event, mentions)
    
 
-@bot.on(admin_cmd(pattern="ohh$", outgoing=True))
-@bot.on(sudo_cmd(pattern="ohh$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="ohh$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="ohh$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -144,8 +144,8 @@ async def _(event):
         await edit_or_reply(event, mentions)
   
 
-@bot.on(admin_cmd(pattern="lovestory$", outgoing=True))
-@bot.on(sudo_cmd(pattern="lovestory$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="lovestory$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="lovestory$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -174,8 +174,8 @@ async def _(event):
         await event.edit(animation_chars[i % 103])
 
 
-@bot.on(admin_cmd(pattern="bf$", outgoing=True))
-@bot.on(sudo_cmd(pattern="bf$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="bf$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="bf$", allow_sudo=True))
 async def pressf(f):
     if f.fwd_from:
         return
@@ -200,8 +200,8 @@ async def pressf(f):
         await edit_or_reply(f"`" + out + "`")
 
 
-@bot.on(admin_cmd(pattern="session$", outgoing=True))
-@bot.on(sudo_cmd(pattern="session$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="session$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="session$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

@@ -34,8 +34,8 @@ from userbot.cmdhelp import CmdHelp
 from . import *
 
 
-@bot.on(admin_cmd(pattern="threats(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="threats(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="threats(?: |$)(.*)"))
+@LEGEND.on(sudo_cmd(pattern="threats(?: |$)(.*)", allow_sudo=True))
 async def LEGENDBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
     if not os.path.isdir("./temp/"):
@@ -87,8 +87,8 @@ async def LEGENDBOT(LEGENDmemes):
     await LEGENDmemes.client.send_file(LEGENDmemes.chat_id, LEGEND, reply_to=replied)
 
 
-@bot.on(admin_cmd(pattern="trash(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="trash(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="trash(?: |$)(.*)"))
+@LEGEND.on(sudo_cmd(pattern="trash(?: |$)(.*)", allow_sudo=True))
 async def LEGENDBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
     if not os.path.isdir("./temp/"):
@@ -140,8 +140,8 @@ async def LEGENDBOT(LEGENDmemes):
     await LEGENDmemes.client.send_file(LEGENDmemes.chat_id, LEGEND, reply_to=replied)
 
 
-@bot.on(admin_cmd(pattern="trap(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="trap(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="trap(?: |$)(.*)"))
+@LEGEND.on(sudo_cmd(pattern="trap(?: |$)(.*)", allow_sudo=True))
 async def LEGENDBOT(LEGENDmemes):
     input_str = LEGENDmemes.pattern_match.group(1)
     input_str = deEmojify(input_str)
@@ -203,8 +203,8 @@ async def LEGENDBOT(LEGENDmemes):
     await LEGENDmemes.client.send_file(LEGENDmemes.chat_id, LEGEND, reply_to=replied)
 
 
-@bot.on(admin_cmd(pattern="phc(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="phc(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="phc(?: |$)(.*)"))
+@LEGEND.on(sudo_cmd(pattern="phc(?: |$)(.*)", allow_sudo=True))
 async def LEGENDBOT(LEGENDmemes):
     input_str = LEGENDmemes.pattern_match.group(1)
     input_str = deEmojify(input_str)

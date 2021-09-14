@@ -11,7 +11,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp 
 
-@bot.on(admin_cmd("tti ?(.*)"))
+@LEGEND.on(admin_cmd("tti ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -39,7 +39,7 @@ async def _(event):
             await event.edit("**Error:** `unblock` @HK_tiktok_BOT `and retry!`")
             
 
-@bot.on(admin_cmd("ttv ?(.*)"))
+@LEGEND.on(admin_cmd("ttv ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -67,7 +67,7 @@ async def _(event):
             await event.edit("**Error:** `unblock` @HK_tiktok_BOT `and retry!`")
             
 
-@bot.on(admin_cmd("wttv ?(.*)"))
+@LEGEND.on(admin_cmd("wttv ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

@@ -67,8 +67,8 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ================================================
 
 
-@bot.on(admin_cmd(pattern=f"zombies ?(.*)"))
-@bot.on(sudo_cmd(pattern="zombies ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"zombies ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="zombies ?(.*)", allow_sudo=True))
 async def rm_deletedacc(show):
     if show.fwd_from:
         return

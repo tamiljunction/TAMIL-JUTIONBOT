@@ -4,8 +4,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern=r"gf$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"gf$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"gf$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"gf$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -39,8 +39,8 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 21])
 
-@bot.on(admin_cmd(pattern=r"mom$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"mom$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"mom$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"mom$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

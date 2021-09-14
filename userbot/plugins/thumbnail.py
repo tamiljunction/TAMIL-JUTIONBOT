@@ -42,8 +42,8 @@ def get_video_thumb(file, output=None, width=320):
         return output
 
 
-@bot.on(admin_cmd(pattern="sthumb", outgoing=True))
-@bot.on(sudo_cmd(pattern="sthumb", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="sthumb", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="sthumb", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -78,8 +78,8 @@ async def _(event):
         await edit_or_reply(event, "Reply to a photo to save custom thumbnail")
 
 
-@bot.on(admin_cmd(pattern="cthumb", outgoing=True))
-@bot.on(sudo_cmd(pattern="cthumb", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="cthumb", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="cthumb", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -88,8 +88,8 @@ async def _(event):
     await edit_or_reply(event, "✅ Custom thumbnail cleared succesfully.")
 
 
-@bot.on(admin_cmd(pattern="gthumb", outgoing=True))
-@bot.on(sudo_cmd(pattern="gthumb", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="gthumb", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="gthumb", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

@@ -7,8 +7,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="stt (.*)"))
-@bot.on(sudo_cmd(pattern="stt (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="stt (.*)"))
+@LEGEND.on(sudo_cmd(pattern="stt (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

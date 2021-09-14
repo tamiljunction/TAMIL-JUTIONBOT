@@ -10,8 +10,8 @@ from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot import *
 from userbot.cmdhelp import CmdHelp
 
-@bot.on(admin_cmd(pattern="exec(?: |$|\n)(.*)", command="exec"))
-@bot.on(sudo_cmd(pattern="exec(?: |$|\n)(.*)", command="exec", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="exec(?: |$|\n)(.*)", command="exec"))
+@LEGEND.on(sudo_cmd(pattern="exec(?: |$|\n)(.*)", command="exec", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -47,8 +47,8 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern="eval(?: |$|\n)(.*)", command="eval"))
-@bot.on(sudo_cmd(pattern="eval(?: |$|\n)(.*)", command="eval", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="eval(?: |$|\n)(.*)", command="eval"))
+@LEGEND.on(sudo_cmd(pattern="eval(?: |$|\n)(.*)", command="eval", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -105,8 +105,8 @@ async def aexec(code, smessatatus):
     )
 
 
-@bot.on(admin_cmd(pattern="bash ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="bash ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="bash ?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="bash ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

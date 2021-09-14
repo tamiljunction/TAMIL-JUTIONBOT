@@ -9,8 +9,8 @@ from . import *
 
 
 
-@bot.on(admin_cmd(pattern="insta (.*)"))
-@bot.on(sudo_cmd(pattern="insta (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="insta (.*)"))
+@LEGEND.on(sudo_cmd(pattern="insta (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

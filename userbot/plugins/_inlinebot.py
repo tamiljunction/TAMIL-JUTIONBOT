@@ -100,7 +100,7 @@ def button(page, modules):
 
     modules = CMD_HELP
 if Config.BOT_USERNAME is not None and tgbot is not None:
-    @tgbot.on(InlineQuery)  # pylint:disable=E0602
+    @tgLEGEND.on(InlineQuery)  # pylint:disable=E0602
     async def inline_handler(event):
         builder = event.builder
         result = None
@@ -245,7 +245,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         await event.answer([result] if result else None)
 
 
-    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
+    @tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"pmclick")))
     async def on_pm_click(event):
         if event.query.user_id == bot.uid:
             reply_pop_up_alert = "This is for Other Users..."
@@ -255,7 +255,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 f"🔰 This is Lêɠêɳ̃dẞø† PM Security for {legend_mention} to keep away unwanted retards from spamming PM..."
             )
 
-    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"req")))
+    @tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"req")))
     async def on_pm_click(event):
         if event.query.user_id == bot.uid:
             reply_pop_up_alert = "This is for other users!"
@@ -273,7 +273,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await bot.send_message(LOG_GP, tosend)
 
 
-    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"chat")))
+    @tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"chat")))
     async def on_pm_click(event):
         event.query.user_id
         if event.query.user_id == bot.uid:
@@ -292,7 +292,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await bot.send_message(LOG_GP, tosend)
 
 
-    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
+    @tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"heheboi")))
     async def on_pm_click(event):
         if event.query.user_id == bot.uid:
             reply_pop_up_alert = "This is for other users!"
@@ -314,7 +314,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
 
 
-    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"unmute")))
+    @tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"unmute")))
     async def on_pm_click(event):
         hunter = (event.data_match.group(1)).decode("UTF-8")
         legend = hunter.split("+")
@@ -332,7 +332,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         await event.edit("Yay! You can chat now !!")
 
 
-    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"reopen")))
+    @tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"reopen")))
     async def reopn(event):
             if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
                 current_page_number=0
@@ -352,7 +352,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
         
 
-    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"close")))
+    @tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid or event.query.user_id in Config.SUDO_USERS:
             veriler = custom.Button.inline(f"{legend_emoji1} Re-Open Menu {legend_emoji2}", data="reopen")
@@ -362,7 +362,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
    
 
-    @tgbot.on(callbackquery.CallbackQuery(data=compile(b"page\((.+?)\)")))
+    @tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"page\((.+?)\)")))
     async def page(event):
         page = int(event.data_match.group(1).decode("UTF-8"))
         veriler = button(page, CMD_HELP)
@@ -384,7 +384,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
 
 
-    @tgbot.on(
+    @tgLEGEND.on(
         callbackquery.CallbackQuery(data=compile(b"Information\[(\d*)\]\((.*)\)"))
     )
     async def Information(event):
@@ -418,7 +418,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             )
 
 
-    @tgbot.on(
+    @tgLEGEND.on(
         callbackquery.CallbackQuery(data=compile(b"commands\[(.*)\[(\d*)\]\]\((.*)\)"))
     )
     async def commands(event):

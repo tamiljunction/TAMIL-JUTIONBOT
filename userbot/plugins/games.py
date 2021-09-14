@@ -37,8 +37,8 @@ async def _(event):
             await event.edit(animation_chars[i % 14])
 
 
-@bot.on(admin_cmd(pattern="xogame$", outgoing=True))
-@bot.on(sudo_cmd(pattern="xogame$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="xogame$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="xogame$", allow_sudo=True))
 async def gamez(event):
     if event.fwd_from:
         return

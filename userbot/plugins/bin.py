@@ -7,7 +7,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd as admin_cmd
 from userbot.cmdhelp import CmdHelp
-@bot.on(admin_cmd(pattern="bin ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="bin ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 
@@ -30,7 +30,7 @@ async def _(event):
     await bot(functions.messages.DeleteHistoryRequest(peer=chat, max_id=0))
     await event.delete()
 
-@bot.on(admin_cmd(pattern="vbv ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="vbv ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 
@@ -54,7 +54,7 @@ async def _(event):
     await bot(functions.messages.DeleteHistoryRequest(peer=chat, max_id=0))
     await event.delete()
     
-@bot.on(admin_cmd(pattern="key ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="key ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 
@@ -77,7 +77,7 @@ async def _(event):
     await bot(functions.messages.DeleteHistoryRequest(peer=chat, max_id=0))
     await event.delete()
   
-@bot.on(admin_cmd(pattern="iban ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="iban ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 

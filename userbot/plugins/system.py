@@ -4,8 +4,8 @@ from userbot import CMD_HELP
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-@bot.on(admin_cmd(pattern=f"quickheal$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"quickheal$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"quickheal$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"quickheal$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -30,8 +30,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@bot.on(admin_cmd(pattern=f"sqh$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"sqh$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"sqh$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"sqh$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -56,8 +56,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@bot.on(admin_cmd(pattern=f"vquickheal$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"vquickheal$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"vquickheal$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"vquickheal$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -82,8 +82,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@bot.on(admin_cmd(pattern=f"macos$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"macos$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"macos$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"macos$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -108,8 +108,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@bot.on(admin_cmd(pattern=f"windows$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"windows$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"windows$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"windows$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -134,8 +134,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@bot.on(admin_cmd(pattern=f"linux$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"linux$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"linux$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"linux$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -160,8 +160,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@bot.on(admin_cmd(pattern=f"stock$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"stock$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"stock$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"stock$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -186,8 +186,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@bot.on(admin_cmd(pattern=f"os$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"os$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"os$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"os$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

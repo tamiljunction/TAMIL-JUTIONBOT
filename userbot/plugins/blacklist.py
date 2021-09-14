@@ -17,7 +17,7 @@ from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(events.NewMessage(incoming=True))
+@LEGEND.on(events.NewMessage(incoming=True))
 async def on_new_message(event):
     if event.fwd_from:
         return
@@ -35,8 +35,8 @@ async def on_new_message(event):
             break
 
 
-@bot.on(admin_cmd(pattern="addblacklist ((.|\n)*)"))
-@bot.on(sudo_cmd(pattern="addblacklist ((.|\n)*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="addblacklist ((.|\n)*)"))
+@LEGEND.on(sudo_cmd(pattern="addblacklist ((.|\n)*)", allow_sudo=True))
 async def on_add_black_list(event):
     if event.fwd_from:
         return
@@ -55,8 +55,8 @@ async def on_add_black_list(event):
     )
 
 
-@bot.on(admin_cmd(pattern="rmblacklist ((.|\n)*)"))
-@bot.on(sudo_cmd(pattern="rmblacklist ((.|\n)*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="rmblacklist ((.|\n)*)"))
+@LEGEND.on(sudo_cmd(pattern="rmblacklist ((.|\n)*)", allow_sudo=True))
 async def on_delete_blacklist(event):
     if event.fwd_from:
         return
@@ -76,8 +76,8 @@ async def on_delete_blacklist(event):
     )
 
 
-@bot.on(admin_cmd(pattern="listblacklist$"))
-@bot.on(sudo_cmd(pattern="listblacklist$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="listblacklist$"))
+@LEGEND.on(sudo_cmd(pattern="listblacklist$", allow_sudo=True))
 async def on_view_blacklist(event):
     if event.fwd_from:
         return

@@ -14,8 +14,8 @@ from userbot.cmdhelp import CmdHelp
 # RegEx by https://t.me/c/1220993104/50065
 
 
-@bot.on(admin_cmd(pattern="waifu(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="waifu(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="waifu(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="waifu(?: |$)(.*)", allow_sudo=True))
 async def waifu(animu):
     # """Creates random anime sticker!"""
 
@@ -39,8 +39,8 @@ async def waifu(animu):
     await animu.delete()
 
 
-@bot.on(admin_cmd(pattern=r"stcr ?(?:(.*?) \| )?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"stcr ?(?:(.*?) \| )?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"stcr ?(?:(.*?) \| )?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"stcr ?(?:(.*?) \| )?(.*)", allow_sudo=True))
 async def sticklet(event):
     R = random.randint(0, 256)
     G = random.randint(0, 256)

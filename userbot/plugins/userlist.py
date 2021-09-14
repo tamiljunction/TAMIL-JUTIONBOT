@@ -5,8 +5,8 @@ from telethon.errors.rpcerrorlist import MessageTooLongError
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-@bot.on(admin_cmd(pattern=r"userlist ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"userlist ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"userlist ?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"userlist ?(.*)", allow_sudo=True))
 async def get_users(show):
     """ For .userslist command, list all of the users of the chat. """
     if not show.text[0].isalpha() and show.text[0] not in ("/", "#", "@", "!"):

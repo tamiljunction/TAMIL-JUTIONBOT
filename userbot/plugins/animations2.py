@@ -9,8 +9,8 @@ from userbot.Config import Config
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
 
 
-@bot.on(admin_cmd(pattern=r"boxs$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"boxs$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"boxs$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"boxs$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -22,8 +22,8 @@ async def _(event):
         deq.rotate(1)
 
 
-@bot.on(admin_cmd(pattern=r"rain$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"rain$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"rain$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"rain$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -35,8 +35,8 @@ async def _(event):
         deq.rotate(1)
 
 
-@bot.on(admin_cmd(pattern=r"deploy$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"deploy$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"deploy$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"deploy$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -62,8 +62,8 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@bot.on(admin_cmd(pattern=f"dump$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"dump$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"dump$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"dump$", allow_sudo=True))
 async def _(message):
     if event.fwd_from:
         return
@@ -105,8 +105,8 @@ async def _(message):
                 return
 
 
-@bot.on(admin_cmd(pattern=r"fleaveme$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"fleaveme$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"fleaveme$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"fleaveme$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -131,8 +131,8 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@bot.on(admin_cmd(pattern=r"loveu$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"loveu$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"loveu$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"loveu$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -181,8 +181,8 @@ async def _(event):
         await event.edit(animation_chars[i % 35])
 
 
-@bot.on(admin_cmd(pattern=f"plane$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"plane$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"plane$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"plane$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -211,8 +211,8 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@bot.on(admin_cmd(pattern="police$", outgoing=True))
-@bot.on(sudo_cmd(pattern="police$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="police$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="police$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -236,8 +236,8 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 11])
         
-@bot.on(admin_cmd(pattern=f"hack$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"hack$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"hack$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"hack$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -265,8 +265,8 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 15])
 
-@bot.on(admin_cmd(pattern=r"jio$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"jio$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"jio$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"jio$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -299,8 +299,8 @@ async def _(event):
         await event.edit(animation_chars[i % 19])
 
 
-@bot.on(admin_cmd(pattern=f"solarsystem$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"solarsystem$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"solarsystem$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"solarsystem$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -322,8 +322,8 @@ async def _(event):
         await event.edit(animation_chars[i % 8])
         
         
-@bot.on(admin_cmd(pattern="degi$"))
-@bot.on(sudo_cmd(pattern="degi$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="degi$"))
+@LEGEND.on(sudo_cmd(pattern="degi$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -347,8 +347,8 @@ async def _(event):
     await event.edit("Wo DeGi TuM eKbAr MaNg KaR tOh DeKhO😄")
 
 
-@bot.on(admin_cmd(pattern=f"nehi$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"nehi$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"nehi$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"nehi$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -359,8 +359,8 @@ async def _(event):
     await asyncio.sleep(999)
 
 
-@bot.on(admin_cmd(pattern="hnd (.*)"))
-@bot.on(sudo_cmd(pattern="hnd (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="hnd (.*)"))
+@LEGEND.on(sudo_cmd(pattern="hnd (.*)", allow_sudo=True))
 async def _(event):
     name = event.pattern_match.group(1)
     if event.fwd_from:

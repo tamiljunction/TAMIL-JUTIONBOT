@@ -13,8 +13,8 @@ DEFAULTUSER = (
 
 legend = bot.uid
 
-@bot.on(admin_cmd(pattern=r"lock ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"lock ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"lock ?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"lock ?(.*)", allow_sudo=True))
 @errors_handler
 async def locks(event):
     input_str = event.pattern_match.group(1).lower()
@@ -102,8 +102,8 @@ async def locks(event):
         return
 
 
-@bot.on(admin_cmd(pattern="unlock ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="unlock ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="unlock ?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="unlock ?(.*)", allow_sudo=True))
 @errors_handler
 async def rem_locks(event):
     input_str = event.pattern_match.group(1).lower()
@@ -192,8 +192,8 @@ async def rem_locks(event):
         await edit_or_reply(event, f"`Do I have proper rights for that ??`\n**Error:** {str(e)}")
         return
 
-@bot.on(admin_cmd(pattern="ltype$"))
-@bot.on(sudo_cmd(pattern="ltype$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="ltype$"))
+@LEGEND.on(sudo_cmd(pattern="ltype$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

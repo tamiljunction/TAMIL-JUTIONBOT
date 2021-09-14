@@ -5,7 +5,7 @@ from userbot import *
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-@bot.on(admin_cmd(pattern=f"bigoof$", outgoing=True))
+@LEGEND.on(admin_cmd(pattern=f"bigoof$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -28,15 +28,15 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 7])
         
-@bot.on(admin_cmd(pattern="birthday$", outgoing=True))
-@bot.on(sudo_cmd(pattern="birthday$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="birthday$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="birthday$", allow_sudo=True))
 async def gn(event):
     if event.fwd_from:
         return
     await edit_or_reply(event, "╔╗╔╦══╦═╦═╦╗╔╗\n║╚╝║══║═║═║╚╝║\n║╔╗║╔╗║╔╣╔╩╗╔╝\n╚╝╚╩╝╚╩╝╚╝• B-day •"
     )
 
-@bot.on(admin_cmd(pattern=f"g1$", outgoing=True))
+@LEGEND.on(admin_cmd(pattern=f"g1$", outgoing=True))
 async def payf(event):
     paytext = event.pattern_match.group(1)
     pay = "{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}".format(
@@ -163,7 +163,7 @@ async def payf(event):
     )
     await event.edit(pay)
 
-@bot.on(admin_cmd(pattern=f"uff$", outgoing=True))
+@LEGEND.on(admin_cmd(pattern=f"uff$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -188,7 +188,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 13])
 
-@bot.on(admin_cmd(pattern=f"ctext$", outgoing=True))
+@LEGEND.on(admin_cmd(pattern=f"ctext$", outgoing=True))
 async def payf(event):
     paytext = event.pattern_match.group(1)
     pay = "{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}".format(
@@ -207,7 +207,7 @@ async def payf(event):
     )
     await event.edit(pay)
 
-@bot.on(admin_cmd(pattern=f"ftext$", outgoing=True))
+@LEGEND.on(admin_cmd(pattern=f"ftext$", outgoing=True))
 async def payf(event):
     paytext = event.pattern_match.group(1)
     pay = "{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}\n{}".format(
@@ -227,7 +227,7 @@ async def payf(event):
     await event.edit(pay)
 
 
-@bot.on(admin_cmd(pattern=f"kf$", outgoing=True))
+@LEGEND.on(admin_cmd(pattern=f"kf$", outgoing=True))
 async def _(event):
     r = random.randint(0, 3)
     logger.debug(r)
@@ -237,7 +237,7 @@ async def _(event):
         r == 1
         await event.edit("╭━━━╮\n┃╭━━╯\n┃╰━━╮\n┃╭━━╯\n┃┃\n╰╯")
 
-@bot.on(admin_cmd(pattern=f"f$", outgoing=True))
+@LEGEND.on(admin_cmd(pattern=f"f$", outgoing=True))
 async def payf(e):
     paytext = e.pattern_match.group(1)
     pay = "{}\n{}\n{}\n{}\n{}\n{}\n{}".format(
@@ -251,8 +251,8 @@ async def payf(e):
     )
     await event.edit(pay)
     
-@bot.on(admin_cmd(pattern=f"animate$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"animate$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"animate$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"animate$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

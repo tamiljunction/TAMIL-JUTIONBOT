@@ -4,7 +4,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from userbot.utils import admin_cmd
 from . import *
 from userbot.cmdhelp import CmdHelp
-@bot.on(admin_cmd("chup"))
+@LEGEND.on(admin_cmd("chup"))
 async def _(event):
     if event.fwd_from:
         return

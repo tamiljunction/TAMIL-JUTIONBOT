@@ -16,8 +16,8 @@ from userbot.cmdhelp import CmdHelp
 langi = "en"
 
 # kanged from Blank-x ;---;
-@bot.on(admin_cmd(pattern="imdb (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="imdb (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="imdb (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="imdb (.*)", allow_sudo=True))
 async def imdb(e):
     if e.fwd_from:
         return

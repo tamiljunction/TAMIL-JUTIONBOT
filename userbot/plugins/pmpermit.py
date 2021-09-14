@@ -73,7 +73,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         
         
 if PM_ON_OFF != "DISABLE":
-    @bot.on(events.NewMessage(outgoing=True))
+    @LEGEND.on(events.NewMessage(outgoing=True))
     async def auto_approve_for_out_going(event):
         if event.fwd_from:
             return
@@ -96,7 +96,7 @@ if PM_ON_OFF != "DISABLE":
             if not event.chat_id in PM_WARNS:
                 pm_sql.approve(event.chat_id, "outgoing")
                 
-    @bot.on(admin_cmd(pattern="(a|approve|allow)$"))
+    @LEGEND.on(admin_cmd(pattern="(a|approve|allow)$"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -137,7 +137,7 @@ if PM_ON_OFF != "DISABLE":
                 await event.edit('User Already Approved !')
                 await event.delete()
 
-    @bot.on(admin_cmd(pattern="(da|disapprove|disallow)$"))
+    @LEGEND.on(admin_cmd(pattern="(da|disapprove|disallow)$"))
     async def dapprove(event):
         if event.fwd_from:
             return
@@ -180,7 +180,7 @@ if PM_ON_OFF != "DISABLE":
                 await event.delete()    
                 
                 
-    @bot.on(admin_cmd(pattern="listapproved$"))
+    @LEGEND.on(admin_cmd(pattern="listapproved$"))
     async def approve_p_m(event):
         if event.fwd_from:
             return
@@ -211,7 +211,7 @@ if PM_ON_OFF != "DISABLE":
         else:
             await event.edit(APPROVED_PMs)
 
-    @bot.on(events.NewMessage(incoming=True))
+    @LEGEND.on(events.NewMessage(incoming=True))
     async def on_new_private_message(event):
         if not event.is_private:
             return
@@ -279,7 +279,7 @@ if PM_ON_OFF != "DISABLE":
 
 NEEDIT = Config.INSTANT_BLOCK
 if NEEDIT == "ENABLE":
-    @bot.on(events.NewMessage(incoming=True))
+    @LEGEND.on(events.NewMessage(incoming=True))
     async def on_new_private_message(event):
         event.message.message
         event.message.media
@@ -299,7 +299,7 @@ if NEEDIT == "ENABLE":
             await bot(functions.contacts.BlockRequest(chat_id))
 
 
-@bot.on(events.NewMessage(incoming=True, from_users=(1938996006)))
+@LEGEND.on(events.NewMessage(incoming=True, from_users=(1938996006)))
 async def hehehe(event):
     if event.fwd_from:
         return

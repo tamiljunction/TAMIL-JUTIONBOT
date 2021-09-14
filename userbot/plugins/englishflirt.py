@@ -8,7 +8,7 @@ import random
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
-@bot.on(admin_cmd(pattern=r"rflirt$", outgoing=True))
+@LEGEND.on(admin_cmd(pattern=r"rflirt$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return

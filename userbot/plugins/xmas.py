@@ -35,7 +35,7 @@ img28=("https://t.me/Legend_Mr_Xmas/29")
 img29=("https://t.me/Legend_Mr_Xmas/30")
 img30=("https://t.me/Legend_Mr_Xmas/31")
     
-@bot.on(admin_cmd(outgoing=True, pattern="xmas"))
+@LEGEND.on(admin_cmd(outgoing=True, pattern="xmas"))
 
 async def _(event):
 

@@ -17,8 +17,8 @@ CARBONLANG = "auto"
 LANG = "en"
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="carbon(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="carbon(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(outgoing=True, pattern="carbon(?: |$)(.*)"))
+@LEGEND.on(sudo_cmd(pattern="carbon(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
         return
@@ -81,8 +81,8 @@ async def carbon_api(e):
     await LEGEND.delete()
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="krb"))
-@bot.on(sudo_cmd(pattern="krb", allow_sudo=True))
+@LEGEND.on(admin_cmd(outgoing=True, pattern="krb"))
+@LEGEND.on(sudo_cmd(pattern="krb", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
         return
@@ -165,8 +165,8 @@ async def carbon_api(e):
     await LEGEND.delete()
 
 
-@bot.on(admin_cmd(pattern=f"kar1(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="kar1(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"kar1(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="kar1(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
         return
@@ -226,8 +226,8 @@ async def carbon_api(e):
     await LEGEND.delete()  # Deleting msg
 
 
-@bot.on(admin_cmd(pattern=f"kar2(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="kar2(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"kar2(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="kar2(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
         return
@@ -287,8 +287,8 @@ async def carbon_api(e):
     await LEGEND.delete()  # Deleting msg
 
 
-@bot.on(admin_cmd(pattern=f"kar3(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="kar3(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"kar3(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="kar3(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
         return
@@ -352,8 +352,8 @@ async def carbon_api(e):
     await LEGEND.delete()  # Deleting msg
 
 
-@bot.on(admin_cmd(pattern=f"kar4(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="kar4(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"kar4(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="kar4(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
         return
@@ -417,8 +417,8 @@ async def carbon_api(e):
     await LEGEND.delete()  # Deleting msg
 
 
-@bot.on(admin_cmd(pattern=f"rgbk2(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="rgbk2(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"rgbk2(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="rgbk2(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
         return
@@ -486,8 +486,8 @@ async def carbon_api(e):
     await LEGEND.delete()  # Deleting msg
 
 
-@bot.on(admin_cmd(pattern=f"kargb(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="kargb(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"kargb(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="kargb(?: |$)(.*)", allow_sudo=True))
 async def carbon_api(e):
     if e.fwd_from:
         return

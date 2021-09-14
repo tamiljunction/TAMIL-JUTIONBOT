@@ -17,7 +17,7 @@ RUNSREACTS = [
 ]
 
 
-@bot.on(admin_cmd(pattern="chalbsdk"))
+@LEGEND.on(admin_cmd(pattern="chalbsdk"))
 async def _(event):
     if event.fwd_from:
         return

@@ -20,8 +20,8 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
 legend = bot.uid
 # credits to legend, john snow
 # credits to legend, john snow
-@bot.on(admin_cmd(pattern="hny$", outgoing=True))
-@bot.on(sudo_cmd(pattern="hny$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="hny$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="hny$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

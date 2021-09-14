@@ -7,8 +7,8 @@ from userbot.cmdhelp import CmdHelp
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND user"
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="kiler( (.*)|$)"))
-@bot.on(sudo_cmd(pattern="kiler( (.*)|$)", allow_sudo=True))
+@LEGEND.on(admin_cmd(outgoing=True, pattern="kiler( (.*)|$)"))
+@LEGEND.on(sudo_cmd(pattern="kiler( (.*)|$)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -33,8 +33,8 @@ async def _(event):
         await event.edit(animation_chars[i % 8])
 
 
-@bot.on(admin_cmd(pattern="eye$"))
-@bot.on(sudo_cmd(pattern="eye$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="eye$"))
+@LEGEND.on(sudo_cmd(pattern="eye$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -60,8 +60,8 @@ async def _(event):
     await event.delete()
 
 
-@bot.on(admin_cmd(pattern="thinking$"))
-@bot.on(sudo_cmd(pattern="thinking$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="thinking$"))
+@LEGEND.on(sudo_cmd(pattern="thinking$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -111,8 +111,8 @@ async def _(event):
         await event.edit(animation_chars[i % 36])
 
 
-@bot.on(admin_cmd(pattern=f"snake$", outgoing=True))
-@bot.on(sudo_cmd(pattern="snake$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"snake$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="snake$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -153,8 +153,8 @@ async def _(event):
         await event.edit(animation_chars[i % 27])
 
 
-@bot.on(admin_cmd(pattern=f"human$", outgoing=True))
-@bot.on(sudo_cmd(pattern="human$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"human$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="human$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -184,8 +184,8 @@ async def _(event):
         await event.edit(animation_chars[i % 16])
 
 
-@bot.on(admin_cmd(pattern=f"mc$", outgoing=True))
-@bot.on(sudo_cmd(pattern="mc$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"mc$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="mc$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -227,8 +227,8 @@ async def _(event):
         await event.edit(animation_chars[i % 28])
 
 
-@bot.on(admin_cmd(pattern="virus$"))
-@bot.on(sudo_cmd(pattern="virus$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="virus$"))
+@LEGEND.on(sudo_cmd(pattern="virus$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -272,8 +272,8 @@ async def _(event):
         await event.edit(animation_chars[i % 30])
 
 
-@bot.on(admin_cmd(pattern=r"repe$", outgoing=True))
-@bot.on(sudo_cmd(pattern="repe$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"repe$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="repe$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -317,9 +317,9 @@ async def _(event):
         await event.edit(animation_chars[i % 30])
 
         
-@bot.on(admin_cmd(pattern=r"wow$", outgoing=True))
+@LEGEND.on(admin_cmd(pattern=r"wow$", outgoing=True))
 
-@bot.on(sudo_cmd(pattern="wow$", allow_sudo=True))
+@LEGEND.on(sudo_cmd(pattern="wow$", allow_sudo=True))
 
 async def _(event):
 
@@ -361,8 +361,8 @@ async def _(event):
 
         await event.edit(animation_chars[i % 30])
 
-@bot.on(admin_cmd(pattern=f"nikal$", outgoing=True))
-@bot.on(sudo_cmd(pattern="nikal$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"nikal$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="nikal$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -382,8 +382,8 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@bot.on(admin_cmd(pattern=f"music$", outgoing=True))
-@bot.on(sudo_cmd(pattern="music$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"music$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="music$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -408,8 +408,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@bot.on(admin_cmd(pattern=f"squ$", outgoing=True))
-@bot.on(sudo_cmd(pattern="squ$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"squ$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="squ$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

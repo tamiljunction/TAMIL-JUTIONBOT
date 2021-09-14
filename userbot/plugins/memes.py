@@ -420,8 +420,8 @@ HIT = [
 
 # ===========================================
 
-@bot.on(admin_cmd(pattern=r"(\w+)say (.*)"))
-@bot.on(sudo_cmd(pattern=r"(\w+)say (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"(\w+)say (.*)"))
+@LEGEND.on(sudo_cmd(pattern=r"(\w+)say (.*)", allow_sudo=True))
 async def univsaye(cowmsg):
     """ For .cowsay module, userbot wrapper for cow which says things. """
     if not cowmsg.text[0].isalpha() and cowmsg.text[0] not in ("/", "#", "@", "!"):
@@ -438,8 +438,8 @@ async def univsaye(cowmsg):
         await edit_or_reply(cowmsg, f"`{cheese.milk(text).replace('`', '´')}`")
 
 
-@bot.on(admin_cmd(pattern=":/$", outgoing=True))
-@bot.on(sudo_cmd(pattern=":/$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=":/$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=":/$", allow_sudo=True))
 async def kek(keks):
     if not keks.text[0].isalpha() and keks.text[0] not in ("/", "#", "@", "!"):
         """ Check yourself ;)"""
@@ -449,8 +449,8 @@ async def kek(keks):
             await keks.edit(":" + uio[i % 2])
 
 
-@bot.on(admin_cmd(pattern="slap(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="slap(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="slap(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="slap(?: |$)(.*)", allow_sudo=True))
 async def who(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         """ slaps a user, or get slapped if not a reply. """
@@ -526,8 +526,8 @@ async def slap(replied_user, event):
     return caption
 
 
-@bot.on(admin_cmd(pattern="-_-$", outgoing=True))
-@bot.on(sudo_cmd(pattern="-_-$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="-_-$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="-_-$", allow_sudo=True))
 async def lol(lel):
     if not lel.text[0].isalpha() and lel.text[0] not in ("/", "#", "@", "!"):
         """ Ok... """
@@ -537,8 +537,8 @@ async def lol(lel):
             await edit_or_reply(lel, okay)
 
 
-@bot.on(admin_cmd(pattern=";_;$", outgoing=True))
-@bot.on(sudo_cmd(pattern=";_;$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=";_;$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=";_;$", allow_sudo=True))
 async def fun(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         t = ";__;"
@@ -547,16 +547,16 @@ async def fun(e):
             await edit_or_reply(e, t)
 
 
-@bot.on(admin_cmd(pattern="cry$", outgoing=True))
-@bot.on(sudo_cmd(pattern="cry$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="cry$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="cry$", allow_sudo=True))
 async def cry(e):
     """ y u du dis, i cry everytime !! """
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await edit_or_reply(e, random.choice(CRI))
 
 
-@bot.on(admin_cmd(pattern="cp(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="cp(?:|$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="cp(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="cp(?:|$)(.*)", allow_sudo=True))
 async def copypasta(cp_e):
     """ Copypasta the famous meme """
     if not cp_e.text[0].isalpha() and cp_e.text[0] not in ("/", "#", "@", "!"):
@@ -592,8 +592,8 @@ async def copypasta(cp_e):
         await edit_or_reply(cp_e, reply_text)
 
 
-@bot.on(admin_cmd(pattern="vapor(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="vapor(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="vapor(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="vapor(?: |$)(.*)", allow_sudo=True))
 async def vapor(vpr):
     """ Vaporize everything! """
     if not vpr.text[0].isalpha() and vpr.text[0] not in ("/", "#", "@", "!"):
@@ -619,15 +619,15 @@ async def vapor(vpr):
         await edit_or_reply(vpr, "".join(reply_text))
 
 
-@bot.on(admin_cmd(pattern=f"repo", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"repo", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"repo", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"repo", allow_sudo=True))
 async def source(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await edit_or_reply(e, "Click [here](https://github.com/LEGEND-OS/LEGENDBOT) to open this 🔥**Lit AF!!**🔥 __LEGENDBOT__ Repo.. Join channel :- @LEGEND_Userbot")
 
 
-@bot.on(admin_cmd(pattern="str(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="str(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="str(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="str(?: |$)(.*)", allow_sudo=True))
 async def stretch(stret):
     """ Stretch it."""
     if not stret.text[0].isalpha() and stret.text[0] not in ("/", "#", "@", "!"):
@@ -649,8 +649,8 @@ async def stretch(stret):
         await edit_or_reply(stret, reply_text)
 
 
-@bot.on(admin_cmd(pattern="zal(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="zal(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="zal(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="zal(?: |$)(.*)", allow_sudo=True))
 async def zal(zgfy):
     """ Invoke the feeling of chaos. """
     if not zgfy.text[0].isalpha() and zgfy.text[0] not in ("/", "#", "@", "!"):
@@ -686,8 +686,8 @@ async def zal(zgfy):
         await edit_or_reply(zgfy, "".join(reply_text))
 
 
-@bot.on(admin_cmd(pattern="pkill$", outgoing=True))
-@bot.on(sudo_cmd(pattern="pkill$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="pkill$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="pkill$", allow_sudo=True))
 async def killing(killed):
     """ Dont Kill Too much -_-"""
     if not killed.text[0].isalpha() and killed.text[0] not in ("/", "#", "@", "!"):
@@ -696,8 +696,8 @@ async def killing(killed):
                 "#Sad_Reacts_Onli\n"
             )
 
-@bot.on(admin_cmd(pattern="bt$", outgoing=True))
-@bot.on(sudo_cmd(pattern="bt$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="bt$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="bt$", allow_sudo=True))
 async def bluetext(bte):
     """ Believe me, you will find this useful. """
     if not bte.text[0].isalpha() and bte.text[0] not in ("/", "#", "@", "!"):
@@ -706,8 +706,8 @@ async def bluetext(bte):
                 "`Are you a stupid animal which is attracted to colours?`"
             )
 
-@bot.on(admin_cmd(pattern="owo(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="owo(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="owo(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="owo(?: |$)(.*)", allow_sudo=True))
 async def faces(owo):
     """ UwU """
     if not owo.text[0].isalpha() and owo.text[0] not in ("/", "#", "@", "!"):
@@ -730,28 +730,28 @@ async def faces(owo):
         reply_text += " " + random.choice(UWUS)
         await edit_or_reply(owo, reply_text)
 
-@bot.on(admin_cmd(pattern="react$", outgoing=True))
-@bot.on(sudo_cmd(pattern="react$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="react$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="react$", allow_sudo=True))
 async def react_meme(react):
     """ Make your userbot react to everything. """
     if not react.text[0].isalpha() and react.text[0] not in ("/", "#", "@", "!"):
         await edit(react, random.choice(FACEREACTS))
 
-@bot.on(admin_cmd(pattern="shg$", outgoing=True))
-@bot.on(sudo_cmd(pattern="shg$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="shg$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="shg$", allow_sudo=True))
 async def shrugger(shg):
     r""" ¯\_(ツ)_/¯ """
     if not shg.text[0].isalpha() and shg.text[0] not in ("/", "#", "@", "!"):
         await edit_or_reply(shg, random.choice(SHGS))
 
-@bot.on(admin_cmd(pattern="10iq$", outgoing=True))
-@bot.on(sudo_cmd(pattern="10iq$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="10iq$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="10iq$", allow_sudo=True))
 async def iqless(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await edit_or_reply(e, "♿")
 
-@bot.on(admin_cmd(pattern="mock(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="mock(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="mock(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="mock(?: |$)(.*)", allow_sudo=True))
 async def spongemocktext(mock):
     """ Do it and find the real fun. """
     if not mock.text[0].isalpha() and mock.text[0] not in ("/", "#", "@", "!"):
@@ -775,8 +775,8 @@ async def spongemocktext(mock):
 
         await edit_or_reply(mock, "".join(reply_text))
 
-@bot.on(admin_cmd(pattern="clap(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="clap(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="clap(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="clap(?: |$)(.*)", allow_sudo=True))
 async def claptext(memereview):
     """ Praise people! """
     if not memereview.text[0].isalpha() and memereview.text[0] not in (
@@ -799,8 +799,8 @@ async def claptext(memereview):
         reply_text += " 👏"
         await edit_or_reply(memereview, reply_text)
 
-@bot.on(admin_cmd(pattern="smk (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="smk (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="smk (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="smk (.*)", allow_sudo=True))
 async def smrk(smk):
     if not smk.text[0].isalpha() and smk.text[0] not in ("/", "#", "@", "!"):
         textx = await smk.get_reply_message()
@@ -818,8 +818,8 @@ async def smrk(smk):
         reply_text = message + smirk
         await edit_or_reply(smk, reply_text)
 
-@bot.on(admin_cmd(pattern="lfy (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="lfy (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="lfy (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="lfy (.*)", allow_sudo=True))
 async def let_me_google_that_for_you(lmgtfy_q):
     if not lmgtfy_q.text[0].isalpha() and lmgtfy_q.text[0] not in ("/", "#", "@", "!"):
         textx = await lmgtfy_q.get_reply_message()

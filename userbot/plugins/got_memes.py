@@ -22,7 +22,7 @@ CmdHelp("gτ мємѕ").add_command(
 ).add()
 
 
-@bot.on(admin_cmd(pattern=r"gotm"))
+@LEGEND.on(admin_cmd(pattern=r"gotm"))
 
 async def _(event):
 

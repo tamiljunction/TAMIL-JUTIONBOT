@@ -1,6 +1,6 @@
 from . import *
 
-@bot.on(admin_cmd(pattern="gdmrng(.*)"))
+@LEGEND.on(admin_cmd(pattern="gdmrng(.*)"))
 async def xd(event):
     await event.edit("Sending To all Group good Morning")
     themessage = event.pattern_match.group(1)

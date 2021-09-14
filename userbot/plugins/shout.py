@@ -2,8 +2,8 @@ from LEGENDBOT.utils import *
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern=r"shout", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"shout", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"shout", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"shout", allow_sudo=True))
 async def shout(args):
     if args.fwd_from:
         return

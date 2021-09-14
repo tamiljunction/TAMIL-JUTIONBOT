@@ -16,8 +16,8 @@ if not os.path.isdir(pathdc):
 
 
 
-@bot.on(admin_cmd(pattern=r"trig"))
-@bot.on(sudo_cmd(pattern=r"trig", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"trig"))
+@LEGEND.on(sudo_cmd(pattern=r"trig", allow_sudo=True))
 async def dc(event):
     await event.edit("Making this image 😡triggered😈")    
     dc = await event.get_reply_message()
@@ -43,8 +43,8 @@ async def dc(event):
     await event.delete()
             
        
-@bot.on(admin_cmd(pattern=r"wst"))
-@bot.on(sudo_cmd(pattern=r"wst", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"wst"))
+@LEGEND.on(sudo_cmd(pattern=r"wst", allow_sudo=True))
 async def dc(event):
     await event.edit("What a waste 😒😒")    
     dc = await event.get_reply_message()
@@ -73,8 +73,8 @@ async def dc(event):
             
             
 
-@bot.on(admin_cmd(pattern=r"grey"))
-@bot.on(sudo_cmd(pattern=r"grey", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"grey"))
+@LEGEND.on(sudo_cmd(pattern=r"grey", allow_sudo=True))
 async def dc(event):
     await event.edit("Stealing Color from this 😜")    
     dc = await event.get_reply_message()
@@ -100,8 +100,8 @@ async def dc(event):
     await event.delete()
 #legend
     
-@bot.on(admin_cmd(pattern=r"blur"))
-@bot.on(sudo_cmd(pattern=r"blur", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"blur"))
+@LEGEND.on(sudo_cmd(pattern=r"blur", allow_sudo=True))
 async def dc(event):
     await event.edit("Bluring Image🤓🤓")    
     dc = await event.get_reply_message()
@@ -127,8 +127,8 @@ async def dc(event):
     await event.delete()
     
     
-@bot.on(admin_cmd(pattern=r"invert"))
-@bot.on(sudo_cmd(pattern=r"invert", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"invert"))
+@LEGEND.on(sudo_cmd(pattern=r"invert", allow_sudo=True))
 async def dc(event):
     await event.edit("Inverting Image🤔🤔")    
     dc = await event.get_reply_message()
@@ -154,8 +154,8 @@ async def dc(event):
     await event.delete()
  
     
-@bot.on(admin_cmd(pattern=r"igrey"))
-@bot.on(sudo_cmd(pattern=r"igery", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"igrey"))
+@LEGEND.on(sudo_cmd(pattern=r"igery", allow_sudo=True))
 async def dc(event):
     await event.edit("Don't know what i'm doing 😛😜")    
     dc = await event.get_reply_message()
@@ -181,8 +181,8 @@ async def dc(event):
     await event.delete()
             
           #legend
-@bot.on(admin_cmd(pattern=r"bright"))
-@bot.on(sudo_cmd(pattern=r"bright", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"bright"))
+@LEGEND.on(sudo_cmd(pattern=r"bright", allow_sudo=True))
 async def dc(event):
     await event.edit("Adding Brightness 😎")    
     dc = await event.get_reply_message()
@@ -212,8 +212,8 @@ async def dc(event):
             
 
           #legend
-@bot.on(admin_cmd(pattern=r"ytc"))
-@bot.on(sudo_cmd(pattern=r"ytc", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"ytc"))
+@LEGEND.on(sudo_cmd(pattern=r"ytc", allow_sudo=True))
 async def hehe(event):
     await event.edit("Lets make a utube comment 😁😁")
     givenvar=event.text
@@ -248,8 +248,8 @@ async def hehe(event):
     await event.delete()
 
        #legend
-@bot.on(admin_cmd(pattern=r"glass"))
-@bot.on(sudo_cmd(pattern=r"glass", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"glass"))
+@LEGEND.on(sudo_cmd(pattern=r"glass", allow_sudo=True))
 async def dc(event):
     await event.edit("Framing image under Glass 😁😁")    
     dc = await event.get_reply_message()
@@ -275,8 +275,8 @@ async def dc(event):
     await event.delete()
           #legend
             
-@bot.on(admin_cmd(pattern=r"blrpl"))
-@bot.on(sudo_cmd(pattern=r"blrpl", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"blrpl"))
+@LEGEND.on(sudo_cmd(pattern=r"blrpl", allow_sudo=True))
 async def dc(event):
     await event.edit("Bluring Image🤓🤓")    
     dc = await event.get_reply_message()

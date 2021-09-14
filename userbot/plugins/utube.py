@@ -37,7 +37,7 @@ def deEmojify(inputString: str) -> str:
     return re.sub(IF_EMOJI, '', inputString)
 
 
-@bot.on(admin_cmd(pattern="ulinks ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="ulinks ?(.*)"))
 async def yt_search(video_q):
     """For .yt command, do a YouTube search from Telegram."""
     query = video_q.pattern_match.group(1)
@@ -65,7 +65,7 @@ async def yt_search(video_q):
 
 
 
-@bot.on(admin_cmd(pattern="uta ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="uta ?(.*)"))
 
 async def nope(doit):
     ok = doit.pattern_match.group(1)
@@ -90,7 +90,7 @@ NOT_FOUND_STRING = "<code>Sorry !I am unable to find any results to your query</
 SENDING_STRING = "<code>Ok I found something related to that.....</code>"
 BOT_BLOCKED_STRING = "<code>Please unblock @utubebot and try again</code>"
 
-@bot.on(admin_cmd(pattern="ut ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="ut ?(.*)"))
 async def fetcher(event):
     if event.fwd_from:
         return

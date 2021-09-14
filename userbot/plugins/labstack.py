@@ -7,8 +7,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="labstack ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="labstack ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="labstack ?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="labstack ?(.*)", allow_sudo=True))
 async def labstack(event):
     if event.fwd_from:
         return

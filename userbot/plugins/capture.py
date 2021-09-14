@@ -6,8 +6,8 @@ from selenium import webdriver
 
 from . import *
 
-@bot.on(admin_cmd(pattern="(webshot|screenshot) (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="(webshot|screenshot) (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="(webshot|screenshot) (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="(webshot|screenshot) (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

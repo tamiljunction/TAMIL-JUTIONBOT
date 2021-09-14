@@ -7,8 +7,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern=r"tagall (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"tagall (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"tagall (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"tagall (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -20,8 +20,8 @@ async def _(event):
     await event.delete()
 
 
-@bot.on(admin_cmd(pattern=r"admins", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"admins", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"admins", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"admins", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

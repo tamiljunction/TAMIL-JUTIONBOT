@@ -14,8 +14,8 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
 
 legend = bot.uid
 
-@bot.on(admin_cmd(pattern=r"sing$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"sing$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"sing$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"sing$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -154,8 +154,8 @@ async def _(event):
         await event.edit("Not in a mood to sing. Sorry!")
 
 
-@bot.on(admin_cmd(pattern=f"hps$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"hps$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"hps$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"hps$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -244,8 +244,8 @@ async def _(event):
         await event.edit("**Wingardium Leviosa**")
 
 
-@bot.on(admin_cmd(pattern=f"gott$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"gott$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"gott$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"gott$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -394,8 +394,8 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern=f"gotm$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"gotm$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"gotm$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"gotm$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -554,8 +554,8 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern="bello$", outgoing=True))
-@bot.on(sudo_cmd(pattern="bello$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="bello$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="bello$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -940,8 +940,8 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern=r"tip$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"tip$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"tip$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"tip$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -1302,8 +1302,8 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern=r"qt$"))
-@bot.on(sudo_cmd(pattern=r"qt$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"qt$"))
+@LEGEND.on(sudo_cmd(pattern=r"qt$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -1490,8 +1490,8 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern=f"logic$", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"logic$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"logic$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"logic$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -1882,8 +1882,8 @@ async def _(event):
     if x == 104:
         await event.edit("`Do You Know, We can't see Ghosts But Ghosts Can see Us...`")
         
-@bot.on(admin_cmd(pattern=r"snow$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"sonw$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"snow$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"sonw$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -1922,8 +1922,8 @@ async def _(event):
         )
         
 
-@bot.on(admin_cmd(pattern=r"shayri$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"shayri$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"shayri$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"shayri$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -2162,8 +2162,8 @@ async def _(event):
         await event.edit(f"Not in mood. Sorry!!!!")
 
 
-@bot.on(admin_cmd(pattern=r"hflirt$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"hflirt$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"hflirt$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"hflirt$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -2204,8 +2204,8 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern=r"eflirt$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"eflirt$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"eflirt$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"eflirt$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -2262,8 +2262,8 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern=r"attitude$", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"attitude$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"attitude$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"attitude$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -2304,8 +2304,8 @@ async def _(event):
         )
 
 
-@bot.on(admin_cmd(pattern="gbye$", outgoing=True))
-@bot.on(sudo_cmd(pattern="gbye$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="gbye$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="gbye$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

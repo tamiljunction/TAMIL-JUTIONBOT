@@ -4,8 +4,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="ytube (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="ytube (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="ytube (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="ytube (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -25,8 +25,8 @@ async def _(event):
         await edit_or_reply(event, "Something went wrong. Please try again later.")
 
 
-@bot.on(admin_cmd(pattern="ddg (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="ddg (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="ddg (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="ddg (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -46,8 +46,8 @@ async def _(event):
         await edit_or_reply(event, "Something went wrong. Please try again later.")
 
 
-@bot.on(admin_cmd(pattern="altn (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="altn (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="altn (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="altn (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -65,8 +65,8 @@ async def _(event):
         await edit_or_reply(event, "Something went wrong. Please try again later.")
 
 
-@bot.on(admin_cmd(pattern="var (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="var (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="var (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="var (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -86,8 +86,8 @@ async def _(event):
         await edit_or_reply(event, "Something went wrong. Please try again later.")
 
 
-@bot.on(admin_cmd(pattern="lmlog (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="lmlog (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="lmlog (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="lmlog (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -105,8 +105,8 @@ async def _(event):
         await edit_or_reply(event, "Something went wrong. Please try again later.")
 
 
-@bot.on(admin_cmd(pattern="hacc (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="hacc (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="hacc (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="hacc (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -124,8 +124,8 @@ async def _(event):
         await edit_or_reply(event, "Something went wrong. Please try again later.")
 
 
-@bot.on(admin_cmd(pattern="lmkp (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="lmkp (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="lmkp (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="lmkp (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -143,8 +143,8 @@ async def _(event):
         await edit_or_reply(event, "Something went wrong. Please try again later.")
 
 
-@bot.on(admin_cmd(pattern="gem (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="gem (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="gem (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="gem (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -162,8 +162,8 @@ async def _(event):
         await edit_or_reply(event, "Something went wrong. Please try again later.")
 
 
-@bot.on(admin_cmd(pattern="rchiv (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="rchiv (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="rchiv (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="rchiv (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

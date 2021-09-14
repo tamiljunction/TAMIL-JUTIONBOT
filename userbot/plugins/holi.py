@@ -3,7 +3,7 @@ from . import *
 import asyncio
 
 
-@bot.on(admin_cmd(pattern=r"holi"))
+@LEGEND.on(admin_cmd(pattern=r"holi"))
 async def _(event):
     if event.fwd_from:
         return

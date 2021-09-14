@@ -67,8 +67,8 @@ async def formatJSON(outData):
         return msg
 
 
-@bot.on(admin_cmd(pattern="anilist (.*)"))
-@bot.on(sudo_cmd(pattern="anilist (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="anilist (.*)"))
+@LEGEND.on(sudo_cmd(pattern="anilist (.*)", allow_sudo=True))
 async def anilist(event):
     if event.fwd_from:
         return
@@ -79,8 +79,8 @@ async def anilist(event):
     await event.edit(msg, link_preview=True)
 
 
-@bot.on(admin_cmd(pattern="anime(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="anime(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="anime(?: |$)(.*)"))
+@LEGEND.on(sudo_cmd(pattern="anime(?: |$)(.*)", allow_sudo=True))
 async def nope(lege):
     legend = lege.pattern_match.group(1)
     if not legend:
@@ -102,8 +102,8 @@ async def nope(lege):
     await lege.delete()
     
     
-@bot.on(admin_cmd(pattern="manga(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="manga(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="manga(?: |$)(.*)"))
+@LEGEND.on(sudo_cmd(pattern="manga(?: |$)(.*)", allow_sudo=True))
 async def nope(lege_):
     legend = lege_.pattern_match.group(1)
     if not legend:
@@ -125,8 +125,8 @@ async def nope(lege_):
     await lege_.delete()
     
 
-@bot.on(admin_cmd(pattern="character(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="character(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="character(?: |$)(.*)"))
+@LEGEND.on(sudo_cmd(pattern="character(?: |$)(.*)", allow_sudo=True))
 async def nope(lege_):
     legend = lege_.pattern_match.group(1)
     if not legend:

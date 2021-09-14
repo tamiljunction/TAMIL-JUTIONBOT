@@ -4,8 +4,8 @@ import asyncio
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 
-@bot.on(admin_cmd(pattern="unoob$", outgoing=True))
-@bot.on(sudo_cmd(pattern="unoob$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="unoob$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="unoob$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:
@@ -35,8 +35,8 @@ async def _(event):
         await event.edit(animation_chars[i % 9])
         await asyncio.sleep(animation_interval)
 
-@bot.on(admin_cmd(pattern="menoob$", outgoing=True))
-@bot.on(sudo_cmd(pattern="menoob$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="menoob$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="menoob$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:
@@ -67,8 +67,8 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@bot.on(admin_cmd(pattern="uproo$", outgoing=True))
-@bot.on(sudo_cmd(pattern="uproo$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="uproo$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="uproo$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:
@@ -98,8 +98,8 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@bot.on(admin_cmd(pattern="mepro$", outgoing=True))
-@bot.on(sudo_cmd(pattern="mepro$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="mepro$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="mepro$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:

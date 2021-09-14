@@ -24,7 +24,7 @@ from userbot.plugins.sql_helper.idadder import (
 )
 # await function async def ke baad lagega
 
-@bot.on(events.NewMessage(pattern="/start$"))
+@LEGEND.on(events.NewMessage(pattern="/start$"))
 async def start(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -71,7 +71,7 @@ async def start(event):
             os.remove(mypic)
 
 
-@bot.on(events.callbackquery.CallbackQuery(data=re.compile(b"users")))
+@LEGEND.on(events.callbackquery.CallbackQuery(data=re.compile(b"users")))
 async def users(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -97,7 +97,7 @@ async def users(event):
         pass
 
 
-@xbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"cmds")))
+@xLEGEND.on(events.callbackquery.CallbackQuery(data=re.compile(b"cmds")))
 async def users(event):
     Pro = "The button is under construction...\nSorry for inconvenience, Will update soon....\nThanks..."
     await event.answer(Pro, alert=True)
@@ -105,7 +105,7 @@ async def users(event):
 
     pass
 
-@xbot.on(events.NewMessage(func=lambda e: e.is_private))
+@xLEGEND.on(events.NewMessage(func=lambda e: e.is_private))
 async def all_messages_catcher(event):
     if is_he_added(event.sender_id):
         return
@@ -129,7 +129,7 @@ async def all_messages_catcher(event):
     add_me_in_db(sed.id, event.sender_id, event.id)
 
 
-@bot.on(events.NewMessage(func=lambda e: e.is_private))
+@LEGEND.on(events.NewMessage(func=lambda e: e.is_private))
 async def sed(event):
     msg = await event.get_reply_message()
     if msg is None:
@@ -162,7 +162,7 @@ async def sed(event):
 
 
 
-@bot.on(events.NewMessage(pattern="/broadcast ?(.*)"))
+@LEGEND.on(events.NewMessage(pattern="/broadcast ?(.*)"))
 async def sedlyfsir(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -193,7 +193,7 @@ async def sedlyfsir(event):
     )
 
 
-@bot.on(events.NewMessage(pattern="/stats"))
+@LEGEND.on(events.NewMessage(pattern="/stats"))
 async def _(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -206,7 +206,7 @@ async def _(event):
 
 
 
-@bot.on(events.NewMessage(pattern="/block ?(.*)"))
+@LEGEND.on(events.NewMessage(pattern="/block ?(.*)"))
 async def ok(event):
     pro = await bot.get_me()
     boy = pro.id
@@ -225,7 +225,7 @@ async def ok(event):
         )
 
 
-@bot.on(events.NewMessage(pattern="/unblock ?(.*)"))
+@LEGEND.on(events.NewMessage(pattern="/unblock ?(.*)"))
 async def gey(event):
     pro = await bot.get_me()
     boy = pro.id

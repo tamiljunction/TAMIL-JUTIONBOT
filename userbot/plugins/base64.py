@@ -8,8 +8,8 @@ from userbot import *
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-@bot.on(admin_cmd(pattern="hash (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="hash (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="hash (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="hash (.*)", allow_sudo=True))
 async def gethash(hash_q):
     if hash_q.fwd_from:
         return
@@ -56,8 +56,8 @@ async def gethash(hash_q):
         await event.delete()
 
 
-@bot.on(admin_cmd(pattern="b64 (en|de) (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="b64 (en|de) (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="b64 (en|de) (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="b64 (en|de) (.*)", allow_sudo=True))
 async def endecrypt(query):
     if query.fwd_from:
         return

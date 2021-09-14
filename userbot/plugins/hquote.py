@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as bs
 from userbot.cmdhelp import CmdHelp
 from . import *
 
-@bot.on(admin_cmd(pattern="hquote"))
+@LEGEND.on(admin_cmd(pattern="hquote"))
 async def hurray(e):
     a = requests.get("https://www.brainyquote.com/topics/hackers-quotes")
     bt = bs(a.content, "html.parser",from_encoding="utf-8")

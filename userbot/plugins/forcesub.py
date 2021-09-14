@@ -6,7 +6,7 @@ from telethon.tl.functions.messages import ExportChatInviteRequest
 from userbot.plugins.sql_helper.fsub_sql import *
 from . import *
 """
-@tgbot.on(InlineQuery)
+@tgLEGEND.on(InlineQuery)
 async def fsub_in(event):
         builder = event.builder
         query = event.text
@@ -33,7 +33,7 @@ async def fsub_in(event):
             await event.answer(sub)
 
 
-@tgbot.on(callbackquery.CallbackQuery(data=compile(b"unmute")))
+@tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"unmute")))
 async def on_pm_click(event):
     hunter = (event.data_match.group(1)).decode("UTF-8")
     legend = hunter.split("+")
@@ -52,7 +52,7 @@ async def on_pm_click(event):
 """
 
 
-@bot.on(events.ChatAction())
+@LEGEND.on(events.ChatAction())
 async def forcesub(event):
     if all_fsub() == None:
         return
@@ -75,8 +75,8 @@ async def forcesub(event):
         await res[0].click(event.chat_id, reply_to=event.action_message.id)
 
 
-@bot.on(admin_cmd(pattern="fsub ?(.*)"))
-@bot.on(sudo_cmd(pattern="fsub ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="fsub ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="fsub ?(.*)", allow_sudo=True))
 async def _(event):
     if event.is_private:
         await eor(event, "This is meant to be used in groups only!!")
@@ -101,8 +101,8 @@ async def _(event):
     await eor(event, "Implementing **Force Subscribe** In This Channel !!")
 
 
-@bot.on(admin_cmd(pattern="rmfsub"))
-@bot.on(sudo_cmd(pattern="rmfsub", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="rmfsub"))
+@LEGEND.on(sudo_cmd(pattern="rmfsub", allow_sudo=True))
 async def removef(event):
     hel_ = rem_fsub(event.chat_id)
     if not hel_:
@@ -110,8 +110,8 @@ async def removef(event):
     await eor(e, "Deactivated **Force Subscribe** In This Channel !!")
 
 
-@bot.on(admin_cmd(pattern="chfsub"))
-@bot.on(sudo_cmd(pattern="chfsub", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="chfsub"))
+@LEGEND.on(sudo_cmd(pattern="chfsub", allow_sudo=True))
 async def getfsub(event):
     all_chat = is_fsub(event.chat_id)
     if not all_chat:
@@ -120,8 +120,8 @@ async def getfsub(event):
     await eor(event, f"**ForceSub Enabled ** :\n- {channel.title} `({all})`")
 
 
-@bot.on(admin_cmd(pattern="lsfsub$"))
-@bot.on(sudo_cmd(pattern="lsfsub$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="lsfsub$"))
+@LEGEND.on(sudo_cmd(pattern="lsfsub$", allow_sudo=True))
 async def list(event):
     channels = all_fsub()
     CHANNEL_LIST = "**🚀 Fsub Enabled In :**\n"

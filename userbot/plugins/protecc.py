@@ -20,8 +20,8 @@ def progress(current, total):
         )
     )
 
-@bot.on(admin_cmd(pattern="pt ?(.*)"))
-@bot.on(sudo_cmd(pattern="pt ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="pt ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="pt ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -69,7 +69,7 @@ async def _(event):
     await hell.edit(OUTPUT_STR, parse_mode="HTML", link_preview=False)
 
 
-@bot.on(events.NewMessage(incoming=True))
+@LEGEND.on(events.NewMessage(incoming=True))
 async def _(event):
     if not event.media:
         return
@@ -116,7 +116,7 @@ async def _(event):
             pass
 
 
-@bot.on(events.NewMessage(incoming=True))
+@LEGEND.on(events.NewMessage(incoming=True))
 async def _(event):
     if not event.media:
         return
@@ -163,8 +163,8 @@ async def _(event):
             pass
 
 
-@bot.on(admin_cmd(pattern="adwaifu ?(.*)"))
-@bot.on(sudo_cmd(pattern="adwaifu ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="adwaifu ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="adwaifu ?(.*)", allow_sudo=True))
 async def _(event):
     if not event.is_group:
         await eod(event, "Autowaifu works in Groups Only !!")
@@ -176,8 +176,8 @@ async def _(event):
     await eod(event, f"**Added Chat** {event.chat.title} **With Id** `{event.chat_id}` **To Autowaifu Database.**")
 
 
-@bot.on(admin_cmd(pattern="rmwaifu ?(.*)"))
-@bot.on(sudo_cmd(pattern="rmwaifu ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="rmwaifu ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="rmwaifu ?(.*)", allow_sudo=True))
 async def _(event):
     if not event.is_group:
         await eod(event, "Autowaifu works in groups only !!")
@@ -189,8 +189,8 @@ async def _(event):
     await eod(event, f"**Removed Chat** {event.chat.title} **With Id** `{event.chat_id}` **From AutoWaifu Database.**")
 
 
-@bot.on(admin_cmd(pattern="aw$"))
-@bot.on(sudo_cmd(pattern="aw$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="aw$"))
+@LEGEND.on(sudo_cmd(pattern="aw$", allow_sudo=True))
 async def _(event):
     hell = await eor(event, "Fetching Autowaifu chats...")
     all_grp = get_all_grp()

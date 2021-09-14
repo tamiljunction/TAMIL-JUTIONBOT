@@ -21,7 +21,7 @@ def dogbin(magnets):
     return urls
 
 
-@bot.on(admin_cmd(pattern="tsearch ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="tsearch ?(.*)"))
 async def tor_search(event):
     if event.fwd_from:
         return
@@ -95,7 +95,7 @@ async def tor_search(event):
     await event.edit(msg, link_preview=False)
 
 
-@bot.on(admin_cmd(pattern=r"movie (torrentz2\.eu|idop\.se) (.*)"))
+@LEGEND.on(admin_cmd(pattern=r"movie (torrentz2\.eu|idop\.se) (.*)"))
 async def _(event):
     if event.fwd_from:
         return

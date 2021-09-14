@@ -5,7 +5,7 @@ from LEGENDBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="webup ?(.+?|) (?:--)(anonfiles|transfer|filebin|anonymousfiles|megaupload|bayfiles)"
+@LEGEND.on(admin_cmd(pattern="webup ?(.+?|) (?:--)(anonfiles|transfer|filebin|anonymousfiles|megaupload|bayfiles)"
 ))
 async def _(event):
     if event.fwd_from:

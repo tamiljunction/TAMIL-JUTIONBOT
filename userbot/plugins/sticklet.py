@@ -9,8 +9,8 @@ from telethon.tl.types import InputMessagesFilterDocument
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 
-@bot.on(admin_cmd(pattern="text (.*)"))
-@bot.on(sudo_cmd(pattern="text (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="text (.*)"))
+@LEGEND.on(sudo_cmd(pattern="text (.*)", allow_sudo=True))
 async def sticklet(event):
     R = random.randint(0, 256)
     G = random.randint(0, 256)

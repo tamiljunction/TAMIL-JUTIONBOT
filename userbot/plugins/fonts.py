@@ -173,8 +173,8 @@ bubbletextfont = [
     "Ⓩ",
 ]
 
-@bot.on(admin_cmd(pattern="weeb(?: |$)(.*)", command="weeb"))
-@bot.on(sudo_cmd(pattern="weeb(?: |$)(.*)", command="weeb", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="weeb(?: |$)(.*)", command="weeb"))
+@LEGEND.on(sudo_cmd(pattern="weeb(?: |$)(.*)", command="weeb", allow_sudo=True))
 async def weebify(event):
     if event.fwd_from:
         return
@@ -193,8 +193,8 @@ async def weebify(event):
     await edit_or_reply(event, string)
 
 
-@bot.on(admin_cmd(pattern="tanify(?: |$)(.*)", command="tanify"))
-@bot.on(sudo_cmd(pattern="tanify(?: |$)(.*)", command="tanify", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="tanify(?: |$)(.*)", command="tanify"))
+@LEGEND.on(sudo_cmd(pattern="tanify(?: |$)(.*)", command="tanify", allow_sudo=True))
 async def tantxt(event):
     if event.fwd_from:
         return
@@ -213,8 +213,8 @@ async def tantxt(event):
     await edit_or_reply(event, string)
 
 
-@bot.on(admin_cmd(pattern="lintxt(?: |$)(.*)", command="lintxt"))
-@bot.on(sudo_cmd(pattern="lintxt(?: |$)(.*)", command="lintxt", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="lintxt(?: |$)(.*)", command="lintxt"))
+@LEGEND.on(sudo_cmd(pattern="lintxt(?: |$)(.*)", command="lintxt", allow_sudo=True))
 async def linetxt(event):
     if event.fwd_from:
         return
@@ -233,8 +233,8 @@ async def linetxt(event):
     await edit_or_reply(event, string)
 
 
-@bot.on(admin_cmd(pattern="boxify(?: |$)(.*)", command="boxify"))
-@bot.on(sudo_cmd(pattern="boxify(?: |$)(.*)", command="boxify", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="boxify(?: |$)(.*)", command="boxify"))
+@LEGEND.on(sudo_cmd(pattern="boxify(?: |$)(.*)", command="boxify", allow_sudo=True))
 async def boxtxt(event):
     if event.fwd_from:
         return
@@ -253,8 +253,8 @@ async def boxtxt(event):
     await edit_or_reply(event, string)
 
 
-@bot.on(admin_cmd(pattern="bubble(?: |$)(.*)", command="bubble"))
-@bot.on(sudo_cmd(pattern="bubble(?: |$)(.*)", command="bubble", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="bubble(?: |$)(.*)", command="bubble"))
+@LEGEND.on(sudo_cmd(pattern="bubble(?: |$)(.*)", command="bubble", allow_sudo=True))
 async def bubbletxt(event):
     if event.fwd_from:
         return

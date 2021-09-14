@@ -21,7 +21,7 @@ TYPE_DOCUMENT = 2
 global last_triggered_filters
 last_triggered_filters = {}  # pylint:disable=E0602
 
-@bot.on(admin_cmd(incoming=True))
+@LEGEND.on(admin_cmd(incoming=True))
 async def on_snip(event):
     global last_triggered_filters
     name = event.raw_text
@@ -63,8 +63,8 @@ async def on_snip(event):
                 last_triggered_filters[event.chat_id].remove(name)
 
 
-@bot.on(admin_cmd(pattern="savefilter (.*)"))
-@bot.on(sudo_cmd(pattern="savefilter (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="savefilter (.*)"))
+@LEGEND.on(sudo_cmd(pattern="savefilter (.*)", allow_sudo=True))
 async def on_snip_save(event):
     name = event.pattern_match.group(1)
     msg = await event.get_reply_message()
@@ -98,8 +98,8 @@ async def on_snip_save(event):
         )
         
 
-@bot.on(admin_cmd(pattern="listfilter$"))
-@bot.on(sudo_cmd(pattern="listfilter$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="listfilter$"))
+@LEGEND.on(sudo_cmd(pattern="listfilter$", allow_sudo=True))
 async def on_snip_list(event):
     if event.fwd_from:
         return
@@ -126,8 +126,8 @@ async def on_snip_list(event):
         await edit_or_reply(event, OUT_STR)
 
 
-@bot.on(admin_cmd(pattern="stop (.*)"))
-@bot.on(sudo_cmd(pattern="stop (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="stop (.*)"))
+@LEGEND.on(sudo_cmd(pattern="stop (.*)", allow_sudo=True))
 async def on_snip_delete(event):
     if event.fwd_from:
         return
@@ -136,8 +136,8 @@ async def on_snip_delete(event):
     await edit_or_reply(event, f"Filter `{name}` deleted successfully")
 
 
-@bot.on(admin_cmd(pattern="clearallfilters$"))
-@bot.on(sudo_cmd(pattern="clearallfilters$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="clearallfilters$"))
+@LEGEND.on(sudo_cmd(pattern="clearallfilters$", allow_sudo=True))
 async def on_all_snip_delete(event):
     if event.fwd_from:
         return

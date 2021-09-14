@@ -133,7 +133,7 @@ async def gbun(event):
     await event.delete()
 
 
-@bot.on(admin_cmd(pattern="fgban ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="fgban ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("Preparing to gban this nub nibba....")
@@ -226,7 +226,7 @@ async def _(event):
     
      
         
-@bot.on(admin_cmd(pattern="fungban ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="fungban ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("Preparing to Ungban this nub nibba please weit for a while.....")

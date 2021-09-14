@@ -9,8 +9,8 @@ from googletrans import Translator
 from LEGENDBOT.utils import *
 from userbot.cmdhelp import CmdHelp
 
-@bot.on(admin_cmd(pattern="trt ?(.*)"))
-@bot.on(sudo_cmd(pattern="trt ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="trt ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="trt ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -46,8 +46,8 @@ async def _(event):
     except Exception as exc:
         await edit_or_reply(event, str(exc))
 
-@bot.on(admin_cmd(pattern=r"trc", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"trc", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"trc", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"trc", allow_sudo=True))
 async def _(LEGEND):
     if LEGEND.fwd_from:
         return

@@ -77,8 +77,8 @@ HIT = [
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
 
 
-@bot.on(admin_cmd(pattern="slap ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="slap ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="slap ?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="slap ?(.*)", allow_sudo=True))
 async def who(event):
     if event.fwd_from:
         return

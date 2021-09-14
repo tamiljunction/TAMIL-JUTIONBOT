@@ -25,8 +25,8 @@ msg = f"""
 """
 botname = Config.BOT_USERNAME
 
-@bot.on(admin_cmd(pattern="repo$"))
-@bot.on(sudo_cmd(pattern="repo$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="repo$"))
+@LEGEND.on(sudo_cmd(pattern="repo$", allow_sudo=True))
 async def repo(event):
     try:
         legend = await bot.inline_query(botname, "repo")
@@ -37,8 +37,8 @@ async def repo(event):
         await eor(event, msg)
 
 
-@bot.on(admin_cmd(pattern="op ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="op ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="op ?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="op ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -72,8 +72,8 @@ async def _(event):
         await eor(event, "**⚠️ 𝙴𝚁𝚁𝙾𝚁 !!** \n𝙿𝚕𝚎𝚊𝚜𝚎 𝚁𝚎-𝙲𝚑𝚎𝚌𝚔 BOT_TOKEN & BOT_USERNAME on Heroku.")
 
 
-@bot.on(admin_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="plinfo(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="plinfo(?: |$)(.*)", allow_sudo=True))
 async def legendbott(event):
     if event.fwd_from:
         return

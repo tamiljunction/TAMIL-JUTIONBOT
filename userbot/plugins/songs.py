@@ -14,8 +14,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply, progress
 from userbot.cmdhelp import CmdHelp
 from userbot.helpers.functions import deEmojify
 
-@bot.on(admin_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="lyrics(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="lyrics(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="lyrics(?: |$)(.*)", allow_sudo=True))
 async def nope(aura):
     LEGEND = aura.pattern_match.group(1)
     if not LEGEND:
@@ -40,8 +40,8 @@ async def nope(aura):
 
 #>>>>>>>>>>>>>>>>>>✓✓✓✓✓<<<<<<<<<<<<<<<<<<<
 
-@bot.on(admin_cmd(pattern="gaana ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="gaana ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="gaana ?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="gaana ?(.*)", allow_sudo=True))
 async def FindMusicPleaseBot(gaana):
 
     song = gaana.pattern_match.group(1)
@@ -122,8 +122,8 @@ except:
     from youtubesearchpython import SearchVideos
 
 
-@bot.on(admin_cmd(pattern="song(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="song(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="song(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="song(?: |$)(.*)", allow_sudo=True))
 async def download_video(v_url):
 
     lazy = v_url
@@ -245,8 +245,8 @@ async def download_video(v_url):
         await rkp.delete()
 
 
-@bot.on(admin_cmd(pattern="vsong(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="vsong(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="vsong(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="vsong(?: |$)(.*)", allow_sudo=True))
 async def download_video(v_url):
     lazy = v_url
     sender = await lazy.get_sender()
@@ -379,8 +379,8 @@ def bruh(name):
 
 
 
-@bot.on(admin_cmd(pattern="getsong(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="getsong(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="getsong(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="getsong(?: |$)(.*)", allow_sudo=True))
 async def getmusic(so):
     if so.fwd_from:
         return
@@ -429,8 +429,8 @@ def bruh(name):
     os.system("instantmusic -q -s " + name)
 
 
-@bot.on(admin_cmd(pattern="dwlsong(?: |$)(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="dwlsong(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="dwlsong(?: |$)(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="dwlsong(?: |$)(.*)", allow_sudo=True))
 async def DeezLoader(Deezlod):
     if Deezlod.fwd_from:
         return
@@ -470,8 +470,8 @@ from telethon.errors.rpcerrorlist import (
 from telethon.tl.functions.messages import ImportChatInviteRequest
 
 
-@bot.on(admin_cmd(pattern="sdd ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="sdd?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="sdd ?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="sdd?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

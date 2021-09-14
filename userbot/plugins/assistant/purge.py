@@ -34,7 +34,7 @@ async def is_administrator(user_id: int, message):
     return admin
 
 
-@tgbot.on(events.NewMessage(pattern="^/purge"))
+@tgLEGEND.on(events.NewMessage(pattern="^/purge"))
 async def purge(event):
     chat = event.chat_id
     msgs = []
@@ -77,7 +77,7 @@ async def purge(event):
         await del_res.delete()
 
 
-@tgbot.on(events.NewMessage(pattern="^/del$"))
+@tgLEGEND.on(events.NewMessage(pattern="^/del$"))
 async def delete_msg(event):
 
     if not await is_administrator(user_id=event.sender_id, message=event):

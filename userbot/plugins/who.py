@@ -13,8 +13,8 @@ def get_who_string(who):
     return who_string
 
 
-@bot.on(admin_cmd(pattern="urid", outgoing=True))
-@bot.on(sudo_cmd(pattern="urid", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="urid", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="urid", allow_sudo=True))
 async def _(event):
     if not event.message.is_reply:
         who = await event.get_chat()
@@ -29,8 +29,8 @@ async def _(event):
     await edit_or_reply(event, get_who_string(who), parse_mode="html")
 
 
-@bot.on(admin_cmd(pattern=r"members", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"members", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"members", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"members", allow_sudo=True))
 async def _(event):
     members = [get_who_string(m) async for m in borg.iter_participants(event.chat_id)]
 

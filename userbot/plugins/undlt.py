@@ -3,7 +3,7 @@ from userbot.utils import admin_cmd
 import asyncio
 
 
-@bot.on(admin_cmd(pattern="undlt"))
+@LEGEND.on(admin_cmd(pattern="undlt"))
 async def _(event):
     if event.fwd_from:
         return

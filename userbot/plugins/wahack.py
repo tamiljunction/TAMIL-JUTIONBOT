@@ -11,8 +11,8 @@ import asyncio
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 
 
-@bot.on(admin_cmd(pattern=f"wahack", outgoing=True))
-@bot.on(sudo_cmd(pattern=f"wahack", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=f"wahack", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=f"wahack", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

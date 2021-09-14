@@ -4,8 +4,8 @@ from userbot.cmdhelp import *
 # when you are tight on schedule...
 # and also lazy af!!
 
-@bot.on(admin_cmd(pattern="whatscrapp"))
-@bot.on(sudo_cmd(pattern="whatscrapp", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="whatscrapp"))
+@LEGEND.on(sudo_cmd(pattern="whatscrapp", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

@@ -15,7 +15,7 @@ import inspect
 running_processes: dict = {}
 
 
-@bot.on(admin_cmd(pattern="term(?: |$|\n)([\s\S]*)"))
+@LEGEND.on(admin_cmd(pattern="term(?: |$|\n)([\s\S]*)"))
 async def dc(event):  
     await event.edit(f"{LEGEND}: Running Terminal.....")
     message = (str(event.chat_id) + ':' + str(event.message.id))

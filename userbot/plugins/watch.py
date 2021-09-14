@@ -76,8 +76,8 @@ def get_provider(url):
     return url
 
 
-@bot.on(admin_cmd(pattern="watch (.*)"))
-@bot.on(sudo_cmd(pattern="watch (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="watch (.*)"))
+@LEGEND.on(sudo_cmd(pattern="watch (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

@@ -9,8 +9,8 @@ from telethon.utils import get_input_location
 from . import *
 
 
-@bot.on(admin_cmd(pattern="getpic ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="getpic ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="getpic ?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="getpic ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -131,8 +131,8 @@ async def get_full_user(event):
 
 name = "Profile Photos"
 
-@bot.on(admin_cmd(pattern="poto ?(.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="poto ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="poto ?(.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="poto ?(.*)", allow_sudo=True))
 async def potocmd(event):
     uid = "".join(event.raw_text.split(maxsplit=1)[1:])
     user = await event.get_reply_message()

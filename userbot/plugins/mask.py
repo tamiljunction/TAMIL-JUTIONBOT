@@ -22,8 +22,8 @@ from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="mask$", outgoing=True))
-@bot.on(sudo_cmd(pattern="mask$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="mask$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="mask$", allow_sudo=True))
 async def _(LEGENDBOT):
     reply_message = await LEGENDBOT.get_reply_message()
     if not reply_message.media or not reply_message:
@@ -52,8 +52,8 @@ async def _(LEGENDBOT):
             await event.delete()
 
 
-@bot.on(admin_cmd(pattern="awooify$", outgoing=True))
-@bot.on(sudo_cmd(pattern="awooify$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="awooify$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="awooify$", allow_sudo=True))
 async def LEGENDBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
@@ -103,8 +103,8 @@ async def LEGENDBOT(LEGENDmemes):
     await LEGENDmemes.client.send_file(LEGENDmemes.chat_id, LEGEND, reply_to=replied)
 
 
-@bot.on(admin_cmd(pattern="lolice$"))
-@bot.on(sudo_cmd(pattern="lolice$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="lolice$"))
+@LEGEND.on(sudo_cmd(pattern="lolice$", allow_sudo=True))
 async def LEGENDBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
@@ -154,8 +154,8 @@ async def LEGENDBOT(LEGENDmemes):
     await LEGENDmemes.client.send_file(LEGENDmemes.chat_id, LEGEND, reply_to=replied)
 
 
-@bot.on(admin_cmd(pattern="bun$"))
-@bot.on(sudo_cmd(pattern="bun$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="bun$"))
+@LEGEND.on(sudo_cmd(pattern="bun$", allow_sudo=True))
 async def LEGENDBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
@@ -205,8 +205,8 @@ async def LEGENDBOT(LEGENDmemes):
     await LEGENDmemes.client.send_file(LEGENDmemes.chat_id, LEGEND, reply_to=replied)
 
 
-@bot.on(admin_cmd(pattern="iphx$"))
-@bot.on(sudo_cmd(pattern="iphx$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="iphx$"))
+@LEGEND.on(sudo_cmd(pattern="iphx$", allow_sudo=True))
 async def LEGENDBOT(LEGENDmemes):
     replied = await LEGENDmemes.get_reply_message()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):

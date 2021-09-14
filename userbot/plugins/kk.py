@@ -4,7 +4,7 @@ import random
 import logging
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
-@bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+@LEGEND.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 async def _(event):
            input_str = event.pattern_match.group(1)
            if input_str == "kk":                              

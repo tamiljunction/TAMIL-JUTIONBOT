@@ -28,7 +28,7 @@ SLOT_E_MOJI = "🎰"
 # EMOJI CONSTANTS
 
 
-@bot.on(admin_cmd(pattern=f"({DART_E_MOJI}|dart)( ([1-6])|$)"))
+@LEGEND.on(admin_cmd(pattern=f"({DART_E_MOJI}|dart)( ([1-6])|$)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -56,7 +56,7 @@ async def _(event):
             await event.reply(file=InputMediaDice(emoticon=emoticon))
 
 
-@bot.on(admin_cmd(pattern=f"({DICE_E_MOJI}|dice)( ([1-6])|$)"))
+@LEGEND.on(admin_cmd(pattern=f"({DICE_E_MOJI}|dice)( ([1-6])|$)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -84,7 +84,7 @@ async def _(event):
             await event.reply(file=InputMediaDice(emoticon=emoticon))
 
 
-@bot.on(admin_cmd(pattern=f"({BALL_E_MOJI}|bb)( ([1-5])|$)"))
+@LEGEND.on(admin_cmd(pattern=f"({BALL_E_MOJI}|bb)( ([1-5])|$)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -112,7 +112,7 @@ async def _(event):
             await event.reply(file=InputMediaDice(emoticon=emoticon))
 
 
-@bot.on(admin_cmd(pattern=f"({FOOT_E_MOJI}|fb)( ([1-5])|$)"))
+@LEGEND.on(admin_cmd(pattern=f"({FOOT_E_MOJI}|fb)( ([1-5])|$)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -140,7 +140,7 @@ async def _(event):
             await event.reply(file=InputMediaDice(emoticon=emoticon))
 
 
-@bot.on(admin_cmd(pattern=f"({SLOT_E_MOJI}|jp)( ([1-64])|$)"))
+@LEGEND.on(admin_cmd(pattern=f"({SLOT_E_MOJI}|jp)( ([1-64])|$)"))
 async def _(event):
     if event.fwd_from:
         return

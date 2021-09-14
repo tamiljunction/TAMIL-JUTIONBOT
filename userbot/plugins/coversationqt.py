@@ -7,7 +7,7 @@ import random
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 from . import *
-@bot.on(admin_cmd(pattern=r"qt"))
+@LEGEND.on(admin_cmd(pattern=r"qt"))
 async def _(event):
 
     if event.fwd_from:

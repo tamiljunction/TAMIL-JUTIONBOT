@@ -4,8 +4,8 @@ from LEGENDBOT.utils import *
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="wspr ?(.*)"))
-@bot.on(sudo_cmd(pattern="wspr ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="wspr ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="wspr ?(.*)", allow_sudo=True))
 async def wspr(event):
     if event.fwd_from:
         return

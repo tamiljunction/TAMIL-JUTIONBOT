@@ -9,7 +9,7 @@ if Config.TAG_LOGGER:
 
 if Config.TAG_LOGGER:
 
-    @bot.on(
+    @LEGEND.on(
         events.NewMessage(
             incoming=True,
             blacklist_chats=Config.UB_BLACK_LIST_CHAT,

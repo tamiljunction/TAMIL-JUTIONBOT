@@ -14,8 +14,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="random", outgoing=True))
-@bot.on(sudo_cmd(pattern="random", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="random", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="random", allow_sudo=True))
 async def randomise(items):
     """ For .random command, get a random item from the list of items. """
     if not items.text[0].isalpha() and items.text[0] not in ("/", "#", "@", "!"):
@@ -29,8 +29,8 @@ async def randomise(items):
             + "`"
         )
 
-@bot.on(admin_cmd(pattern="sleep([0-9]+)?$", outgoing=True))
-@bot.on(sudo_cmd(pattern="sleep([0-9]+)?$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="sleep([0-9]+)?$", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="sleep([0-9]+)?$", allow_sudo=True))
 async def sleepybot(time):
     """ For .sleep command, let the userbot snooze for a few second. """
     message = time.text

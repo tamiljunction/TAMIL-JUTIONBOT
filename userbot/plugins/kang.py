@@ -32,8 +32,8 @@ KANGING_STR = [
 legend = Config.CUSTOM_STICKER_PACK_NAME
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="kang"))
-@bot.on(sudo_cmd(pattern="kang", allow_sudo=True))
+@LEGEND.on(admin_cmd(outgoing=True, pattern="kang"))
+@LEGEND.on(sudo_cmd(pattern="kang", allow_sudo=True))
 async def kang(args):
     """ For .kang command, kangs stickers or creates new ones. """
     user = await bot.get_me()
@@ -287,8 +287,8 @@ async def resize_photo(photo):
     return image
 
 
-@bot.on(admin_cmd(outgoing=True, pattern="stkrinfo"))
-@bot.on(sudo_cmd(pattern="stkrinfo", allow_sudo=True))
+@LEGEND.on(admin_cmd(outgoing=True, pattern="stkrinfo"))
+@LEGEND.on(sudo_cmd(pattern="stkrinfo", allow_sudo=True))
 async def get_pack_info(event):
     if not event.is_reply:
         await eor(event, "`I can't fetch info from black hole!!!`")

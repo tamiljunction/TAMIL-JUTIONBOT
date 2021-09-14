@@ -6,7 +6,7 @@ from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern=f"dns$", outgoing=True))
+@LEGEND.on(admin_cmd(pattern=f"dns$", outgoing=True))
 async def _(event):
     "To get Domain Name System(dns) of the given link."
     input_str = "".join(event.text.split(maxsplit=1)[1:])
@@ -33,7 +33,7 @@ async def _(event):
         )
 
 
-bot.on(admin_cmd(pattern=f"short$", outgoing=True))
+LEGEND.on(admin_cmd(pattern=f"short$", outgoing=True))
 async def _(event):
     "shortens the given link"
     input_str = "".join(event.text.split(maxsplit=1)[1:])
@@ -62,7 +62,7 @@ async def _(event):
         await edit_or_reply(event, "`Something is wrong, please try again later.`")
 
 
-bot.on(admin_cmd(pattern=f"unshort$", outgoing=True))
+LEGEND.on(admin_cmd(pattern=f"unshort$", outgoing=True))
 async def _(event):
     "To unshort the given dagb shorten url."
     input_str = "".join(event.text.split(maxsplit=1)[1:])
@@ -96,7 +96,7 @@ async def _(event):
 
 
 
-bot.on(admin_cmd(pattern=f"trs$", outgoing=True))
+LEGEND.on(admin_cmd(pattern=f"trs$", outgoing=True))
 async def _(event):
     input_str = "".join(event.text.split(maxsplit=1)[1:])
     reply = await event.get_reply_message()

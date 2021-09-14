@@ -93,8 +93,8 @@ def yaml_format(obj, indent=0):
     return "".join(result)
 
 
-@bot.on(admin_cmd(pattern=r"new", outgoing=True))
-@bot.on(sudo_cmd(pattern=r"new", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"new", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern=r"new", allow_sudo=True))
 async def _(event):
     if not event.message.is_reply:
         return

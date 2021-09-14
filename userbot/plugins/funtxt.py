@@ -5,8 +5,8 @@ from userbot import CMD_HELP
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="ftext ?(.*)"))
-@bot.on(sudo_cmd(pattern="ftext ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="ftext ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="ftext ?(.*)", allow_sudo=True))
 async def payf(event):
     if event.fwd_from:
         return
@@ -33,8 +33,8 @@ async def payf(event):
     await event.edit(pay)
 
 
-@bot.on(admin_cmd(pattern="cat$"))
-@bot.on(sudo_cmd(pattern="cat$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="cat$"))
+@LEGEND.on(sudo_cmd(pattern="cat$", allow_sudo=True))
 async def hmm(LEGEND):
     if LEGEND.fwd_from:
         return
@@ -42,8 +42,8 @@ async def hmm(LEGEND):
     await edit_or_reply(LEGEND, reactcat)
 
 
-@bot.on(admin_cmd(pattern="why$"))
-@bot.on(sudo_cmd(pattern="why$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="why$"))
+@LEGEND.on(sudo_cmd(pattern="why$", allow_sudo=True))
 async def hmm(LEGEND):
     if LEGEND.fwd_from:
         return
@@ -51,8 +51,8 @@ async def hmm(LEGEND):
     await edit_or_reply(LEGEND, whyLEGEND)
 
 
-@bot.on(admin_cmd(pattern="fact$"))
-@bot.on(sudo_cmd(pattern="fact$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="fact$"))
+@LEGEND.on(sudo_cmd(pattern="fact$", allow_sudo=True))
 async def hmm(LEGEND):
     if LEGEND.fwd_from:
         return

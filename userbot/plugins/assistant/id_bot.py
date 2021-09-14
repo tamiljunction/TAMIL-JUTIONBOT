@@ -2,7 +2,7 @@ from telethon import events
 from telethon.utils import pack_bot_file_id
 from userbot import bot
 
-@tgbot.on(events.NewMessage(pattern="^/id"))
+@tgLEGEND.on(events.NewMessage(pattern="^/id"))
 async def _(event):
     if event.reply_to_msg_id:
         await event.get_input_chat()

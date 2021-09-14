@@ -10,7 +10,7 @@ TYPE_PHOTO = 1
 TYPE_DOCUMENT = 2
 
 
-@bot.on(events.NewMessage(pattern=r'\#(\S+)', outgoing=True))
+@LEGEND.on(events.NewMessage(pattern=r'\#(\S+)', outgoing=True))
 async def on_snip(event):
     name = event.pattern_match.group(1)
     snip = get_snips(name)
@@ -41,8 +41,8 @@ async def on_snip(event):
         await event.delete()
 
 
-@bot.on(admin_cmd(pattern="snips (.*)"))
-@bot.on(sudo_cmd(pattern="snips (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="snips (.*)"))
+@LEGEND.on(sudo_cmd(pattern="snips (.*)", allow_sudo=True))
 async def on_snip_save(event):
     name = event.pattern_match.group(1)
     msg = await event.get_reply_message()
@@ -66,8 +66,8 @@ async def on_snip_save(event):
         await edit_or_reply(event, "Reply to a message with `snips keyword` to save the snip")
 
 
-@bot.on(admin_cmd(pattern="snipl"))
-@bot.on(sudo_cmd(pattern="snipl", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="snipl"))
+@LEGEND.on(sudo_cmd(pattern="snipl", allow_sudo=True))
 async def on_snip_list(event):
     all_snips = get_all_snips()
     OUT_STR = "Available Snips:\n"
@@ -92,8 +92,8 @@ async def on_snip_list(event):
         await edit_or_reply(event, OUT_STR)
 
 
-@bot.on(admin_cmd(pattern="snipd (\S+)"))
-@bot.on(sudo_cmd(pattern="snipd (\S+)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="snipd (\S+)"))
+@LEGEND.on(sudo_cmd(pattern="snipd (\S+)", allow_sudo=True))
 async def on_snip_delete(event):
     name = event.pattern_match.group(1)
     remove_snip(name)

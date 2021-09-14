@@ -236,7 +236,7 @@ async def animeppwall():
     urllib.request.urlretrieve(fy, "donottouch.jpg")
 
 
-@bot.on(admin_cmd(pattern="batmandp$"))
+@LEGEND.on(admin_cmd(pattern="batmandp$"))
 async def main(event):
     if event.fwd_from:
         return
@@ -254,7 +254,7 @@ async def main(event):
         await asyncio.sleep(600)  # Edit this to your required needs
 
 
-@bot.on(admin_cmd(pattern="thordp$"))
+@LEGEND.on(admin_cmd(pattern="thordp$"))
 async def main(event):
     if event.fwd_from:
         return
@@ -272,7 +272,7 @@ async def main(event):
         await asyncio.sleep(600)  # Edit this to your required needs
 
 
-@bot.on(admin_cmd(pattern="actressdp$"))
+@LEGEND.on(admin_cmd(pattern="actressdp$"))
 async def main(event):
     if event.fwd_from:
         return
@@ -290,7 +290,7 @@ async def main(event):
         await asyncio.sleep(600)
 
 
-@bot.on(admin_cmd(pattern="animedp$"))
+@LEGEND.on(admin_cmd(pattern="animedp$"))
 async def main(event):
     if event.fwd_from:
         return
@@ -308,7 +308,7 @@ async def main(event):
         await asyncio.sleep(600)
 
 
-@bot.on(admin_cmd(pattern="avengersdp$"))
+@LEGEND.on(admin_cmd(pattern="avengersdp$"))
 async def main(event):
     if event.fwd_from:
         return
@@ -326,7 +326,7 @@ async def main(event):
         await asyncio.sleep(600)
 
 
-@bot.on(admin_cmd(pattern="gamerdp$"))
+@LEGEND.on(admin_cmd(pattern="gamerdp$"))
 async def main(event):
     if event.fwd_from:
         return
@@ -344,7 +344,7 @@ async def main(event):
         await asyncio.sleep(600)
 
 
-@bot.on(admin_cmd(pattern="hackerdp$"))
+@LEGEND.on(admin_cmd(pattern="hackerdp$"))
 async def main(event):
     if event.fwd_from:
         return
@@ -362,7 +362,7 @@ async def main(event):
         await asyncio.sleep(600)
 
 
-@bot.on(admin_cmd(pattern="spacedp$"))
+@LEGEND.on(admin_cmd(pattern="spacedp$"))
 async def main(event):
     if event.fwd_from:
         return
@@ -380,7 +380,7 @@ async def main(event):
         await asyncio.sleep(600)
 
 
-@bot.on(admin_cmd(pattern="wallpapers$"))
+@LEGEND.on(admin_cmd(pattern="wallpapers$"))
 async def main(event):
     if event.fwd_from:
         return

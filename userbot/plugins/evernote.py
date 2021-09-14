@@ -3,7 +3,7 @@ import asyncio
 import os
 import sys
 
-@bot.on(events.NewMessage(pattern=r"^.note (.*)", outgoing=True))
+@LEGEND.on(events.NewMessage(pattern=r"^.note (.*)", outgoing=True))
 async def test(event):
     if event.fwd_from:
         return

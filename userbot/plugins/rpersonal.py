@@ -18,8 +18,8 @@ OSP = [
 que = {}
 
 
-@bot.on(admin_cmd(incoming=True))
-@bot.on(sudo_cmd(incoming=True, allow_sudo=True))
+@LEGEND.on(admin_cmd(incoming=True))
+@LEGEND.on(sudo_cmd(incoming=True, allow_sudo=True))
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -34,8 +34,8 @@ async def _(event):
             reply_to=event.message.id,
         )
 
-@bot.on(admin_cmd(pattern="Rstarts(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="Rstarts(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="Rstarts(?: |$)(.*)"))
+@LEGEND.on(sudo_cmd(pattern="Rstarts(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:
@@ -66,8 +66,8 @@ async def _(event):
         await event.edit(f"LEGEND {ALIVE_NAME}")
 
 
-@bot.on(admin_cmd(pattern="Rstops(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="Rstops(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="Rstops(?: |$)(.*)"))
+@LEGEND.on(sudo_cmd(pattern="Rstops(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:

@@ -5,7 +5,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
-@bot.on(admin_cmd("grab ?(.*)"))
+@LEGEND.on(admin_cmd("grab ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 

@@ -5,8 +5,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@bot.on(admin_cmd(pattern="dns (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="dns (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="dns (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="dns (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -19,8 +19,8 @@ async def _(event):
         await edit_or_reply(event, "i can't seem to find [this link]({}) on the internet".format(input_str, link_preview=False))
 
 
-@bot.on(admin_cmd(pattern="url (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="url (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="url (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="url (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -33,8 +33,8 @@ async def _(event):
         await edit_or_reply(event, "something is wrong. please try again later.")
 
 
-@bot.on(admin_cmd(pattern="unshort (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="unshort (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="unshort (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="unshort (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

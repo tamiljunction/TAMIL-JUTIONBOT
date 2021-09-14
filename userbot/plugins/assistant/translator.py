@@ -9,7 +9,7 @@ from googletrans import Translator
 from telethon import events
 
 
-@tgbot.on(events.NewMessage(pattern="^/tr ?(.*)"))
+@tgLEGEND.on(events.NewMessage(pattern="^/tr ?(.*)"))
 async def _(event):
     input_str = event.pattern_match.group(1)
     if event.reply_to_msg_id:

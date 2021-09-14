@@ -32,7 +32,7 @@ pm_caption += "❣❣ **𝖑𝖊ɠêɳ̃dẞø✞︎**❣❣ >>》 [𝕲𝖗ου
 pm_caption += "🎊🎊 **Řepô**🎊🎊  >>》 [𝕽єρο](https://github.com/LEGEND-OS/LEGENDBOT)\n\n"
 pm_caption += "[....▄███▄███▄\n....█████████\n.......▀██❣🌹💫😇💫🌹❣███▀\n...............▀█▀\n](https://t.me/Its_LegendBoy)\n\n"
 @borg.on(admin_cmd(pattern=r"abot"))
-@bot.on(sudo_cmd(pattern="abot$", allow_sudo=True))
+@LEGEND.on(sudo_cmd(pattern="abot$", allow_sudo=True))
 async def amireallyalive(yes):
     chat = await yes.get_chat()
 

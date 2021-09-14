@@ -11,8 +11,8 @@ import io
 from userbot.utils import admin_cmd, sudo_cmd, edit_or_reply 
 from userbot import CmdHelp
 
-@bot.on(admin_cmd("eval"))
-@bot.on(sudo_cmd("eval", allow_sudo=True))
+@LEGEND.on(admin_cmd("eval"))
+@LEGEND.on(sudo_cmd("eval", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

@@ -54,8 +54,8 @@ async def get_user_from_id(user, event):
 
 
 
-@bot.on(admin_cmd(pattern="gpro ?(.*)"))
-@bot.on(sudo_cmd(pattern="gpro ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="gpro ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="gpro ?(.*)", allow_sudo=True))
 async def _(legendevent):
     i = 0
     sender = await legendevent.get_sender()
@@ -107,8 +107,8 @@ async def _(legendevent):
     await bot.send_message(Config.LOGGER_ID, f"#GPROMOTE \n\n**Globally Promoted User :** [{user.first_name}](tg://user?id={user.id}) \n\n**Total Chats :** `{i}`")
 
 
-@bot.on(admin_cmd(pattern="gdem ?(.*)"))
-@bot.on(sudo_cmd(pattern="gdem ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="gdem ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="gdem ?(.*)", allow_sudo=True))
 async def _(legendevent):
     i = 0
     sender = await legendevent.get_sender()
@@ -160,8 +160,8 @@ async def _(legendevent):
     await bot.send_message(Config.LOGGER_ID, f"#GDEMOTE \n\n**Globally Demoted :** [{user.first_name}](tg://user?id={user.id}) \n\n**Total Chats :** `{i}`")
 
 
-@bot.on(admin_cmd(pattern=r"gbans ?(.*)"))
-@bot.on(sudo_cmd(pattern=r"gbans ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"gbans ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern=r"gbans ?(.*)", allow_sudo=True))
 async def _(event):
     legend = await eor(event, "`Gbanning...`")
     reason = ""
@@ -218,8 +218,8 @@ async def _(event):
         await legend.edit(ogmsg)
 
 
-@bot.on(admin_cmd(pattern=r"ungbans ?(.*)"))
-@bot.on(sudo_cmd(pattern=r"ungbans ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"ungbans ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern=r"ungbans ?(.*)", allow_sudo=True))
 async def _(event):
     legend = await eor(event, "`Ungban in progress...`")
     if event.reply_to_msg_id:
@@ -247,8 +247,8 @@ async def _(event):
     )
 
 
-@bot.on(admin_cmd(pattern="listgbanned$"))
-@bot.on(sudo_cmd(pattern="listgbanned$", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="listgbanned$"))
+@LEGEND.on(sudo_cmd(pattern="listgbanned$", allow_sudo=True))
 async def already(event):
     hmm = await eor(event, "`Fetching Gbanned users...`")
     gbanned_users = all_gbanned()
@@ -268,7 +268,7 @@ async def already(event):
     await hmm.edit(GBANNED_LIST)
 
 
-@bot.on(events.ChatAction)
+@LEGEND.on(events.ChatAction)
 async def _(event):
     if event.user_joined or event.added_by:
         user = await event.get_user()
@@ -288,8 +288,8 @@ async def _(event):
                     pass
 
 
-@bot.on(admin_cmd(pattern=r"gkick ?(.*)"))
-@bot.on(sudo_cmd(pattern=r"gkick ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern=r"gkick ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern=r"gkick ?(.*)", allow_sudo=True))
 async def gkick(event):
     legend = await eor(event, "`Kicking globally...`")
     if event.reply_to_msg_id:
@@ -321,8 +321,8 @@ async def gkick(event):
         await legend.edit(gkmsg)
 
 
-@bot.on(admin_cmd(pattern=r"gmuted ?(\d+)?"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern=r"gmuted ?(\d+)?"))
+@LEGEND.on(admin_cmd(pattern=r"gmuted ?(\d+)?"))
+@LEGEND.on(sudo_cmd(allow_sudo=True, pattern=r"gmuted ?(\d+)?"))
 async def gm(event):
     private = False
     if event.fwd_from:
@@ -362,8 +362,8 @@ async def gm(event):
         
 
 
-@bot.on(admin_cmd(outgoing=True, pattern=r"ungmuted ?(\d+)?"))
-@bot.on(sudo_cmd(allow_sudo=True, pattern=r"ungmuted ?(\d+)?"))
+@LEGEND.on(admin_cmd(outgoing=True, pattern=r"ungmuted ?(\d+)?"))
+@LEGEND.on(sudo_cmd(allow_sudo=True, pattern=r"ungmuted ?(\d+)?"))
 async def endgmute(event):
     private = False
     if event.fwd_from:

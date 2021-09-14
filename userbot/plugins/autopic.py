@@ -53,7 +53,7 @@ async def actresspp():
 
     urllib.request.urlretrieve(fy,"donottouch.jpg")
 
-@bot.on(admin_cmd(pattern="actressdps ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="actressdps ?(.*)"))
 
 async def main(event):
 
@@ -127,7 +127,7 @@ async def avengersdps():
 
     urllib.request.urlretrieve(fy,"donottouch.jpg")
 
-@bot.on(admin_cmd(pattern="avengersdps ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="avengersdps ?(.*)"))
 
 async def main(event):
 
@@ -190,7 +190,7 @@ async def hackpp():
 
     urllib.request.urlretrieve(fy,"donottouch.jpg")
 
-@bot.on(admin_cmd(pattern="hackers ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="hackers ?(.*)"))
 
 async def main(event):
 
@@ -304,7 +304,7 @@ async def marveldps():
 
     urllib.request.urlretrieve(fy,"donottouch.jpg")
 
-@bot.on(admin_cmd(pattern="marveldps ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="marveldps ?(.*)"))
 
 async def main(event):
 
@@ -349,7 +349,7 @@ async def predatordps():
         urllib.request.urlretrieve("https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf","f.ttf")
     urllib.request.urlretrieve(fy,"donottouch.jpg")
     
-@bot.on(admin_cmd(pattern="predatordps ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="predatordps ?(.*)"))
 async def main(event):
     await event.edit("**Starting predator Profile Pic.**") #Owner @NihiNivi
     while True:
@@ -411,7 +411,7 @@ async def spacedps():
 
     urllib.request.urlretrieve(fy,"friday.jpg")
 
-@bot.on(admin_cmd(pattern="spacedps ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="spacedps ?(.*)"))
 
 async def main(event):
 
@@ -458,7 +458,7 @@ TELEGRAPH_MEDIA_LINKS = ["https://telegra.ph/file/2eab4f64ead6fbf41bf87.jpg",
                          "https://telegra.ph/file/a196b6c07f0a659daf058.jpg",
                          "https://telegra.ph/file/69f19acd13b1eaf3fc120.jpg"
                         ]
-@bot.on(admin_cmd(pattern="survivorpfps ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="survivorpfps ?(.*)"))
 async def autopic(event):
     while True:
         piclink = random.randint(0, len(TELEGRAPH_MEDIA_LINKS) - 1)
@@ -547,7 +547,7 @@ async def actiondps():
 
     urllib.request.urlretrieve(fy,"donottouch.jpg")
 
-@bot.on(admin_cmd(pattern="actiondps ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="actiondps ?(.*)"))
 
 async def main(event):
 
@@ -622,7 +622,7 @@ async def animedps():
 
     urllib.request.urlretrieve(fy,"donottouch.jpg")
 
-@bot.on(admin_cmd(pattern="animedps ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="animedps ?(.*)"))
 
 async def main(event):
 
@@ -670,7 +670,7 @@ async def gamerpfps():
     if not os.path.exists("f.ttf"):
         urllib.request.urlretrieve("https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf","f.ttf")
     urllib.request.urlretrieve(fy,"donottouch.jpg")
-@bot.on(admin_cmd(pattern="gamerpfps ?(.*)"))
+@LEGEND.on(admin_cmd(pattern="gamerpfps ?(.*)"))
 async def main(event):
     await event.edit("**Starting Gamer Profile Pic.**") #Owner @NihiNivi
     while True:

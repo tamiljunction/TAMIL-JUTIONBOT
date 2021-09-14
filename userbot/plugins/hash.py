@@ -14,8 +14,8 @@ import pybase64
 from LEGENDBOT.utils import errors_handler, admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-@bot.on(admin_cmd(pattern="hash (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="hash (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="hash (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="hash (.*)", allow_sudo=True))
 @errors_handler
 async def gethash(hash_q):
     if hash_q.fwd_from:
@@ -62,8 +62,8 @@ async def gethash(hash_q):
         await hash_q.reply(ans)
 
 
-@bot.on(admin_cmd(pattern="hbase (en|de) (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="hbase (en|de) (.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="hbase (en|de) (.*)", outgoing=True))
+@LEGEND.on(sudo_cmd(pattern="hbase (en|de) (.*)", allow_sudo=True))
 @errors_handler
 async def endecrypt(query):
     if query.fwd_from:

@@ -17,8 +17,8 @@ OS = [
 que = {}
 
 
-@bot.on(admin_cmd(incoming=True))
-@bot.on(sudo_cmd(incoming=True, allow_sudo=True))
+@LEGEND.on(admin_cmd(incoming=True))
+@LEGEND.on(sudo_cmd(incoming=True, allow_sudo=True))
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -33,8 +33,8 @@ async def _(event):
             reply_to=event.message.id,
         )
 
-@bot.on(admin_cmd(pattern="lstarts(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="lstarts(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="lstarts(?: |$)(.*)"))
+@LEGEND.on(sudo_cmd(pattern="lstarts(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:
@@ -65,8 +65,8 @@ async def _(event):
         await event.edit(f"LEGEND {ALIVE_NAME}")
 
 
-@bot.on(admin_cmd(pattern="lstops(?: |$)(.*)"))
-@bot.on(sudo_cmd(pattern="lstops(?: |$)(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="lstops(?: |$)(.*)"))
+@LEGEND.on(sudo_cmd(pattern="lstops(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:

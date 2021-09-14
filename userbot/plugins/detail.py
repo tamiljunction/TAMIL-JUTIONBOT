@@ -6,8 +6,8 @@ from userbot.cmdhelp import CmdHelp
 CmdHelp("detail").add_command(
    'detailed', None, 'help to get detail of plugin'
 ).add()
-@bot.on(sudo_cmd(pattern="detailed ?(.*)", allow_sudo=True))
-@bot.on(admin_cmd(pattern="detailed ?(.*)"))
+@LEGEND.on(sudo_cmd(pattern="detailed ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="detailed ?(.*)"))
 async def _(event):
     help_plugs = event.pattern_match.group(1).lower()
     if help_plugs:

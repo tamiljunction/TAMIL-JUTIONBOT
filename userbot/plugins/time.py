@@ -14,8 +14,8 @@ from userbot.cmdhelp import CmdHelp
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
 
-@bot.on(admin_cmd(pattern="time ?(.*)", outgoing=True))# pylint:disable=E0602
-@bot.on(sudo_cmd(pattern="time ?(.*)", allow_sudo=True))
+@LEGEND.on(admin_cmd(pattern="time ?(.*)", outgoing=True))# pylint:disable=E0602
+@LEGEND.on(sudo_cmd(pattern="time ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

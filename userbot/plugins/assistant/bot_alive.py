@@ -18,6 +18,6 @@ pm_caption += "➥ 𝓒𝓸𝓹𝔂𝓻𝓲𝓼𝓱𝓽 : By [lҽցҽղժճօԵ]
 pm_caption += "[Assistant By ℓεɠεn∂](https://t.me/Its_LegendBoy)"
 
 # only Owner Can Use it
-@tgbot.on(events.NewMessage(pattern="^/alive", func=lambda e: e.sender_id == bot.uid))
+@tgLEGEND.on(events.NewMessage(pattern="^/alive", func=lambda e: e.sender_id == bot.uid))
 async def _(event):
     await tgbot.send_file(event.chat_id, PM_IMG, caption=pm_caption)
