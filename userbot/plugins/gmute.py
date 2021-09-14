@@ -69,12 +69,13 @@ async def cumshot(event):
     except Exception as e:
         await edit_or_reply(event, "Error occured!\nError is " + str(e))
     else:
-        await edit_or_reply(event, "Aur bhai Ja Chod Diya Ab Purani Bat Bhool Ja 😎")
+        await edit_or_reply(event, "Now u Can Speak Freely")
         
 @command(incoming=True)
 async def watcher(event):
     if is_muted(event.sender_id, "gmute"):
         await event.delete()
+
 CmdHelp("gmute").add_command(
    "gmute", "<Reply To User>", "To Mute User In Which U are Admin"
 ).add_command(
