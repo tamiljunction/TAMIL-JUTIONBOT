@@ -7,7 +7,7 @@ import re
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
-@LEGEND.on(admin_cmd(pattern=f"logic$", outgoing=True))
+@bot.on(admin_cmd(pattern=f"logic$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return

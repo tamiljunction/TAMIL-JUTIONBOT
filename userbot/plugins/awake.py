@@ -55,8 +55,8 @@ def get_readable_time(seconds: int) -> str:
 uptime = get_readable_time((time.time() - StartTime))
 
 
-@LEGEND.on(admin_cmd(outgoing=True, pattern="awake$"))
-@LEGEND.on(sudo_cmd(pattern="awake$", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="awake$"))
+@bot.on(sudo_cmd(pattern="awake$", allow_sudo=True))
 async def amireallyalive(event):
     if event.fwd_from:
         return

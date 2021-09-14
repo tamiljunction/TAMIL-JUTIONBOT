@@ -4,8 +4,8 @@ from userbot import CMD_HELP
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-@LEGEND.on(admin_cmd(pattern="figlet ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="figlet ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="figlet ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="figlet ?(.*)", allow_sudo=True))
 async def figlet(event):
     if event.fwd_from:
         return

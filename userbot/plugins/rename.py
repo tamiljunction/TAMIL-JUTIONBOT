@@ -43,8 +43,8 @@ def get_video_thumb(file, output=None, width=90):
         return output
 
 
-@LEGEND.on(admin_cmd(pattern="rename (.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="rename (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="rename (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="rename (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -76,8 +76,8 @@ async def _(event):
         await edit_or_reply(event, "Syntax // `.rename file.name` as reply to a Telegram media")
 
 
-@LEGEND.on(admin_cmd(pattern="rnupload (.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="rnupload (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="rnupload (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="rnupload (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -126,8 +126,8 @@ async def _(event):
         await edit_or_reply(event, "Syntax // .rnupload file.name as reply to a Telegram media")
 
 
-@LEGEND.on(admin_cmd(pattern="rnsupload (.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="rnsupload (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="rnsupload (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="rnsupload (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

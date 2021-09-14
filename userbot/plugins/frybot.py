@@ -12,8 +12,8 @@ from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(admin_cmd(pattern="frybot$"))
-@LEGEND.on(sudo_cmd(pattern="frybot$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="frybot$"))
+@bot.on(sudo_cmd(pattern="frybot$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -57,8 +57,8 @@ async def _(event):
         await event.delete()
 
 
-@LEGEND.on(admin_cmd(pattern="deepfry(?: |$)(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="deepfry(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="deepfry(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="deepfry(?: |$)(.*)", allow_sudo=True))
 async def deepfryer(event):
     try:
         frycount = int(event.pattern_match.group(1))

@@ -33,8 +33,8 @@ BANNED_RIGHTS = ChatBannedRights(
     embed_links=True,
 )
 
-@LEGEND.on(admin_cmd(pattern=r"kickall ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"kickall ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"kickall ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"kickall ?(.*)", allow_sudo=True))
 async def _(event):
     result = await event.client(
         functions.channels.GetParticipantRequest(event.chat_id, event.client.uid)
@@ -69,8 +69,8 @@ async def _(event):
     )
 
 
-@LEGEND.on(admin_cmd(pattern=r"banall ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"banall ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"banall ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"banall ?(.*)", allow_sudo=True))
 async def _(event):
     result = await event.client(
         functions.channels.GetParticipantRequest(event.chat_id, event.client.uid)
@@ -107,8 +107,8 @@ async def _(event):
     )
     
 
-@LEGEND.on(admin_cmd(pattern=r"unbanall ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"unbanall ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"unbanall ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"unbanall ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -138,8 +138,8 @@ async def _(event):
         await edit_or_reply(event, "{}: {} unbanned".format(event.chat_id, p))
 
 
-@LEGEND.on(admin_cmd(pattern="ikuck ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="ikuck ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ikuck ?(.*)"))
+@bot.on(sudo_cmd(pattern="ikuck ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

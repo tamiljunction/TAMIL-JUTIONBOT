@@ -14,7 +14,7 @@ from PIL import Image
 sedpath = "./LEGEND_Logo/"
 if not os.path.isdir(sedpath):
     os.makedirs(sedpath)
-@LEGEND.on(admin_cmd(pattern=r"rotate"))
+@bot.on(admin_cmd(pattern=r"rotate"))
 async def hmm(event):
     s=event.text
     h=s[8:]

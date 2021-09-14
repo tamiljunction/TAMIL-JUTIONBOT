@@ -13,8 +13,8 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "『Lêɠêɳ̃dẞø†』"
 legend = bot.uid
 LEGEND = f"[{DEFAULTUSER}](tg://user?id={legend})"
 
-@LEGEND.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"send (?P<shortname>\w+)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"send (?P<shortname>\w+)", allow_sudo=True))
 async def send(event):
     if event.fwd_from:
         return
@@ -37,8 +37,8 @@ async def send(event):
     else:
         await edit_or_reply(event, "File not found..... Kek")
 
-@LEGEND.on(admin_cmd(pattern="install$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="install$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="install$", outgoing=True))
+@bot.on(sudo_cmd(pattern="install$", allow_sudo=True))
 async def install(event):
     if event.fwd_from:
         return
@@ -78,8 +78,8 @@ async def install(event):
             await event.edit(f"**Failed to Install** \n`Error`\n{str(e)}")
             return os.remove(downloaded_file_name)
     
-@LEGEND.on(admin_cmd(pattern=r"uninstall (?P<shortname>\w+)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"uninstall (?P<shortname>\w+)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"uninstall (?P<shortname>\w+)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"uninstall (?P<shortname>\w+)", allow_sudo=True))
 async def uninstall(event):
     if event.fwd_from:
         return
@@ -92,8 +92,8 @@ async def uninstall(event):
     except OSError as e:
         await event.edit("Error: %s : %s" % (dir_path, e.strerror))
 
-@LEGEND.on(admin_cmd(pattern=r"unload (?P<shortname>\w+)$"))
-@LEGEND.on(sudo_cmd(pattern=r"upload (?P<shortname>\w+)$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"unload (?P<shortname>\w+)$"))
+@bot.on(sudo_cmd(pattern=r"upload (?P<shortname>\w+)$", allow_sudo=True))
 async def unload(event):
     if event.fwd_from:
         return
@@ -109,8 +109,8 @@ async def unload(event):
         )
 
 
-@LEGEND.on(admin_cmd(pattern=r"load (?P<shortname>\w+)$"))
-@LEGEND.on(sudo_cmd(pattern=r"load (?P<shortname>\w+)$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"load (?P<shortname>\w+)$"))
+@bot.on(sudo_cmd(pattern=r"load (?P<shortname>\w+)$", allow_sudo=True))
 async def load(event):
     if event.fwd_from:
         return
@@ -129,8 +129,8 @@ async def load(event):
 
 
 
-@LEGEND.on(admin_cmd(pattern=r"cmds"))
-@LEGEND.on(sudo_cmd(pattern=r"cmds", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"cmds"))
+@bot.on(sudo_cmd(pattern=r"cmds", allow_sudo=True))
 async def install(event):
     if event.fwd_from:
         return

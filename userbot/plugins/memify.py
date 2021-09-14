@@ -15,8 +15,8 @@ from var import Var
 client = borg
 
 
-@LEGEND.on(admin_cmd(pattern="memify ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="memify ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="memify ?(.*)"))
+@bot.on(sudo_cmd(pattern="memify ?(.*)", allow_sudo=True))
 async def handler(event):
     if event.fwd_from:
         return

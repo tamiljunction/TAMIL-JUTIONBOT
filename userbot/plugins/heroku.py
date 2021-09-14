@@ -111,8 +111,8 @@ async def variable(var):
             return await var.edit(f"**{variable}**  `is not exists`")
 
 
-@LEGEND.on(admin_cmd(pattern="usage(?: |$)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="usage(?: |$)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="usage(?: |$)", outgoing=True))
+@bot.on(sudo_cmd(pattern="usage(?: |$)", allow_sudo=True))
 async def dyno_usage(dyno):
     if dyno.fwd_from:
         return
@@ -176,8 +176,8 @@ async def dyno_usage(dyno):
     )
 
 
-@LEGEND.on(admin_cmd(pattern="logs$"))
-@LEGEND.on(sudo_cmd(pattern="logs$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="logs$"))
+@bot.on(sudo_cmd(pattern="logs$", allow_sudo=True))
 async def _(event):
     if (HEROKU_APP_NAME is None) or (HEROKU_API_KEY is None):
         return await eor(dyno, f"Make Sure Your HEROKU_APP_NAME & HEROKU_API_KEY are filled correct. Visit {my_group} for help.", link_preview=False)

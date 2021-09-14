@@ -18,8 +18,8 @@ async def reply_id(event):
     return reply_to_id
 
 
-@LEGEND.on(admin_cmd(pattern=r"img(?: |$)(\d*)? ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"img(?: |$)(\d*)? ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"img(?: |$)(\d*)? ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"img(?: |$)(\d*)? ?(.*)", allow_sudo=True))
 async def img_sampler(event):
     if event.fwd_from:
         return

@@ -19,8 +19,8 @@ SUDO_WALA = Config.SUDO_USERS
 lg_id = Config.LOGGER_ID
 
 
-@LEGEND.on(admin_cmd(pattern="spam (.*)"))
-@LEGEND.on(sudo_cmd(pattern="spam (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="spam (.*)"))
+@bot.on(sudo_cmd(pattern="spam (.*)", allow_sudo=True))
 async def spammer(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         message = e.text
@@ -31,8 +31,8 @@ async def spammer(e):
         await e.client.send_message(
             lg_id, f"#SPAM \n\nSpammed  `{counter}`  messages!!"
         )
-@LEGEND.on(admin_cmd(pattern="bigspam"))
-@LEGEND.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
+@bot.on(admin_cmd(pattern="bigspam"))
+@bot.on(sudo_cmd(pattern="bigspam", allow_sudo=True))
 async def bigspam(LEGEND):
     if not LEGEND.text[0].isalpha() and LEGEND.text[0] not in ("/", "#", "@", "!"):
         LEGEND_msg = LEGEND.text
@@ -47,8 +47,8 @@ async def bigspam(LEGEND):
             )
 
 
-@LEGEND.on(admin_cmd("dspam (.*)"))
-@LEGEND.on(sudo_cmd(pattern="dspam (.*)", allow_sudo=True))
+@bot.on(admin_cmd("dspam (.*)"))
+@bot.on(sudo_cmd(pattern="dspam (.*)", allow_sudo=True))
 async def spammer(e):
     if e.fwd_from:
         return
@@ -63,8 +63,8 @@ async def spammer(e):
 
 
 #@register(outgoing=True, pattern="^.mspam (.*)")
-@LEGEND.on(admin_cmd(pattern="mspam (.*)"))
-@LEGEND.on(sudo_cmd(pattern="mspam (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="mspam (.*)"))
+@bot.on(sudo_cmd(pattern="mspam (.*)", allow_sudo=True))
 async def tiny_pic_spam(e):
     sender = await e.get_sender()
     me = await e.client.get_me()

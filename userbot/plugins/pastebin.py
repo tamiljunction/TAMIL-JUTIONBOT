@@ -37,8 +37,8 @@ BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
 BOTLOG = True
 
 
-@LEGEND.on(admin_cmd(pattern="paste ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="paste ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="paste ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="paste ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -83,8 +83,8 @@ async def _(event):
         await edit_or_reply(event, "Pasted to dogbin : [dog]({}) in {} seconds".format(url, ms))
 
 
-@LEGEND.on(admin_cmd(pattern="getpaste(?: |$)(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="getpaste(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="getpaste(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="getpaste(?: |$)(.*)", allow_sudo=True))
 async def get_dogbin_content(dog_url):
     """ For .getpaste command, fetches the content of a dogbin URL. """
     textx = await dog_url.get_reply_message()
@@ -134,8 +134,8 @@ async def get_dogbin_content(dog_url):
         )
 
 
-@LEGEND.on(admin_cmd(pattern="neko ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="neko ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="neko ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="neko ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -191,8 +191,8 @@ async def _(event):
     await edit_or_reply(event, reply_text)
 
 
-@LEGEND.on(admin_cmd(pattern="iffuci ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="iffuci ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="iffuci ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="iffuci ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -238,8 +238,8 @@ async def _(event):
         await edit_or_reply(event, "code is pasted to {} in {} seconds".format(url, ms))
 
 
-@LEGEND.on(admin_cmd(pattern="paster ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="paster ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="paster ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="paster ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

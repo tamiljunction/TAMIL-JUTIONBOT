@@ -11,7 +11,7 @@ from userbot.cmdhelp import CmdHelp
 
 
 
-@LEGEND.on(admin_cmd(outgoing=True, pattern="animator( (.*)|$)"))
+@bot.on(admin_cmd(outgoing=True, pattern="animator( (.*)|$)"))
 async def _(event):
     if event.fwd_from:
         return

@@ -41,8 +41,8 @@ async def get_tz(con):
         return
 
 
-@LEGEND.on(admin_cmd(outgoing=True, pattern="climate( (.*)|$)"))
-@LEGEND.on(sudo_cmd(pattern="climate( (.*)|$)", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="climate( (.*)|$)"))
+@bot.on(sudo_cmd(pattern="climate( (.*)|$)", allow_sudo=True))
 @errors_handler
 async def get_weather(weather):
     if weather.fwd_from:
@@ -142,8 +142,8 @@ async def get_weather(weather):
     )
 
 
-@LEGEND.on(admin_cmd(outgoing=True, pattern="setcity(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="setcity(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(outgoing=True, pattern="setcity(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="setcity(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def set_default_city(city):
     if city.fwd_from:
@@ -193,8 +193,8 @@ async def set_default_city(city):
     await edit_or_reply(city, f"`Set default city as {cityname}, {fullc_n}.`")
 
 
-@LEGEND.on(admin_cmd(pattern="wttr ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="wttr ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="wttr ?(.*)"))
+@bot.on(sudo_cmd(pattern="wttr ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

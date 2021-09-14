@@ -38,8 +38,8 @@ def convert_tosticker(response, filename=None):
     return filename
 
 
-@LEGEND.on(admin_cmd(pattern="(rmbg|srmbg) ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="(rmbg|srmbg) ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="(rmbg|srmbg) ?(.*)"))
+@bot.on(sudo_cmd(pattern="(rmbg|srmbg) ?(.*)", allow_sudo=True))
 async def remove_background(event):
     if Config.REM_BG_API_KEY is None:
         return await edit_or_reply(

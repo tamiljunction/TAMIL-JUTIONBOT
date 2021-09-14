@@ -1,6 +1,6 @@
 import asyncio
 from . import *
-@LEGEND.on(admin_cmd(pattern="happybirthday"))
+@bot.on(admin_cmd(pattern="happybirthday"))
 async def _(event):
 	await asyncio.sleep(1)
 	await event.edit("""

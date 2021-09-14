@@ -9,7 +9,7 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, eor
 from userbot.cmdhelp import CmdHelp
 from userbot import HEROKU_APP, bot
 
-@LEGEND.on(admin_cmd(pattern="restart"))
+@bot.on(admin_cmd(pattern="restart"))
 async def _(event):
     if event.fwd_from:
         return
@@ -22,7 +22,7 @@ async def _(event):
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
 
-@LEGEND.on(admin_cmd(pattern="shutdown$"))
+@bot.on(admin_cmd(pattern="shutdown$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -32,8 +32,8 @@ async def _(event):
     else:
         sys.exit(0)
 
-@LEGEND.on(admin_cmd(pattern="reload$"))
-@LEGEND.on(sudo_cmd(pattern="reload$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="reload$"))
+@bot.on(sudo_cmd(pattern="reload$", allow_sudo=True))
 async def rel(event):
     await eor(event, "Reloading Lêɠêɳ̃dẞø†... Wait for few seconds...")
     await reload_LEGENDBOT()

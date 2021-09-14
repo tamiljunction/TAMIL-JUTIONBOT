@@ -5,8 +5,8 @@ from userbot.cmdhelp import CmdHelp
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 
 
-@LEGEND.on(admin_cmd(pattern="mute ?(\d+)?", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="mute ?(\d+)?", allow_sudo=True))
+@bot.on(admin_cmd(pattern="mute ?(\d+)?", outgoing=True))
+@bot.on(sudo_cmd(pattern="mute ?(\d+)?", allow_sudo=True))
 async def startmute(event):
     private = False
     if event.fwd_from:
@@ -88,8 +88,8 @@ async def startmute(event):
             await edit_or_reply(event, "Chup Hi Raho \n**｀-´)⊃━☆ﾟ.*･｡ﾟ **")
 
 
-@LEGEND.on(admin_cmd(pattern="unmute ?(\d+)?", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="unmute ?(\d+)?", allow_sudo=True))
+@bot.on(admin_cmd(pattern="unmute ?(\d+)?", outgoing=True))
+@bot.on(sudo_cmd(pattern="unmute ?(\d+)?", allow_sudo=True))
 async def endmute(event):
     private = False
     if event.fwd_from:

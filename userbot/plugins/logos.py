@@ -14,8 +14,8 @@ from userbot import ALIVE_NAME
 
 PICS_STR = []
 
-@LEGEND.on(admin_cmd(pattern=r"logo ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"logo ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"logo ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"logo ?(.*)", allow_sudo=True))
 async def lg1(LEGENDevent):
     event = await edit_or_reply(LEGENDevent, "`Processing.....`")
     fnt = await get_font_file(event.client, "@LegendFonts")

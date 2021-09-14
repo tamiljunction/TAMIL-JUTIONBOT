@@ -20,8 +20,8 @@ from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(admin_cmd(pattern="echo$"))
-@LEGEND.on(sudo_cmd(pattern="echo$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="echo$"))
+@bot.on(sudo_cmd(pattern="echo$", allow_sudo=True))
 async def echo(LEGEND):
     if LEGEND.fwd_from:
         return
@@ -44,8 +44,8 @@ async def echo(LEGEND):
         await edit_or_reply(LEGEND, "Reply to a User's message to echo his messages")
 
 
-@LEGEND.on(admin_cmd(pattern="rmecho$"))
-@LEGEND.on(sudo_cmd(pattern="rmecho$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="rmecho$"))
+@bot.on(sudo_cmd(pattern="rmecho$", allow_sudo=True))
 async def echo(LEGEND):
     if LEGEND.fwd_from:
         return
@@ -68,8 +68,8 @@ async def echo(LEGEND):
         await edit_or_reply(LEGEND, "Reply to a User's message to echo his messages")
 
 
-@LEGEND.on(admin_cmd(pattern="listecho$"))
-@LEGEND.on(sudo_cmd(pattern="listecho$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="listecho$"))
+@bot.on(sudo_cmd(pattern="listecho$", allow_sudo=True))
 async def echo(LEGEND):
     if LEGEND.fwd_from:
         return
@@ -98,7 +98,7 @@ async def echo(LEGEND):
         await edit_or_reply(LEGEND, output_str)
 
 
-@LEGEND.on(events.NewMessage(incoming=True))
+@bot.on(events.NewMessage(incoming=True))
 async def samereply(LEGEND):
     if LEGEND.chat_id in Config.UB_BLACK_LIST_CHAT:
         return

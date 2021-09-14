@@ -5,8 +5,8 @@ from userbot import CMD_HELP
 from LEGENDBOT.utils import *
 
 
-@LEGEND.on(admin_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="plinfo(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="plinfo(?: |$)(.*)", allow_sudo=True))
 async def LEGENDBOTt(event):
     if event.fwd_from:
         return

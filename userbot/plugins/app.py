@@ -8,8 +8,8 @@ from userbot.cmdhelp import CmdHelp
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "✞︎t͛ẞ̸ 𝖑𝖊ɠêɳ̃d"
 
 
-@LEGEND.on(admin_cmd(pattern="app (.*)"))
-@LEGEND.on(sudo_cmd(pattern="app (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="app (.*)"))
+@bot.on(sudo_cmd(pattern="app (.*)", allow_sudo=True))
 async def apk(event):
     if event.fwd_from:
         return
@@ -80,8 +80,8 @@ async def apk(event):
         await event.edit("Exception Occured:- " + str(err))
 
 
-@LEGEND.on(admin_cmd(pattern="appr (.*)"))
-@LEGEND.on(sudo_cmd(pattern="appr (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="appr (.*)"))
+@bot.on(sudo_cmd(pattern="appr (.*)", allow_sudo=True))
 async def apkr(event):
     if event.fwd_from:
         return

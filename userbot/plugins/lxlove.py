@@ -46,8 +46,8 @@ MEDHU = [
 que = {}
 
 
-@LEGEND.on(admin_cmd(incoming=True))
-@LEGEND.on(sudo_cmd(incoming=True, allow_sudo=True))
+@bot.on(admin_cmd(incoming=True))
+@bot.on(sudo_cmd(incoming=True, allow_sudo=True))
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -62,8 +62,8 @@ async def _(event):
             reply_to=event.message.id,
         )
 
-@LEGEND.on(admin_cmd(pattern="lxlove(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="lxlove(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="lxlove(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="lxlove(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:
@@ -94,8 +94,8 @@ async def _(event):
         await event.edit(f"EK TU H MERI M KYA DUNIA TO LENA. {ALIVE_NAME}")
 
 
-@LEGEND.on(admin_cmd(pattern="nofeelings(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="nofeelings(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="nofeelings(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="nofeelings(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:

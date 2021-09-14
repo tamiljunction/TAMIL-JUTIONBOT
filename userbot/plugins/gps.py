@@ -8,8 +8,8 @@ from telethon.tl import types
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from LEGENDBOT import CmdHelp
 
-@LEGEND.on(admin_cmd(pattern="gps ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="gps ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="gps ?(.*)"))
+@bot.on(sudo_cmd(pattern="gps ?(.*)", allow_sudo=True))
 async def gps(event):
     if event.fwd_from:
         return

@@ -73,7 +73,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ===========================Consts.=====================
 
 
-@LEGEND.on(admin_cmd(pattern="(ban|unban) ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="(ban|unban) ?(.*)", allow_sudo=True))
 async def _(event):
     # Space weirdness in regex required because argument is optional and other
     # commands start with ".unban"
@@ -104,7 +104,7 @@ async def _(event):
         await event.edit(f"{input_cmd}ned Successfully!")
 
 
-@LEGEND.on(admin_cmd(pattern="pgs ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="pgs ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -134,7 +134,7 @@ async def _(event):
             await event.edit("**PURGE** Failed!")
 
 
-@LEGEND.on(admin_cmd(pattern="(ban|unban) ?(.*)"))
+@bot.on(admin_cmd(pattern="(ban|unban) ?(.*)"))
 async def _(event):
     # Space weirdness in regex required because argument is optional and other
     # commands start with ".unban"

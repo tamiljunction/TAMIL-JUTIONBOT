@@ -71,8 +71,8 @@ def progress(current, total):
     )
 
 
-@LEGEND.on(admin_cmd(pattern="ocrlang", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="ocrlang", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ocrlang", outgoing=True))
+@bot.on(sudo_cmd(pattern="ocrlang", allow_sudo=True))
 async def get_ocr_languages(event):
     if event.fwd_from:
         return
@@ -105,8 +105,8 @@ async def get_ocr_languages(event):
     await edit_or_reply(event, str(a))
 
 
-@LEGEND.on(admin_cmd(pattern="ocr (.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="ocr (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ocr (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="ocr (.*)", allow_sudo=True))
 async def parse_ocr_space_api(event):
     if event.fwd_from:
         return

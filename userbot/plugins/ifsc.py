@@ -10,7 +10,7 @@ CmdHelp("ifsc").add_command(
 ).add()
 
 
-@LEGEND.on(admin_cmd(pattern="ifsc(.*)"))
+@bot.on(admin_cmd(pattern="ifsc(.*)"))
 async def _(event):
     if event.fwd_from:
         return

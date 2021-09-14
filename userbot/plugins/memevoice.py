@@ -12,8 +12,8 @@ from userbot.cmdhelp import CmdHelp
 from userbot.helpers.functions import deEmojify
 
 
-@LEGEND.on(admin_cmd(pattern="mev(?: |$)(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="mev(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="mev(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="mev(?: |$)(.*)", allow_sudo=True))
 async def nope(legend):
     LEGEND = legend.pattern_match.group(1)
     if not LEGEND:

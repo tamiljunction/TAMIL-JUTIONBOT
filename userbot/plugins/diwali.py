@@ -8,7 +8,7 @@ import asyncio
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-@LEGEND.on(admin_cmd("hdd"))
+@bot.on(admin_cmd("hdd"))
 async def _(event):
     if event.fwd_from:
         return
@@ -1267,7 +1267,7 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@LEGEND.on(admin_cmd("diwali"))
+@bot.on(admin_cmd("diwali"))
 async def _(event):
     if event.fwd_from:
         return
@@ -1288,7 +1288,7 @@ async def _(event):
         await event.edit(animation_chars[i % 20])
 
 
-@LEGEND.on(admin_cmd("dosto"))
+@bot.on(admin_cmd("dosto"))
 async def _(event):
     if event.fwd_from:
         return

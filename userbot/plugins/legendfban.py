@@ -25,8 +25,8 @@ if G_BAN_LOGGER_GROUP:
     G_BAN_LOGGER_GROUP = int(G_BAN_LOGGER_GROUP)
 
 
-@LEGEND.on(admin_cmd("superfstat ?(.*)"))
-@LEGEND.on(sudo_cmd("superfstat ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd("superfstat ?(.*)"))
+@bot.on(sudo_cmd("superfstat ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -73,8 +73,8 @@ async def _(event):
                 await event.edit("**Error:** `unblock` @MissRose_Bot `and try again!")
 
 
-@LEGEND.on(admin_cmd("suzieinfo ?(.*)"))
-@LEGEND.on(sudo_cmd("suzieinfo ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd("suzieinfo ?(.*)"))
+@bot.on(sudo_cmd("suzieinfo ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -111,8 +111,8 @@ async def _(event):
                 await event.edit("**Error:** `unblock` @MissRose_Bot `and try again!")
 
 
-@LEGEND.on(admin_cmd("superfinfo ?(.*)"))
-@LEGEND.on(sudo_cmd("superfinfo ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd("superfinfo ?(.*)"))
+@bot.on(sudo_cmd("superfinfo ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -141,8 +141,8 @@ async def _(event):
                 await event.edit("**Error:** `unblock` @MissRose_Bot `and try again!")
 
 
-@LEGEND.on(admin_cmd("supermyfeds ?(.*)"))
-@LEGEND.on(sudo_cmd("supermyfeds ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd("supermyfeds ?(.*)"))
+@bot.on(sudo_cmd("supermyfeds ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -163,8 +163,8 @@ async def _(event):
             await event.edit("**Error:** `unblock` @MissRose_Bot `and try again!")
 
 
-@LEGEND.on(admin_cmd(pattern=r"superplist ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"superplist ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"superplist ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"superplist ?(.*)", allow_sudo=True))
 async def get_users(show):
     await show.delete()
     if not show.text[0].isalpha() and show.text[0] not in ("/"):
@@ -203,8 +203,8 @@ async def get_users(show):
         )
 
 
-@LEGEND.on(admin_cmd(pattern=r"superblist ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"superblist ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"superblist ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"superblist ?(.*)", allow_sudo=True))
 async def get_users(show):
     await show.delete()
     if not show.text[0].isalpha() and show.text[0] not in ("/"):
@@ -243,8 +243,8 @@ async def get_users(show):
         )
 
 
-@LEGEND.on(admin_cmd(pattern="supergban ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="supergban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="supergban ?(.*)"))
+@bot.on(sudo_cmd(pattern="supergban ?(.*)", allow_sudo=True))
 async def _(event):
     if G_BAN_LOGGER_GROUP is None:
         await event.edit("ENV VAR is not set. This module will not work.")
@@ -265,8 +265,8 @@ async def _(event):
     await event.delete()
 
 
-@LEGEND.on(admin_cmd(pattern="superungban ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="superungban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="superungban ?(.*)"))
+@bot.on(sudo_cmd(pattern="superungban ?(.*)", allow_sudo=True))
 async def _(event):
     if G_BAN_LOGGER_GROUP is None:
         await event.edit("ENV VAR is not set. This module will not work.")
@@ -297,8 +297,8 @@ if FBAN_GROUP_ID:
     FBAN_GROUP_ID = int(FBAN_GROUP_ID)
 EXCLUDE_FED = os.environ.get("EXCLUDE_FED", None)
 
-@LEGEND.on(admin_cmd("superfban ?(.*)"))
-@LEGEND.on(sudo_cmd("superfban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd("superfban ?(.*)"))
+@bot.on(sudo_cmd("superfban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -432,8 +432,8 @@ async def _(event):
     await event.edit(f"SuperFBan Completed. Affected {len(fedList) - exCount} feds.")
 
 
-@LEGEND.on(admin_cmd("superunfban ?(.*)"))
-@LEGEND.on(sudo_cmd("superunfban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd("superunfban ?(.*)"))
+@bot.on(sudo_cmd("superunfban ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

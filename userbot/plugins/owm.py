@@ -38,8 +38,8 @@ async def get_tz(con):
         return
 
 
-@LEGEND.on(admin_cmd(pattern="weather(?: |$)(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="weather(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="weather(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="weather(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def get_weather(weather):
     """ For .weather command, gets the current weather of a city. """
@@ -143,8 +143,8 @@ async def get_weather(weather):
 
 
 #@register(outgoing=True, pattern="^.setcity(?: |$)(.*)")
-@LEGEND.on(admin_cmd(pattern="setcity(?: |$)(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="setcity(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="setcity(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="setcity(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def set_default_city(city):
     """ For .ctime command, change the default userbot country for date and time commands. """

@@ -8,7 +8,7 @@ CmdHelp("get_id").add_command(
     "get_id", None, "Get id of any group / channel / any user"
 ).add()
 
-@LEGEND.on(admin_cmd("get_id"))
+@bot.on(admin_cmd("get_id"))
 async def _(event):
     if event.fwd_from:
         return

@@ -4,8 +4,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(admin_cmd(pattern=r"macos$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"macos$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"macos$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"macos$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:
@@ -39,8 +39,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@LEGEND.on(admin_cmd(pattern=r"windows$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"windows$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"windows$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"windows$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:
@@ -74,8 +74,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@LEGEND.on(admin_cmd(pattern=r"linux$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"linux$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"linux$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"linux$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:
@@ -109,8 +109,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@LEGEND.on(admin_cmd(pattern=r"stock$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"stock$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"stock$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"stock$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:
@@ -144,8 +144,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@LEGEND.on(admin_cmd(pattern=r"os$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"os$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"os$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"os$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:

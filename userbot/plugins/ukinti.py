@@ -16,8 +16,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(admin_cmd(pattern=r"unbanall ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"unbanall ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"unbanall ?(.*)"))
+@bot.on(sudo_cmd(pattern=r"unbanall ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -47,8 +47,8 @@ async def _(event):
         await edit_or_reply(event, "{}: {} unbanned".format(event.chat_id, p))
 
 
-@LEGEND.on(admin_cmd(pattern="ikuck ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="ikuck ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ikuck ?(.*)"))
+@bot.on(sudo_cmd(pattern="ikuck ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd, humanbytes
 
 
-@LEGEND.on(admin_cmd(  # pylint:disable=E0602
+@bot.on(admin_cmd(  # pylint:disable=E0602
     pattern="anibsdk (torrentz2\.eu|idop\.se) (.*)"
 ))
 async def _(event):

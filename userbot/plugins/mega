@@ -55,7 +55,7 @@ async def subprocess_run(megadl, cmd):
     return stdout.decode().strip(), stderr.decode().strip(), exitCode
 
 
-@LEGEND.on(admin_cmd(outgoing=True, pattern=r"mega(?: |$)(.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"mega(?: |$)(.*)"))
 async def mega_downloader(megadl):
     LEGENDevent = await edit_or_reply(megadl, "`Collecting information...`")
     if not os.path.isdir(TMP_DOWNLOAD_DIRECTORY):

@@ -1,6 +1,6 @@
 from userbot.cmdhelp import CmdHelp
 from . import *
-@LEGEND.on(admin_cmd(pattern="hey ?(.*)"))
+@bot.on(admin_cmd(pattern="hey ?(.*)"))
 async def hi(event):
     giveVar = event.text
     ult = giveVar[4:5]

@@ -6,7 +6,7 @@ import random
 import asyncio
 from userbot.utils import admin_cmd
 
-@LEGEND.on(admin_cmd(pattern=r"jainder(.*)"))
+@bot.on(admin_cmd(pattern=r"jainder(.*)"))
 async def _(event):
     if event.fwd_from:
         return

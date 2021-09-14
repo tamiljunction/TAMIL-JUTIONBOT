@@ -14,7 +14,7 @@ from userbot.utils import admin_cmd, sudo_cmd
 
 from . import *
 
-@LEGEND.on(admin_cmd(outgoing=True, pattern=r"^\.ssvideo(?: |$)(.*)"))
+@bot.on(admin_cmd(outgoing=True, pattern=r"^\.ssvideo(?: |$)(.*)"))
 
 async def ssvideo(event):
 

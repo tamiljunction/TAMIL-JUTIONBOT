@@ -26,8 +26,8 @@ from userbot.cmdhelp import CmdHelp
 """ Userbot module for getiing info about any user on Telegram(including you!). """
 
 
-@LEGEND.on(admin_cmd(pattern="whois(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="whois(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="whois(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="whois(?: |$)(.*)", allow_sudo=True))
 async def who(event):
     if event.fwd_from:
         return
@@ -143,8 +143,8 @@ async def fetch_info(replied_user, event):
     return photo, caption
 
 
-@LEGEND.on(admin_cmd(pattern="link(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="link(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="link(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="link(?: |$)(.*)", allow_sudo=True))
 async def permalink(mention):
     """ For .link command, generates a link to the user's PM with a custom text. """
     user, custom = await get_user_from_event(mention)

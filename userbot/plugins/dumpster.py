@@ -3,7 +3,7 @@ import asyncio
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
-@LEGEND.on(admin_cmd(pattern="dump ?(.*)"))
+@bot.on(admin_cmd(pattern="dump ?(.*)"))
 async def _(message):
     try:
         obj = message.pattern_match.group(1)

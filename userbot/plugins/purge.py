@@ -15,8 +15,8 @@ from userbot.cmdhelp import CmdHelp
 
 
 
-@LEGEND.on(admin_cmd(pattern=r"purge", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"purge", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"purge", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"purge", allow_sudo=True))
 @errors_handler
 async def fastpurger(purg):
     """ For .purge command, purge all messages starting from the reply. """
@@ -48,8 +48,8 @@ async def fastpurger(purg):
 
 
 # @register(outgoing=True, pattern="^.purgeme")
-@LEGEND.on(admin_cmd(pattern=r"purgeme", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"purgeme", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"purgeme", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"purgeme", allow_sudo=True))
 @errors_handler
 async def purgeme(delme):
     """ For .purgeme, delete x count of your latest message."""
@@ -76,8 +76,8 @@ async def purgeme(delme):
     await smsg.delete()
 
 
-@LEGEND.on(admin_cmd(pattern=r"sd", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"sd", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"sd", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"sd", allow_sudo=True))
 @errors_handler
 async def selfdestruct(destroy):
     """ For .sd command, make seflf-destructable messages. """

@@ -312,8 +312,8 @@ RAID = [
 que = {}
 
 
-@LEGEND.on(admin_cmd(incoming=True))
-@LEGEND.on(sudo_cmd(incoming=True, allow_sudo=True))
+@bot.on(admin_cmd(incoming=True))
+@bot.on(sudo_cmd(incoming=True, allow_sudo=True))
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -328,8 +328,8 @@ async def _(event):
             reply_to=event.message.id,
         )
 
-@LEGEND.on(admin_cmd(pattern="replyraid(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="replyraid(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="replyraid(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="replyraid(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:
@@ -360,8 +360,8 @@ async def _(event):
         await event.edit(f"DONT BE OVERSMART. {ALIVE_NAME}")
 
 
-@LEGEND.on(admin_cmd(pattern="dreplyraid(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="dreplyraid(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="dreplyraid(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="dreplyraid(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:

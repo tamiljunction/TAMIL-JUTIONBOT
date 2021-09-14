@@ -72,8 +72,8 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ================================================
 
 
-@LEGEND.on(admin_cmd("setgpic$"))
-@LEGEND.on(sudo_cmd(pattern="setgpic$", allow_sudo=True))
+@bot.on(admin_cmd("setgpic$"))
+@bot.on(sudo_cmd(pattern="setgpic$", allow_sudo=True))
 @errors_handler
 async def set_group_photo(gpic):
     if gpic.fwd_from:
@@ -119,8 +119,8 @@ async def set_group_photo(gpic):
             )
 
 
-@LEGEND.on(admin_cmd("promote(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="promote(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd("promote(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="promote(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def promote(promt):
     if promt.fwd_from:
@@ -159,8 +159,8 @@ async def promote(promt):
     )
 
 
-@LEGEND.on(admin_cmd("demote(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="demote(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd("demote(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="demote(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def demote(dmod):
     if dmod.fwd_from:
@@ -200,8 +200,8 @@ async def demote(dmod):
         )
 
 
-@LEGEND.on(admin_cmd("ban(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="ban(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd("ban(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="ban(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def ban(bon):
     if bon.fwd_from:
@@ -241,8 +241,8 @@ async def ban(bon):
         )
 
 
-@LEGEND.on(admin_cmd("unban(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="unban(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd("unban(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="unban(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def nothanos(unbon):
     if unbon.fwd_from:
@@ -282,8 +282,8 @@ async def watcher(event):
         except Exception as e:
             LOGS.info(str(e))
 
-@LEGEND.on(admin_cmd("pin($| (.*))"))
-@LEGEND.on(sudo_cmd(pattern="pin($| (.*))", allow_sudo=True))
+@bot.on(admin_cmd("pin($| (.*))"))
+@bot.on(sudo_cmd(pattern="pin($| (.*))", allow_sudo=True))
 @errors_handler
 async def pin(msg):
     if msg.fwd_from:
@@ -324,8 +324,8 @@ async def pin(msg):
         pass
 
 
-@LEGEND.on(admin_cmd("kick(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="kick(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd("kick(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="kick(?: |$)(.*)", allow_sudo=True))
 @errors_handler
 async def kick(usr):
     if usr.fwd_from:
@@ -362,8 +362,8 @@ async def kick(usr):
         )
 
 
-@LEGEND.on(admin_cmd("undelet$"))
-@LEGEND.on(sudo_cmd(pattern="undelet$", allow_sudo=True))
+@bot.on(admin_cmd("undelet$"))
+@bot.on(sudo_cmd(pattern="undelet$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

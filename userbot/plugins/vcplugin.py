@@ -21,7 +21,7 @@ def user_list(l, n):
         yield l[i : i + n]
 
 
-@LEGEND.on(admin_cmd(pattern="stopvc$",
+@bot.on(admin_cmd(pattern="stopvc$",
     outgoing=True,
 ))
 async def _(e):
@@ -32,7 +32,7 @@ async def _(e):
         await eor(e, f"`{str(ex)}`")
 
 
-@LEGEND.on(admin_cmd(pattern="playvc$",
+@bot.on(admin_cmd(pattern="playvc$",
 ))
 async def _(e):
     zz = await eor(e, "`VC bot started...`")
@@ -51,7 +51,7 @@ async def _(e):
         await zz.edit(msg)
 
 
-@LEGEND.on(admin_cmd(
+@bot.on(admin_cmd(
     pattern="vcinvite$",
     outgoing=True,
 ))
@@ -72,7 +72,7 @@ async def _(e):
     await ok.edit(f"`Invited {z} users`")
 
 
-@LEGEND.on(admin_cmd(
+@bot.on(admin_cmd(
     pattern="startvc$",
     outgoing=True,
 ))
@@ -84,7 +84,7 @@ async def _(e):
         await eor(e, f"`{str(ex)}`")
 
 
-@LEGEND.on(admin_cmd(
+@bot.on(admin_cmd(
     pattern="listvcaccess$",
 ))
 async def _(e):
@@ -101,7 +101,7 @@ async def _(e):
     await xx.edit(pp)
 
 
-@LEGEND.on(admin_cmd(
+@bot.on(admin_cmd(
     pattern="rmvaccess ?(.*)",
 ))
 async def _(e):
@@ -135,7 +135,7 @@ async def _(e):
         return await eod(xx, f"`{str(ex)}`", time=5)
 
 
-@LEGEND.on(admin_cmd(
+@bot.on(admin_cmd(
     pattern="vcaccess ?(.*)",
 ))
 async def _(e):

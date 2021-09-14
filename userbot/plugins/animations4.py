@@ -4,8 +4,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(admin_cmd(pattern="phub$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="phub$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="phub$", outgoing=True))
+@bot.on(sudo_cmd(pattern="phub$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:
@@ -36,8 +36,8 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@LEGEND.on(admin_cmd(pattern=r"amore$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"amore$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"amore$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"amore$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:
@@ -70,8 +70,8 @@ async def _(event):
 import asyncio
 
 
-@LEGEND.on(admin_cmd(pattern=r"sexy$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"sexy$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"sexy$", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"sexy$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:
@@ -99,8 +99,8 @@ async def _(event):
 
         await event.edit(animation_chars[i % 10])
         
-@LEGEND.on(admin_cmd(pattern="istar$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="istar$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="istar$", outgoing=True))
+@bot.on(sudo_cmd(pattern="istar$", allow_sudo=True))
 async def ammastar(LEGENDstar):
   
     if LEGENDstar.fwd_from:
@@ -128,8 +128,8 @@ async def ammastar(LEGENDstar):
         await LEGENDstar.edit(animation_chars[i % 11])
     
         
-@LEGEND.on(admin_cmd(pattern=r"lmoon", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"lmoon", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"lmoon", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"lmoon", allow_sudo=True))
 async def test(event):
     if event.fwd_from:
         return
@@ -138,8 +138,8 @@ async def test(event):
     )
 
 
-@LEGEND.on(admin_cmd(pattern=r"city", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"city", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"city", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"city", allow_sudo=True))
 async def test(event):
     if event.fwd_from:
         return
@@ -156,16 +156,16 @@ async def test(event):
     )
 
 
-@LEGEND.on(admin_cmd(pattern=r"hii", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"hii", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"hii", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"hii", allow_sudo=True))
 async def hi(event):
     if event.fwd_from:
         return
     await edit_or_reply(event, "🌺✨✨🌺✨🌺🌺🌺\n🌺✨✨🌺✨✨🌺✨\n🌺🌺🌺🌺✨✨🌺✨\n🌺✨✨🌺✨✨🌺✨\n🌺✨✨🌺✨🌺🌺🌺\n☁☁☁☁☁☁☁☁")
 
 
-@LEGEND.on(admin_cmd(pattern=r"cheer", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"cheer", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"cheer", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"cheer", allow_sudo=True))
 async def cheer(event):
     if event.fwd_from:
         return
@@ -174,15 +174,15 @@ async def cheer(event):
     )
 
 
-@LEGEND.on(admin_cmd(pattern=r"getwell", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"getwell", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"getwell", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"getwell", allow_sudo=True))
 async def getwell(event):
     if event.fwd_from:
         return
     await edit_or_reply(event, "🌹🌹🌹🌹🌹🌹🌹🌹 \n🌹😷😢😓😷😢💨🌹\n🌹💝💉🍵💊💐💝🌹\n🌹 GetBetter Soon! 🌹\n🌹🌹🌹🌹🌹🌹🌹🌹")
 
-@LEGEND.on(admin_cmd(pattern="switch$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="switch$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="switch$", outgoing=True))
+@bot.on(sudo_cmd(pattern="switch$", allow_sudo=True))
 async def _(event):
 
     if event.fwd_from:
@@ -220,8 +220,8 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-@LEGEND.on(admin_cmd(pattern=r"sprinkle", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"sprinkle", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"sprinkle", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"sprinkle", allow_sudo=True))
 async def sprinkle(event):
     if event.fwd_from:
         return
@@ -230,8 +230,8 @@ async def sprinkle(event):
     )
     
 
-@LEGEND.on(admin_cmd(pattern=r"fstyle", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"fstyle", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"fstyle", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"fstyle", allow_sudo=True))
 async def payf(event):
     if event.fwd_from:
         return

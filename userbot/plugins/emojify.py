@@ -5,7 +5,7 @@ from userbot.utils import edit_or_reply ,admin_cmd
 from userbot.helpers import fonts as emojify
 from userbot.cmdhelp import CmdHelp
 
-@LEGEND.on(admin_cmd(pattern=r"emotes ?(.*)"))
+@bot.on(admin_cmd(pattern=r"emotes ?(.*)"))
 async def itachi(event):
     "To get emoji art text."
     args = event.pattern_match.group(1)
@@ -28,7 +28,7 @@ async def itachi(event):
     await edit_or_reply(event, result)
 
 
-@LEGEND.on(admin_cmd(pattern=r"cemotes ?(.*)"))
+@bot.on(admin_cmd(pattern=r"cemotes ?(.*)"))
 async def itachi(event):
     "To get custom emoji art text."
     args = event.pattern_match.group(1)

@@ -9,8 +9,8 @@ from gtts import gTTS
 from . import *
 
 
-@LEGEND.on(admin_cmd(pattern="trp ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="trp ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="trp ?(.*)"))
+@bot.on(sudo_cmd(pattern="trp ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -44,16 +44,16 @@ async def _(event):
     except Exception as exc:
         await edit_or_reply(event, str(exc))
 
-@LEGEND.on(admin_cmd(pattern=r"trs", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"trs", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"trs", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"trs", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
     await edit_or_reply( "**All The Language Codes Can Be Found** \n ⚡ [Here](https://telegra.ph/file/d2d666595b61c676169c1.jpg) ⚡", link_preview=False)
 
 
-@LEGEND.on(admin_cmd(pattern="voices (.*)"))
-@LEGEND.on(sudo_cmd(pattern="voices (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="voices (.*)"))
+@bot.on(sudo_cmd(pattern="voices (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

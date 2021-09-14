@@ -100,32 +100,32 @@ CRI = [
 ]
 # ===========================================
 
-@LEGEND.on(admin_cmd(pattern="cri$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="cri$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="cri$", outgoing=True))
+@bot.on(sudo_cmd(pattern="cri$", allow_sudo=True))
 async def cri(e):
     """ y u du dis, i cry everytime !! """
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await edit_or_reply(e, random.choice(CRI))
         
 
-@LEGEND.on(admin_cmd(pattern="hey$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="hey$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="hey$", outgoing=True))
+@bot.on(sudo_cmd(pattern="hey$", allow_sudo=True))
 async def hoi(hello):
     """ Greet everyone! """
     if not hello.text[0].isalpha() and hello.text[0] not in ("/", "#", "@", "!"):
         await edit_or_reply(hello, random.choice(LEGENDOSTR))
 
 
-@LEGEND.on(admin_cmd(pattern="shrug$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="shrug$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="shrug$", outgoing=True))
+@bot.on(sudo_cmd(pattern="shrug$", allow_sudo=True))
 async def shrugger(shg):
     r""" ¯\_(ツ)_/¯ """
     if not shg.text[0].isalpha() and shg.text[0] not in ("/", "#", "@", "!"):
         await edit_or_reply(shg, random.choice(SHGS))
 
 
-@LEGEND.on(admin_cmd(pattern="f (.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="f (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="f (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="f (.*)", allow_sudo=True))
 async def payf(e):
     paytext = e.pattern_match.group(1)[0]
     pay = "{}\n{}\n{}\n{}\n{}\n{}\n{}".format(
@@ -139,8 +139,8 @@ async def payf(e):
     )
     await edit_or_reply(e, pay)
 
-@LEGEND.on(admin_cmd(pattern="nopee$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="nopee$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="nopee$", outgoing=True))
+@bot.on(sudo_cmd(pattern="nopee$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -163,8 +163,8 @@ async def _(event):
         await event.edit(animation_chars[i % 18])
 
 
-@LEGEND.on(admin_cmd(pattern="^Okk$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="^Okk$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="^Okk$", outgoing=True))
+@bot.on(sudo_cmd(pattern="^Okk$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

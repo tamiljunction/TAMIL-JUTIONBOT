@@ -12,8 +12,8 @@ from userbot import *
 from LEGENDBOT.utils import *
 from userbot.cmdhelp import CmdHelp
 
-@LEGEND.on(admin_cmd("boobs$"))
-@LEGEND.on(sudo_cmd(pattern="boobs$", allow_sudo=True))
+@bot.on(admin_cmd("boobs$"))
+@bot.on(sudo_cmd(pattern="boobs$", allow_sudo=True))
 async def boobs(event):
     if event.fwd_from:
         return
@@ -31,8 +31,8 @@ async def boobs(event):
     await a.delete()
 
 
-@LEGEND.on(admin_cmd("butts$"))
-@LEGEND.on(sudo_cmd(pattern="butts$", allow_sudo=True))
+@bot.on(admin_cmd("butts$"))
+@bot.on(sudo_cmd(pattern="butts$", allow_sudo=True))
 async def butts(event):
     if event.fwd_from:
         return

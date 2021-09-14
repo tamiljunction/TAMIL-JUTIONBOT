@@ -10,8 +10,8 @@ from LEGENDBOT.utils import *
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
 
 
-@LEGEND.on(admin_cmd(pattern="imp(|n) (.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="imp(|n) (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="imp(|n) (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="imp(|n) (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -97,8 +97,8 @@ async def _(event):
         await event.client.send_file(event.chat_id, "CAADAQADQAADnjOcH-WOkB8DEctJAg")
 
 
-@LEGEND.on(admin_cmd(pattern="timp(|n) (.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="timp(|n) (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="timp(|n) (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="timp(|n) (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

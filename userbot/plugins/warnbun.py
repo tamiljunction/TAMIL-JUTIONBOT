@@ -5,8 +5,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(admin_cmd(pattern=r"warn1", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"warn1", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"warn1", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"warn1", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -30,8 +30,8 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from uniborg.util import admin_cmd
 
 
-@LEGEND.on(admin_cmd(pattern=r"warn2", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"warn2", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"warn2", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"warn2", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -55,8 +55,8 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from uniborg.util import admin_cmd
 
 
-@LEGEND.on(admin_cmd(pattern=r"warn3", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"warn3", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"warn3", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"warn3", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -81,7 +81,7 @@ from uniborg.util import admin_cmd
 
 
 @borg.on(admin_cmd(pattern=r"warn0", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"warn0", allow_sudo=True))
+@bot.on(sudo_cmd(pattern=r"warn0", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -103,8 +103,8 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from uniborg.util import admin_cmd
 
 
-@LEGEND.on(admin_cmd(pattern=r"ocb"))
-@LEGEND.on(sudo_cmd(pattern=r"ocb", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"ocb"))
+@bot.on(sudo_cmd(pattern=r"ocb", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -121,8 +121,8 @@ async def _(event):
     await event.delete()
 
 
-@LEGEND.on(admin_cmd(pattern=r"fw", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"fw", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"fw", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"fw", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

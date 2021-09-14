@@ -277,76 +277,76 @@ GDMORNING = [
 ]
 
 
-@LEGEND.on(admin_cmd(pattern=f"love$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"love$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"love$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"love$", allow_sudo=True))
 async def love(e):
     txt = random.choice(LOVESTR)
     await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"dhoka$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"dhoka$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"dhoka$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"dhoka$", allow_sudo=True))
 async def katgya(e):
     txt = random.choice(DHOKA)
     await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"metoo$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"metoo$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"metoo$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"metoo$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(METOOSTR)
     await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"gdnoon$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"gdnoon$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"gdnoon$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"gdnoon$", allow_sudo=True))
 async def noon(e):
     txt = random.choice(GDNOON)
     await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"chase$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"chase$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"chase$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"chase$", allow_sudo=True))
 async def police(e):
     txt = random.choice(CHASE_STR)
     await edit_or_reply(e, txt)
 
-@LEGEND.on(admin_cmd(pattern=f"congo$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"congo$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"congo$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"congo$", allow_sudo=True))
 async def Sahih(e):
     txt = random.choice(CONGRATULATION)
     await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"qhi$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"qhi$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"qhi$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"qhi$", allow_sudo=True))
 async def hoi(e):
     txt = random.choice(LEGENDOSTR)
     await edit_or_reply(e, txt)
 
-@LEGEND.on(admin_cmd(pattern=f"gdbye$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"gdbye$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"gdbye$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"gdbye$", allow_sudo=True))
 async def bhago(e):
     txt = random.choice(BYESTR)
     await edit_or_reply(e, txt)
     
 
-@LEGEND.on(admin_cmd(pattern=f"gdnyt$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"gdnyt$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"gdnyt$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"gdnyt$", allow_sudo=True))
 async def night(e):
     txt = random.choice(GDNIGHT)
     await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"gdmng$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"gdmng$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"gdmng$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"gdmng$", allow_sudo=True))
 async def morning(e):
     txt = random.choice(GDMORNING)
     await edit_or_reply(e, txt)
   
   
-@LEGEND.on(admin_cmd(pattern="quote ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="quote ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="quote ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="quote ?(.*)", allow_sudo=True))
 async def quote_search(event):
     if event.fwd_from:
         return

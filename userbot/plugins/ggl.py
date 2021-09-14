@@ -6,7 +6,7 @@ import json
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
-@LEGEND.on(admin_cmd("ggl (.*)"))
+@bot.on(admin_cmd("ggl (.*)"))
 async def _(event):
     if event.fwd_from:
         return

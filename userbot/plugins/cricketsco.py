@@ -20,7 +20,7 @@ from userbot.cmdhelp import CmdHelp
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
-@LEGEND.on(admin_cmd(pattern="cs"))
+@bot.on(admin_cmd(pattern="cs"))
 async def _(event):
     score_page = "http://static.cricinfo.com/rss/livescores.xml"
     page = urllib.request.urlopen(score_page)

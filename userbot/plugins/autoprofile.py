@@ -14,7 +14,7 @@ DEL_TIME_OUT = 60
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
 
 
-@LEGEND.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
+@bot.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -63,7 +63,7 @@ async def _(event):
     await LEGEND.edit(f"Auto Name has been started my Master")
 
 
-@LEGEND.on(admin_cmd(pattern="autobio"))  # pylint:disable=E0602
+@bot.on(admin_cmd(pattern="autobio"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -90,8 +90,8 @@ async def _(event):
         await asyncio.sleep(DEL_TIME_OUT)
 
 
-@LEGEND.on(admin_cmd(pattern="reserved", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="reserved", allow_sudo=True))
+@bot.on(admin_cmd(pattern="reserved", outgoing=True))
+@bot.on(sudo_cmd(pattern="reserved", allow_sudo=True))
 async def mine(event):
     if event.fwd_from:
         return

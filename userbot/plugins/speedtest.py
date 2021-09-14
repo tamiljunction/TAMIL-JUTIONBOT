@@ -9,8 +9,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(admin_cmd(pattern="speedtest ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="speedtest ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="speedtest ?(.*)"))
+@bot.on(sudo_cmd(pattern="speedtest ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

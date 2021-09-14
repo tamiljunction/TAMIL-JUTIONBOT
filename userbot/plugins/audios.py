@@ -16,7 +16,7 @@ from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 
 
 
-@LEGEND.on(admin_cmd(pattern="audios (.*)"))
+@bot.on(admin_cmd(pattern="audios (.*)"))
 @borg.on(admin_cmd(pattern="audios"))
 
 async def _(event):

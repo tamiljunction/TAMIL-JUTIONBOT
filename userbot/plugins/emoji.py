@@ -9,7 +9,7 @@ import asyncio
 from LEGENDBOT.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 
-@LEGEND.on(admin_cmd(pattern="emoji (.*)"))
+@bot.on(admin_cmd(pattern="emoji (.*)"))
 async def _(event):
     if event.fwd_from:
         return

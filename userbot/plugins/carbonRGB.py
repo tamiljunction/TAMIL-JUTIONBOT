@@ -16,8 +16,8 @@ import random
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-#@LEGEND.on(events.NewMessage(pattern=r"\.karb ", outgoing=True))
-@LEGEND.on(admin_cmd(pattern="karbs"))
+#@bot.on(events.NewMessage(pattern=r"\.karb ", outgoing=True))
+@bot.on(admin_cmd(pattern="karbs"))
 async def carbon_api(e):
  RED = random.randint(0,256)
  GREEN = random.randint(0,256)

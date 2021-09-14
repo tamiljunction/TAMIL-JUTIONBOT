@@ -285,91 +285,91 @@ INSULT_STRINGS = [
     "`If you’re talking behind my back then you’re in a perfect position to kiss my a**!.`",
 ]
 # ===========================================
-@LEGEND.on(admin_cmd(pattern=f"randi$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"randi$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"randi$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"randi$", allow_sudo=True))
 async def rendi(e):
    txt = random.choice(RENDISTR)
    await edit_or_reply(e, txt)
    
    
-@LEGEND.on(admin_cmd(pattern=f"habuse$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"habuse$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"habuse$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"habuse$", allow_sudo=True))
 async def thenus(e):
    txt = random.choice(THANOS_STRINGS)
    await edit_or_reply(e, txt)
    
    
-@LEGEND.on(admin_cmd(pattern=f"fuk$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"fuk$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"fuk$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"fuk$", allow_sudo=True))
 async def tapatap(e):
    txt = random.choice(FUK_STRINGS)
    await edit_or_reply(e, txt)
    
    
-@LEGEND.on(admin_cmd(pattern=f"chu$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"chu$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"chu$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"chu$", allow_sudo=True))
 async def chut(e):
    txt = random.choice(CHU_STRINGS)
    await edit_or_reply(e, txt)
    
    
-@LEGEND.on(admin_cmd(pattern=f"noob$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"noob$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"noob$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"noob$", allow_sudo=True))
 async def nub(e):
    txt = random.choice(NOOBSTR)
    await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"run$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"run$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"run$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"run$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(RUNSREACTS)
     await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"gali$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"gali$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"gali$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"gali$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(GAALI_STR)
     await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"rape$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"rape$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"rape$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"rape$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(RAPE_STRINGS)
     await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"abuse$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"abuse$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"abuse$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"abuse$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(ABUSE_STRINGS)
     await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"gey$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"gey$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"gey$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"gey$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(GEY_STRINGS)
     await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"piro$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"piro$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"piro$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"piro$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(PRO_STRINGS)
     await edit_or_reply(e, txt)
 
 
-@LEGEND.on(admin_cmd(pattern=f"insult$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"insult$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"insult$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"insult$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(INSULT_STRINGS)
     await edit_or_reply(e, txt)
 
-@LEGEND.on(admin_cmd(pattern=f"hiabuse$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"hiabuse$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"hiabuse$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"hiabuse$", allow_sudo=True))
 async def metoo(e):
     txt = random.choice(HIABUSE_STR)
     await edit_or_reply(e, txt)

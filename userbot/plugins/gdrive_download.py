@@ -81,8 +81,8 @@ async def get_file_name(content):
     return file_name
 
 
-@LEGEND.on(admin_cmd(pattern=r"gdl"))
-@LEGEND.on(sudo_cmd(pattern=r"gdl", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"gdl"))
+@bot.on(sudo_cmd(pattern=r"gdl", allow_sudo=True))
 async def g_download(event):
     if event.fwd_from:
         return

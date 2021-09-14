@@ -11,7 +11,7 @@ from LEGENDBOT.utils import *
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(events.ChatAction())  # pylint:disable=E0602
+@bot.on(events.ChatAction())  # pylint:disable=E0602
 async def _(event):
     cws = get_current_welcome_settings(event.chat_id)
     if cws:
@@ -65,8 +65,8 @@ async def _(event):
             update_previous_welcome(event.chat_id, current_message.id)
 
 
-@LEGEND.on(admin_cmd(pattern="savewelcome", outgoing=True))  # pylint:disable=E0602
-@LEGEND.on(sudo_cmd(pattern="savewelcome", allow_sudo=True))
+@bot.on(admin_cmd(pattern="savewelcome", outgoing=True))  # pylint:disable=E0602
+@bot.on(sudo_cmd(pattern="savewelcome", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -81,8 +81,8 @@ async def _(event):
         await edit_or_reply(event, "Welcome note saved. ")
 
 
-@LEGEND.on(admin_cmd(pattern="clearwelcome", outgoing=True)) # pylint:disable=E0602
-@LEGEND.on(sudo_cmd(pattern="clearwelcome", allow_sudo=True))
+@bot.on(admin_cmd(pattern="clearwelcome", outgoing=True)) # pylint:disable=E0602
+@bot.on(sudo_cmd(pattern="clearwelcome", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -94,8 +94,8 @@ async def _(event):
     )
 
 
-@LEGEND.on(admin_cmd(pattern="listwelcome", outgoing=True)) # pylint:disable=E0602
-@LEGEND.on(sudo_cmd(pattern="listwelcome", allow_sudo=True))
+@bot.on(admin_cmd(pattern="listwelcome", outgoing=True)) # pylint:disable=E0602
+@bot.on(sudo_cmd(pattern="listwelcome", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

@@ -13,7 +13,7 @@ PROFILE_IMAGE = os.environ.get(
 )
 
 
-@LEGEND.on(admin_cmd(pattern="offline", outgoing=True))  # pylint:disable=E0602
+@bot.on(admin_cmd(pattern="offline", outgoing=True))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -55,7 +55,7 @@ async def _(event):
         await edit_or_reply(event, str(e))
 
 
-@LEGEND.on(admin_cmd(pattern="online", outgoing=True))  # pylint:disable=E0602
+@bot.on(admin_cmd(pattern="online", outgoing=True))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return

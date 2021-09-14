@@ -11,7 +11,7 @@ def progress(current, total):
     logger.info("Downloaded {} of {}\nCompleted {}".format(current, total, (current / total) * 100))
 
 
-@LEGEND.on(admin_cmd(pattern="iffuci ?(.*)"))
+@bot.on(admin_cmd(pattern="iffuci ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

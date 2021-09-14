@@ -17,8 +17,8 @@ extracted = Config.TMP_DOWNLOAD_DIRECTORY + "extracted/"
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
 
 
-@LEGEND.on(admin_cmd(pattern="zip", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="zip", allow_sudo=True))
+@bot.on(admin_cmd(pattern="zip", outgoing=True))
+@bot.on(sudo_cmd(pattern="zip", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -62,8 +62,8 @@ def zipdir(path, ziph):
             os.remove(os.path.join(root, file))
 
 
-@LEGEND.on(admin_cmd(pattern="unzip", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="unzip", allow_sudo=True))
+@bot.on(admin_cmd(pattern="unzip", outgoing=True))
+@bot.on(sudo_cmd(pattern="unzip", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

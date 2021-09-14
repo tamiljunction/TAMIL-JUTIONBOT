@@ -3,8 +3,8 @@ import subprocess
 
 from . import *
 
-@LEGEND.on(admin_cmd(pattern=r"getc"))
-@LEGEND.on(sudo_cmd(pattern=r"getc", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"getc"))
+@bot.on(sudo_cmd(pattern=r"getc", allow_sudo=True))
 async def get_media(event):
     if event.fwd_from:
         return
@@ -34,8 +34,8 @@ async def get_media(event):
     await event.edit("Downloaded " + output + " files.")
 
 
-@LEGEND.on(admin_cmd(pattern=r"geta"))
-@LEGEND.on(sudo_cmd(pattern=r"geta", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"geta"))
+@bot.on(sudo_cmd(pattern=r"geta", allow_sudo=True))
 async def get_media(event):
     if event.fwd_from:
         return

@@ -7,8 +7,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(admin_cmd(pattern="test ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="test ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="test ?(.*)"))
+@bot.on(sudo_cmd(pattern="test ?(.*)", allow_sudo=True))
 async def _(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
 

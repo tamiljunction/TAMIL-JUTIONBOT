@@ -5,7 +5,7 @@ Available Commands:
 from telethon import events
 import asyncio
 
-@LEGEND.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
+@bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return

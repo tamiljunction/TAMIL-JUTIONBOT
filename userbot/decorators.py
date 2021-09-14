@@ -153,7 +153,7 @@ def sudo_cmd(pattern=None, command=None, **args):
     return events.NewMessage(**args)
 
 
-on = LEGEND.on
+on = bot.on
 
 
 def on(**args):

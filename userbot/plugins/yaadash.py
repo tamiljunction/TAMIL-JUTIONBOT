@@ -2,7 +2,7 @@ import asyncio
 from . import *
 
 
-@LEGEND.on(admin_cmd(pattern="yaadash"))
+@bot.on(admin_cmd(pattern="yaadash"))
 async def _(event):
 	await event.edit("***falled while walking***")
 	await asyncio.sleep(3)

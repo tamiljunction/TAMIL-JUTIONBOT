@@ -10,8 +10,8 @@ from userbot.cmdhelp import CmdHelp
 
 name = "Profile Photos"
 
-@LEGEND.on(admin_cmd(pattern="poto ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="poto ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="poto ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="poto ?(.*)", allow_sudo=True))
 async def potocmd(event):
     """Gets the profile photos of replied users, channels or chats"""
     uid = "".join(event.raw_text.split(maxsplit=1)[1:])

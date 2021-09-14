@@ -18,8 +18,8 @@ BASE_URL = "https://headp.at/pats/{}"
 PAT_IMAGE = "pat.jpg"
 
 
-@LEGEND.on(admin_cmd(pattern="pat ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="pat ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="pat ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="pat ?(.*)", allow_sudo=True))
 async def lastfm(event):
     if event.fwd_from:
         return

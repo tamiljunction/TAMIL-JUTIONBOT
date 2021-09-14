@@ -397,7 +397,7 @@ async def delete_LEGEND(event, text, time=None, parse_mode=None, link_preview=No
     return await LEGENDevent.delete()
 
 # from paperplaneextended
-on = LEGEND.on
+on = bot.on
 
 
 async def eor(
@@ -486,7 +486,7 @@ async def delete_LEGEND(event, text, time=None, parse_mode=None, link_preview=No
     return await LEGENDevent.delete()
 
 # from paperplaneextended
-on = LEGEND.on
+on = bot.on
 
 
 

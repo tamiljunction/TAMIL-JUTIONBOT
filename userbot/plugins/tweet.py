@@ -18,8 +18,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(admin_cmd(pattern=r"tweet(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern="tweet(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"tweet(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern="tweet(?: |$)(.*)", allow_sudo=True))
 async def nope(legend):
     LEGEND = legend.pattern_match.group(1)
     if not LEGEND:
@@ -38,8 +38,8 @@ async def nope(legend):
     await legend.delete()
 
 
-@LEGEND.on(admin_cmd(pattern=r"trump(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"trump(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"trump(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern=r"trump(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
     reply_to_id = borg.message
@@ -71,8 +71,8 @@ async def nekobot(borg):
     await borg.delete()
 
 
-@LEGEND.on(admin_cmd(pattern=r"modi(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"modi(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"modi(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern=r"modi(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
     reply_to_id = borg.message
@@ -104,8 +104,8 @@ async def nekobot(borg):
     await borg.delete()
 
 
-@LEGEND.on(admin_cmd(pattern=r"mia(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"mia(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"mia(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern=r"mia(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
     reply_to_id = borg.message
@@ -137,8 +137,8 @@ async def nekobot(borg):
     await borg.delete()
 
 
-@LEGEND.on(admin_cmd(pattern=r"dani(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"dani(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"dani(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern=r"dani(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
     reply_to_id = borg.message
@@ -171,8 +171,8 @@ async def nekobot(borg):
 
 
 # @register(pattern="^.pappu(?: |$)(.*)", outgoing=True)
-@LEGEND.on(admin_cmd(pattern=r"pappu(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"pappu(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"pappu(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern=r"pappu(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
     reply_to_id = borg.message
@@ -205,8 +205,8 @@ async def nekobot(borg):
 
 
 # @register(pattern="^.sunny(?: |$)(.*)", outgoing=True)
-@LEGEND.on(admin_cmd(pattern=r"sunny(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"sunny(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"sunny(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern=r"sunny(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
     reply_to_id = borg.message
@@ -239,8 +239,8 @@ async def nekobot(borg):
 
 
 # @register(pattern="^.johhny(?: |$)(.*)", outgoing=True)
-@LEGEND.on(admin_cmd(pattern=r"johhny(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"johhny(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"johhny(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern=r"johhny(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
     reply_to_id = borg.message
@@ -272,8 +272,8 @@ async def nekobot(borg):
     await borg.delete()
 
 
-@LEGEND.on(admin_cmd(pattern=r"gandhi(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"gandhi(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"gandhi(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern=r"gandhi(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
     reply_to_id = borg.message
@@ -306,8 +306,8 @@ async def nekobot(borg):
 
 
 # @register(pattern="^.cmm(?: |$)(.*)", outgoing=True)
-@LEGEND.on(admin_cmd(pattern=r"cmm(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"cmm(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"cmm(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern=r"cmm(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
     reply_to_id = borg.message
@@ -340,8 +340,8 @@ async def nekobot(borg):
 
 
 # @register(pattern="^.kanna(?: |$)(.*)", outgoing=True)
-@LEGEND.on(admin_cmd(pattern=r"kanna(?: |$)(.*)"))
-@LEGEND.on(sudo_cmd(pattern=r"kanna(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"kanna(?: |$)(.*)"))
+@bot.on(sudo_cmd(pattern=r"kanna(?: |$)(.*)", allow_sudo=True))
 async def nekobot(borg):
     text = borg.pattern_match.group(1)
     reply_to_id = borg.message

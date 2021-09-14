@@ -4,7 +4,7 @@ import random, re
 from userbot.utils import admin_cmd
 from . import *
 
-@LEGEND.on(admin_cmd(pattern="coin ?(.*)"))
+@bot.on(admin_cmd(pattern="coin ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

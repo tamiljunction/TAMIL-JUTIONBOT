@@ -9,8 +9,8 @@ from telethon.utils import pack_bot_file_id
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-@LEGEND.on(admin_cmd(pattern="get_admins ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="get_admins ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="get_admins ?(.*)"))
+@bot.on(sudo_cmd(pattern="get_admins ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -61,8 +61,8 @@ async def _(event):
         await event.client.send_message(event.chat_id, mentions)
     await event.delete()
     
-@LEGEND.on(admin_cmd(pattern="get_bot ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="get_bot ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="get_bot ?(.*)"))
+@bot.on(sudo_cmd(pattern="get_bot ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -94,8 +94,8 @@ async def _(event):
     await event.edit(mentions)
     
     
-@LEGEND.on(admin_cmd(pattern="get_id"))
-@LEGEND.on(sudo_cmd(pattern="get_id", allow_sudo=True))
+@bot.on(admin_cmd(pattern="get_id"))
+@bot.on(sudo_cmd(pattern="get_id", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

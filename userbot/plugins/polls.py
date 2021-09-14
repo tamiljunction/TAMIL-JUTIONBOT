@@ -4,8 +4,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(admin_cmd(pattern="get_poll$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="get_poll$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="get_poll$", outgoing=True))
+@bot.on(sudo_cmd(pattern="get_poll$", allow_sudo=True))
 async def _(event):
     reply_message = await event.get_reply_message()
     if reply_message.media is None:

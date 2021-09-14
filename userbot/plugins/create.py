@@ -13,8 +13,8 @@ from userbot import CMD_HELP
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-@LEGEND.on(admin_cmd(pattern="create (b|g|c) (.*)"))  # pylint:disable=E0602
-@LEGEND.on(sudo_cmd(pattern="create (b|g|c) (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="create (b|g|c) (.*)"))  # pylint:disable=E0602
+@bot.on(sudo_cmd(pattern="create (b|g|c) (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -75,8 +75,8 @@ async def _(event):
     else:
         await event.edit("Read `.plinfo create` to know how to use me")
 
-@LEGEND.on(admin_cmd(pattern="link(?: |$)(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="link(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="link(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="link(?: |$)(.*)", allow_sudo=True))
 async def permalink(mention):
     if mention.fwd_from:
         return

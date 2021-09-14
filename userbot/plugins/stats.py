@@ -9,8 +9,8 @@ from userbot import CMD_HELP
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-@LEGEND.on(admin_cmd(pattern="stats$"))
-@LEGEND.on(sudo_cmd(pattern="stats$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="stats$"))
+@bot.on(sudo_cmd(pattern="stats$", allow_sudo=True))
 async def stats(
     event: NewMessage.Event,
 ) -> None:  # pylint: disable = R0912, R0914, R0915

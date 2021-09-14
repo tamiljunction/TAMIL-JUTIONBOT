@@ -9,8 +9,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(admin_cmd(pattern=r"dc"))  # pylint:disable=E0602
-@LEGEND.on(sudo_cmd(pattern=r"dc", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"dc"))  # pylint:disable=E0602
+@bot.on(sudo_cmd(pattern=r"dc", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -18,8 +18,8 @@ async def _(event):
     await edit_or_reply(event, result.stringify())
 
 
-@LEGEND.on(admin_cmd(pattern=r"owner"))  # pylint:disable=E0602
-@LEGEND.on(sudo_cmd(pattern=r"owner", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"owner"))  # pylint:disable=E0602
+@bot.on(sudo_cmd(pattern=r"owner", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

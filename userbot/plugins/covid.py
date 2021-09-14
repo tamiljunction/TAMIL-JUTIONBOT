@@ -9,7 +9,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp 
 
-@LEGEND.on(admin_cmd(pattern="covid ?(.*)"))
+@bot.on(admin_cmd(pattern="covid ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

@@ -14,7 +14,7 @@ from datetime import datetime
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd, sudo_cmd , edit_or_reply
 from userbot.cmdhelp import CmdHelp
 from . import *
-@LEGEND.on(admin_cmd(pattern=r"open", outgoing=True))
+@bot.on(admin_cmd(pattern=r"open", outgoing=True))
 async def _(event):
     b = await event.client.download_media(await event.get_reply_message())
     a = open(b, "r")
@@ -36,7 +36,7 @@ async def _(event):
     os.remove(b)
 
 
-@LEGEND.on(admin_cmd(pattern="doc ?(.*)"))
+@bot.on(admin_cmd(pattern="doc ?(.*)"))
 async def get(event):
     name = event.text[5:]
     if name is None:
@@ -57,8 +57,8 @@ async def get(event):
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "thumb_image.jpg"
 
 
-@LEGEND.on(admin_cmd(pattern="stoi"))
-@LEGEND.on(sudo_cmd(pattern="stoi", allow_sudo=True))
+@bot.on(admin_cmd(pattern="stoi"))
+@bot.on(sudo_cmd(pattern="stoi", allow_sudo=True))
 async def danish(hehe):
     if hehe.fwd_from:
         return
@@ -112,8 +112,8 @@ async def danish(hehe):
   
   #hehe
   
-@LEGEND.on(admin_cmd(pattern="itos"))
-@LEGEND.on(sudo_cmd(pattern="itos", allow_sudo=True))
+@bot.on(admin_cmd(pattern="itos"))
+@bot.on(sudo_cmd(pattern="itos", allow_sudo=True))
 async def teamcobra(hehe):
     if hehe.fwd_from:
         return

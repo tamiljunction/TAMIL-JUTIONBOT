@@ -19,8 +19,8 @@ if not os.path.isdir(path):
 
 
 
-@LEGEND.on(admin_cmd(pattern="mms ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="mms ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="mms ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="mms ?(.*)", allow_sudo=True))
 async def _(event):
     _reply = await event.get_reply_message()
     msg = event.pattern_match.group(1)
@@ -62,8 +62,8 @@ async def _(event):
     os.remove(pic)
 
     
-@LEGEND.on(admin_cmd(pattern="doge(?: |$)(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="doge(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="doge(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="doge(?: |$)(.*)", allow_sudo=True))
 async def nope(lip):
     legend = lip.pattern_match.group(1)
     if not legend:
@@ -90,8 +90,8 @@ async def nope(lip):
      await eod(lip, "Error 404:  Not Found")
 
 
-@LEGEND.on(admin_cmd(pattern="gg(?: |$)(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="gg(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="gg(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="gg(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
     legend = kraken.pattern_match.group(1)
     if not legend:
@@ -118,8 +118,8 @@ async def nope(kraken):
      await eod(kraken, "Error 404:  Not Found")
 
 
-@LEGEND.on(admin_cmd(pattern="honk(?: |$)(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="honk(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="honk(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="honk(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
     legend = kraken.pattern_match.group(1)
     if not legend:
@@ -149,8 +149,8 @@ async def nope(kraken):
     
     
     
-@LEGEND.on(admin_cmd(pattern="gogl(?: |$)(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="gogl(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="gogl(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="gogl(?: |$)(.*)", allow_sudo=True))
 async def nope(kraken):
     hell = kraken.pattern_match.group(1)
     if not hell:

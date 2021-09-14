@@ -4,8 +4,8 @@ from LEGENDBOT.utils import edit_or_reply, admin_cmd, sudo_cmd
 import os
 
 
-@LEGEND.on(admin_cmd(pattern="picgen"))
-@LEGEND.on(sudo_cmd(pattern="picgen", allow_sudo=True))
+@bot.on(admin_cmd(pattern="picgen"))
+@bot.on(sudo_cmd(pattern="picgen", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

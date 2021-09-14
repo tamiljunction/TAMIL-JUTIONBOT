@@ -9,7 +9,7 @@ heroku_api = "https://api.heroku.com"
 sudousers = Config.SUDO_USERS
 
 
-@LEGEND.on(admin_cmd(pattern="sudo"))
+@bot.on(admin_cmd(pattern="sudo"))
 async def sudo(event):
     sudo = "True" if Config.SUDO_USERS else "False"
     users = sudousers
@@ -19,7 +19,7 @@ async def sudo(event):
         await eod(event, f"📍 **Sudo :**  `Disabled`")
 
 
-@LEGEND.on(admin_cmd(pattern="addsudo(?: |$)"))
+@bot.on(admin_cmd(pattern="addsudo(?: |$)"))
 async def add(event):
     ok = await eor(event, "**⌛ 𝙰𝚍𝚍𝚒𝚗𝚐 𝚂𝚞𝚍𝚘 𝚄𝚜𝚎𝚛𝚜...**")
     bot = "SUDO_USERS"
@@ -42,7 +42,7 @@ async def add(event):
     await ok.edit(f"✅** Added**  `{target}`  **in Sudo User.**\n\n 𝚁𝚎𝚜𝚝𝚊𝚛𝚝𝚒𝚗𝚐 𝙷𝚎𝚛𝚘𝚔𝚞 𝚝𝚘 𝙲𝚑𝚊𝚗𝚐𝚎𝚜 𝙸𝚗 𝚟𝚊𝚛. 𝚆𝚊𝚒𝚝 𝙵𝚘𝚛 𝙰 𝙼𝚒𝚗𝚞𝚝𝚎.")
     heroku_Config[bot] = newsudo
 
-@LEGEND.on(admin_cmd(pattern="rmsudo(?: |$)"))
+@bot.on(admin_cmd(pattern="rmsudo(?: |$)"))
 async def _(event):
     ok = await eor(event, "**🚫 Removing Sudo User...**")
     bot = "SUDO_USERS"

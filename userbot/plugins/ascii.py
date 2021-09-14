@@ -15,8 +15,8 @@ USERID = bot.uid
 mention = f"[{DEFAULTUSER}](tg://user?id={USERID})"
 
 
-@LEGEND.on(admin_cmd("ascii ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="ascii ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd("ascii ?(.*)"))
+@bot.on(sudo_cmd(pattern="ascii ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -57,8 +57,8 @@ async def _(event):
             await event.client.send_read_acknowledge(conv.chat_id)
 
 
-@LEGEND.on(admin_cmd(pattern="line ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="line ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="line ?(.*)"))
+@bot.on(sudo_cmd(pattern="line ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

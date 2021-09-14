@@ -6,7 +6,7 @@ from telethon.tl.types import ChatAdminRights
 
 from . import *
 
-@LEGEND.on(admin_cmd(pattern="gcast ?(.*)"))
+@bot.on(admin_cmd(pattern="gcast ?(.*)"))
 async def gcast(event):
     if not event.out and not is_fullsudo(event.sender_id):
         return await edit_or_reply(event, "`This Command Is Sudo Restricted.`")
@@ -29,7 +29,7 @@ async def gcast(event):
     await kk.edit(f"Done in {done} chats, error in {er} chat(s)")
 
 
-@LEGEND.on(admin_cmd(pattern="gucast ?(.*)"))
+@bot.on(admin_cmd(pattern="gucast ?(.*)"))
 async def gucast(event):
     if not event.out and not is_fullsudo(event.sender_id):
         return await edit_or_reply(event, "`This Command Is Sudo Restricted.`")

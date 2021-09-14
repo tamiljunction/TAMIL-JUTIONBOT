@@ -9,8 +9,8 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
 legend = borg.uid
 
 
-@LEGEND.on(admin_cmd(pattern=f"hbping$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=f"hbping$", allow_sudo=True))
+@bot.on(admin_cmd(pattern=f"hbping$", outgoing=True))
+@bot.on(sudo_cmd(pattern=f"hbping$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -58,8 +58,8 @@ async def _(event):
     )
 
 
-@LEGEND.on(admin_cmd(pattern="ping$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="ping$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ping$", outgoing=True))
+@bot.on(sudo_cmd(pattern="ping$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

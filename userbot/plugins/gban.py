@@ -55,8 +55,8 @@ async def get_user_from_id(user, event):
         return None
     return user_obj
 
-@LEGEND.on(admin_cmd(pattern="gban ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="gban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="gban ?(.*)"))
+@bot.on(sudo_cmd(pattern="gban ?(.*)", allow_sudo=True))
 async def gban(userbot):
     if userbot.fwd_from:
         return
@@ -123,8 +123,8 @@ async def gban(userbot):
         f"[{user.first_name}](tg://user?id={user.id}) \n\n**Gban Successful This Nube 🔥\nAffected Chats😏 : {a} **"
     )
 
-@LEGEND.on(admin_cmd(pattern="ungban ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="ungban ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ungban ?(.*)"))
+@bot.on(sudo_cmd(pattern="ungban ?(.*)", allow_sudo=True))
 async def gunban(userbot):
     if userbot.fwd_from:
         return

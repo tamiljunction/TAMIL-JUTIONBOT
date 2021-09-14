@@ -18,8 +18,8 @@ def progress(current, total):
     )
 
 
-@LEGEND.on(admin_cmd(pattern="google (.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="google (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="google (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="google (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -49,8 +49,8 @@ async def _(event):
     await edit_or_reply(event, "Google: {}\n{}".format(input_str, output_str), link_preview=False)
 
 
-@LEGEND.on(admin_cmd(pattern="image (.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="image (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="image (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="image (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -94,8 +94,8 @@ async def _(event):
     await event.delete()
 
 
-@LEGEND.on(admin_cmd(pattern="reverse"))
-@LEGEND.on(sudo_cmd(pattern="reverse", allow_sudo=True))
+@bot.on(admin_cmd(pattern="reverse"))
+@bot.on(sudo_cmd(pattern="reverse", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

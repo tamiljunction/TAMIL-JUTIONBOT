@@ -5,8 +5,8 @@ from userbot.cmdhelp import CmdHelp
 from telethon import events
 
 
-@LEGEND.on(admin_cmd(pattern=r"gmute ?(\d+)?"))
-@LEGEND.on(sudo_cmd(pattern=r"gmute ?(\d+)?", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"gmute ?(\d+)?"))
+@bot.on(sudo_cmd(pattern=r"gmute ?(\d+)?", allow_sudo=True))
 async def blowjob(event):
     private = False
     if event.fwd_from:
@@ -42,8 +42,8 @@ async def blowjob(event):
         await edit_or_reply(event, "Successfully Globally Muted Ab bol ke Dikha 😏.")
 
 
-@LEGEND.on(admin_cmd(pattern=r"ungmute ?(\d+)?"))
-@LEGEND.on(sudo_cmd(pattern=r"ungmute ?(\d+)?", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"ungmute ?(\d+)?"))
+@bot.on(sudo_cmd(pattern=r"ungmute ?(\d+)?", allow_sudo=True))
 async def cumshot(event):
     private = False
     if event.fwd_from:

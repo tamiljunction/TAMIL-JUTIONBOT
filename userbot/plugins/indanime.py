@@ -3,7 +3,7 @@
 
 from . import *
 
-@LEGEND.on(admin_cmd(pattern="indanime(.*)"))
+@bot.on(admin_cmd(pattern="indanime(.*)"))
 async def xd(event):
     await event.edit("wishing to all🇮🇳🇮🇳...")
     themessage = event.pattern_match.group(1)

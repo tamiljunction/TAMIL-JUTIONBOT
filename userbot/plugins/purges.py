@@ -30,8 +30,8 @@ async def await_read(chat, message):
     await fut
 
 
-@LEGEND.on(admin_cmd(pattern="(del)(?:ete)?$"))
-@LEGEND.on(admin_cmd(pattern="(edit)(?:\s+(.*))?$"))
+@bot.on(admin_cmd(pattern="(del)(?:ete)?$"))
+@bot.on(admin_cmd(pattern="(edit)(?:\s+(.*))?$"))
 async def delete(event):
     await event.delete()
     command = event.pattern_match.group(1)

@@ -19,8 +19,8 @@ if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
     os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
 
 
-@LEGEND.on(admin_cmd(pattern="ls ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="ls ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ls ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="ls ?(.*)", allow_sudo=True))
 async def lst(event):
     if event.fwd_from:
         return
@@ -50,8 +50,8 @@ async def lst(event):
         await event.delete()
         
 
-@LEGEND.on(admin_cmd(pattern="ls_local$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="ls_local$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ls_local$", outgoing=True))
+@bot.on(sudo_cmd(pattern="ls_local$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -88,8 +88,8 @@ async def _(event):
     await edit_or_reply(event, f"{OUTPUT}`{stdout.decode()}`")
 
 
-@LEGEND.on(admin_cmd(pattern="ls_root$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="ls_root$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ls_root$", outgoing=True))
+@bot.on(sudo_cmd(pattern="ls_root$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -123,8 +123,8 @@ async def _(event):
     await edit_or_reply(event, f"{OUTPUT}`{stdout.decode()}`")
 
 
-@LEGEND.on(admin_cmd(pattern="ls_saved$", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="ls_saved$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ls_saved$", outgoing=True))
+@bot.on(sudo_cmd(pattern="ls_saved$", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -158,8 +158,8 @@ async def _(event):
     await edit_or_reply(event, f"{OUTPUT}`{stdout.decode()}`")
 
 
-@LEGEND.on(admin_cmd(pattern="rnsaved ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="rnsaved ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="rnsaved ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="rnsaved ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -197,8 +197,8 @@ async def _(event):
     await edit_or_reply(event, f"File renamed `{src}` to `{dst}`")
 
 
-@LEGEND.on(admin_cmd(pattern="rnlocal ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="rnlocal ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="rnlocal ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="rnlocal ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -236,8 +236,8 @@ async def _(event):
     await edit_or_reply(event, f"File renamed `{src}` to `{dst}`")
 
 
-@LEGEND.on(admin_cmd(pattern="delsave (.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="delsave (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="delsave (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="delsave (.*)", allow_sudo=True))
 async def handler(event):
     if event.fwd_from:
         return
@@ -252,8 +252,8 @@ async def handler(event):
         await edit_or_reply(event, "⛔️File Not Found😬")
 
 
-@LEGEND.on(admin_cmd(pattern="delocal (.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="delocal (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="delocal (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="delocal (.*)", allow_sudo=True))
 async def handler(event):
     if event.fwd_from:
         return

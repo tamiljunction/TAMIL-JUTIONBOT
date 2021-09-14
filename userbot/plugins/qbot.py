@@ -7,8 +7,8 @@ from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
-@LEGEND.on(admin_cmd(pattern=r"ss(?: |$)(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"ss(?: |$)(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"ss(?: |$)(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"ss(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -44,8 +44,8 @@ async def _(event):
             await event.delete()
             await bot.forward_messages(event.chat_id, response.message)
 
-@LEGEND.on(admin_cmd(pattern=r"css ?(.*)", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern=r"css ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern=r"css ?(.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern=r"css ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

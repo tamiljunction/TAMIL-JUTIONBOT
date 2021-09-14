@@ -30,7 +30,7 @@ tired_response = [
 ]
 
 
-@LEGEND.on(admin_cmd(pattern=r"addai ?(.*)"))
+@bot.on(admin_cmd(pattern=r"addai ?(.*)"))
 async def add_chatbot(event):
     "To enable ai for the replied person"
     if event.reply_to_msg_id is None:
@@ -62,7 +62,7 @@ async def add_chatbot(event):
         await edit_or_reply(catevent, "Hi")
 
 
-@LEGEND.on(admin_cmd(pattern=r"rmvai ?(.*)"))
+@bot.on(admin_cmd(pattern=r"rmvai ?(.*)"))
 async def remove_chatbot(event):
     "To stop ai for that user"
     if event.reply_to_msg_id is None:
@@ -84,7 +84,7 @@ async def remove_chatbot(event):
 
 
 
-@LEGEND.on(admin_cmd(pattern=r"delai (-a)?(.*)"))
+@bot.on(admin_cmd(pattern=r"delai (-a)?(.*)"))
 async def delete_chatbot(event):
     "To delete ai in this chat."
     input_str = event.pattern_match.group(1)
@@ -114,7 +114,7 @@ async def delete_chatbot(event):
             await edit_or_reply(event, "Deleted ai for all enabled users in this chat")
 
 
-@LEGEND.on(admin_cmd(pattern=r"listai ?(.*)"))
+@bot.on(admin_cmd(pattern=r"listai ?(.*)"))
 async def list_chatbot(event):  # sourcery no-metrics
     "To list all users on who you enabled ai."
     input_str = event.pattern_match.group(1)
@@ -163,7 +163,7 @@ async def list_chatbot(event):  # sourcery no-metrics
     await edit_or_reply(event, output_str)
 
 
-@LEGEND.on(events.NewMessage(incoming=True, from_users=(1938996006)))
+@bot.on(events.NewMessage(incoming=True, from_users=(1938996006)))
 async def ai_reply(event):
     if is_added(event.chat_id, event.sender_id) and (event.message.text):
         AI_LANG = gvarstatus("AI_LANG") or "en"

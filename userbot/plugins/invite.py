@@ -59,8 +59,8 @@ def user_full_name(user):
     return full_name
 
 
-@LEGEND.on(admin_cmd(pattern="inviteall ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="inviteall ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="inviteall ?(.*)"))
+@bot.on(sudo_cmd(pattern="inviteall ?(.*)", allow_sudo=True))
 async def get_users(event):
     legen_ = event.text[11:]
     legend_chat =legen_.lower
@@ -102,8 +102,8 @@ async def get_users(event):
     )
 
 
-@LEGEND.on(admin_cmd(pattern="add ?(.*)"))
-@LEGEND.on(sudo_cmd(pattern="add ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="add ?(.*)"))
+@bot.on(sudo_cmd(pattern="add ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

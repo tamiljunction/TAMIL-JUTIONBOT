@@ -13,7 +13,7 @@ from barcode.writer import ImageWriter
 from userbot.utils import admin_cmd
 from userbot.cmdhelp import CmdHelp
 
-@LEGEND.on(admin_cmd(pattern="barcode ?(.*)"))
+@bot.on(admin_cmd(pattern="barcode ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

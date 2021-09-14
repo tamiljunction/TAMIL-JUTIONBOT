@@ -6,7 +6,7 @@ import json
 from LEGENDBOT.utils import admin_cmd, edit_or_reply, sudo_cmd
 from userbot.cmdhelp import CmdHelp
 
-@LEGEND.on(admin_cmd("dns (.*)"))
+@bot.on(admin_cmd("dns (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -19,7 +19,7 @@ async def _(event):
         await event.edit("i can't seem to find {} on the internet".format(input_str))
 
 
-@LEGEND.on(admin_cmd("url (.*)"))
+@bot.on(admin_cmd("url (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -32,7 +32,7 @@ async def _(event):
         await event.edit("something is wrong. please try again later.")
 
 
-@LEGEND.on(admin_cmd("unshort (.*)"))
+@bot.on(admin_cmd("unshort (.*)"))
 async def _(event):
     if event.fwd_from:
         return

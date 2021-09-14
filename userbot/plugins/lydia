@@ -17,8 +17,8 @@ if Var.LYDIA_API_KEY:
     Lydia = LydiaAI(api_client)
 
 
-@LEGEND.on(admin_cmd(pattern="repcf", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="repcf", allow_sudo=True))
+@bot.on(admin_cmd(pattern="repcf", outgoing=True))
+@bot.on(sudo_cmd(pattern="repcf", allow_sudo=True))
 async def repcf(event):
     if event.fwd_from:
         return
@@ -34,8 +34,8 @@ async def repcf(event):
         await edit_or_reply(event, str(e))
 
 
-@LEGEND.on(admin_cmd(pattern="eai", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="eai", allow_sudo=True))
+@bot.on(admin_cmd(pattern="eai", outgoing=True))
+@bot.on(sudo_cmd(pattern="eai", allow_sudo=True))
 async def addcf(event):
     if event.fwd_from:
         return
@@ -59,8 +59,8 @@ async def addcf(event):
         await edit_or_reply(event, "Reply to a user to activate Lydia AI on them")
 
 
-@LEGEND.on(admin_cmd(pattern="dai", outgoing=True))
-@LEGEND.on(sudo_cmd(pattern="dai", allow_sudo=True))
+@bot.on(admin_cmd(pattern="dai", outgoing=True))
+@bot.on(sudo_cmd(pattern="dai", allow_sudo=True))
 async def remcf(event):
     if event.fwd_from:
         return
@@ -80,7 +80,7 @@ async def remcf(event):
         await edit_or_reply(event, "This person does not have Lydia activated on him/her.")
 
 
-@LEGEND.on(events.NewMessage(incoming=True))
+@bot.on(events.NewMessage(incoming=True))
 async def user(event):
     event.text
     try:
