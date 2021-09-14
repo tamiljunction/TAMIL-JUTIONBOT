@@ -26,7 +26,7 @@ from . import *
 # main menu for api setting
 
 
-@tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"apiset")))
+@tgbot.on(callbackquery.CallbackQuery(data=compile(b"apiset")))
 async def apiset(event):
     await event.edit(
         get_string("ast_1"),
@@ -39,7 +39,7 @@ async def apiset(event):
     )
 
 
-@tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"rmbgapi")))
+@tgbot.on(callbackquery.CallbackQuery(data=compile(b"rmbgapi")))
 async def rmbgapi(event):
     await event.delete()
     pru = event.sender_id
@@ -63,7 +63,7 @@ async def rmbgapi(event):
             )
 
 
-@tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"dapi")))
+@tgbot.on(callbackquery.CallbackQuery(data=compile(b"dapi")))
 async def rmbgapi(event):
     await event.delete()
     pru = event.sender_id
@@ -87,7 +87,7 @@ async def rmbgapi(event):
             )
 
 
-@tgLEGEND.on(callbackquery.CallbackQuery(data=compile(b"oaspi")))
+@tgbot.on(callbackquery.CallbackQuery(data=compile(b"oaspi")))
 async def rmbgapi(event):
     await event.delete()
     pru = event.sender_id

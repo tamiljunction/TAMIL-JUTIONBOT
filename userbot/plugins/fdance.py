@@ -58,7 +58,7 @@ from telethon import Button, events
 from youtubesearchpython import SearchVideos
 
 
-@tgLEGEND.on(events.InlineQuery(pattern=r"tor (.*)"))
+@tgbot.on(events.InlineQuery(pattern=r"tor (.*)"))
 async def inline_id_handler(event: events.InlineQuery.Event):
     builder = event.builder
     inp = event.pattern_match.group(1)
@@ -132,7 +132,7 @@ async def inline_id_handler(event: events.InlineQuery.Event):
     await event.answer(results)
 
 
-@tgLEGEND.on(events.InlineQuery(pattern=r"yt (.*)"))
+@tgbot.on(events.InlineQuery(pattern=r"yt (.*)"))
 async def inline_id_handler(event: events.InlineQuery.Event):
     builder = event.builder
     testinput = event.pattern_match.group(1)
