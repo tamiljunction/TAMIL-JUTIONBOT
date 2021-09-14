@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "bot.on"
+          find: "tgLEGEND"
 
-          replace: "LEGEND.on"
+          replace: "tgbot"
 
       - name: Create Pull Request
 
