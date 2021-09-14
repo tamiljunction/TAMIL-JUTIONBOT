@@ -23,7 +23,7 @@ from var import Var
 from userbot import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
 from userbot.helpers.exceptions import CancelProcess
 from userbot.Config import Config
-from userbot import bot
+from userbot import *
 from telethon import events
 from pathlib import Path
 from var import Var
