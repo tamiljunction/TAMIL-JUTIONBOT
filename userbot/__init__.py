@@ -7,8 +7,8 @@ from userbot.Config import Config
 from var import Var
 BOTLOG = True
 StartTime = time.time()
-LEGENDversion = "♥️𝚅2.𝙾♥️"
-botversion = "♥️𝚅1.𝙾♥️"
+LEGENDversion = "𝚅2.𝙾"
+botversion = "𝚅1.𝙾"
 
 os.system("pip install --upgrade pip")
 if Var.LEGEND_STRING:
