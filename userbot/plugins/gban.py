@@ -90,7 +90,7 @@ async def gban(userbot):
     if user:
         if user.id == 1938996006:
             return await LEGENDBOT.edit(
-                f"`First Grow Some Balls To Gban My Creater🤫🚶`"
+                f"`How dare u trying to Gban my master`"
             )
         try:
             from userbot.modules.sql_helper.gmute_sql import gmute
@@ -120,7 +120,7 @@ async def gban(userbot):
     except:
         pass
     return await LEGENDBOT.edit(
-        f"[{user.first_name}](tg://user?id={user.id}) \n\n**Gban Successful This Nube 🔥\nAffected Chats😏 : {a} **"
+        f"[{user.first_name}](tg://user?id={user.id}) \n\n**Gban Successful This Person🔥\nAffected Chats😏 : {a} **"
     )
 
 @bot.on(admin_cmd(pattern="ungban ?(.*)"))
@@ -219,7 +219,7 @@ async def handler(legend):
                     return
                   
                   
-CmdHelp("gban_gmute").add_command(
+CmdHelp("gban").add_command(
   'gban', '<reply> / <userid> / <username>', 'Gbans the targeted user and adds to gban watch list'
 ).add_command(
   'ungban', '<reply> / <userid> / <username>', 'Unbans the targeted user and removes them from gban watch list. Grants another Chance'
