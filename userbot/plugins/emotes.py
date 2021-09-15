@@ -42,7 +42,7 @@ async def hii(event):
     await event.edit(
         f"{b}{a}{b}{b}{a}{b}{a}{b}\n{b}{a}{b}{b}{a}{b}{b}{b}\n{b}{a}{a}{a}{a}{b}{a}{b}\n{b}{a}{b}{b}{a}{b}{a}{b}\n{b}{a}{b}{b}{a}{b}{a}{b}"
     )
-@borg.on(admin_cmd(pattern=r"hlos ?(.*)"))
+@borg.on(admin_cmd(pattern=r"hola ?(.*)"))
 async def hlo(event):
     giveVar = event.text
     a = giveVar[5:6]
@@ -54,7 +54,7 @@ async def hlo(event):
     await event.edit(
         f"{b}{a}{b}{b}{a}{b}{a}{b}{b}{b}{b}{a}{a}{a}{a}{b}\n{b}{a}{b}{b}{a}{b}{a}{b}{b}{b}{b}{a}{b}{b}{a}{b}\n{b}{a}{a}{a}{a}{b}{a}{b}{b}{b}{b}{a}{b}{b}{a}{b}\n{b}{a}{b}{b}{a}{b}{a}{b}{b}{b}{b}{a}{b}{b}{a}{b}\n{b}{a}{b}{b}{a}{b}{a}{a}{a}{a}{b}{a}{a}{a}{a}{b}"
     )
-@borg.on(admin_cmd(pattern=r"byes ?(.*)"))
+@borg.on(admin_cmd(pattern=r"by ?(.*)"))
 async def bye(event):
     giveVar = event.text
     a = giveVar[5:6]
@@ -63,8 +63,8 @@ async def bye(event):
     b = giveVar[7:8]
     if not b:
         b = "🌺"
-    await event.edit(
-        f"{a}{b}{b}{a}{a}{b}{a}{a}{a}{b}{a}{b}{b}{b}{a}\n{a}{b}{a}{b}{a}{a}{b}{a}{b}{a}{a}{b}{a}{a}{a}\n{a}{b}{b}{a}{a}{a}{a}{b}{a}{a}{a}{b}{b}{a}{a}\n{a}{b}{a}{b}{a}{a}{a}{b}{a}{a}{a}{b}{a}{a}{a}\n{a}{b}{b}{a}{a}{a}{a}{b}{a}{a}{a}{b}{b}{b}{a}"
+    await event.edit(                              
+        f"╭━━┳╮╱╱╭┳━━━╮/n┃╭╮┃╰╮╭╯┃╭━━╯/n┃╰╯╰╮ {a}╭┫╰━━╮/n┃╭{b}╮┣╮╭╯┃╭━━╯/n┃╰{b}╯┃┃┃╱┃╰━━╮/n╰━━━╯╰╯╱╰━━━╯/n                              Lêɠêɳ̃dẞø†
     )
 
 CmdHelp("emotes").add_command(
@@ -72,9 +72,9 @@ CmdHelp("emotes").add_command(
 ).add_command(
    'gws <emoji>', None, 'Try it yourself'
 ).add_command(
-   'hlos <emoji>', None, 'Try it yourself'
+   'hlo1 <emoji>', None, 'Try it yourself'
 ).add_command(
    'his <emoji>', None, 'Try it yourself'
 ).add_command(
-   'byes <emoji>', None, 'Try it yourself'
+   'by <emoji>', None, 'Try it yourself'
 ).add()
