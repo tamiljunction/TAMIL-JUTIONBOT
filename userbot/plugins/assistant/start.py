@@ -23,7 +23,7 @@ from userbot.plugins.sql_helper.idadder import (
     get_all_users,
 )
 # await function async def ke baad lagega
-
+from . import *
 @bot.on(events.NewMessage(pattern="/start$"))
 async def start(event):
     pro = await bot.get_me()
