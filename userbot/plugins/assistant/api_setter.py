@@ -8,7 +8,6 @@ import html
 import os
 import re
 import sys
-from telethon import Buttons
 from telethon.events import InlineQuery, callbackquery
 from telethon.sync import custom
 from telethon.tl.functions.channels import GetParticipantRequest
