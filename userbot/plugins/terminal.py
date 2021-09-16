@@ -53,6 +53,6 @@ async def dc(event):
 
 
 from userbot.cmdhelp import CmdHelp
-CmdHelp("τєямιиαℓ").add_command(
+CmdHelp("terminal").add_command(
   'term', None, 'Reply to python file'
 ).add()
