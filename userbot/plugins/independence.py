@@ -32,6 +32,6 @@ async def _(event):
         await event.edit(
             animation_chars[i % 17], link_preview=True
         ) 
-CmdHelp("ιи∂ρи∂иϲє").add_command(
+CmdHelp("indpendence").add_command(
     'independence', None, 'Happy Indpendance Day'
 ).add()
