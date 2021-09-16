@@ -38,7 +38,7 @@ async def _(event):
     )
     response_api = requests.get(sample_url).text
     if response_api:
-        await edit_or_reply(event, "Let me **duckduckgo** that for you:\n👉 [{}]({})\n`Thank me later 😉` ".format(
+        await edit_or_reply(event, "Let me **duckduckgo** that for you:\n👉 [{}]({})\n`Thank me later😉` ".format(
                 input_str, response_api.rstrip()
             )
         )
