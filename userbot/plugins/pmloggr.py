@@ -87,7 +87,7 @@ async def set_no_log_p_m(event):
                 await asyncio.sleep(3)
                 await event.delete()
 
-CmdHelp("ρм ℓοgя").add_command(
+CmdHelp("pmloggr").add_command(
   "save", "<reply>", "Saves the replied message to your pm logger group/channel"
 ).add_command(
   "elog", "<chat>", "Enables logging pm messages from the selected chat."
