@@ -17,7 +17,7 @@ async def _(event):
     )
     response_api = requests.get(sample_url).text
     if response_api:
-        await edit_or_reply(event, "Let me **UThoob** that for you:\n👉 [{}]({})\n`Thank me later 😉` ".format(
+        await edit_or_reply(event, "Click Below To Open Search Query\n👉 [{}]({})\n`Thank me later 😉` ".format(
                 input_str, response_api.rstrip()
             )
         )
@@ -32,9 +32,9 @@ async def _(event):
         return
     input_str = event.pattern_match.group(1)
     sample_url = (
-        "https://da.gd/s?url=https://duckduckgo.com/?q={}&t=h_&ia=about".format(
-            input_str.replace(" ", "+")
-        )
+        await edit_or_reply(event, "Click To Open👇\n👉 [{}]({})\n`Thank me later 😉` ".format(
+                input_str, response_api.rstrip()
+            )
     )
     response_api = requests.get(sample_url).text
     if response_api:
@@ -192,7 +192,7 @@ CmdHelp("search").add_command(
 ).add_command(
   "lmlog", None, "Redirects you to your app's log page"
 ).add_command(
-  "var", None, "Redirects you to your app's var section"
+  "var", "<app name>", "Redirects you to your app's var section"
 ).add_command(
   "ytube", "<query>", "Gives you the link of given query from youthube"
 ).add_command(
