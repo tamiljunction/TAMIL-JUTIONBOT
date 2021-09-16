@@ -25,25 +25,25 @@ async def _(event):
         await edit_or_reply(event, "Something went wrong. Please try again later.")
 
 
-@bot.on(admin_cmd(pattern="ddg (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="ddg (.*)", allow_sudo=True))
-async def _(event):
-    if event.fwd_from:
-        return
-    input_str = event.pattern_match.group(1)
-    sample_url = (
-        await edit_or_reply(event, "Click To Open👇\n👉 [{}]({})\n`Thank me later 😉` ".format(
-                input_str, response_api.rstrip()
-            )
-    )
-    response_api = requests.get(sample_url).text
-    if response_api:
-        await edit_or_reply(event, "Let me **duckduckgo** that for you:\n👉 [{}]({})\n`Thank me later😉` ".format(
-                input_str, response_api.rstrip()
-            )
-        )
-    else:
-        await edit_or_reply(event, "Something went wrong. Please try again later.")
+#@bot.on(admin_cmd(pattern="ddg (.*)", outgoing=True))
+#@bot.on(sudo_cmd(pattern="ddg (.*)", allow_sudo=True))
+#async def _(event):
+#    if event.fwd_from:
+#        return
+#    input_str = event.pattern_match.group(1)
+#    sample_url = (
+#        await edit_or_reply(event, "Click To Open👇\n👉 [{}]({})\n`Thank me later 😉` ".format(
+#                input_str, response_api.rstrip()
+#            )
+#    )
+#    response_api = requests.get(sample_url).text
+#    if response_api:
+#        await edit_or_reply(event, "Let me **duckduckgo** that for you:\n👉 [{}]({})\n`Thank me later😉` ".format(
+#                input_str, response_api.rstrip()
+#            )
+#        )
+#    else:
+#        await edit_or_reply(event, "Something went wrong. Please try again later.")
 
 
 @bot.on(admin_cmd(pattern="altn (.*)", outgoing=True))
