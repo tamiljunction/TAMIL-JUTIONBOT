@@ -373,7 +373,7 @@ async def nekobot(borg):
     await borg.delete()
 
 
-CmdHelp("τωєєτ").add_command(
+CmdHelp("tweet").add_command(
   "kanna", "<text>/<reply to text>", "Kanna writes for you"
 ).add_command(
   "cmm", "<text>/<reply>", "Get a banner of Change My Mind"
