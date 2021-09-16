@@ -318,8 +318,6 @@ CmdHelp("imgfun").add_command(
 ).add_command(
   'ytc', None, 'Use a d See'
 ).add_command(
-  'revert', None, 'Use and see'
-).add_command(
   'invert', None, 'Use and see'
 ).add_command(
   'bright', None, 'Use And See'
