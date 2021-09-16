@@ -207,7 +207,7 @@ def search_torrentz_eu(search_query):
     return r
 
 
-CmdHelp("τяиτ ѕяϲн").add_command(
+CmdHelp("torntsearch").add_command(
   "tsearch", "<query>", "Fetches torrent links of given query"
 ).add_command(
   "movie idop.se", "<query>", "Fetches torrent links of given query alternative way"
