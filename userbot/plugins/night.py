@@ -139,6 +139,6 @@ async def on_night(event):
             await last_night_message[event.chat_id].delete()  # pylint:disable=E0602
         last_night_message[event.chat_id] = msg  # pylint:disable=E0602
 
-CmdHelp("иιgнτ").add_command(
+CmdHelp("night").add_command(
   "night", None, "Same like AFK. But fixed reason and for sleeping purpose only. Sed ;_;example:- .night <reason>"
 ).add()
