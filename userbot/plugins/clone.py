@@ -1,10 +1,3 @@
-"""Get Telegram Profile Picture and other information
-and set as own profile.
-Syntax: .clone @username"""
-# Copy That Plugin by @ViperAdnan
-# modified by @Its_LegendBoy
-# Give credit if you are going to kang it.
-
 import html
 
 from telethon.tl import functions
@@ -17,7 +10,7 @@ from userbot.cmdhelp import CmdHelp
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND User"
 
-DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "Legendary LEGENDBOT"
+DEFAULTUSERBIO = str(BIO_MSG) if BIO_MSG else "Legendary LEGENDBOY"
 BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
 BOTLOG = True
 
@@ -62,7 +55,7 @@ async def _(event):
     )
     await event.delete()
     await borg.send_message(
-        event.chat_id, "**Who Are You? .. **", reply_to=reply_message
+        event.chat_id, "**Hello Who are u??🙄🙄**", reply_to=reply_message
     )
     if BOTLOG:
         await event.client.send_message(
