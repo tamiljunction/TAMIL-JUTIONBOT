@@ -108,8 +108,8 @@ async def cri(e):
         await edit_or_reply(e, random.choice(CRI))
         
 
-@bot.on(admin_cmd(pattern="hey$", outgoing=True))
-@bot.on(sudo_cmd(pattern="hey$", allow_sudo=True))
+@bot.on(admin_cmd(pattern="^hey$", outgoing=True))
+@bot.on(sudo_cmd(pattern="^hey$", allow_sudo=True))
 async def hoi(hello):
     """ Greet everyone! """
     if not hello.text[0].isalpha() and hello.text[0] not in ("/", "#", "@", "!"):
@@ -124,8 +124,8 @@ async def shrugger(shg):
         await edit_or_reply(shg, random.choice(SHGS))
 
 
-@bot.on(admin_cmd(pattern="f (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="f (.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ftest (.*)", outgoing=True))
+@bot.on(sudo_cmd(pattern="ftest (.*)", allow_sudo=True))
 async def payf(e):
     paytext = e.pattern_match.group(1)[0]
     pay = "{}\n{}\n{}\n{}\n{}\n{}\n{}".format(
@@ -176,11 +176,11 @@ async def _(event):
     animation_chars = [
         "οκ",
         "ѕιя",
-        "мιѕα",
+        "мιѕs",
         "οκ bro",
         "οκ ϐяο",
         "οκ gƒ",
-        "οκ ϐƒ",
+        "οκ bƒ",
         "οκ ∂єαя",
         "gο αи∂ ѕαγ οκ",
         "οκ ℓοℓ",
@@ -200,8 +200,8 @@ async def _(event):
         await event.edit(animation_chars[i % 18])
         
 
-CmdHelp("иοιϲє").add_command(
-  "f", "<text>", "Gives out the text in 'F' letter"
+CmdHelp("noice").add_command(
+  "ftest", "<text>", "Gives out the text in 'F' letter"
 ).add_command(
   "shrug", None, "¯\_(ツ)_/¯"
 ).add_command(
