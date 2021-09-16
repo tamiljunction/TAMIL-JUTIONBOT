@@ -9,8 +9,8 @@ from telethon.utils import pack_bot_file_id
 from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-@bot.on(admin_cmd(pattern="get_admins ?(.*)"))
-@bot.on(sudo_cmd(pattern="get_admins ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="admin ?(.*)"))
+@bot.on(sudo_cmd(pattern="admin ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -61,8 +61,8 @@ async def _(event):
         await event.client.send_message(event.chat_id, mentions)
     await event.delete()
     
-@bot.on(admin_cmd(pattern="get_bot ?(.*)"))
-@bot.on(sudo_cmd(pattern="get_bot ?(.*)", allow_sudo=True))
+@bot.on(admin_cmd(pattern="bots ?(.*)"))
+@bot.on(sudo_cmd(pattern="bots ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -94,8 +94,8 @@ async def _(event):
     await event.edit(mentions)
     
     
-@bot.on(admin_cmd(pattern="get_id"))
-@bot.on(sudo_cmd(pattern="get_id", allow_sudo=True))
+@bot.on(admin_cmd(pattern="ids"))
+@bot.on(sudo_cmd(pattern="ids", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -119,12 +119,12 @@ async def _(event):
         await event.edit("🔸 **Current Chat ID:** `{}`".format(str(event.chat_id)))
 
 
-CmdHelp("get_them").add_command(
-  'get_admins', None, 'Gets the list of admins in current chat along with the crator'
+CmdHelp("getinfo").add_command(
+  'admin', None, 'Gets the list of admins in current chat along with the crator'
 ).add_command(
-  'get_id', '<reply>', 'Gets the user id of the replied user.'
+  'ids', '<reply>', 'Gets the user id of the replied user.'
 ).add_command(
-  'get_bot', None, 'Gets the list of all the bots in the chat.'
+  'bots', None, 'Gets the list of all the bots in the chat.'
 ).add_command(
   'info', '<reply / username>', 'Fetches the information of the user'
 ).add()
