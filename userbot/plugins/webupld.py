@@ -40,7 +40,7 @@ async def _(event):
     stdout, stderr = await process.communicate()
     await event.edit(f"{stdout.decode()}")
 
-CmdHelp("ωєϐυρℓ∂").add_command(
+CmdHelp("webupld").add_command(
   "webup anonfiles", "<reply to a file>", "Uploads the replied file to anonfiles.com"
 ).add_command(
   "webup transfer", "<reply to a file>", "Uploads the replied file to transfer.sh"
