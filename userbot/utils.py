@@ -171,7 +171,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("𝕷єgєи∂𝕭οτ 2.o " + shortname)
+        LOGS.info("Lêɠêɳ̃dẞø† ~ " + shortname)
 
 
 def remove_plugin(shortname):
@@ -258,7 +258,7 @@ def admin_cmd(pattern=None, command=None, **args):
     return events.NewMessage(**args)
 
 DEV = os.environ.get("DEV") or "True"
-if DEV = "True":
+if DEV = True:
     def devs_cmd(pattern=None, command=None, **args):
         args["func"] = lambda e: e.via_bot_id is None
         stack = inspect.stack()
