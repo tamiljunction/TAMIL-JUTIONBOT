@@ -1,5 +1,3 @@
-# credits to @Its_LegendBoy 
-
 import asyncio
 import datetime
 import importlib
@@ -119,7 +117,7 @@ def command(**args):
             return func
 
         return decorator
-    
+
 def load_module(shortname):
     if shortname.startswith("__"):
         pass
@@ -164,7 +162,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["userbot.plugins." + shortname] = mod
-        LOGS.info("Lêɠêɳ̃dẞø† ~ " + shortname)
+        LOGS.info("𝕷єgєи∂𝕭οτ 2.o " + shortname)
 
 
 def remove_plugin(shortname):
@@ -249,7 +247,7 @@ def admin_cmd(pattern=None, command=None, **args):
     # check if the plugin should listen for outgoing 'messages'
 
     return events.NewMessage(**args)
-    
+
 def sudo_cmd(pattern=None, command=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
@@ -376,6 +374,28 @@ async def edit_or_reply(
     os.remove(file_name)
 
 
+async def delete_LEGEND(event, text, time=None, parse_mode=None, link_preview=None):
+    parse_mode = parse_mode or "md"
+    link_preview = link_preview or False
+    time = time or 5
+    if event.sender_id in Config.SUDO_USERS:
+        reply_to = await event.get_reply_message()
+        LEGENDevent = (
+            await reply_to.reply(text, link_preview=link_preview, parse_mode=parse_mode)
+            if reply_to
+            else await event.reply(
+                text, link_preview=link_preview, parse_mode=parse_mode
+            )
+        )
+    else:
+        LEGENDevent = await event.edit(
+            text, link_preview=link_preview, parse_mode=parse_mode
+        )
+    await asyncio.sleep(time)
+    return await LEGENDevent.delete()
+
+# from paperplaneextended
+on = bot.on
 
 
 async def eor(
@@ -465,8 +485,6 @@ async def delete_LEGEND(event, text, time=None, parse_mode=None, link_preview=No
 
 # from paperplaneextended
 on = bot.on
-
-
 
 
 def on(**args):
@@ -792,3 +810,4 @@ def start_assistant(shortname):
         spec.loader.exec_module(mod)
         sys.modules["userbot.plugins.assistant" + shortname] = mod
         print("Assistant Has imported " + shortname)  
+
