@@ -1,3 +1,4 @@
+
 import asyncio
 import os
 from datetime import datetime
@@ -6,7 +7,7 @@ import requests
 from bs4 import BeautifulSoup
 from google_images_download import google_images_download
 
-from LEGENDBOT.utils import admin_cmd, sudo_cmd, edit_or_reply
+from LEGENDGIRLS.utils import admin_cmd, sudo_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
 
@@ -18,35 +19,17 @@ def progress(current, total):
     )
 
 
-@bot.on(admin_cmd(pattern="google (.*)", outgoing=True))
-@bot.on(sudo_cmd(pattern="google (.*)", allow_sudo=True))
+@bot.on(admin_cmd("google (.*)"))
 async def _(event):
     if event.fwd_from:
         return
-    start = datetime.now()
-    await edit_or_reply(event, "Processing ...")
-    # SHOW_DESCRIPTION = False
-    input_str = event.pattern_match.group(
-        1
-    )  # + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (mkv|mp4|avi|epub|pdf|mp3)"
-    input_url = "https://bots.shrimadhavuk.me/search/?q={}".format(input_str)
-    headers = {"USER-AGENT": "UniBorg"}
-    response = requests.get(input_url, headers=headers).json()
-    output_str = " "
-    for result in response["results"]:
-        text = result.get("title")
-        url = result.get("url")
-        result.get("description")
-        result.get("image")
-        output_str += " 👉🏻  [{}]({}) \n\n".format(text, url)
-    end = datetime.now()
-    ms = (end - start).seconds
-    await edit_or_reply(event, 
-        "searched Google for {} in {} seconds. \n{}".format(input_str, ms, output_str),
-        link_preview=False,
-    )
-    await asyncio.sleep(5)
-    await edit_or_reply(event, "Google: {}\n{}".format(input_str, output_str), link_preview=False)
+    input_str = event.pattern_match.group(1)
+    sample_url = "https://da.gd/s?url=https://lmgtfy.com/?q={}%26iie=1".format(input_str.replace(" ","+"))
+    response_api = requests.get(sample_url).text
+    if response_api:
+        await event.edit("[{}]({})\n`Thank me Later 🙃` ".format(input_str,response_api.rstrip()))
+    else:
+        await event.edit("something is wrong. please try again later.")
 
 
 @bot.on(admin_cmd(pattern="image (.*)", outgoing=True))
@@ -148,7 +131,6 @@ async def _(event):
         ms = (end - start).seconds
         OUTPUT_STR = """{img_size}
 **Possible Related Search**: <a href="{prs_url}">{prs_text}</a>
-
 More Info: Open this <a href="{the_location}">Link</a> in {ms} seconds""".format(
             **locals()
         )
