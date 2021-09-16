@@ -28,6 +28,6 @@ async def _(event):
 from userbot.cmdhelp import CmdHelp
 
 
-CmdHelp("τнαиοѕ").add_command(
+CmdHelp("thanos").add_command(
     'Thanos', None, 'Use and See'
 ).add()
