@@ -25,6 +25,9 @@ from userbot.helpers.exceptions import CancelProcess
 from userbot.Config import Config
 from userbot import bot
 from telethon import events
+DEV_HANDLER = os.environ.get("DEVS_HANDLER")
+if DEV_HANDLER is None:
+    DEV_HANDLER = "."
 from pathlib import Path
 from var import Var
 from userbot import LOAD_PLUG
