@@ -1,4 +1,4 @@
-# Made by @Its_LegendBoy for @LEGEND_Userbot
+# Made by @Its_LegendBoy for @Legend_Userbot
 # Now in LEGENDBOT
 # Thanks to LegendBot
 

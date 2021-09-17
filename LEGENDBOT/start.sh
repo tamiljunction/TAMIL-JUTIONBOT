@@ -17,7 +17,7 @@
 echo """
               
 Legendary LEGENDBOT!!
-@LEGEND_Userbot
+@Legend_Userbot
 """
 
 python3 -m userbot
