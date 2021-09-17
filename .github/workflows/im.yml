@@ -18,7 +18,7 @@ jobs:
 
         with:
 
-          find: "LEGEND_Userbot"
+          find: "LEGEND_Support"
 
           replace: "Legend_Userbot"
 
