@@ -1416,7 +1416,7 @@ async def _(event):
 
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 22])
-CmdHelp("∂ιωαℓι").add_command(
+CmdHelp("diwali").add_command(
         'hdd', None, 'µรε αɳ∂ รεε'
 ).add_command(
         'diwali', None, 'մsɾ αղժ sҽҽ'
