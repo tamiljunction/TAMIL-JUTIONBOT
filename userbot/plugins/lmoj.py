@@ -34,7 +34,7 @@ async def _(event):
     
     
 from userbot.cmdhelp import CmdHelp
-CmdHelp("ℓϰмοנ").add_command(
+CmdHelp("lmoj").add_command(
   'moj', None, 'Its like abuse'
 ).add_command(
   'nonehi', None, 'Try It'
