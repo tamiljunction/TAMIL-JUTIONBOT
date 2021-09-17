@@ -125,7 +125,7 @@ async def get_users(event):
     async for user in event.client.iter_participants(aura.full_chat.id):
         try:
             if error.startswith("Too"):
-                return await W2H.edit(
+                return await LEGEND.edit(
                     f"**Terminal Finished With Error**\n(`May Got Limit Error from telethon Please try agin Later`)\n**Error** : \n`{error}`\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people"
                 )
             await event.client(
@@ -138,7 +138,7 @@ async def get_users(event):
         except Exception as e:
             error = str(e)
             f = f + 1
-    return await W2H.edit(
+    return await LEGEND.edit(
         f"**Terminal Finished** \n\n• Successfully Invited `{s}` people \n• failed to invite `{f}` people"
     )
 
