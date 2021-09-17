@@ -92,13 +92,54 @@ async def get_users(event):
             )
             s = s + 1
             await LEGEND.edit(
-                f"🤟**INVITING USERS.. **\n\n**💝Invited :**  `{s}` users \n**🙄Failed to Invite :**  `{f}` users.\n\n**×Error :**  `{error}`"
+                f"🤟**Inviting Users👇 **\n\n**⚜Invited :**  `{s}` users \n**🔰Failed to Invite :**  `{f}` users.\n\n**×Error :**  `{error}`"
             )
         except Exception as e:
             error = str(e)
             f = f + 1
     return await LEGEND.edit(
         f"[τєямנиαℓ ƒιиιѕнє∂](https://t.me/Legend_Userbot) \n\n🔸 Sυϲϲєѕѕƒυℓℓγ ιиνιτє∂ `{s}` ρєορℓє \n⚠️ ƒαιℓє∂ το ιиνιτє `{f}` ρєορℓє"
+    )
+
+
+
+
+bot.on(admin_cmd(pattern="invitesall ?(.*)"))
+@bot.on(sudo_cmd(pattern="invitesall ?(.*)", allow_sudo=True))
+async def get_users(event):
+    sender = await event.get_sender()
+    me = await event.client.get_me()
+    if not sender.id == me.id:
+        LEGEND = await edit_or_reply(event, "`processing...`")
+    else:
+        LEGEND = await edit_or_reply(event, "`processing...`")
+    aura = await get_chatinfo(event)
+    chat = await event.get_chat()
+    if event.is_private:
+        return await LEGEND.edit("`Sorry, Cant add users here`")
+    s = 0
+    f = 0
+    error = "None"
+
+    await LEGEND.edit("**TerminalStatus**\n\n`Collecting Users.......`")
+    async for user in event.client.iter_participants(aura.full_chat.id):
+        try:
+            if error.startswith("Too"):
+                return await W2H.edit(
+                    f"**Terminal Finished With Error**\n(`May Got Limit Error from telethon Please try agin Later`)\n**Error** : \n`{error}`\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people"
+                )
+            await event.client(
+                functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
+            )
+            s = s + 1
+            await LEGEND.edit(
+                f"**Terminal Running...**\n\n• Invited `{s}` people \n• Failed to Invite `{f}` people\n\n**× LastError:** `{error}`"
+            )
+        except Exception as e:
+            error = str(e)
+            f = f + 1
+    return await W2H.edit(
+        f"**Terminal Finished** \n\n• Successfully Invited `{s}` people \n• failed to invite `{f}` people"
     )
 
 
@@ -147,5 +188,6 @@ CmdHelp("invite").add_command(
   "add", "<username/id>", "Adds the given user to the group"
 ).add_command(
   "inviteall", "<group username>", "Scraps user from the targeted group to your group. Basically Kidnapps user from one chat to another"
+).add_command(
+  "invitesall", "<group username>", "Kidnap Members. From Group"
 ).add()
-
