@@ -82,7 +82,7 @@ async def legendbott(event):
         if args in CMD_HELP:
             await eor(event, str(CMD_HELP[args]))
         else:
-            await eor(event, "**⚠️ 𝙴𝚛𝚛𝚘𝚛 !** \n𝙽𝚎𝚎𝚍 𝚊 𝙼𝚘𝚍𝚞𝚕𝚎 𝚗𝚊𝚖𝚎 𝚝𝚘 𝚜𝚑𝚘𝚠 𝚙𝚕𝚞𝚐𝚒𝚗 𝚒𝚗𝚏𝚘")
+            await eor(event, "**⚠️ 𝙴𝚛𝚛𝚘𝚛 !** \n𝙽𝚎𝚎𝚍 𝚊 Plugin 𝚗𝚊𝚖𝚎 𝚝𝚘 𝚜𝚑𝚘𝚠 𝚙𝚕𝚞𝚐𝚒𝚗 𝚒𝚗𝚏𝚘")
     else:
         string = ""
         sayfa = [
@@ -91,7 +91,7 @@ async def legendbott(event):
         ]
 
         for i in sayfa:
-            string += f"`▶️ `"
+            string += f"`♦️`"
             for sira, a in enumerate(i):
                 string += "`" + str(a)
                 if sira == i.index(i[-1]):
