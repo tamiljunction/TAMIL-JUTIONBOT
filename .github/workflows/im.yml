@@ -18,9 +18,9 @@ jobs:
 
         with:
 
-          find: "LEGENDGIRLS"
+          find: "LEGEND_Userbot"
 
-          replace: "LEGENDBOT"
+          replace: "Legend_Userbot"
 
       - name: Create Pull Request
 
