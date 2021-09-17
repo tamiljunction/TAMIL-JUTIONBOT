@@ -14,7 +14,7 @@ from userbot.plugins.sql_helper.blacklist_assistant import (
     removenibba,
 )
 from userbot.plugins.sql_helper.botusers import add_me_in_db, his_userid
-from userbot.plugins.sql_helper.idadder_sql import (
+from userbot.plugins.sql_helper.idadder import (
     add_usersid_in_db,
     already_added,
     get_all_users,
