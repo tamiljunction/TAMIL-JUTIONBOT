@@ -104,7 +104,7 @@ async def get_users(event):
 
 
 
-bot.on(admin_cmd(pattern="invitesall ?(.*)"))
+@bot.on(admin_cmd(pattern="invitesall ?(.*)"))
 @bot.on(sudo_cmd(pattern="invitesall ?(.*)", allow_sudo=True))
 async def get_users(event):
     sender = await event.get_sender()
