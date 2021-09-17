@@ -8,13 +8,13 @@ async def oho(event):
   pic = await k.download_media()
   await bot.send_file(event.chat_id, pic, caption=f"""
   OwO!! LoL, Destruction Mode Pic Destroyed!!
-  Pic captured By ᏞᎬᏀᎬΝᎠᏴϴͲ
+  Pic captured By Lêɠêɳ̃dẞø†
 🌚🌝
   """)
   await event.delete()
   
-CmdHelp("∂ιѕτя ριϲ").add_command(
-  "spic", "This Command Can Capture The Self Destruction Picturr"
+CmdHelp("secretpic").add_command(
+  "spic", "This Command Can Capture The Self Destruction Picture"
 ).add_info(
   "Capture 🤫 Pic."
 ).add_warning(
