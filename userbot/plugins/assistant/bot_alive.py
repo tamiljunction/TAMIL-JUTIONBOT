@@ -3,6 +3,10 @@ from . import *
 from userbot import ALIVE_NAME
 from userbot import bot
 
+LEGEND_USER = bot.me.first_name
+Its_LegendBoy = bot.uid
+legend_mention = f"[{LEGEND_USER}](tg://user?id={Its_LegendBoy})"
+
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "LEGEND"
 
 
