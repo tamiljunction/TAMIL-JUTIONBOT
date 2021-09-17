@@ -33,7 +33,7 @@ async def start(event):
     if event.sender_id == bot.uid:
         await tgbot.send_message(
             vent,
-            message=f"Hi Master, It's Me {bot_id}, Your Assistant ! \nWhat You Wanna Do today ?",
+            message=f"Hi Sir/Miss, It's Me {bot_id}, Your Assistant ! \nHow Can I help U?",
             buttons=[
                 [custom.Button.inline("Show Users 🔥", data="users")],
                 [custom.Button.inline("Commands For Assistant", data="gibcmd")],
@@ -54,8 +54,8 @@ async def start(event):
             message=starttext,
             link_preview=False,
             buttons=[
-                [custom.Button.inline("Deploy your DarkCobra 🐍", data="deploy")],
-                [Button.url("Help Me ❓", "https://t.me/Dark_cobra_support_group")],
+                [custom.Button.inline("『Lêɠêɳ̃dẞø†』", data="deploy")],
+                [Button.url("Help Me ❓", "https://t.me/Legend_Userbot")],
             ],
         )
 
@@ -69,10 +69,10 @@ async def help(event):
     if event.query.user_id is not bot.uid:
         await tgbot.send_message(
             event.chat_id,
-            message="You Can Deploy DARKCOBRA In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
+            message="You Can Deploy 『Lêɠêɳ̃dẞø†』 In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
             buttons=[
-                [Button.url("Deploy Tutorial 📺", "http://www.youtube.com/watch?v=-MbQO6kmP8o")],
-                [Button.url("Need Help ❓", "https://t.me/Dark_cobra_support_group")],
+                [Button.url("Tutorial 📺", "https://youtu.be/9dQgdUJfk_k")],
+                [Button.url("Need Help ❓", "https://t.me/Legend_Userbot")],
             ],
         )
 
@@ -82,7 +82,7 @@ async def users(event):
     if event.query.user_id == bot.uid:
         await event.delete()
         total_users = get_all_users()
-        users_list = "List Of Total Users In Bot. \n\n"
+        users_list = "⚜List Of Total Users In Bot.⚜ \n\n"
         for starked in total_users:
             users_list += ("==> {} \n").format(int(starked.chat_id))
         with io.BytesIO(str.encode(users_list)) as tedt_file:
@@ -101,7 +101,7 @@ async def users(event):
 @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"gibcmd")))
 async def users(event):
     await event.delete()
-    grabon = "Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr <lang-code> \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Media. \n➤ /addnote - Add Note \n➤ /notes - Shows Notes \n➤ /rmnote - Remove Note \n➤ /alive - Am I Alive? \n➤ /bun - Works In Group , Bans A User. \n➤ /unbun - Unbans A User in Group \n➤ /prumote - Promotes A User \n➤ /demute - Demotes A User \n➤ /pin - Pins A Message \n➤ /stats - Shows Total Users In Bot \n➤ /purge - Reply It From The Message u Want to Delete (Your Bot Should be Admin to Execute It) \n➤ /del - Reply a Message Tht Should Be Deleted (Your Bot Should be Admin to Execute It)"
+    grabon = "🇮🇳Hello Here Are Some Commands \n➤ /start - Check if I am Alive \n➤ /ping - Pong! \n➤ /tr <lang-code> \n➤ /broadcast - Sends Message To all Users In Bot \n➤ /id - Shows ID of User And Media. \n➤ /addnote - Add Note \n➤ /notes - Shows Notes \n➤ /rmnote - Remove Note \n➤ /alive - Am I Alive? \n➤ /bun - Works In Group , Bans A User. \n➤ /unbun - Unbans A User in Group \n➤ /prumote - Promotes A User \n➤ /demute - Demotes A User \n➤ /pin - Pins A Message \n➤ /stats - Shows Total Users In Bot \n➤ /purge - Reply It From The Message u Want to Delete (Your Bot Should be Admin to Execute It) \n➤ /del - Reply a Message Tht Should Be Deleted (Your Bot Should be Admin to Execute It)"
     await tgbot.send_message(event.chat_id, grabon)
 
 
