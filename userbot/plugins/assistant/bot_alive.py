@@ -13,7 +13,7 @@ pm_caption += f"┣─ Çhâññel: [Channel](https://t.me/Its_LegendBot) \n"
 pm_caption += "┣─ **License** : [GNU General Public License v3.0](github.com/LEGEND-OS/LEGENBOT/blob/master/LICENSE)\n"
 pm_caption += "┣─ Copyright: By [ 『Lêɠêɳ̃dẞø†』 ](https://t.me/Legend_Userbot)\n"
 pm_caption += "┣─ [Assistant By 『Lêɠêɳ̃dẞøy』](https://t.me/Its_LegendBoy)"
-pm_caption += "╰──────────────
+pm_caption += "╰──────────────"
 pm_caption += "»»» [『Lêɠêɳ̃dẞø†』](https://t.me/Legend_Userbot) «««"
 # only Owner Can Use it
 @tgbot.on(events.NewMessage(pattern="^/alive", func=lambda e: e.sender_id == bot.uid))
