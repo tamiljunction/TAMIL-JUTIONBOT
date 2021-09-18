@@ -11,13 +11,9 @@ StartTime = time.time()
 LEGENDversion = "𝚅2.𝙾"
 botversion = "𝚅1.𝙾"
 
-os.system("pip install --upgrade pip")
-if Var.LEGEND_STRING:
-    session_name = str(Var.LEGEND_STRING)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
-else:
-    session_name = "startup"
-    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
+#New Tcp
+bot = Legend
+tbot = LegendBot
 
 #LEGEND = bot
 DEVS = [1938996006]
@@ -55,7 +51,7 @@ if bool(ENV):
     else:
         basicConfig(format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
                     level=INFO)
-    LOGS = getLogger(["LEGEND bOT 3.0"])
+    LOGS = getLogger(["LEGEND BOT 3.0"])
 
 try:
     if Config.HEROKU_API_KEY is not None or Config.HEROKU_APP_NAME is not None:
