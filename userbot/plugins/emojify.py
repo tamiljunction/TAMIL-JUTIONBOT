@@ -28,7 +28,7 @@ async def itachi(event):
     await edit_or_reply(event, result)
 
 
-@bot.on(admin_cmd(pattern=r"cemotes ?(.*)"))
+@bot.on(admin_cmd(pattern=r"lemotes ?(.*)"))
 async def itachi(event):
     "To get custom emoji art text."
     args = event.pattern_match.group(1)
@@ -43,7 +43,7 @@ async def itachi(event):
         emoji, arg = args.split(" ", 1)
     except Exception:
         arg = args
-        emoji = "😺"
+        emoji = "⚜️"
     result = ""
     for a in arg:
         a = a.lower()
@@ -58,6 +58,6 @@ async def itachi(event):
 CmdHelp("emojify").add_command(
     "emotes", "<text>", "Use and See"
 ).add_command(
-    "cemotes", "<text>", "Use and See"
+    "lemotes", "<text>", "Use and See"
 ).add()
     
