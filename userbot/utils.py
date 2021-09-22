@@ -154,6 +154,9 @@ def load_module(shortname):
         mod.LEGENDBOT = bot
         mod.edit_or_reply = edit_or_reply
         mod.delete_LEGEND = delete_LEGEND
+        mod.eod = delete_LEGEND
+        mod.admin_cmd = admin_cmd
+        mod.sudo_cmd = sudo_cmd
         # support for LEGENDBOT originals
         sys.modules["LEGENDBOT.utils"] = userbot.utils
         sys.modules["LEGENDBOT"] = userbot
