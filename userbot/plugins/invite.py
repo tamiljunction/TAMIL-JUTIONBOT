@@ -62,7 +62,7 @@ def user_full_name(user):
 @bot.on(sudo_cmd(pattern=r"inviteall ?(.*)", allow_sudo=True))
 async def get_users(event):
     legen_ = event.text[11:]
-    legend_chat = hel_.lower()
+    legend_chat = legen_.lower()
     restricted = ["@Legend_Userbot", "@Its_LegendBot"]
     legend = await eor(event, f"__Inviting members from__ {legen_}")
     if legend_chat in restricted:
